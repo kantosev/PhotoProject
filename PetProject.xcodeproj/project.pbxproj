@@ -7,23 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A8F5CD42916FE3D002406FC /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F5CD32916FE3D002406FC /* AboutViewController.swift */; };
+		3A902A3E29153E96007C3FDC /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A902A3D29153E96007C3FDC /* SignUpViewController.swift */; };
+		3A902A4029153F79007C3FDC /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A902A3F29153F79007C3FDC /* AlertController.swift */; };
+		3A902A4229154042007C3FDC /* SignManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A902A4129154042007C3FDC /* SignManager.swift */; };
 		3A906C4229144A860070996F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A906C4129144A860070996F /* AppDelegate.swift */; };
 		3A906C4429144A860070996F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A906C4329144A860070996F /* SceneDelegate.swift */; };
-		3A906C4629144A860070996F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A906C4529144A860070996F /* ViewController.swift */; };
+		3A906C4629144A860070996F /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A906C4529144A860070996F /* SignInViewController.swift */; };
 		3A906C4929144A860070996F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A906C4729144A860070996F /* Main.storyboard */; };
 		3A906C4B29144A890070996F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A906C4A29144A890070996F /* Assets.xcassets */; };
 		3A906C4E29144A890070996F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A906C4C29144A890070996F /* LaunchScreen.storyboard */; };
+		3A906C5729144A9C0070996F /* ParseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3A906C5629144A9C0070996F /* ParseSwift */; };
+		3A906C60291452020070996F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A906C5F291452020070996F /* MainViewController.swift */; };
+		3A906C622914656D0070996F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A906C612914656D0070996F /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A8F5CD32916FE3D002406FC /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		3A902A3D29153E96007C3FDC /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		3A902A3F29153F79007C3FDC /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
+		3A902A4129154042007C3FDC /* SignManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignManager.swift; sourceTree = "<group>"; };
 		3A906C3E29144A860070996F /* PetProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A906C4129144A860070996F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A906C4329144A860070996F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3A906C4529144A860070996F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3A906C4529144A860070996F /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		3A906C4829144A860070996F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3A906C4A29144A890070996F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A906C4D29144A890070996F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A906C4F29144A890070996F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A906C5F291452020070996F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		3A906C612914656D0070996F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A906C5729144A9C0070996F /* ParseSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +70,61 @@
 		3A906C4029144A860070996F /* PetProject */ = {
 			isa = PBXGroup;
 			children = (
-				3A906C4129144A860070996F /* AppDelegate.swift */,
 				3A906C4329144A860070996F /* SceneDelegate.swift */,
-				3A906C4529144A860070996F /* ViewController.swift */,
-				3A906C4729144A860070996F /* Main.storyboard */,
+				3A906C4129144A860070996F /* AppDelegate.swift */,
+				3A906C5E291450A20070996F /* Protocols */,
+				3A906C5C2914508C0070996F /* ViewModel */,
+				3A906C5B291450800070996F /* View */,
+				3A906C5D2914509D0070996F /* Support */,
+				3A906C5A291450790070996F /* Model */,
 				3A906C4A29144A890070996F /* Assets.xcassets */,
-				3A906C4C29144A890070996F /* LaunchScreen.storyboard */,
 				3A906C4F29144A890070996F /* Info.plist */,
 			);
 			path = PetProject;
+			sourceTree = "<group>";
+		};
+		3A906C5A291450790070996F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3A906C612914656D0070996F /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3A906C5B291450800070996F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3A906C4529144A860070996F /* SignInViewController.swift */,
+				3A902A3D29153E96007C3FDC /* SignUpViewController.swift */,
+				3A906C5F291452020070996F /* MainViewController.swift */,
+				3A906C4729144A860070996F /* Main.storyboard */,
+				3A906C4C29144A890070996F /* LaunchScreen.storyboard */,
+				3A8F5CD32916FE3D002406FC /* AboutViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3A906C5C2914508C0070996F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3A906C5D2914509D0070996F /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				3A902A3F29153F79007C3FDC /* AlertController.swift */,
+				3A902A4129154042007C3FDC /* SignManager.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		3A906C5E291450A20070996F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +143,9 @@
 			dependencies = (
 			);
 			name = PetProject;
+			packageProductDependencies = (
+				3A906C5629144A9C0070996F /* ParseSwift */,
+			);
 			productName = PetProject;
 			productReference = 3A906C3E29144A860070996F /* PetProject.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +174,9 @@
 				Base,
 			);
 			mainGroup = 3A906C3529144A860070996F;
+			packageReferences = (
+				3A906C5529144A9C0070996F /* XCRemoteSwiftPackageReference "Parse-Swift" */,
+			);
 			productRefGroup = 3A906C3F29144A860070996F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,9 +204,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A906C4629144A860070996F /* ViewController.swift in Sources */,
+				3A902A3E29153E96007C3FDC /* SignUpViewController.swift in Sources */,
+				3A906C4629144A860070996F /* SignInViewController.swift in Sources */,
 				3A906C4229144A860070996F /* AppDelegate.swift in Sources */,
+				3A8F5CD42916FE3D002406FC /* AboutViewController.swift in Sources */,
 				3A906C4429144A860070996F /* SceneDelegate.swift in Sources */,
+				3A902A4029153F79007C3FDC /* AlertController.swift in Sources */,
+				3A902A4229154042007C3FDC /* SignManager.swift in Sources */,
+				3A906C622914656D0070996F /* User.swift in Sources */,
+				3A906C60291452020070996F /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +430,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3A906C5529144A9C0070996F /* XCRemoteSwiftPackageReference "Parse-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/parse-community/Parse-Swift";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3A906C5629144A9C0070996F /* ParseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3A906C5529144A9C0070996F /* XCRemoteSwiftPackageReference "Parse-Swift" */;
+			productName = ParseSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3A906C3629144A860070996F /* Project object */;
 }
