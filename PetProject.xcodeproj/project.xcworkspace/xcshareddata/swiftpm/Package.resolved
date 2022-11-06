@@ -14,8 +14,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/google/GoogleSignIn-iOS",
       "state" : {
-        "branch" : "main",
-        "revision" : "6ab021100e95c5986ad8e7e766f9c7589123fed9"
+        "revision" : "9c9b36af86a4dd3da16048a36cf37351e63ccfe1",
+        "version" : "6.2.4"
       }
     },
     {
@@ -42,7 +42,7 @@
       "location" : "https://github.com/parse-community/Parse-Swift",
       "state" : {
         "branch" : "main",
-        "revision" : "8aefc95d9e52f03b4d76a4f7e0185d35fd00f774"
+        "revision" : "9c979122963b5a6c8b1b9425151ef6c16aa1dd48"
       }
     }
   ],

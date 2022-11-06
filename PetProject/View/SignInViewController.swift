@@ -17,6 +17,7 @@ class SignInViewController: UIViewController {
     
     private var signManager: SignManagerProtocol?
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         checkLogIn()
@@ -42,6 +43,15 @@ class SignInViewController: UIViewController {
         }
     }
     
+    
+    @IBAction func signInGoogleButtonAction(_ sender: Any) {
+        GoogleSignManager.SignInWithGoogle(onViewController: self) { user in
+            self.user = user
+            self.performSegue(withIdentifier: "toMainVCfromSignInVC", sender: self)
+        }
+    }
+    
+    
     @IBAction func signUpButtonAction(_ sender: Any) {
        performSegue(withIdentifier: "toSignUpVCfromSignInVC", sender: self)
     }
@@ -57,7 +67,6 @@ class SignInViewController: UIViewController {
     
     
 }
-
 
 
 
