@@ -15,12 +15,12 @@ class SignInViewController: UIViewController {
     
     var user: User? = nil
     
+    private var signManager: SignManagerProtocol?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.navigationController?.isNavigationBarHidden = true
-//        try? User.logout()
         checkLogIn()
-        
+        signManager = SignManager()
     }
     
     private func checkLogIn() {
@@ -36,7 +36,7 @@ class SignInViewController: UIViewController {
             return AlertController.showAlertController(onViewController: self, title: "Error", message: "Данные введены неверно")
         }
         
-        SignManager.logIn(username: username, password: password, onViewController: self) { user in
+        signManager?.logIn(username: username, password: password, onViewController: self) { user in
             self.user = user
             self.performSegue(withIdentifier: "toMainVCfromSignInVC", sender: self)
         }

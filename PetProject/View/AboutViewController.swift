@@ -9,15 +9,18 @@ import UIKit
 
 class AboutViewController: UIViewController {
 
+    private var signManager: SignManagerProtocol?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        signManager = SignManager()
     }
     
    
 
     
     @IBAction func logOutButtonAction(_ sender: Any) {
-        SignManager.logOut(onViewController: self) {
+        signManager?.logOut(onViewController: self) {
             self.navigationController?.popToRootViewController(animated: true)
         }
         navigationController?.setNavigationBarHidden(false, animated: false)

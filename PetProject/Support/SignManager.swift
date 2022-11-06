@@ -9,9 +9,9 @@ import Foundation
 import ParseSwift
 import UIKit
 
-class SignManager {
+class SignManager: SignManagerProtocol {
     
-    static func signUp(username: String, email: String?, password: String, age: String, onViewController vc: UIViewController, completionToSuccessAlert: (() -> ())?) {
+    func signUp(username: String, email: String?, password: String, age: String, onViewController vc: UIViewController, completionToSuccessAlert: (() -> ())?) {
         let newUser = User(username: username, email: email, password: password, age: age)
         
         
@@ -26,7 +26,7 @@ class SignManager {
             }
         }
     }
-    static func logIn(username: String, password: String, onViewController vc: UIViewController, successCompletion: @escaping (User) -> ()) {
+    func logIn(username: String, password: String, onViewController vc: UIViewController, successCompletion: @escaping (User) -> ()) {
         // Logs in the user asynchronously
         User.login(username: username, password: password) { result in // Handle the result (of type Result<User, ParseError>)
             switch result {
@@ -37,7 +37,7 @@ class SignManager {
             }
         }
     }
-    static func logOut(onViewController vc: UIViewController, successCompletion: @escaping () -> ()) {
+    func logOut(onViewController vc: UIViewController, successCompletion: @escaping () -> ()) {
         // Logs out the user asynchronously
         User.logout { result in // Handle the result (of type Result<Void, ParseError>)
           switch result {
