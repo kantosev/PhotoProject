@@ -20,7 +20,6 @@ class AboutViewController: UIViewController {
 
     
     @IBAction func logOutButtonAction(_ sender: Any) {
-        print(User.current?.authData)
         signManager?.logOut(onViewController: self) {
             self.navigationController?.popToRootViewController(animated: true)
         }

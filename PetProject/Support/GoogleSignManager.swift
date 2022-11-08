@@ -11,7 +11,7 @@ import GoogleSignIn
 
 
 class GoogleSignManager: GoogleSignManagerProtocol {
-    static func SignInWithGoogle(onViewController vc: UIViewController, successCompletion: @escaping (User) -> ()) {
+    func SignInWithGoogle(onViewController vc: UIViewController, successCompletion: @escaping (User) -> ()) {
         let signInConfig = GIDConfiguration(clientID: "264601043832-18u1gf418cnte5r1f4vlg9vj74l3tsn0.apps.googleusercontent.com")
         GIDSignIn.sharedInstance.signIn(with: signInConfig, presenting: vc) { googleUser, error in
             if let error = error {

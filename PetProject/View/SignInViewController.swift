@@ -8,6 +8,7 @@
 import UIKit
 import ParseSwift
 
+
 class SignInViewController: UIViewController {
     
     @IBOutlet weak var userNameOrEmailTextField: UITextField!
@@ -16,12 +17,14 @@ class SignInViewController: UIViewController {
     var user: User? = nil
     
     private var signManager: SignManagerProtocol?
+    private var googleSignManager: GoogleSignManagerProtocol?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         checkLogIn()
         signManager = SignManager()
+        googleSignManager = GoogleSignManager()
     }
     
     private func checkLogIn() {
@@ -45,7 +48,7 @@ class SignInViewController: UIViewController {
     
     
     @IBAction func signInGoogleButtonAction(_ sender: Any) {
-        GoogleSignManager.SignInWithGoogle(onViewController: self) { user in
+        googleSignManager?.SignInWithGoogle(onViewController: self) { user in
             self.user = user
             self.performSegue(withIdentifier: "toMainVCfromSignInVC", sender: self)
         }
