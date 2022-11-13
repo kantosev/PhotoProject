@@ -14,8 +14,6 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var userNameOrEmailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
-    var user: User? = nil
-    
     private var signManager: SignManagerProtocol?
     private var googleSignManager: GoogleSignManagerProtocol?
     
@@ -26,10 +24,9 @@ class SignInViewController: UIViewController {
         signManager = SignManager()
         googleSignManager = GoogleSignManager()
     }
-    
+    // Проверка вошел ли уже пользователь до этого
     private func checkLogIn() {
-        if let user = User.current {
-            self.user = user
+        if (User.current != nil) {
             performSegue(withIdentifier: "toMainVCfromSignInVC", sender: self)
         }
     }
@@ -40,8 +37,7 @@ class SignInViewController: UIViewController {
             return AlertController.showAlertController(onViewController: self, title: "Error", message: "Данные введены неверно")
         }
         
-        signManager?.logIn(username: username, password: password, onViewController: self) { user in
-            self.user = user
+        signManager?.logIn(username: username, password: password, onViewController: self) { _ in
             self.performSegue(withIdentifier: "toMainVCfromSignInVC", sender: self)
         }
     }
@@ -49,23 +45,24 @@ class SignInViewController: UIViewController {
     
     @IBAction func signInGoogleButtonAction(_ sender: Any) {
         googleSignManager?.SignInWithGoogle(onViewController: self) { user in
-            self.user = user
             self.performSegue(withIdentifier: "toMainVCfromSignInVC", sender: self)
         }
     }
     
-    
     @IBAction func signUpButtonAction(_ sender: Any) {
-       performSegue(withIdentifier: "toSignUpVCfromSignInVC", sender: self)
+        performSegue(withIdentifier: "toSignUpVCfromSignInVC", sender: self)
     }
-    
-    
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toMainVCfromSignInVC" {
-            let vc = segue.destination as? MainViewController
-            vc?.user = user
+        switch segue.identifier {
+        case "toMainVCfromSignInVC":
+            navigationController?.setNavigationBarHidden(true, animated: false)
+        case "toSignUpVCfromSignInVC":
+            navigationController?.setNavigationBarHidden(false, animated: true)
+        default:
+            break
         }
+        
     }
     
     

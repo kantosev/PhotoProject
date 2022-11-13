@@ -31,4 +31,9 @@ class SignUpViewController: UIViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toMainVCfromSignUpVC" {
+            navigationController?.setNavigationBarHidden(true, animated: false)
+        }
+    }
 }

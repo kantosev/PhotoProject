@@ -28,6 +28,7 @@ class SignManager: SignManagerProtocol {
     }
     func logIn(username: String, password: String, onViewController vc: UIViewController, successCompletion: @escaping (User) -> ()) {
         // Logs in the user asynchronously
+        
         User.login(username: username, password: password) { result in // Handle the result (of type Result<User, ParseError>)
             switch result {
             case .success(let loggedInUser):

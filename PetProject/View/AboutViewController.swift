@@ -11,9 +11,12 @@ class AboutViewController: UIViewController {
 
     private var signManager: SignManagerProtocol?
     
+    @IBOutlet weak var userNameLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         signManager = SignManager()
+        userNameLabel.text = User.current?.username
     }
     
    
@@ -23,7 +26,6 @@ class AboutViewController: UIViewController {
         signManager?.logOut(onViewController: self) {
             self.navigationController?.popToRootViewController(animated: true)
         }
-        navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
 

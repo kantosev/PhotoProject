@@ -10,6 +10,7 @@
 		3A4FDF2F291835A200D4B066 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 3A4FDF2E291835A200D4B066 /* GoogleSignIn */; };
 		3A4FDF31291835A200D4B066 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3A4FDF30291835A200D4B066 /* GoogleSignInSwift */; };
 		3A4FDF3429183EAB00D4B066 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A4FDF3329183EAA00D4B066 /* AuthenticationServices.framework */; };
+		3A8B53252921122700FDDA1C /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8B53242921122700FDDA1C /* CollectionViewController.swift */; };
 		3A8F5CD42916FE3D002406FC /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F5CD32916FE3D002406FC /* AboutViewController.swift */; };
 		3A902A3E29153E96007C3FDC /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A902A3D29153E96007C3FDC /* SignUpViewController.swift */; };
 		3A902A4029153F79007C3FDC /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A902A3F29153F79007C3FDC /* AlertController.swift */; };
@@ -21,7 +22,6 @@
 		3A906C4B29144A890070996F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A906C4A29144A890070996F /* Assets.xcassets */; };
 		3A906C4E29144A890070996F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A906C4C29144A890070996F /* LaunchScreen.storyboard */; };
 		3A906C5729144A9C0070996F /* ParseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3A906C5629144A9C0070996F /* ParseSwift */; };
-		3A906C60291452020070996F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A906C5F291452020070996F /* MainViewController.swift */; };
 		3A906C622914656D0070996F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A906C612914656D0070996F /* User.swift */; };
 		3A907CD0291821EA0004FC00 /* SignManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A907CCF291821EA0004FC00 /* SignManagerProtocol.swift */; };
 		3A907CD229182DCC0004FC00 /* GoogleSignManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A907CD129182DCC0004FC00 /* GoogleSignManager.swift */; };
@@ -30,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		3A4FDF3329183EAA00D4B066 /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
+		3A8B53242921122700FDDA1C /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		3A8F5CD32916FE3D002406FC /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		3A902A3D29153E96007C3FDC /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		3A902A3F29153F79007C3FDC /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
@@ -42,7 +43,6 @@
 		3A906C4A29144A890070996F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A906C4D29144A890070996F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A906C4F29144A890070996F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3A906C5F291452020070996F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		3A906C612914656D0070996F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3A907CCF291821EA0004FC00 /* SignManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignManagerProtocol.swift; sourceTree = "<group>"; };
 		3A907CD129182DCC0004FC00 /* GoogleSignManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignManager.swift; sourceTree = "<group>"; };
@@ -119,7 +119,7 @@
 			children = (
 				3A906C4529144A860070996F /* SignInViewController.swift */,
 				3A902A3D29153E96007C3FDC /* SignUpViewController.swift */,
-				3A906C5F291452020070996F /* MainViewController.swift */,
+				3A8B53242921122700FDDA1C /* CollectionViewController.swift */,
 				3A8F5CD32916FE3D002406FC /* AboutViewController.swift */,
 				3A906C4729144A860070996F /* Main.storyboard */,
 				3A906C4C29144A890070996F /* LaunchScreen.storyboard */,
@@ -241,6 +241,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A8B53252921122700FDDA1C /* CollectionViewController.swift in Sources */,
 				3A902A3E29153E96007C3FDC /* SignUpViewController.swift in Sources */,
 				3A906C4629144A860070996F /* SignInViewController.swift in Sources */,
 				3A906C4229144A860070996F /* AppDelegate.swift in Sources */,
@@ -252,7 +253,6 @@
 				3A907CD0291821EA0004FC00 /* SignManagerProtocol.swift in Sources */,
 				3A902A4229154042007C3FDC /* SignManager.swift in Sources */,
 				3A906C622914656D0070996F /* User.swift in Sources */,
-				3A906C60291452020070996F /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
