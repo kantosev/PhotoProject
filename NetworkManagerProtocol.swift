@@ -8,5 +8,5 @@
 import Foundation
 
 protocol NetworkManagerProtocol {
-    func getArrayOfImages(url: String, completion: @escaping ([String]) -> ())
+    func getArrayOfImages(url: String,searchText: String, completion: @escaping ([String]) -> ())
 }

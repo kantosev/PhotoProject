@@ -10,15 +10,20 @@ import UIKit
 class CollectionViewHeader: UICollectionReusableView {
 
     @IBOutlet weak var searchTextField: UITextField!
+    private var viewModel: CollectionViewModelProtocol?
+    
     
     var searchText: String!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        viewModel = CollectionViewModel()
     }
     
     @IBAction func searchButtonPressed(_ sender: Any) {
         searchText = searchTextField.text ?? ""
+        viewModel?.fetchOfData(with: searchText, completion: { 
+
+        })
     }
 }

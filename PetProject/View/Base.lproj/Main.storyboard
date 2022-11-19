@@ -267,7 +267,7 @@
                             <outlet property="delegate" destination="2Qm-M0-m52" id="sLm-qd-yo1"/>
                         </connections>
                     </collectionView>
-                    <tabBarItem key="tabBarItem" title="Item" image="photo.fill" catalog="system" id="2Aa-fu-xdV"/>
+                    <tabBarItem key="tabBarItem" title="Photo" image="photo.fill" catalog="system" id="2Aa-fu-xdV"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Ke-UQ-bzb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

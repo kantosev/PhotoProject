@@ -13,13 +13,13 @@ private let cellID = "PhotoCell"
 class CollectionViewController: UICollectionViewController {
     
     private var viewModel: CollectionViewModelProtocol?
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         viewModel = CollectionViewModel()
-        viewModel?.fetchOfData { [weak self] in
+        viewModel?.fetchOfData(with: "собака") { [weak self] in
             DispatchQueue.main.async {
                 self?.collectionView.reloadData()
             }
@@ -95,6 +95,7 @@ class CollectionViewController: UICollectionViewController {
      
      }
      */
+    
     
 }
 

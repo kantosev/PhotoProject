@@ -8,7 +8,7 @@
 import Foundation
 
 protocol CollectionViewModelProtocol {
-    func fetchOfData(completion: @escaping () -> ())
+    func fetchOfData(with text: String, completion: @escaping () -> ())
     func numberOfItemsInSection() -> Int
     func setOfCell(cell: PhotoCell, with indexPath: IndexPath)
 }

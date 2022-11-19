@@ -13,10 +13,10 @@ class CollectionViewModel: CollectionViewModelProtocol {
     
     private let networkManager: NetworkManagerProtocol = NetworkManager()
     private var arrayOfImages: [String]?
-    private let url = "https://imsea.herokuapp.com/api/1?q=dinosaur"
+    private let url = "https://imsea.herokuapp.com/api/1?"
     
-    func fetchOfData(completion: @escaping () -> ()) {
-        networkManager.getArrayOfImages(url: url) { [weak self] arrayString in
+    func fetchOfData(with text: String, completion: @escaping () -> ()) {
+        networkManager.getArrayOfImages(url: url, searchText: text) { [weak self] arrayString in
             self?.arrayOfImages = arrayString
             completion()
         }
