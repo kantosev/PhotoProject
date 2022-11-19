@@ -18,7 +18,7 @@ class NetworkManager: NetworkManagerProtocol {
         AF.request(url).validate().responseDecodable(of: ImageModel.self) { response in
             switch response.result {
             case .success(let answer):
-                print(answer)
+                
                 completion(answer.results)
             case.failure(let error):
                 print(error)

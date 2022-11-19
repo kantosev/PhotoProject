@@ -17,6 +17,7 @@ class CollectionViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         viewModel = CollectionViewModel()
         viewModel?.fetchOfData { [weak self] in
             DispatchQueue.main.async {
@@ -24,6 +25,7 @@ class CollectionViewController: UICollectionViewController {
             }
         }
         collectionView.register(UINib(nibName: cellID, bundle: nil), forCellWithReuseIdentifier: cellID)
+        collectionView.register(UINib(nibName: "CollectionViewHeader", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "Header")
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -33,11 +35,12 @@ class CollectionViewController: UICollectionViewController {
         let layout = self.collectionView.collectionViewLayout as? UICollectionViewFlowLayout
         layout?.sectionInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
         layout?.minimumLineSpacing = 10
-        
+        // header виден даже при прокрутке
+        layout?.sectionHeadersPinToVisibleBounds = true
     }
     
     
-    // MARK: UICollectionViewDataSource
+    // MARK: - UICollectionViewDataSource
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
@@ -45,13 +48,22 @@ class CollectionViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as? PhotoCell else { return UICollectionViewCell() }
         viewModel?.setOfCell(cell: cell, with: indexPath)
         return cell
     }
     
+    // MARK: - UICollectionViewDataSource Header
     
-    // MARK: UICollectionViewDelegate
+    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        guard kind == UICollectionView.elementKindSectionHeader else { return UICollectionReusableView() }
+        let view = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "Header", for: indexPath) as! CollectionViewHeader
+        return view
+    }
+    
+    
+    // MARK: - UICollectionViewDelegate
     
     
     
@@ -86,6 +98,7 @@ class CollectionViewController: UICollectionViewController {
     
 }
 
+// MARK: - UICollectionViewDelegateFlowLayout
 
 extension CollectionViewController: UICollectionViewDelegateFlowLayout {
     // layout.itemSize почему то не работает, поэтому использую метод делегата
@@ -93,4 +106,10 @@ extension CollectionViewController: UICollectionViewDelegateFlowLayout {
         let width: CGFloat = collectionView.frame.width / 2 - 10 - 5
         return CGSize(width: width, height: width)
     }
+    // размеры header'a
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: collectionView.frame.width, height: 45)
+    }
 }
+
+

@@ -157,12 +157,12 @@
 				3A906C4529144A860070996F /* SignInViewController.swift */,
 				3A902A3D29153E96007C3FDC /* SignUpViewController.swift */,
 				3A8B53242921122700FDDA1C /* CollectionViewController.swift */,
+				3A5D84DC292968EA00E41245 /* CollectionViewHeader.swift */,
+				3A5D84DD292968EA00E41245 /* CollectionViewHeader.xib */,
 				3A8B53262921232400FDDA1C /* Cell */,
 				3A8F5CD32916FE3D002406FC /* AboutViewController.swift */,
 				3A906C4729144A860070996F /* Main.storyboard */,
 				3A906C4C29144A890070996F /* LaunchScreen.storyboard */,
-				3A5D84DC292968EA00E41245 /* CollectionViewHeader.swift */,
-				3A5D84DD292968EA00E41245 /* CollectionViewHeader.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
