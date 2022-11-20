@@ -24,7 +24,7 @@
                         <constraint firstAttribute="width" constant="49.670000000000002" id="H2x-dl-FXl"/>
                     </constraints>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                    <buttonConfiguration key="configuration" style="tinted" image="magnifyingglass" catalog="system"/>
+                    <buttonConfiguration key="configuration" style="filled" image="magnifyingglass" catalog="system"/>
                     <connections>
                         <action selector="searchButtonPressed:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="Nng-oP-fCO"/>
                     </connections>

@@ -18,7 +18,9 @@ class CollectionViewModel: CollectionViewModelProtocol {
     func fetchOfData(with text: String, completion: @escaping () -> ()) {
         networkManager.getArrayOfImages(url: url, searchText: text) { [weak self] arrayString in
             self?.arrayOfImages = arrayString
-            completion()
+            if self?.arrayOfImages != nil {
+                completion()
+            }
         }
     }
     func numberOfItemsInSection() -> Int {

@@ -14,16 +14,10 @@ class CollectionViewController: UICollectionViewController {
     
     private var viewModel: CollectionViewModelProtocol?
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        NotificationCenter.default.addObserver(self, selector: #selector(dataUpdate), name: .init("searchButtonPressed"), object: nil)
         viewModel = CollectionViewModel()
-        viewModel?.fetchOfData(with: "собака") { [weak self] in
-            DispatchQueue.main.async {
-                self?.collectionView.reloadData()
-            }
-        }
         collectionView.register(UINib(nibName: cellID, bundle: nil), forCellWithReuseIdentifier: cellID)
         collectionView.register(UINib(nibName: "CollectionViewHeader", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "Header")
         
@@ -112,5 +106,13 @@ extension CollectionViewController: UICollectionViewDelegateFlowLayout {
         return CGSize(width: collectionView.frame.width, height: 45)
     }
 }
-
-
+// MARK: - Observer
+extension CollectionViewController {
+    @objc func dataUpdate(notification: Notification) {
+        guard let userInfo = notification.userInfo else { return }
+        guard let text = userInfo["text"] as? String else { return }
+        viewModel?.fetchOfData(with: text, completion: {
+            self.collectionView.reloadData()
+        })
+    }
+}
