@@ -254,7 +254,7 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="oue-il-uug">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="BdD-gj-c9b">
                             <size key="itemSize" width="128" height="128"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -268,14 +268,33 @@
                         </connections>
                     </collectionView>
                     <tabBarItem key="tabBarItem" title="Photo" image="photo.fill" catalog="system" id="2Aa-fu-xdV"/>
+                    <connections>
+                        <segue destination="MnF-6T-0Re" kind="show" identifier="toImageVC" id="uDb-LC-Xy6"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Ke-UQ-bzb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1537" y="707"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="yyv-uy-fc2">
+            <objects>
+                <viewController id="MnF-6T-0Re" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="su3-Yt-4Sv">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="bNX-jC-Dda"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Dz5-Vy-XbO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kpg-Ig-d0I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2411" y="707"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="J6f-ML-QEY"/>
+        <segue reference="cKf-t6-rNO"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="google" width="18" height="18"/>
@@ -283,6 +302,9 @@
         <image name="photo.fill" catalog="system" width="128" height="93"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

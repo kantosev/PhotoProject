@@ -8,31 +8,22 @@
 import UIKit
 import Alamofire
 
-private let cellID = "PhotoCell"
-
 class CollectionViewController: UICollectionViewController {
     
     private var viewModel: CollectionViewModelProtocol?
 
+    var activityIndicator: UIActivityIndicatorView!
+       
     override func viewDidLoad() {
         super.viewDidLoad()
-        NotificationCenter.default.addObserver(self, selector: #selector(dataUpdate), name: .init("searchButtonPressed"), object: nil)
+        addObserverForTouchSearchButton()
+        addObserverForErrorSearch()
         viewModel = CollectionViewModel()
-        collectionView.register(UINib(nibName: cellID, bundle: nil), forCellWithReuseIdentifier: cellID)
-        collectionView.register(UINib(nibName: "CollectionViewHeader", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "Header")
-        
+        registerView()
+        setActivityIndicator()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
     }
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        let layout = self.collectionView.collectionViewLayout as? UICollectionViewFlowLayout
-        layout?.sectionInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
-        layout?.minimumLineSpacing = 10
-        // header виден даже при прокрутке
-        layout?.sectionHeadersPinToVisibleBounds = true
-    }
-    
     
     // MARK: - UICollectionViewDataSource
     
@@ -43,7 +34,7 @@ class CollectionViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as? PhotoCell else { return UICollectionViewCell() }
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath) as? PhotoCell else { return UICollectionViewCell() }
         viewModel?.setOfCell(cell: cell, with: indexPath)
         return cell
     }
@@ -91,28 +82,27 @@ class CollectionViewController: UICollectionViewController {
      */
     
     
+   
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout
 
-extension CollectionViewController: UICollectionViewDelegateFlowLayout {
-    // layout.itemSize почему то не работает, поэтому использую метод делегата
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width: CGFloat = collectionView.frame.width / 2 - 10 - 5
-        return CGSize(width: width, height: width)
-    }
-    // размеры header'a
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: 45)
-    }
-}
+
 // MARK: - Observer
 extension CollectionViewController {
-    @objc func dataUpdate(notification: Notification) {
+    @objc func searchButtonPressed(notification: Notification) {
+        activityIndicator.isHidden = false
+        activityIndicator.startAnimating()
+        activityIndicator.hidesWhenStopped = true
         guard let userInfo = notification.userInfo else { return }
         guard let text = userInfo["text"] as? String else { return }
-        viewModel?.fetchOfData(with: text, completion: {
+        viewModel?.fetchOfData(with: text) {
+            self.activityIndicator.stopAnimating()
             self.collectionView.reloadData()
-        })
+        }
     }
+    @objc func errorSearch() {
+        AlertController.showAlertController(onViewController: self, title: "Error", message: "Вы ничего не ввели")
+    }
+    
 }
