@@ -55,19 +55,16 @@ class CollectionViewController: UICollectionViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let r = sender as? IndexPath
+        guard let indexPath = sender as? IndexPath else { return }
         if segue.identifier == "toDetailPhotoVC" {
             let vc = segue.destination as? DetailPhotoViewController
-            let cell = collectionView.cellForItem(at: r!) as? PhotoCell
+            let cell = collectionView.cellForItem(at: indexPath) as? PhotoCell
             vc?.image = cell?.imageView.image
         }
     }
     
    
 }
-
-// MARK: - UICollectionViewDelegateFlowLayout
-
 
 // MARK: - Observer
 extension CollectionViewController {

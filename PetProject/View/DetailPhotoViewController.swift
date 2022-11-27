@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class DetailPhotoViewController: UIViewController {
 
     var image: UIImage?
@@ -20,6 +21,9 @@ class DetailPhotoViewController: UIViewController {
     }
     
 
+    @IBAction func saveButtonPressed(_ sender: Any) {
+        print(34)
+    }
     /*
     // MARK: - Navigation
 
