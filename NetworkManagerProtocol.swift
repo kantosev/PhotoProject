@@ -6,7 +6,8 @@
 //
 
 import Foundation
+import Alamofire
 
 protocol NetworkManagerProtocol {
-    func getArrayOfImages(url: String,searchText: String, completion: @escaping ([String]) -> ())
+    func getArrayOfImages(url: String,searchText: String, completion: @escaping (([String]) -> ()), errorCompletion: @escaping (AFError) -> ())
 }

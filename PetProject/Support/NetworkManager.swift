@@ -9,18 +9,26 @@ import Foundation
 import Alamofire
 
 class NetworkManager: NetworkManagerProtocol {
-    func getArrayOfImages(url: String, searchText: String, completion: @escaping ([String]) -> ()) {
+    func getArrayOfImages(url: String, searchText: String, completion: @escaping (([String]) -> ()), errorCompletion: @escaping ((AFError) -> ())) {
         guard let url = URL(string: url) else { return }
         let urlParams = [
-                "q": searchText,
+                "query": searchText,
+                "per_page": "10"
             ]
-    
-        AF.request(url, parameters: urlParams).validate().responseDecodable(of: ImageModel.self) { response in
+        let headers = [
+            "Authorization": "Client-ID 4Uitm6ZbRdgeZKMPHKFW11JI9Q00TFRFN3ajlRuzUTs"
+        ]
+        AF.request(url, parameters: urlParams, headers: HTTPHeaders(headers)).validate().responseDecodable(of: UnsplashImageModel.self) { response in
             switch response.result {
             case .success(let answer):
-                completion(answer.results)
+                var array: [String] = []
+                for image in 0...9 {
+                    array.append(answer.results[image].urls.small)
+                }
+                completion(array)
             case.failure(let error):
                 print(error)
+                errorCompletion(error)
             }
         }
     }

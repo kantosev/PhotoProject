@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ImageModel: Codable {
+struct ImseaImageModel: Codable {
     
     let image_name: String
     let results: [String]

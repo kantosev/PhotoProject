@@ -28,7 +28,6 @@ class CollectionViewController: UICollectionViewController {
     // MARK: - UICollectionViewDataSource
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
         return viewModel?.numberOfItemsInSection() ?? 0
     }
     
@@ -51,36 +50,15 @@ class CollectionViewController: UICollectionViewController {
     // MARK: - UICollectionViewDelegate
     
     
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "toDetailPhotoVC", sender: nil)
+    }
     
-    /*
-     // Uncomment this method to specify if the specified item should be highlighted during tracking
-     override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-     return true
-     }
-     */
-    
-    /*
-     // Uncomment this method to specify if the specified item should be selected
-     override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-     return true
-     }
-     */
-    
-    /*
-     // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-     override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-     return false
-     }
-     
-     override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-     return false
-     }
-     
-     override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-     
-     }
-     */
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetailPhotoVC" {
+            
+        }
+    }
     
    
 }
@@ -96,10 +74,13 @@ extension CollectionViewController {
         activityIndicator.hidesWhenStopped = true
         guard let userInfo = notification.userInfo else { return }
         guard let text = userInfo["text"] as? String else { return }
-        viewModel?.fetchOfData(with: text) {
-            self.activityIndicator.stopAnimating()
-            self.collectionView.reloadData()
-        }
+        viewModel?.fetchOfData(with: text, completion: { [activityIndicator, collectionView] in
+            activityIndicator?.stopAnimating()
+            collectionView?.reloadData()
+        }, errorCompletion: { [activityIndicator] error in
+            AlertController.showAlertController(onViewController: self, title: "Ошибка загрузки данных", message: "Данные не были загружены, попробуйте позже")
+            activityIndicator?.stopAnimating()
+        })
     }
     @objc func errorSearch() {
         AlertController.showAlertController(onViewController: self, title: "Error", message: "Вы ничего не ввели")

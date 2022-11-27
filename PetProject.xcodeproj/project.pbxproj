@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A0D6E5C2933A1DF00D468F8 /* UnsplashPhotoPicker in Frameworks */ = {isa = PBXBuildFile; productRef = 3A0D6E5B2933A1DF00D468F8 /* UnsplashPhotoPicker */; };
+		3A0D6E5E2933A3C200D468F8 /* UnsplashImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0D6E5D2933A3C200D468F8 /* UnsplashImageModel.swift */; };
+		3A17777829325B6700703F92 /* DetailPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A17777729325B6700703F92 /* DetailPhotoViewController.swift */; };
 		3A4FDF2F291835A200D4B066 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 3A4FDF2E291835A200D4B066 /* GoogleSignIn */; };
 		3A4FDF31291835A200D4B066 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3A4FDF30291835A200D4B066 /* GoogleSignInSwift */; };
 		3A4FDF3429183EAB00D4B066 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A4FDF3329183EAA00D4B066 /* AuthenticationServices.framework */; };
@@ -18,7 +21,7 @@
 		3A8B53252921122700FDDA1C /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8B53242921122700FDDA1C /* CollectionViewController.swift */; };
 		3A8B532B292124FB00FDDA1C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3A8B532A292124FB00FDDA1C /* Alamofire */; };
 		3A8B532D2921253100FDDA1C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8B532C2921253100FDDA1C /* NetworkManager.swift */; };
-		3A8B532F292128CE00FDDA1C /* imageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8B532E292128CE00FDDA1C /* imageModel.swift */; };
+		3A8B532F292128CE00FDDA1C /* ImseaImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8B532E292128CE00FDDA1C /* ImseaImageModel.swift */; };
 		3A8B53342921658B00FDDA1C /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8B53322921658B00FDDA1C /* PhotoCell.swift */; };
 		3A8B53352921658B00FDDA1C /* PhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A8B53332921658B00FDDA1C /* PhotoCell.xib */; };
 		3A8F5CD42916FE3D002406FC /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F5CD32916FE3D002406FC /* AboutViewController.swift */; };
@@ -42,6 +45,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A0D6E5D2933A3C200D468F8 /* UnsplashImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashImageModel.swift; sourceTree = "<group>"; };
+		3A17777729325B6700703F92 /* DetailPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPhotoViewController.swift; sourceTree = "<group>"; };
 		3A4FDF3329183EAA00D4B066 /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
 		3A5D84DC292968EA00E41245 /* CollectionViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewHeader.swift; sourceTree = "<group>"; };
 		3A5D84DD292968EA00E41245 /* CollectionViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewHeader.xib; sourceTree = "<group>"; };
@@ -50,7 +55,7 @@
 		3A6EB260292AA7D1000688FE /* CollectionViewController + DelegateFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectionViewController + DelegateFlowLayout.swift"; sourceTree = "<group>"; };
 		3A8B53242921122700FDDA1C /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		3A8B532C2921253100FDDA1C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		3A8B532E292128CE00FDDA1C /* imageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageModel.swift; sourceTree = "<group>"; };
+		3A8B532E292128CE00FDDA1C /* ImseaImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImseaImageModel.swift; sourceTree = "<group>"; };
 		3A8B53322921658B00FDDA1C /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		3A8B53332921658B00FDDA1C /* PhotoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCell.xib; sourceTree = "<group>"; };
 		3A8F5CD32916FE3D002406FC /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +87,7 @@
 				3A8B532B292124FB00FDDA1C /* Alamofire in Frameworks */,
 				3A4FDF3429183EAB00D4B066 /* AuthenticationServices.framework in Frameworks */,
 				3A4FDF31291835A200D4B066 /* GoogleSignInSwift in Frameworks */,
+				3A0D6E5C2933A1DF00D468F8 /* UnsplashPhotoPicker in Frameworks */,
 				3A906C5729144A9C0070996F /* ParseSwift in Frameworks */,
 				3A4FDF2F291835A200D4B066 /* GoogleSignIn in Frameworks */,
 			);
@@ -116,13 +122,6 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		3A8B53362921677F00FDDA1C /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extension;
-			sourceTree = "<group>";
-		};
 		3A906C3529144A860070996F = {
 			isa = PBXGroup;
 			children = (
@@ -147,7 +146,6 @@
 				3A906C4129144A860070996F /* AppDelegate.swift */,
 				3A906C5C2914508C0070996F /* ViewModel */,
 				3A906C5B291450800070996F /* View */,
-				3A8B53362921677F00FDDA1C /* Extension */,
 				3A906C5D2914509D0070996F /* Support */,
 				3A907CCE291821C70004FC00 /* Protocols */,
 				3A906C5A291450790070996F /* Model */,
@@ -162,7 +160,8 @@
 			isa = PBXGroup;
 			children = (
 				3A906C612914656D0070996F /* User.swift */,
-				3A8B532E292128CE00FDDA1C /* imageModel.swift */,
+				3A8B532E292128CE00FDDA1C /* ImseaImageModel.swift */,
+				3A0D6E5D2933A3C200D468F8 /* UnsplashImageModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -173,6 +172,7 @@
 				3A906C4529144A860070996F /* SignInViewController.swift */,
 				3A902A3D29153E96007C3FDC /* SignUpViewController.swift */,
 				3A8B53242921122700FDDA1C /* CollectionViewController.swift */,
+				3A17777729325B6700703F92 /* DetailPhotoViewController.swift */,
 				3A5D84DC292968EA00E41245 /* CollectionViewHeader.swift */,
 				3A5D84DD292968EA00E41245 /* CollectionViewHeader.xib */,
 				3A5F951F292AAA4B00C8C869 /* Extension */,
@@ -236,6 +236,7 @@
 				3A4FDF2E291835A200D4B066 /* GoogleSignIn */,
 				3A4FDF30291835A200D4B066 /* GoogleSignInSwift */,
 				3A8B532A292124FB00FDDA1C /* Alamofire */,
+				3A0D6E5B2933A1DF00D468F8 /* UnsplashPhotoPicker */,
 			);
 			productName = PetProject;
 			productReference = 3A906C3E29144A860070996F /* PetProject.app */;
@@ -269,6 +270,7 @@
 				3A906C5529144A9C0070996F /* XCRemoteSwiftPackageReference "Parse-Swift" */,
 				3A4FDF2D291835A200D4B066 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 				3A8B5329292124FB00FDDA1C /* XCRemoteSwiftPackageReference "Alamofire" */,
+				3A0D6E5A2933A1DF00D468F8 /* XCRemoteSwiftPackageReference "unsplash-photopicker-ios" */,
 			);
 			productRefGroup = 3A906C3F29144A860070996F /* Products */;
 			projectDirPath = "";
@@ -310,11 +312,13 @@
 				3A907CD429182DDB0004FC00 /* GoogleSignManagerProtocol.swift in Sources */,
 				3A902A4029153F79007C3FDC /* AlertController.swift in Sources */,
 				3A5F9521292AAA7100C8C869 /* CollectionView + Support.swift in Sources */,
+				3A17777829325B6700703F92 /* DetailPhotoViewController.swift in Sources */,
 				3A907CD229182DCC0004FC00 /* GoogleSignManager.swift in Sources */,
+				3A0D6E5E2933A3C200D468F8 /* UnsplashImageModel.swift in Sources */,
 				3A6EB25F292A73EA000688FE /* ToDo.swift in Sources */,
 				3A8B532D2921253100FDDA1C /* NetworkManager.swift in Sources */,
 				3A6EB261292AA7D1000688FE /* CollectionViewController + DelegateFlowLayout.swift in Sources */,
-				3A8B532F292128CE00FDDA1C /* imageModel.swift in Sources */,
+				3A8B532F292128CE00FDDA1C /* ImseaImageModel.swift in Sources */,
 				3AC1DC442929415B004D10EE /* CollectionViewModelProtocol.swift in Sources */,
 				3AC1DC4229293ECA004D10EE /* NetworkManagerProtocol.swift in Sources */,
 				3AC1DC4029293E2F004D10EE /* CollectionViewModel.swift in Sources */,
@@ -546,6 +550,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		3A0D6E5A2933A1DF00D468F8 /* XCRemoteSwiftPackageReference "unsplash-photopicker-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/unsplash/unsplash-photopicker-ios.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		3A4FDF2D291835A200D4B066 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
@@ -573,6 +585,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		3A0D6E5B2933A1DF00D468F8 /* UnsplashPhotoPicker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3A0D6E5A2933A1DF00D468F8 /* XCRemoteSwiftPackageReference "unsplash-photopicker-ios" */;
+			productName = UnsplashPhotoPicker;
+		};
 		3A4FDF2E291835A200D4B066 /* GoogleSignIn */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 3A4FDF2D291835A200D4B066 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;

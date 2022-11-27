@@ -269,19 +269,19 @@
                     </collectionView>
                     <tabBarItem key="tabBarItem" title="Photo" image="photo.fill" catalog="system" id="2Aa-fu-xdV"/>
                     <connections>
-                        <segue destination="MnF-6T-0Re" kind="show" identifier="toImageVC" id="uDb-LC-Xy6"/>
+                        <segue destination="MnF-6T-0Re" kind="presentation" identifier="toDetailPhotoVC" id="uDb-LC-Xy6"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Ke-UQ-bzb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1537" y="707"/>
         </scene>
-        <!--View Controller-->
+        <!--DetailPhotoViewController-->
         <scene sceneID="yyv-uy-fc2">
             <objects>
-                <viewController id="MnF-6T-0Re" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailPhotoViewController" title="DetailPhotoViewController" id="MnF-6T-0Re" customClass="DetailPhotoViewController" customModule="PetProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="su3-Yt-4Sv">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="bNX-jC-Dda"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -294,7 +294,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="cKf-t6-rNO"/>
+        <segue reference="J6f-ML-QEY"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="google" width="18" height="18"/>

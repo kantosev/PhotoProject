@@ -53,6 +53,15 @@
         "branch" : "main",
         "revision" : "9c979122963b5a6c8b1b9425151ef6c16aa1dd48"
       }
+    },
+    {
+      "identity" : "unsplash-photopicker-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/unsplash/unsplash-photopicker-ios.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "7306a92362855ec41149e5e214c63089586653f4"
+      }
     }
   ],
   "version" : 2
