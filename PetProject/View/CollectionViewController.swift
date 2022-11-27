@@ -51,12 +51,15 @@ class CollectionViewController: UICollectionViewController {
     
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "toDetailPhotoVC", sender: nil)
+        performSegue(withIdentifier: "toDetailPhotoVC", sender: indexPath)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let r = sender as? IndexPath
         if segue.identifier == "toDetailPhotoVC" {
-            
+            let vc = segue.destination as? DetailPhotoViewController
+            let cell = collectionView.cellForItem(at: r!) as? PhotoCell
+            vc?.image = cell?.imageView.image
         }
     }
     

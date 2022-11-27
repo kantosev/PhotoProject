@@ -10,7 +10,6 @@ import Foundation
 struct UnsplashImageModel: Codable {
     let results: [Result]
 }
-
 struct Result: Codable {
     let urls: Urls
 }
