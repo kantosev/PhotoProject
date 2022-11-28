@@ -22,8 +22,9 @@ class NetworkManager: NetworkManagerProtocol {
             switch response.result {
             case .success(let answer):
                 var array: [String] = []
+                #warning("Если всего есть меньше 10 фото, то краш")
                 for image in 0...9 {
-                    array.append(answer.results[image].urls.small)
+                    array.append(answer.results[image].urls.regular)
                 }
                 completion(array)
             case.failure(let error):

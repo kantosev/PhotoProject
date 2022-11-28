@@ -10,7 +10,7 @@ import UIKit
 
 class AlertController {
     
-    static func showAlertController(onViewController vc: UIViewController, title: String, message: String, buttonTitle: String = "Back", buttonStyle: UIAlertAction.Style = .cancel, completion: (() -> ())? = nil) {
+    static func showAlertController(onViewController vc: UIViewController, title: String, message: String, buttonTitle: String = "Ok", buttonStyle: UIAlertAction.Style = .cancel, completion: (() -> ())? = nil) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let alertAction = UIAlertAction(title: buttonTitle, style: buttonStyle) { _ in 
             alertController.dismiss(animated: true)

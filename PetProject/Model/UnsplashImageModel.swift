@@ -14,5 +14,5 @@ struct Result: Codable {
     let urls: Urls
 }
 struct Urls: Codable {
-    let small: String
+    let regular: String
 }

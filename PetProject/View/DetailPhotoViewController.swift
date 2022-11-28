@@ -11,27 +11,30 @@ import UIKit
 class DetailPhotoViewController: UIViewController {
 
     var image: UIImage?
+    let fileManager = FileManager.default
     
     @IBOutlet weak var imageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         imageView.image = image
-        // Do any additional setup after loading the view.
     }
     
 
     @IBAction func saveButtonPressed(_ sender: Any) {
-        print(34)
+        guard let image = image else { return }
+        saveImage(image: image)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    private func saveImage(image: UIImage) {
+        UIImageWriteToSavedPhotosAlbum(image, self, #selector(imageDidSaved), nil)
     }
-    */
-
+    @objc func imageDidSaved(_ image: UIImage, error: Error?, context: UnsafeMutableRawPointer?) {
+        if let error {
+            print(error)
+            AlertController.showAlertController(onViewController: self, title: "Ошибка", message: "Ошибка загрузки")
+            return
+        }
+        AlertController.showAlertController(onViewController: self, title: "Успешно", message: "Фото загружено в галерею")
+    }
 }

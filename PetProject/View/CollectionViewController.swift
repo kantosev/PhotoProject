@@ -48,7 +48,10 @@ class CollectionViewController: UICollectionViewController {
     
     
     // MARK: - UICollectionViewDelegate
-    
+    // Отслеживание поворота экрана
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        collectionView.reloadData()
+    }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         performSegue(withIdentifier: "toDetailPhotoVC", sender: indexPath)
