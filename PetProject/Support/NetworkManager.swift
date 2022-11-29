@@ -13,7 +13,7 @@ class NetworkManager: NetworkManagerProtocol {
         guard let url = URL(string: url) else { return }
         let urlParams = [
                 "query": searchText,
-                "per_page": "10"
+                "per_page": "100"
             ]
         let headers = [
             "Authorization": "Client-ID 4Uitm6ZbRdgeZKMPHKFW11JI9Q00TFRFN3ajlRuzUTs"
@@ -22,8 +22,9 @@ class NetworkManager: NetworkManagerProtocol {
             switch response.result {
             case .success(let answer):
                 var array: [String] = []
-                #warning("Если всего есть меньше 10 фото, то краш")
-                for image in 0...9 {
+                
+                let imagesCount = answer.results.count
+                for image in 0...(imagesCount - 1) {
                     array.append(answer.results[image].urls.regular)
                 }
                 completion(array)

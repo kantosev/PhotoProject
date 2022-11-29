@@ -15,9 +15,11 @@ class DetailPhotoViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         imageView.image = image
+        print(image?.description)
     }
     
 
@@ -29,7 +31,7 @@ class DetailPhotoViewController: UIViewController {
     private func saveImage(image: UIImage) {
         UIImageWriteToSavedPhotosAlbum(image, self, #selector(imageDidSaved), nil)
     }
-    @objc func imageDidSaved(_ image: UIImage, error: Error?, context: UnsafeMutableRawPointer?) {
+    @objc private func imageDidSaved(_ image: UIImage, error: Error?, context: UnsafeMutableRawPointer?) {
         if let error {
             print(error)
             AlertController.showAlertController(onViewController: self, title: "Ошибка", message: "Ошибка загрузки")
@@ -37,4 +39,11 @@ class DetailPhotoViewController: UIViewController {
         }
         AlertController.showAlertController(onViewController: self, title: "Успешно", message: "Фото загружено в галерею")
     }
+    
+    @IBAction func shareAction(_ sender: Any) {
+        let items: [Any] = [image as Any]
+        let activityVC = UIActivityViewController(activityItems: items, applicationActivities: nil)
+        self.present(activityVC, animated: true)
+    }
+    
 }

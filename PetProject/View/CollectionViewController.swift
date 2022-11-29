@@ -13,12 +13,17 @@ class CollectionViewController: UICollectionViewController {
     private var viewModel: CollectionViewModelProtocol?
 
     var activityIndicator: UIActivityIndicatorView!
+    
+    var recognizer: UILongPressGestureRecognizer!
        
     override func viewDidLoad() {
         super.viewDidLoad()
         addObserverForTouchSearchButton()
         addObserverForErrorSearch()
         viewModel = CollectionViewModel()
+        recognizer = UILongPressGestureRecognizer()
+        recognizer.addTarget(self, action: #selector(longPress))
+        view.addGestureRecognizer(recognizer)
         registerView()
         setActivityIndicator()
         // Uncomment the following line to preserve selection between presentations
@@ -89,4 +94,9 @@ extension CollectionViewController {
         AlertController.showAlertController(onViewController: self, title: "Error", message: "Вы ничего не ввели")
     }
     
+    @objc private func longPress(_ gestureRecognizer: UILongPressGestureRecognizer) {
+        if gestureRecognizer.state == .began {
+            
+        }
+    }
 }

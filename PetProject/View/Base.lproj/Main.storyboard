@@ -290,10 +290,14 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1X2-mO-K7v">
                                 <rect key="frame" x="0.0" y="47" width="390" height="44"/>
                                 <items>
-                                    <barButtonItem id="Xvs-8w-4Aa">
-                                        <imageReference key="image" image="square.and.arrow.down" catalog="system" symbolScale="default"/>
+                                    <barButtonItem systemItem="save" id="Xvs-8w-4Aa">
                                         <connections>
                                             <action selector="saveButtonPressed:" destination="MnF-6T-0Re" id="97A-OP-oPb"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="action" id="wta-Ut-lSm">
+                                        <connections>
+                                            <action selector="shareAction:" destination="MnF-6T-0Re" id="aTs-eY-Nip"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -328,7 +332,6 @@
         <image name="google" width="18" height="18"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="photo.fill" catalog="system" width="128" height="93"/>
-        <image name="square.and.arrow.down" catalog="system" width="121" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
