@@ -38,16 +38,16 @@ class SignManager: SignManagerProtocol {
             }
         }
     }
-    func logOut(onViewController vc: UIViewController, successCompletion: @escaping () -> ()) {
+    func logOut(successCompletion: @escaping () -> (), errorCompletion: @escaping (Error) -> ()) {
         // Logs out the user asynchronously
         User.logout { result in // Handle the result (of type Result<Void, ParseError>)
-          switch result {
-          case .success:
-            successCompletion()
-          case .failure(let error):
-              AlertController.showAlertController(onViewController: vc, title: "Error", message: "Ошибка выхода \(error)")
-          }
+            switch result {
+            case .success:
+                successCompletion()
+            case .failure(let error):
+                errorCompletion(error)
+            }
         }
-      }
+    }
     
 }

@@ -10,32 +10,31 @@ import SwiftUI
 struct AboutView: View {
     
     
-    private var signManager: SignManagerProtocol? = SignManager()
+    var dismiss: (() -> Void)?
     
     var body: some View {
         ZStack {
             Color(.gray)
-                .opacity(0.05)
+                .opacity(0.1)
                 .ignoresSafeArea()
             
             VStack {
-//                RowView(text1: "Имя", text2: String(describing: (User.current?.username)!))
-//                RowView(text1: "email", text2: String(describing: (User.current?.email)!))
-//                RowView(text1: "Возраст", text2: String(describing: (User.current?.age)!))
-                RowView(text1: "Имя", text2: "")
-                RowView(text1: "email", text2: "")
-                RowView(text1: "Возраст", text2: "")
+                RowView(text1: "Имя", text2: String(describing: (User.current?.username)!))
+                RowView(text1: "email", text2: String(describing: (User.current?.email)!))
+                RowView(text1: "Возраст", text2: String(describing: (User.current?.age)!))
+//                RowView(text1: "Имя", text2: "")
+//                RowView(text1: "email", text2: "")
+//                RowView(text1: "Возраст", text2: "")
                 Spacer()
                 Button("Выйти из аккаунта") {
-                    signManager?.logOut(onViewController: self) {
-                        self.navigationController?.popToRootViewController(animated: true)
-                    }
+                    self.dismiss?()
                 }
+                .padding(EdgeInsets(top: 0, leading: 0, bottom: 30, trailing: 0))
             }
             
+            .padding(EdgeInsets(top: 30, leading: 0, bottom: 0, trailing: 0))
         }
     }
-        
 }
 
 struct AboutView_SwiftUI__Previews: PreviewProvider {

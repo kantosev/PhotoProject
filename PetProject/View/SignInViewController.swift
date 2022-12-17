@@ -26,6 +26,7 @@ class SignInViewController: UIViewController {
     }
     // Проверка вошел ли уже пользователь до этого
     private func checkLogIn() {
+        
         if (User.current != nil) {
             performSegue(withIdentifier: "toMainVCfromSignInVC", sender: self)
         }

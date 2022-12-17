@@ -23,9 +23,12 @@ class AboutViewController: UIViewController {
 
     
     @IBAction func logOutButtonAction(_ sender: Any) {
-        signManager?.logOut(onViewController: self) {
+        signManager?.logOut(successCompletion: {
             self.navigationController?.popToRootViewController(animated: true)
-        }
+        }, errorCompletion: { error in
+            AlertController.showAlertController(onViewController: self, title: "Error", message: "\(error)")
+        })
+        
     }
     
 

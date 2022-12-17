@@ -17,7 +17,8 @@ struct RowView: View {
             Spacer()
             Text(text2)
         }
-        .padding()
+        .padding(EdgeInsets(top: 0, leading: 40, bottom: 15, trailing: 40))
+        
     }
 }
 

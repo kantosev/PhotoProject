@@ -7,23 +7,42 @@
 
 import SwiftUI
 
-class AboutViewControllerSwiftUI: UIHostingController<ContentView> {
+class AboutViewControllerSwiftUI: UIViewController {
     
-    required init?(coder aDecoder: NSCoder){
-        super.init(coder: aDecoder, rootView: ContentView())
+    private var signManager: SignManagerProtocol?
+    
+    private let hostingViewController = UIHostingController(rootView: AboutView())
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        signManager = SignManager()
+        hostingViewController.rootView.dismiss = {
+            self.signManager?.logOut(successCompletion: {
+                self.navigationController?.popToRootViewController(animated: true)
+            }, errorCompletion: { error in
+                AlertController.showAlertController(onViewController: self, title: "Error", message: "\(error)")
+            })
+        }
+        addChild(hostingViewController)
+        view.addSubview(hostingViewController.view)
+        setupConstraint()
     }
     
+    private func setupConstraint() {
+        hostingViewController.view.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            hostingViewController.view.topAnchor.constraint(equalTo: view.topAnchor),
+            hostingViewController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            hostingViewController.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            hostingViewController.view.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+            ])
+        
+        
+    }
     
+    //    required init?(coder aDecoder: NSCoder){
+    //        super.init(coder: aDecoder, rootView: AboutView())
+    //    }
     
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
 }
