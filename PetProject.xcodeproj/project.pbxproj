@@ -39,6 +39,8 @@
 		3A907CD0291821EA0004FC00 /* SignManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A907CCF291821EA0004FC00 /* SignManagerProtocol.swift */; };
 		3A907CD229182DCC0004FC00 /* GoogleSignManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A907CD129182DCC0004FC00 /* GoogleSignManager.swift */; };
 		3A907CD429182DDB0004FC00 /* GoogleSignManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A907CD329182DDB0004FC00 /* GoogleSignManagerProtocol.swift */; };
+		3A9F25BC294E20E400A53EC6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F25BB294E20E400A53EC6 /* ContentView.swift */; };
+		3A9F25BE294E213600A53EC6 /* AboutView(SwiftUI).swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F25BD294E213600A53EC6 /* AboutView(SwiftUI).swift */; };
 		3AC1DC4029293E2F004D10EE /* CollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1DC3F29293E2F004D10EE /* CollectionViewModel.swift */; };
 		3AC1DC4229293ECA004D10EE /* NetworkManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1DC4129293ECA004D10EE /* NetworkManagerProtocol.swift */; };
 		3AC1DC442929415B004D10EE /* CollectionViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1DC432929415B004D10EE /* CollectionViewModelProtocol.swift */; };
@@ -74,6 +76,8 @@
 		3A907CCF291821EA0004FC00 /* SignManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignManagerProtocol.swift; sourceTree = "<group>"; };
 		3A907CD129182DCC0004FC00 /* GoogleSignManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignManager.swift; sourceTree = "<group>"; };
 		3A907CD329182DDB0004FC00 /* GoogleSignManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignManagerProtocol.swift; sourceTree = "<group>"; };
+		3A9F25BB294E20E400A53EC6 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3A9F25BD294E213600A53EC6 /* AboutView(SwiftUI).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AboutView(SwiftUI).swift"; sourceTree = "<group>"; };
 		3AC1DC3F29293E2F004D10EE /* CollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewModel.swift; sourceTree = "<group>"; };
 		3AC1DC4129293ECA004D10EE /* NetworkManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerProtocol.swift; sourceTree = "<group>"; };
 		3AC1DC432929415B004D10EE /* CollectionViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewModelProtocol.swift; sourceTree = "<group>"; };
@@ -169,15 +173,16 @@
 		3A906C5B291450800070996F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3A9F25BF294E2FC300A53EC6 /* SwiftUI */,
 				3A906C4529144A860070996F /* SignInViewController.swift */,
 				3A902A3D29153E96007C3FDC /* SignUpViewController.swift */,
 				3A8B53242921122700FDDA1C /* CollectionViewController.swift */,
 				3A17777729325B6700703F92 /* DetailPhotoViewController.swift */,
+				3A8F5CD32916FE3D002406FC /* AboutViewController.swift */,
 				3A5D84DC292968EA00E41245 /* CollectionViewHeader.swift */,
 				3A5D84DD292968EA00E41245 /* CollectionViewHeader.xib */,
 				3A5F951F292AAA4B00C8C869 /* Extension */,
 				3A8B53262921232400FDDA1C /* Cell */,
-				3A8F5CD32916FE3D002406FC /* AboutViewController.swift */,
 				3A906C4729144A860070996F /* Main.storyboard */,
 				3A906C4C29144A890070996F /* LaunchScreen.storyboard */,
 			);
@@ -213,6 +218,15 @@
 			);
 			name = Protocols;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		3A9F25BF294E2FC300A53EC6 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				3A9F25BB294E20E400A53EC6 /* ContentView.swift */,
+				3A9F25BD294E213600A53EC6 /* AboutView(SwiftUI).swift */,
+			);
+			path = SwiftUI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,6 +316,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A8B53252921122700FDDA1C /* CollectionViewController.swift in Sources */,
+				3A9F25BC294E20E400A53EC6 /* ContentView.swift in Sources */,
 				3A8B53342921658B00FDDA1C /* PhotoCell.swift in Sources */,
 				3A902A3E29153E96007C3FDC /* SignUpViewController.swift in Sources */,
 				3A906C4629144A860070996F /* SignInViewController.swift in Sources */,
@@ -314,6 +329,7 @@
 				3A5F9521292AAA7100C8C869 /* CollectionView + Support.swift in Sources */,
 				3A17777829325B6700703F92 /* DetailPhotoViewController.swift in Sources */,
 				3A907CD229182DCC0004FC00 /* GoogleSignManager.swift in Sources */,
+				3A9F25BE294E213600A53EC6 /* AboutView(SwiftUI).swift in Sources */,
 				3A0D6E5E2933A3C200D468F8 /* UnsplashImageModel.swift in Sources */,
 				3A6EB25F292A73EA000688FE /* ToDo.swift in Sources */,
 				3A8B532D2921253100FDDA1C /* NetworkManager.swift in Sources */,
