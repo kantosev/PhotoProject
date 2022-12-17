@@ -7,28 +7,39 @@
 
 import SwiftUI
 
-struct AboutView_SwiftUI_: View {
+struct AboutView: View {
     
+    
+    private var signManager: SignManagerProtocol? = SignManager()
     
     var body: some View {
         ZStack {
             Color(.gray)
-                .opacity(0.2)
+                .opacity(0.05)
                 .ignoresSafeArea()
+            
             VStack {
-                Text("\(String(describing: User.current?.username))")
-                Text("\(String(describing: User.current?.email))")
-                Text("\(String(describing: User.current?.age))")
-                Text("\(String(describing: User.current?.emailVerified))")
+//                RowView(text1: "Имя", text2: String(describing: (User.current?.username)!))
+//                RowView(text1: "email", text2: String(describing: (User.current?.email)!))
+//                RowView(text1: "Возраст", text2: String(describing: (User.current?.age)!))
+                RowView(text1: "Имя", text2: "")
+                RowView(text1: "email", text2: "")
+                RowView(text1: "Возраст", text2: "")
+                Spacer()
+                Button("Выйти из аккаунта") {
+                    signManager?.logOut(onViewController: self) {
+                        self.navigationController?.popToRootViewController(animated: true)
+                    }
+                }
             }
+            
         }
-        
     }
         
 }
 
 struct AboutView_SwiftUI__Previews: PreviewProvider {
     static var previews: some View {
-        AboutView_SwiftUI_()
+        AboutView()
     }
 }

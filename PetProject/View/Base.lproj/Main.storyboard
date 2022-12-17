@@ -167,13 +167,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Справочный экран" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xf0-by-ztO">
-                                <rect key="frame" x="119" y="116" width="152" height="21"/>
+                                <rect key="frame" x="119" y="72" width="152" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xSC-pl-Z5C">
-                                <rect key="frame" x="154.66666666666666" y="680" width="81" height="35"/>
+                                <rect key="frame" x="154.66666666666666" y="729" width="81" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="LogOut"/>
                                 <connections>
@@ -181,7 +181,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUG-UO-lJG">
-                                <rect key="frame" x="174" y="187" width="42" height="21"/>
+                                <rect key="frame" x="174" y="143" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -207,7 +207,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6GL-0j-Kf5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1537" y="1423"/>
+            <point key="canvasLocation" x="2409" y="1419"/>
+        </scene>
+        <!--About-->
+        <scene sceneID="8Ta-zC-wdY">
+            <objects>
+                <hostingController id="0mw-l1-GZc" customClass="AboutViewControllerSwiftUI" customModule="PetProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="About" image="person.fill" catalog="system" id="CaJ-ch-TWm"/>
+                </hostingController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rLF-3v-W3s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1537" y="1400"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HTK-q2-Gr2">
@@ -240,7 +250,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="2Qm-M0-m52" kind="relationship" relationship="viewControllers" id="f1Q-P9-dJw"/>
-                        <segue destination="20h-TF-rUE" kind="relationship" relationship="viewControllers" id="Z30-hD-a4h"/>
+                        <segue destination="0mw-l1-GZc" kind="relationship" relationship="viewControllers" id="xlQ-fz-iq4"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6vU-LB-Rqj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

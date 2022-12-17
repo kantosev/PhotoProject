@@ -17,7 +17,6 @@ class AboutViewController: UIViewController {
         super.viewDidLoad()
         signManager = SignManager()
         userNameLabel.text = User.current?.username
-        
     }
     
    
