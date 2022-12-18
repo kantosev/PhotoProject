@@ -26,6 +26,7 @@
 		3A8B53342921658B00FDDA1C /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8B53322921658B00FDDA1C /* PhotoCell.swift */; };
 		3A8B53352921658B00FDDA1C /* PhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A8B53332921658B00FDDA1C /* PhotoCell.xib */; };
 		3A8D1D4A294F48B7001341AE /* ColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8D1D49294F48B7001341AE /* ColorPickerView.swift */; };
+		3A8D1D4C294F5B53001341AE /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8D1D4B294F5B53001341AE /* NetworkMonitor.swift */; };
 		3A8F5CD42916FE3D002406FC /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F5CD32916FE3D002406FC /* AboutViewController.swift */; };
 		3A902A3E29153E96007C3FDC /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A902A3D29153E96007C3FDC /* SignUpViewController.swift */; };
 		3A902A4029153F79007C3FDC /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A902A3F29153F79007C3FDC /* AlertController.swift */; };
@@ -66,6 +67,7 @@
 		3A8B53322921658B00FDDA1C /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		3A8B53332921658B00FDDA1C /* PhotoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCell.xib; sourceTree = "<group>"; };
 		3A8D1D49294F48B7001341AE /* ColorPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerView.swift; sourceTree = "<group>"; };
+		3A8D1D4B294F5B53001341AE /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		3A8F5CD32916FE3D002406FC /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		3A902A3D29153E96007C3FDC /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		3A902A3F29153F79007C3FDC /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 				3A907CD129182DCC0004FC00 /* GoogleSignManager.swift */,
 				3A8B532C2921253100FDDA1C /* NetworkManager.swift */,
 				3A902A3F29153F79007C3FDC /* AlertController.swift */,
+				3A8D1D4B294F5B53001341AE /* NetworkMonitor.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 				3A906C4629144A860070996F /* SignInViewController.swift in Sources */,
 				3A906C4229144A860070996F /* AppDelegate.swift in Sources */,
 				3A5D84DE292968EA00E41245 /* CollectionViewHeader.swift in Sources */,
+				3A8D1D4C294F5B53001341AE /* NetworkMonitor.swift in Sources */,
 				3A8F5CD42916FE3D002406FC /* AboutViewController.swift in Sources */,
 				3A906C4429144A860070996F /* SceneDelegate.swift in Sources */,
 				3A907CD429182DDB0004FC00 /* GoogleSignManagerProtocol.swift in Sources */,
