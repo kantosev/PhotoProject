@@ -15,4 +15,6 @@ protocol SignManagerProtocol {
     func logIn(username: String, password: String, onViewController vc: UIViewController, successCompletion: @escaping (User) -> ())
     
     func logOut(successCompletion: @escaping () -> (), errorCompletion: @escaping (Error) -> ())
+    
+    func deleteAccount(successCompletion: @escaping () -> (), errorCompletion: @escaping (Error) -> ())
 }

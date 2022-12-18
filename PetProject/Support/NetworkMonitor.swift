@@ -4,6 +4,7 @@
 //
 //  Created by Антон Кирилюк on 18.12.2022.
 //
+// https://habr.com/ru/post/661549/
 
 import Foundation
 import Network

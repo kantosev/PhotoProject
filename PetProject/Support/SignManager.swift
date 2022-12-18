@@ -49,5 +49,16 @@ class SignManager: SignManagerProtocol {
             }
         }
     }
+    func deleteAccount(successCompletion: @escaping () -> (), errorCompletion: @escaping (Error) -> ()) {
+        guard let currentUser = User.current else { return }
+        currentUser.delete { result in
+            switch result {
+            case .success:
+                successCompletion()
+            case .failure(let error):
+                errorCompletion(error)
+            }
+        }
+    }
     
 }
