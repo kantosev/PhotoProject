@@ -17,4 +17,6 @@ protocol SignManagerProtocol {
     func logOut(successCompletion: @escaping () -> (), errorCompletion: @escaping (Error) -> ())
     
     func deleteAccount(successCompletion: @escaping () -> (), errorCompletion: @escaping (Error) -> ())
+    
+    func updateAccount(userName: String?, email: String?, age: String?, successCompletion: @escaping () -> (), errorCompletion: @escaping (Error) -> ())
 }

@@ -27,6 +27,8 @@
 		3A8B53352921658B00FDDA1C /* PhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A8B53332921658B00FDDA1C /* PhotoCell.xib */; };
 		3A8D1D4A294F48B7001341AE /* ColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8D1D49294F48B7001341AE /* ColorPickerView.swift */; };
 		3A8D1D4C294F5B53001341AE /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8D1D4B294F5B53001341AE /* NetworkMonitor.swift */; };
+		3A8D1D50294F8CBC001341AE /* UpdateAccountScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8D1D4F294F8CBC001341AE /* UpdateAccountScreenView.swift */; };
+		3A8D1D52294F8CEC001341AE /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8D1D51294F8CEC001341AE /* TextFieldView.swift */; };
 		3A8F5CD42916FE3D002406FC /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F5CD32916FE3D002406FC /* AboutViewController.swift */; };
 		3A902A3E29153E96007C3FDC /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A902A3D29153E96007C3FDC /* SignUpViewController.swift */; };
 		3A902A4029153F79007C3FDC /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A902A3F29153F79007C3FDC /* AlertController.swift */; };
@@ -68,6 +70,8 @@
 		3A8B53332921658B00FDDA1C /* PhotoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCell.xib; sourceTree = "<group>"; };
 		3A8D1D49294F48B7001341AE /* ColorPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerView.swift; sourceTree = "<group>"; };
 		3A8D1D4B294F5B53001341AE /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		3A8D1D4F294F8CBC001341AE /* UpdateAccountScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateAccountScreenView.swift; sourceTree = "<group>"; };
+		3A8D1D51294F8CEC001341AE /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 		3A8F5CD32916FE3D002406FC /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		3A902A3D29153E96007C3FDC /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		3A902A3F29153F79007C3FDC /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
@@ -134,6 +138,24 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		3A8D1D4D294F8C52001341AE /* CollectionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3A8B53242921122700FDDA1C /* CollectionViewController.swift */,
+				3A5F951F292AAA4B00C8C869 /* Extension */,
+			);
+			path = CollectionViewController;
+			sourceTree = "<group>";
+		};
+		3A8D1D4E294F8C71001341AE /* CollectionViewHeader */ = {
+			isa = PBXGroup;
+			children = (
+				3A5D84DC292968EA00E41245 /* CollectionViewHeader.swift */,
+				3A5D84DD292968EA00E41245 /* CollectionViewHeader.xib */,
+			);
+			path = CollectionViewHeader;
+			sourceTree = "<group>";
+		};
 		3A906C3529144A860070996F = {
 			isa = PBXGroup;
 			children = (
@@ -184,12 +206,10 @@
 				3A9F25BF294E2FC300A53EC6 /* SwiftUI */,
 				3A906C4529144A860070996F /* SignInViewController.swift */,
 				3A902A3D29153E96007C3FDC /* SignUpViewController.swift */,
-				3A8B53242921122700FDDA1C /* CollectionViewController.swift */,
+				3A8D1D4D294F8C52001341AE /* CollectionViewController */,
 				3A17777729325B6700703F92 /* DetailPhotoViewController.swift */,
 				3A8F5CD32916FE3D002406FC /* AboutViewController.swift */,
-				3A5D84DC292968EA00E41245 /* CollectionViewHeader.swift */,
-				3A5D84DD292968EA00E41245 /* CollectionViewHeader.xib */,
-				3A5F951F292AAA4B00C8C869 /* Extension */,
+				3A8D1D4E294F8C71001341AE /* CollectionViewHeader */,
 				3A8B53262921232400FDDA1C /* Cell */,
 				3A906C4729144A860070996F /* Main.storyboard */,
 				3A906C4C29144A890070996F /* LaunchScreen.storyboard */,
@@ -237,6 +257,8 @@
 				3A5BA2DB294E36A400DE0B65 /* AboutViewControllerSwiftUI.swift */,
 				3A5BA2DD294E3E4900DE0B65 /* RowView.swift */,
 				3A8D1D49294F48B7001341AE /* ColorPickerView.swift */,
+				3A8D1D4F294F8CBC001341AE /* UpdateAccountScreenView.swift */,
+				3A8D1D51294F8CEC001341AE /* TextFieldView.swift */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -345,8 +367,10 @@
 				3A9F25BE294E213600A53EC6 /* AboutView(SwiftUI).swift in Sources */,
 				3A0D6E5E2933A3C200D468F8 /* UnsplashImageModel.swift in Sources */,
 				3A6EB25F292A73EA000688FE /* ToDo.swift in Sources */,
+				3A8D1D52294F8CEC001341AE /* TextFieldView.swift in Sources */,
 				3A8B532D2921253100FDDA1C /* NetworkManager.swift in Sources */,
 				3A5BA2DC294E36A400DE0B65 /* AboutViewControllerSwiftUI.swift in Sources */,
+				3A8D1D50294F8CBC001341AE /* UpdateAccountScreenView.swift in Sources */,
 				3A6EB261292AA7D1000688FE /* CollectionViewController + DelegateFlowLayout.swift in Sources */,
 				3A8B532F292128CE00FDDA1C /* ImseaImageModel.swift in Sources */,
 				3AC1DC442929415B004D10EE /* CollectionViewModelProtocol.swift in Sources */,
