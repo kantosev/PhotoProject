@@ -12,7 +12,6 @@
 		3A17777829325B6700703F92 /* DetailPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A17777729325B6700703F92 /* DetailPhotoViewController.swift */; };
 		3A4FDF2F291835A200D4B066 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 3A4FDF2E291835A200D4B066 /* GoogleSignIn */; };
 		3A4FDF31291835A200D4B066 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3A4FDF30291835A200D4B066 /* GoogleSignInSwift */; };
-		3A4FDF3429183EAB00D4B066 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A4FDF3329183EAA00D4B066 /* AuthenticationServices.framework */; };
 		3A5BA2DC294E36A400DE0B65 /* AboutViewControllerSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5BA2DB294E36A400DE0B65 /* AboutViewControllerSwiftUI.swift */; };
 		3A5BA2DE294E3E4900DE0B65 /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5BA2DD294E3E4900DE0B65 /* RowView.swift */; };
 		3A5D84DE292968EA00E41245 /* CollectionViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5D84DC292968EA00E41245 /* CollectionViewHeader.swift */; };
@@ -26,6 +25,7 @@
 		3A8B532F292128CE00FDDA1C /* ImseaImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8B532E292128CE00FDDA1C /* ImseaImageModel.swift */; };
 		3A8B53342921658B00FDDA1C /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8B53322921658B00FDDA1C /* PhotoCell.swift */; };
 		3A8B53352921658B00FDDA1C /* PhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A8B53332921658B00FDDA1C /* PhotoCell.xib */; };
+		3A8D1D4A294F48B7001341AE /* ColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8D1D49294F48B7001341AE /* ColorPickerView.swift */; };
 		3A8F5CD42916FE3D002406FC /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F5CD32916FE3D002406FC /* AboutViewController.swift */; };
 		3A902A3E29153E96007C3FDC /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A902A3D29153E96007C3FDC /* SignUpViewController.swift */; };
 		3A902A4029153F79007C3FDC /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A902A3F29153F79007C3FDC /* AlertController.swift */; };
@@ -46,6 +46,7 @@
 		3AC1DC4029293E2F004D10EE /* CollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1DC3F29293E2F004D10EE /* CollectionViewModel.swift */; };
 		3AC1DC4229293ECA004D10EE /* NetworkManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1DC4129293ECA004D10EE /* NetworkManagerProtocol.swift */; };
 		3AC1DC442929415B004D10EE /* CollectionViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1DC432929415B004D10EE /* CollectionViewModelProtocol.swift */; };
+		3AEDD931294E65C700A7F169 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A4FDF3329183EAA00D4B066 /* AuthenticationServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		3A8B532E292128CE00FDDA1C /* ImseaImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImseaImageModel.swift; sourceTree = "<group>"; };
 		3A8B53322921658B00FDDA1C /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		3A8B53332921658B00FDDA1C /* PhotoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCell.xib; sourceTree = "<group>"; };
+		3A8D1D49294F48B7001341AE /* ColorPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerView.swift; sourceTree = "<group>"; };
 		3A8F5CD32916FE3D002406FC /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		3A902A3D29153E96007C3FDC /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		3A902A3F29153F79007C3FDC /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
@@ -92,8 +94,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AEDD931294E65C700A7F169 /* AuthenticationServices.framework in Frameworks */,
 				3A8B532B292124FB00FDDA1C /* Alamofire in Frameworks */,
-				3A4FDF3429183EAB00D4B066 /* AuthenticationServices.framework in Frameworks */,
 				3A4FDF31291835A200D4B066 /* GoogleSignInSwift in Frameworks */,
 				3A0D6E5C2933A1DF00D468F8 /* UnsplashPhotoPicker in Frameworks */,
 				3A906C5729144A9C0070996F /* ParseSwift in Frameworks */,
@@ -231,6 +233,7 @@
 				3A9F25BD294E213600A53EC6 /* AboutView(SwiftUI).swift */,
 				3A5BA2DB294E36A400DE0B65 /* AboutViewControllerSwiftUI.swift */,
 				3A5BA2DD294E3E4900DE0B65 /* RowView.swift */,
+				3A8D1D49294F48B7001341AE /* ColorPickerView.swift */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 				3AC1DC4029293E2F004D10EE /* CollectionViewModel.swift in Sources */,
 				3A907CD0291821EA0004FC00 /* SignManagerProtocol.swift in Sources */,
 				3A902A4229154042007C3FDC /* SignManager.swift in Sources */,
+				3A8D1D4A294F48B7001341AE /* ColorPickerView.swift in Sources */,
 				3A906C622914656D0070996F /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

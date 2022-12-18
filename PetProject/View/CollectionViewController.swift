@@ -82,9 +82,13 @@ extension CollectionViewController {
         activityIndicator.hidesWhenStopped = true
         guard let userInfo = notification.userInfo else { return }
         guard let text = userInfo["text"] as? String else { return }
-        viewModel?.fetchOfData(with: text, completion: { [activityIndicator, collectionView] in
+        viewModel?.fetchOfData(with: text, completion: { [activityIndicator, collectionView] arrayIsEmpty in
             activityIndicator?.stopAnimating()
-            collectionView?.reloadData()
+            if arrayIsEmpty == false {
+                collectionView?.reloadData()
+            } else {
+                AlertController.showAlertController(onViewController: self, title: "Ошибка", message: "Изображений по запросу не найдено")
+            }
         }, errorCompletion: { [activityIndicator] error in
             AlertController.showAlertController(onViewController: self, title: "Ошибка загрузки данных", message: "Данные не были загружены, попробуйте позже")
             activityIndicator?.stopAnimating()

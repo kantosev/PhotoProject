@@ -5,7 +5,6 @@
 //  Created by Антон Кирилюк on 19.11.2022.
 //
 
-import Foundation
 import UIKit
 import Alamofire
 
@@ -16,10 +15,14 @@ class CollectionViewModel: CollectionViewModelProtocol {
 //    private let url = "https://imsea.herokuapp.com/api/1?"
     private let url = "https://api.unsplash.com/search/photos"
     
-    func fetchOfData(with text: String, completion: @escaping () -> (), errorCompletion: @escaping (AFError) -> ()) {
+    func fetchOfData(with text: String, completion: @escaping (Bool) -> (), errorCompletion: @escaping (AFError) -> ()) {
         networkManager.getArrayOfImages(url: url, searchText: text) { [weak self] array in
-            self?.arrayOfImages = array
-            completion()
+            if !array.isEmpty {
+                self?.arrayOfImages = array
+                completion(false)
+            } else {
+                completion(true)
+            }
             
         } errorCompletion: { error in
             errorCompletion(error)

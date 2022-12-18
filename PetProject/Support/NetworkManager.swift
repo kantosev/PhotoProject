@@ -12,9 +12,9 @@ class NetworkManager: NetworkManagerProtocol {
     func getArrayOfImages(url: String, searchText: String, completion: @escaping (([String]) -> ()), errorCompletion: @escaping ((AFError) -> ())) {
         guard let url = URL(string: url) else { return }
         let urlParams = [
-                "query": searchText,
-                "per_page": "100"
-            ]
+            "query": searchText,
+            "per_page": "100"
+        ]
         let headers = [
             "Authorization": "Client-ID 4Uitm6ZbRdgeZKMPHKFW11JI9Q00TFRFN3ajlRuzUTs"
         ]
@@ -24,10 +24,13 @@ class NetworkManager: NetworkManagerProtocol {
                 var array: [String] = []
                 
                 let imagesCount = answer.results.count
-                for image in 0...(imagesCount - 1) {
-                    array.append(answer.results[image].urls.regular)
+                
+                if imagesCount > 1 {
+                    for image in 0...(imagesCount - 1) {
+                        array.append(answer.results[image].urls.regular)
+                    }
                 }
-                completion(array)
+                completion(array)  
             case.failure(let error):
                 print(error)
                 errorCompletion(error)
