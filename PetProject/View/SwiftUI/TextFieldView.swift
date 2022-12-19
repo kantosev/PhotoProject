@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct TextFieldView: View {
-    @Binding var text: String
+    @Binding var textFieldText: String
     let placeholder: Text
     
     var body: some View {
-        TextField("", text: $text, prompt: placeholder)
+        TextField("", text: $textFieldText, prompt: placeholder)
             .frame(height: 40)
             .autocorrectionDisabled()
             .textInputAutocapitalization(.never)
@@ -25,6 +25,6 @@ struct TextFieldView: View {
 
 struct TextFieldView_Previews: PreviewProvider {
     static var previews: some View {
-        TextFieldView(text: .constant(""), placeholder: Text("Введите имя"))
+        TextFieldView(textFieldText: .constant(""), placeholder: Text("Введите имя"))
     }
 }

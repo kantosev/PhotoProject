@@ -60,15 +60,17 @@ class SignManager: SignManagerProtocol {
             }
         }
     }
-    func updateAccount(userName: String?, email: String?, age: String?, successCompletion: @escaping () -> (), errorCompletion: @escaping (Error) -> ()) {
+    func updateAccount(userName: String, email: String, age: String, successCompletion: @escaping () -> (), errorCompletion: @escaping (Error) -> ()) {
         guard var currentUser = User.current else { return }
-        if let userName = userName {
+        
+        
+        if !userName.isEmpty {
             currentUser.username = userName
         }
-        if let email = email {
+        if !email.isEmpty {
             currentUser.email = email
         }
-        if let age = age {
+        if !age.isEmpty {
             currentUser.age = age
         }
         currentUser.save { result in

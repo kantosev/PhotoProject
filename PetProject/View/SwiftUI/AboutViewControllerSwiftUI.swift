@@ -21,6 +21,10 @@ class AboutViewControllerSwiftUI: UIViewController {
         addVC()
         setupConstraint()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    
+    }
     
     private func setupConstraint() {
         hostingViewController.view.translatesAutoresizingMaskIntoConstraints = false

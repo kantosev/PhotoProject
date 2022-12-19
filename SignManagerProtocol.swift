@@ -18,5 +18,5 @@ protocol SignManagerProtocol {
     
     func deleteAccount(successCompletion: @escaping () -> (), errorCompletion: @escaping (Error) -> ())
     
-    func updateAccount(userName: String?, email: String?, age: String?, successCompletion: @escaping () -> (), errorCompletion: @escaping (Error) -> ())
+    func updateAccount(userName: String, email: String, age: String, successCompletion: @escaping () -> (), errorCompletion: @escaping (Error) -> ())
 }
