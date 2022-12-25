@@ -9,6 +9,7 @@ import Foundation
 import ParseSwift
 
 struct User: ParseUser {
+    
     // Additional properties required by the ParseUser protocol
     var authData: [String : [String : String]?]?
     var originalData: Data?

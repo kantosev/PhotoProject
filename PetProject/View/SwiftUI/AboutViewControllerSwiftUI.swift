@@ -15,16 +15,14 @@ class AboutViewControllerSwiftUI: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         signManager = SignManager()
         setDismissCompletion()
         setDeleteAccountCompletion()
         addVC()
         setupConstraint()
     }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    
-    }
+  
     
     private func setupConstraint() {
         hostingViewController.view.translatesAutoresizingMaskIntoConstraints = false

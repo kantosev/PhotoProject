@@ -12,6 +12,7 @@ struct ColorPickerView: View {
     
     var body: some View {
         ColorPicker("Выберите цвет фона", selection: $bgColor)
+        
             .frame(width: 220)
     }
 }

@@ -11,6 +11,8 @@ struct UpdateAccountScreenView: View {
     @State private var userName: String = ""
     @State private var email: String = ""
     @State private var age: String = ""
+    @State private var renameDataSuccessful: Bool = false
+    @State private var renameDataError: Bool = false
     
     @Environment(\.dismiss) var dismiss
     
@@ -25,16 +27,22 @@ struct UpdateAccountScreenView: View {
         }
         .toolbar {
             Button("Save") {
-                dismiss()
+                guard let user = User.current?.username else { return }
                 signManager?.updateAccount(userName: userName, email: email, age: age, successCompletion: {
-                    #warning("обновить данные на пред. экране")
+                    DispatchQueue.main.async {
+                        dismiss()
+                    }
+                    renameDataSuccessful.toggle()
+                    guard let backgroundColor = UserDefaults.standard.object(forKey: user) as? [CGFloat] else { return }
+                    UserDefaults.standard.set(backgroundColor, forKey: userName)
                 }, errorCompletion: { error in
                     print(error.localizedDescription)
+                    renameDataError.toggle()
                 })
             }
-            
-            
-            
+            .alert("Информация аккаунта обновлена успешно", isPresented: $renameDataSuccessful) {}
+            .alert("Ошибка. Данные не изменены.", isPresented: $renameDataError) { }
+
         }
            
         .padding(EdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 0))

@@ -44,7 +44,6 @@
 		3A907CD0291821EA0004FC00 /* SignManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A907CCF291821EA0004FC00 /* SignManagerProtocol.swift */; };
 		3A907CD229182DCC0004FC00 /* GoogleSignManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A907CD129182DCC0004FC00 /* GoogleSignManager.swift */; };
 		3A907CD429182DDB0004FC00 /* GoogleSignManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A907CD329182DDB0004FC00 /* GoogleSignManagerProtocol.swift */; };
-		3A9F25BC294E20E400A53EC6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F25BB294E20E400A53EC6 /* ContentView.swift */; };
 		3A9F25BE294E213600A53EC6 /* AboutView(SwiftUI).swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F25BD294E213600A53EC6 /* AboutView(SwiftUI).swift */; };
 		3AC1DC4029293E2F004D10EE /* CollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1DC3F29293E2F004D10EE /* CollectionViewModel.swift */; };
 		3AC1DC4229293ECA004D10EE /* NetworkManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1DC4129293ECA004D10EE /* NetworkManagerProtocol.swift */; };
@@ -88,7 +87,6 @@
 		3A907CCF291821EA0004FC00 /* SignManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignManagerProtocol.swift; sourceTree = "<group>"; };
 		3A907CD129182DCC0004FC00 /* GoogleSignManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignManager.swift; sourceTree = "<group>"; };
 		3A907CD329182DDB0004FC00 /* GoogleSignManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignManagerProtocol.swift; sourceTree = "<group>"; };
-		3A9F25BB294E20E400A53EC6 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3A9F25BD294E213600A53EC6 /* AboutView(SwiftUI).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AboutView(SwiftUI).swift"; sourceTree = "<group>"; };
 		3AC1DC3F29293E2F004D10EE /* CollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewModel.swift; sourceTree = "<group>"; };
 		3AC1DC4129293ECA004D10EE /* NetworkManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerProtocol.swift; sourceTree = "<group>"; };
@@ -252,9 +250,8 @@
 		3A9F25BF294E2FC300A53EC6 /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				3A9F25BB294E20E400A53EC6 /* ContentView.swift */,
-				3A9F25BD294E213600A53EC6 /* AboutView(SwiftUI).swift */,
 				3A5BA2DB294E36A400DE0B65 /* AboutViewControllerSwiftUI.swift */,
+				3A9F25BD294E213600A53EC6 /* AboutView(SwiftUI).swift */,
 				3A5BA2DD294E3E4900DE0B65 /* RowView.swift */,
 				3A8D1D49294F48B7001341AE /* ColorPickerView.swift */,
 				3A8D1D4F294F8CBC001341AE /* UpdateAccountScreenView.swift */,
@@ -350,7 +347,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A8B53252921122700FDDA1C /* CollectionViewController.swift in Sources */,
-				3A9F25BC294E20E400A53EC6 /* ContentView.swift in Sources */,
 				3A8B53342921658B00FDDA1C /* PhotoCell.swift in Sources */,
 				3A902A3E29153E96007C3FDC /* SignUpViewController.swift in Sources */,
 				3A906C4629144A860070996F /* SignInViewController.swift in Sources */,
