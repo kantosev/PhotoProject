@@ -27,7 +27,9 @@ struct UpdateAccountScreenView: View {
         }
         .toolbar {
             Button("Save") {
-                guard let user = User.current?.username else { return }
+                guard let user = User.current?.username else { renameDataError.toggle()
+                    return
+                }
                 signManager?.updateAccount(userName: userName, email: email, age: age, successCompletion: {
                     DispatchQueue.main.async {
                         dismiss()

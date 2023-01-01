@@ -42,7 +42,7 @@ class AboutViewControllerSwiftUI: UIViewController {
             self.signManager?.logOut(successCompletion: {
                 self.navigationController?.popToRootViewController(animated: true)
             }, errorCompletion: { error in
-                AlertController.showAlertController(onViewController: self, title: "Error", message: "\(error)")
+                AlertController.showAlertController(onViewController: self, title: "Error", message: "Ошибка изменения данных")
             })
         }
     }
@@ -54,6 +54,7 @@ class AboutViewControllerSwiftUI: UIViewController {
                         self.navigationController?.popToRootViewController(animated: true)
                     }
                 }, errorCompletion: { error in
+                    print(error.localizedDescription)
                     AlertController.showAlertController(onViewController: self, title: "Ошибка", message: " Ошибка удаления аккаунта")
                 })
         }

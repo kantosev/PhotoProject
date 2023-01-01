@@ -3,7 +3,6 @@
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -157,57 +156,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wyg-5b-82b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="743" y="149"/>
-        </scene>
-        <!--AboutViewController-->
-        <scene sceneID="srS-Cs-4nA">
-            <objects>
-                <viewController storyboardIdentifier="AboutViewController" title="AboutViewController" id="20h-TF-rUE" customClass="AboutViewController" customModule="PetProject" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="hWt-qL-VEH">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Справочный экран" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xf0-by-ztO">
-                                <rect key="frame" x="119" y="72" width="152" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xSC-pl-Z5C">
-                                <rect key="frame" x="154.66666666666666" y="729" width="81" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="LogOut"/>
-                                <connections>
-                                    <action selector="logOutButtonAction:" destination="20h-TF-rUE" eventType="touchUpInside" id="FQW-bG-Dlo"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUG-UO-lJG">
-                                <rect key="frame" x="174" y="143" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="m6v-ha-obb"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="xSC-pl-Z5C" firstAttribute="centerX" secondItem="hWt-qL-VEH" secondAttribute="centerX" id="01b-We-bcu"/>
-                            <constraint firstItem="gUG-UO-lJG" firstAttribute="centerX" secondItem="hWt-qL-VEH" secondAttribute="centerX" id="C4P-UM-esG"/>
-                            <constraint firstItem="m6v-ha-obb" firstAttribute="bottom" secondItem="xSC-pl-Z5C" secondAttribute="bottom" constant="46" id="FMb-Tc-UMh"/>
-                            <constraint firstItem="gUG-UO-lJG" firstAttribute="top" secondItem="xf0-by-ztO" secondAttribute="bottom" constant="50" id="Jwt-II-YQA"/>
-                            <constraint firstItem="xf0-by-ztO" firstAttribute="centerX" secondItem="hWt-qL-VEH" secondAttribute="centerX" id="Kyl-W1-kwB"/>
-                            <constraint firstItem="xf0-by-ztO" firstAttribute="top" secondItem="m6v-ha-obb" secondAttribute="top" constant="25" id="oCq-0u-Ie8"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Info" image="person.fill" catalog="system" id="HXT-Rm-L9b">
-                        <imageReference key="selectedImage" image="person.fill" catalog="system" renderingMode="template" variableValue="1"/>
-                    </tabBarItem>
-                    <connections>
-                        <outlet property="userNameLabel" destination="gUG-UO-lJG" id="gzQ-ht-DTV"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6GL-0j-Kf5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2157" y="1408"/>
         </scene>
         <!--About-->
         <scene sceneID="Mek-rQ-eb6">

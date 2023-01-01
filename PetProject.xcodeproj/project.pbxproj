@@ -29,7 +29,6 @@
 		3A8D1D4C294F5B53001341AE /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8D1D4B294F5B53001341AE /* NetworkMonitor.swift */; };
 		3A8D1D50294F8CBC001341AE /* UpdateAccountScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8D1D4F294F8CBC001341AE /* UpdateAccountScreenView.swift */; };
 		3A8D1D52294F8CEC001341AE /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8D1D51294F8CEC001341AE /* TextFieldView.swift */; };
-		3A8F5CD42916FE3D002406FC /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F5CD32916FE3D002406FC /* AboutViewController.swift */; };
 		3A902A3E29153E96007C3FDC /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A902A3D29153E96007C3FDC /* SignUpViewController.swift */; };
 		3A902A4029153F79007C3FDC /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A902A3F29153F79007C3FDC /* AlertController.swift */; };
 		3A902A4229154042007C3FDC /* SignManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A902A4129154042007C3FDC /* SignManager.swift */; };
@@ -71,7 +70,6 @@
 		3A8D1D4B294F5B53001341AE /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		3A8D1D4F294F8CBC001341AE /* UpdateAccountScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateAccountScreenView.swift; sourceTree = "<group>"; };
 		3A8D1D51294F8CEC001341AE /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
-		3A8F5CD32916FE3D002406FC /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		3A902A3D29153E96007C3FDC /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		3A902A3F29153F79007C3FDC /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		3A902A4129154042007C3FDC /* SignManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignManager.swift; sourceTree = "<group>"; };
@@ -206,7 +204,6 @@
 				3A902A3D29153E96007C3FDC /* SignUpViewController.swift */,
 				3A8D1D4D294F8C52001341AE /* CollectionViewController */,
 				3A17777729325B6700703F92 /* DetailPhotoViewController.swift */,
-				3A8F5CD32916FE3D002406FC /* AboutViewController.swift */,
 				3A8D1D4E294F8C71001341AE /* CollectionViewHeader */,
 				3A8B53262921232400FDDA1C /* Cell */,
 				3A906C4729144A860070996F /* Main.storyboard */,
@@ -353,7 +350,6 @@
 				3A906C4229144A860070996F /* AppDelegate.swift in Sources */,
 				3A5D84DE292968EA00E41245 /* CollectionViewHeader.swift in Sources */,
 				3A8D1D4C294F5B53001341AE /* NetworkMonitor.swift in Sources */,
-				3A8F5CD42916FE3D002406FC /* AboutViewController.swift in Sources */,
 				3A906C4429144A860070996F /* SceneDelegate.swift in Sources */,
 				3A907CD429182DDB0004FC00 /* GoogleSignManagerProtocol.swift in Sources */,
 				3A902A4029153F79007C3FDC /* AlertController.swift in Sources */,

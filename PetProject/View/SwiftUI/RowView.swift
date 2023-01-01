@@ -14,8 +14,10 @@ struct RowView: View {
     var body: some View {
         HStack {
             Text("\(text1)")
+                .foregroundColor(.black)
             Spacer()
             Text(text2)
+                .foregroundColor(.black)
         }
         .padding(EdgeInsets(top: 0, leading: 40, bottom: 15, trailing: 40))
         

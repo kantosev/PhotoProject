@@ -9,14 +9,14 @@ import SwiftUI
 
 struct AboutView: View {
     @State private var backgroundColor: Color = .white
-   
+    
     @State private var name: String = (User.current?.username)!
     @State private var email: String = (User.current?.email)!
     @State private var age: String = (User.current?.age)!
     
-    @State private var connected: Bool = !(NetworkMonitor.shared.isConnected)
-    
     var dismiss: (() -> Void)?
+    
+    @State private var connected: Bool = false
     
     var deleteAccountCompletion: (() -> Void)?
     
@@ -39,9 +39,9 @@ struct AboutView: View {
                             guard let userAge = User.current?.age else { return }
                             age = userAge
                         }
-//                    RowView(text1: "Имя", text2: "")
-//                    RowView(text1: "email", text2: $name)
-//                    RowView(text1: "Возраст", text2: $name)
+                    //                    RowView(text1: "Имя", text2: "")
+                    //                    RowView(text1: "email", text2: $name)
+                    //                    RowView(text1: "Возраст", text2: $name)
                     NavigationLink(destination: UpdateAccountScreenView()) {
                         Text("Изменить данные аккаунта")
                     }
@@ -58,7 +58,7 @@ struct AboutView: View {
                             guard let colorComponent = UserDefaults.standard.object(forKey: user) as? [CGFloat] else { return }
                             let color = CGColor(red: colorComponent[0], green: colorComponent[1], blue: colorComponent[2], alpha: colorComponent[3])
                             backgroundColor = Color(cgColor: color)
-                           
+                            
                             
                         }
                     Spacer()
@@ -66,24 +66,26 @@ struct AboutView: View {
                         self.dismiss?()
                     }
                     Button("Удалить аккаунт") {
-                    
+                        
                         self.deleteAccountCompletion?()
                     }
                     .foregroundColor(.red)
                     .padding()
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 30, trailing: 0))
                 }
-               
+                
                 .padding(EdgeInsets(top: 30, leading: 0, bottom: 0, trailing: 0))
             }
-            
-            .background(backgroundColor)
-        }
-        .alert("Нет интернета", isPresented: $connected) {
-            
-        }
+            .onAppear {
+                if !NetworkMonitor.shared.isConnected {
+                    connected = true
+                }
             }
-        
+            .background(backgroundColor)
+            .alert("Нет интернет соединения", isPresented: $connected) {}
+        }
+    }
+    
 }
 
 struct AboutView_SwiftUI__Previews: PreviewProvider {
