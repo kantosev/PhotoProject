@@ -12,7 +12,7 @@
 "FhU-Be-fPl.placeholder" = "Введите логин или почту";
 
 /* Class = "UILabel"; text = "Регистрация"; ObjectID = "IxY-5r-LXd"; */
-"IxY-5r-LXd.text" = "Регистрация";
+"IxY-5r-LXd.text" = "Registration";
 
 /* Class = "UITextField"; placeholder = "Введите возраст"; ObjectID = "Kha-Zp-8DS"; */
 "Kha-Zp-8DS.placeholder" = "Введите возраст";
@@ -21,7 +21,7 @@
 "MnF-6T-0Re.title" = "DetailPhotoViewController";
 
 /* Class = "UITabBarItem"; title = "About"; ObjectID = "QRN-DY-7pl"; */
-"QRN-DY-7pl.title" = "About";
+"QRN-DY-7pl.title" = "О пользователе о пользователе о пользователе";
 
 /* Class = "UITextField"; placeholder = "Введите почту"; ObjectID = "TkK-XZ-6Pr"; */
 "TkK-XZ-6Pr.placeholder" = "Введите почту";
@@ -58,3 +58,7 @@
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "wQI-86-mjL"; */
 "wQI-86-mjL.normalTitle" = "Button";
+
+
+
+

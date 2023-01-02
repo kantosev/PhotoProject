@@ -18,6 +18,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                               clientKey: "GAMe7XdBym157Zz2dC2WUOUDnp0VqoG81eEvu5v7",
                               serverURL: URL(string: "https://parseapi.back4app.com")!)
         NetworkMonitor.shared.startMonitoring()
+        
+        // Пробные локальные уведомления
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
+            if success {
+                print("Доступ разрешен")
+            } else {
+                print("Доступ закрыт")
+            }
+        }
+        
+        let content = UNMutableNotificationContent()
+        content.title = "Пробное уведомление"
+        content.body = "Тело уведомления"
+        content.sound = UNNotificationSound.default
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 6, repeats: false)
+      // Уведомление каждый вторник в 11 утра
+        var dateComponents = DateComponents()
+        dateComponents.calendar = Calendar.current
+
+        dateComponents.weekday = 2  // Tuesday
+        dateComponents.hour = 23    // 11:00 hours
+           
+        // Create the trigger as a repeating event.
+        let trigger2 = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+        //
+        
+        let request = UNNotificationRequest(identifier: "heh", content: content, trigger: trigger2)
+        center.add(request)
+        
+        
         return true
     }
 
