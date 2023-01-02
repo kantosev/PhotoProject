@@ -16,6 +16,8 @@ class CollectionViewHeader: UICollectionReusableView {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        // кнопка ввод скрыта до ввода первого символа
+        searchTextField.enablesReturnKeyAutomatically = true
     }
     
     @IBAction func searchButtonPressed(_ sender: Any) {
@@ -24,3 +26,4 @@ class CollectionViewHeader: UICollectionReusableView {
         NotificationCenter.default.post(name: .init("searchButtonPressed"), object: self, userInfo: userInfo)
     }
 }
+

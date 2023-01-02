@@ -45,6 +45,7 @@
 		3A907CD229182DCC0004FC00 /* GoogleSignManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A907CD129182DCC0004FC00 /* GoogleSignManager.swift */; };
 		3A907CD429182DDB0004FC00 /* GoogleSignManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A907CD329182DDB0004FC00 /* GoogleSignManagerProtocol.swift */; };
 		3A9F25BE294E213600A53EC6 /* AboutView(SwiftUI).swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F25BD294E213600A53EC6 /* AboutView(SwiftUI).swift */; };
+		3AA646B62963770D00830603 /* CollectionViewController + keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA646B52963770D00830603 /* CollectionViewController + keyboard.swift */; };
 		3AC1DC4029293E2F004D10EE /* CollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1DC3F29293E2F004D10EE /* CollectionViewModel.swift */; };
 		3AC1DC4229293ECA004D10EE /* NetworkManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1DC4129293ECA004D10EE /* NetworkManagerProtocol.swift */; };
 		3AC1DC442929415B004D10EE /* CollectionViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1DC432929415B004D10EE /* CollectionViewModelProtocol.swift */; };
@@ -91,6 +92,7 @@
 		3A907CD129182DCC0004FC00 /* GoogleSignManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignManager.swift; sourceTree = "<group>"; };
 		3A907CD329182DDB0004FC00 /* GoogleSignManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignManagerProtocol.swift; sourceTree = "<group>"; };
 		3A9F25BD294E213600A53EC6 /* AboutView(SwiftUI).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AboutView(SwiftUI).swift"; sourceTree = "<group>"; };
+		3AA646B52963770D00830603 /* CollectionViewController + keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectionViewController + keyboard.swift"; sourceTree = "<group>"; };
 		3AC1DC3F29293E2F004D10EE /* CollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewModel.swift; sourceTree = "<group>"; };
 		3AC1DC4129293ECA004D10EE /* NetworkManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerProtocol.swift; sourceTree = "<group>"; };
 		3AC1DC432929415B004D10EE /* CollectionViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewModelProtocol.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 			children = (
 				3A6EB260292AA7D1000688FE /* CollectionViewController + DelegateFlowLayout.swift */,
 				3A5F9520292AAA7100C8C869 /* CollectionView + Support.swift */,
+				3AA646B52963770D00830603 /* CollectionViewController + keyboard.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				3A5D84DE292968EA00E41245 /* CollectionViewHeader.swift in Sources */,
 				3A8D1D4C294F5B53001341AE /* NetworkMonitor.swift in Sources */,
 				3A906C4429144A860070996F /* SceneDelegate.swift in Sources */,
+				3AA646B62963770D00830603 /* CollectionViewController + keyboard.swift in Sources */,
 				3A907CD429182DDB0004FC00 /* GoogleSignManagerProtocol.swift in Sources */,
 				3A902A4029153F79007C3FDC /* AlertController.swift in Sources */,
 				3A5F9521292AAA7100C8C869 /* CollectionView + Support.swift in Sources */,

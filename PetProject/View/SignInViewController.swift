@@ -16,12 +16,17 @@ class SignInViewController: UIViewController {
     private var signManager: SignManagerProtocol?
     private var googleSignManager: GoogleSignManagerProtocol?
     
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         checkLogIn()
         signManager = SignManager()
         googleSignManager = GoogleSignManager()
+        registerForKeyboardNotifications()
+        userNameOrEmailTextField.delegate = self
+        passwordTextField.delegate = self
+        
     }
     // Проверка вошел ли уже пользователь до этого
     private func checkLogIn() {
@@ -52,7 +57,7 @@ class SignInViewController: UIViewController {
     @IBAction func signUpButtonAction(_ sender: Any) {
         performSegue(withIdentifier: "toSignUpVCfromSignInVC", sender: self)
     }
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
         case "toMainVCfromSignInVC":
@@ -68,5 +73,35 @@ class SignInViewController: UIViewController {
     
 }
 
+extension SignInViewController {
+    private func registerForKeyboardNotifications() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    @objc private func keyboardWillShow(_ notification: NSNotification) {
+        let userInfo = notification.userInfo!
+        let animationDuration = (userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as! NSNumber).doubleValue
+        let keyboardScreenEndFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+        if notification.name == UIResponder.keyboardWillShowNotification {
+            bottomConstraint.constant = keyboardScreenEndFrame.height
+        }
+        if notification.name == UIResponder.keyboardWillHideNotification {
+            bottomConstraint.constant = 246
+        }
+        
+        view.needsUpdateConstraints()
+        
+        UIView.animate(withDuration: animationDuration) {
+            self.view.layoutIfNeeded()
+        }
+    }
+}
 
-
+extension SignInViewController: UITextFieldDelegate {
+    // нажатие кнопки return на клавиатуре обрабатывается
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        view.endEditing(true)
+        return true
+    }
+    
+}

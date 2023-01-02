@@ -12,7 +12,7 @@
         <!--SignInViewController-->
         <scene sceneID="S9p-uv-B59">
             <objects>
-                <viewController storyboardIdentifier="SignInViewController" title="SignInViewController" id="nJp-xH-SDG" customClass="SignInViewController" customModule="PetProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignInViewController" title="SignInViewController" keyboardType="off" id="nJp-xH-SDG" customClass="SignInViewController" customModule="PetProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AyF-5N-JVj">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -66,16 +66,17 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="ngR-p8-Uqq" firstAttribute="leading" secondItem="73X-pB-bEe" secondAttribute="leading" constant="87" id="1gH-AI-Pcx"/>
-                            <constraint firstItem="Hh8-2v-dZi" firstAttribute="top" secondItem="ngR-p8-Uqq" secondAttribute="bottom" constant="109.67" id="7mB-7d-CWj"/>
                             <constraint firstItem="Hh8-2v-dZi" firstAttribute="centerX" secondItem="AyF-5N-JVj" secondAttribute="centerX" id="8TF-yb-7g2"/>
                             <constraint firstItem="Hh8-2v-dZi" firstAttribute="leading" secondItem="73X-pB-bEe" secondAttribute="leading" constant="25" id="GH7-LY-tNX"/>
                             <constraint firstItem="ngR-p8-Uqq" firstAttribute="top" secondItem="73X-pB-bEe" secondAttribute="top" constant="74" id="HB0-5S-Tri"/>
+                            <constraint firstItem="73X-pB-bEe" firstAttribute="bottom" secondItem="Hh8-2v-dZi" secondAttribute="bottom" constant="246.33000000000001" id="Q2f-mX-gK3"/>
                             <constraint firstItem="73X-pB-bEe" firstAttribute="trailing" secondItem="Hh8-2v-dZi" secondAttribute="trailing" constant="25" id="c2q-2E-8Io"/>
                             <constraint firstItem="73X-pB-bEe" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ngR-p8-Uqq" secondAttribute="trailing" constant="87" id="tEh-2p-qig"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Bam-BQ-7eL"/>
                     <connections>
+                        <outlet property="bottomConstraint" destination="Q2f-mX-gK3" id="00h-PB-QFQ"/>
                         <outlet property="passwordTextField" destination="gl3-xw-p7E" id="vsV-to-bYT"/>
                         <outlet property="userNameOrEmailTextField" destination="FhU-Be-fPl" id="N5Q-8a-hIQ"/>
                         <segue destination="2JI-5B-K8K" kind="show" identifier="toSignUpVCfromSignInVC" id="h9N-eB-tEW"/>
