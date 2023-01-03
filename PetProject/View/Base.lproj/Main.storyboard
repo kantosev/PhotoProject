@@ -286,6 +286,7 @@
                     <navigationItem key="navigationItem" id="Dz5-Vy-XbO"/>
                     <connections>
                         <outlet property="imageView" destination="wFy-QO-7eI" id="efu-I0-uQ3"/>
+                        <outlet property="shareActionButton" destination="wta-Ut-lSm" id="4SS-4q-OOf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kpg-Ig-d0I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -13,6 +13,8 @@ class DetailPhotoViewController: UIViewController {
     var image: UIImage?
     let fileManager = FileManager.default
     
+    @IBOutlet weak var shareActionButton: UIBarButtonItem!
+    
     @IBOutlet weak var imageView: UIImageView!
     
     
@@ -43,7 +45,14 @@ class DetailPhotoViewController: UIViewController {
     @IBAction func shareAction(_ sender: Any) {
         let items: [Any] = [image as Any]
         let activityVC = UIActivityViewController(activityItems: items, applicationActivities: nil)
+//        activityVC.modalPresentationStyle = .popover
+        // для ipad -> указываем точку привязки для popover'a, причем строчка выше необязательна.
+        activityVC.popoverPresentationController?.barButtonItem = shareActionButton
+        
         self.present(activityVC, animated: true)
+    
     }
+   
+
     
 }

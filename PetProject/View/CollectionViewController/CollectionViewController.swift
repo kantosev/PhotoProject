@@ -8,6 +8,7 @@
 import UIKit
 import Alamofire
 
+
 class CollectionViewController: UICollectionViewController {
     
     private var viewModel: CollectionViewModelProtocol?
@@ -28,6 +29,7 @@ class CollectionViewController: UICollectionViewController {
         setActivityIndicator()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
+        
     }
     
     // MARK: - UICollectionViewDataSource

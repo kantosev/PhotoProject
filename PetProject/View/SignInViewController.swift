@@ -8,6 +8,8 @@
 import UIKit
 import ParseSwift
 
+
+
 class SignInViewController: UIViewController {
     
     @IBOutlet weak var userNameOrEmailTextField: UITextField!
@@ -41,6 +43,7 @@ class SignInViewController: UIViewController {
               let password = passwordTextField.text, !password.isEmpty else {
             return AlertController.showAlertController(onViewController: self, title: "Error", message: "Данные введены неверно")
         }
+        
         
         signManager?.logIn(username: username, password: password, onViewController: self) { _ in
             self.performSegue(withIdentifier: "toMainVCfromSignInVC", sender: self)

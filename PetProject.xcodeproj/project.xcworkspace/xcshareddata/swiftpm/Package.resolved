@@ -55,6 +55,15 @@
       }
     },
     {
+      "identity" : "swiftykeychainkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/andriyslyusar/SwiftyKeychainKit",
+      "state" : {
+        "branch" : "master",
+        "revision" : "f864b84bf570e9b13bacbdbec5133c40ddd75364"
+      }
+    },
+    {
       "identity" : "unsplash-photopicker-ios",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/unsplash/unsplash-photopicker-ios.git",
