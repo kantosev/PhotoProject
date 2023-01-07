@@ -17,6 +17,9 @@
 		3A5D84DE292968EA00E41245 /* CollectionViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5D84DC292968EA00E41245 /* CollectionViewHeader.swift */; };
 		3A5D84DF292968EA00E41245 /* CollectionViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A5D84DD292968EA00E41245 /* CollectionViewHeader.xib */; };
 		3A5F9521292AAA7100C8C869 /* CollectionView + Support.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5F9520292AAA7100C8C869 /* CollectionView + Support.swift */; };
+		3A6C2459296989F5007AECB2 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6C2458296989F5007AECB2 /* DetailViewModel.swift */; };
+		3A6C245B29698A67007AECB2 /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6C245A29698A67007AECB2 /* Bindable.swift */; };
+		3A6C245D2969B773007AECB2 /* DetailViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6C245C2969B773007AECB2 /* DetailViewModelProtocol.swift */; };
 		3A6EB25F292A73EA000688FE /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6EB25E292A73EA000688FE /* ToDo.swift */; };
 		3A6EB261292AA7D1000688FE /* CollectionViewController + DelegateFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6EB260292AA7D1000688FE /* CollectionViewController + DelegateFlowLayout.swift */; };
 		3A7008CE296231A100FA6B8E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3A7008D0296231A100FA6B8E /* Localizable.strings */; };
@@ -61,6 +64,9 @@
 		3A5D84DC292968EA00E41245 /* CollectionViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewHeader.swift; sourceTree = "<group>"; };
 		3A5D84DD292968EA00E41245 /* CollectionViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewHeader.xib; sourceTree = "<group>"; };
 		3A5F9520292AAA7100C8C869 /* CollectionView + Support.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectionView + Support.swift"; sourceTree = "<group>"; };
+		3A6C2458296989F5007AECB2 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		3A6C245A29698A67007AECB2 /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
+		3A6C245C2969B773007AECB2 /* DetailViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModelProtocol.swift; sourceTree = "<group>"; };
 		3A6EB25E292A73EA000688FE /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
 		3A6EB260292AA7D1000688FE /* CollectionViewController + DelegateFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectionViewController + DelegateFlowLayout.swift"; sourceTree = "<group>"; };
 		3A7008CA29622A5F00FA6B8E /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
@@ -224,6 +230,8 @@
 			isa = PBXGroup;
 			children = (
 				3AC1DC3F29293E2F004D10EE /* CollectionViewModel.swift */,
+				3A6C2458296989F5007AECB2 /* DetailViewModel.swift */,
+				3A6C245A29698A67007AECB2 /* Bindable.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -247,6 +255,7 @@
 				3A907CD329182DDB0004FC00 /* GoogleSignManagerProtocol.swift */,
 				3AC1DC4129293ECA004D10EE /* NetworkManagerProtocol.swift */,
 				3AC1DC432929415B004D10EE /* CollectionViewModelProtocol.swift */,
+				3A6C245C2969B773007AECB2 /* DetailViewModelProtocol.swift */,
 			);
 			name = Protocols;
 			path = ..;
@@ -368,6 +377,7 @@
 				3A5F9521292AAA7100C8C869 /* CollectionView + Support.swift in Sources */,
 				3A17777829325B6700703F92 /* DetailPhotoViewController.swift in Sources */,
 				3A907CD229182DCC0004FC00 /* GoogleSignManager.swift in Sources */,
+				3A6C2459296989F5007AECB2 /* DetailViewModel.swift in Sources */,
 				3A9F25BE294E213600A53EC6 /* AboutView(SwiftUI).swift in Sources */,
 				3A0D6E5E2933A3C200D468F8 /* UnsplashImageModel.swift in Sources */,
 				3A6EB25F292A73EA000688FE /* ToDo.swift in Sources */,
@@ -380,6 +390,8 @@
 				3AC1DC442929415B004D10EE /* CollectionViewModelProtocol.swift in Sources */,
 				3AC1DC4229293ECA004D10EE /* NetworkManagerProtocol.swift in Sources */,
 				3A5BA2DE294E3E4900DE0B65 /* RowView.swift in Sources */,
+				3A6C245D2969B773007AECB2 /* DetailViewModelProtocol.swift in Sources */,
+				3A6C245B29698A67007AECB2 /* Bindable.swift in Sources */,
 				3AC1DC4029293E2F004D10EE /* CollectionViewModel.swift in Sources */,
 				3A907CD0291821EA0004FC00 /* SignManagerProtocol.swift in Sources */,
 				3A902A4229154042007C3FDC /* SignManager.swift in Sources */,

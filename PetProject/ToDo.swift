@@ -8,8 +8,7 @@
 import Foundation
 
 /*
- 1. Сдвинуть вью при вводе текста в textfield, чтобы клавиатура не закрывала поля
- 3. KeyChain
- 
+Сделать activity indicator на sign in, пока ожидается вход
+2.в deinit -> removeObserver
  
  */

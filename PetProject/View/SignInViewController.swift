@@ -103,7 +103,8 @@ extension SignInViewController {
 extension SignInViewController: UITextFieldDelegate {
     // нажатие кнопки return на клавиатуре обрабатывается
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        view.endEditing(true)
+//        view.endEditing(true)
+        textField.resignFirstResponder()
         return true
     }
     
