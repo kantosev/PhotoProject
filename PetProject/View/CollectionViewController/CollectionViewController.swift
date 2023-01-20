@@ -27,8 +27,6 @@ class CollectionViewController: UICollectionViewController {
         view.addGestureRecognizer(recognizer)
         registerView()
         setActivityIndicator()
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
         
     }
     
@@ -50,7 +48,11 @@ class CollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         guard kind == UICollectionView.elementKindSectionHeader else { return UICollectionReusableView() }
         let view = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "Header", for: indexPath) as! CollectionViewHeader
+        
         return view
+    }
+    override func collectionView(_ collectionView: UICollectionView, willDisplaySupplementaryView view: UICollectionReusableView, forElementKind elementKind: String, at indexPath: IndexPath) {
+        
     }
     
     
@@ -79,7 +81,7 @@ class CollectionViewController: UICollectionViewController {
 // MARK: - Observer
 extension CollectionViewController {
     @objc func searchButtonPressed(notification: Notification) {
-        
+        view.endEditing(true)
         if NetworkMonitor.shared.isConnected == true {
             activityIndicator.isHidden = false
             activityIndicator.startAnimating()
@@ -110,4 +112,17 @@ extension CollectionViewController {
             
         }
     }
+}
+
+
+extension CollectionViewController: UITextFieldDelegate {
+    // нажатие кнопки return на клавиатуре обрабатывается
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        view.endEditing(true)
+//        textField.resignFirstResponder()
+        return true
+    }
+    
+   
+    
 }

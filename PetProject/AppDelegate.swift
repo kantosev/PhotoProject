@@ -33,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         content.title = "Пробное уведомление"
         content.body = "Тело уведомления"
         content.sound = UNNotificationSound.default
-//        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 6, repeats: false)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 6, repeats: false)
       // Уведомление каждый вторник в 11 утра
 //        var dateComponents = DateComponents()
 //        dateComponents.calendar = Calendar.current
@@ -48,7 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let triggerDaily = Calendar.current.dateComponents([.hour,.minute,.second,], from: date)
         let trigger3 = UNCalendarNotificationTrigger(dateMatching: triggerDaily, repeats: true)
         
-        let request = UNNotificationRequest(identifier: "heh", content: content, trigger: trigger3)
+        let request = UNNotificationRequest(identifier: "heh", content: content, trigger: trigger)
         center.add(request)
         
         

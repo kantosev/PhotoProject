@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AQX-gz-YCq">
-    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Image references" minToolsVersion="12.0"/>
@@ -14,30 +14,24 @@
             <objects>
                 <viewController storyboardIdentifier="SignInViewController" title="SignInViewController" keyboardType="off" id="nJp-xH-SDG" customClass="SignInViewController" customModule="PetProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AyF-5N-JVj">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Авторизация пользователя" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ngR-p8-Uqq">
-                                <rect key="frame" x="86.999999999999986" y="165" width="215.66666666666663" height="20.333333333333343"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Hh8-2v-dZi">
-                                <rect key="frame" x="25" y="295" width="340" height="268.66666666666674"/>
+                                <rect key="frame" x="25" y="393" width="364" height="269"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите логин или почту" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FhU-Be-fPl">
-                                        <rect key="frame" x="0.0" y="0.0" width="340" height="34"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="364" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gl3-xw-p7E">
-                                        <rect key="frame" x="0.0" y="59" width="340" height="34"/>
+                                        <rect key="frame" x="0.0" y="59" width="364" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZtB-5d-rY5">
-                                        <rect key="frame" x="0.0" y="117.99999999999999" width="340" height="34.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="118" width="364" height="34.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Войти"/>
                                         <connections>
@@ -45,14 +39,14 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B6M-Vh-O5t">
-                                        <rect key="frame" x="0.0" y="177.33333333333331" width="340" height="32"/>
+                                        <rect key="frame" x="0.0" y="177.5" width="364" height="32"/>
                                         <buttonConfiguration key="configuration" style="gray" image="google" title=""/>
                                         <connections>
                                             <action selector="signInGoogleButtonAction:" destination="nJp-xH-SDG" eventType="touchUpInside" id="T9Y-Q3-2rL"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wQI-86-mjL">
-                                        <rect key="frame" x="0.0" y="234.33333333333337" width="340" height="34.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="234.5" width="364" height="34.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Зарегистрироваться"/>
                                         <connections>
@@ -61,17 +55,22 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Авторизация пользователя" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ngR-p8-Uqq">
+                                <rect key="frame" x="99" y="291.5" width="216" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="73X-pB-bEe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ngR-p8-Uqq" firstAttribute="leading" secondItem="73X-pB-bEe" secondAttribute="leading" constant="87" id="1gH-AI-Pcx"/>
                             <constraint firstItem="Hh8-2v-dZi" firstAttribute="centerX" secondItem="AyF-5N-JVj" secondAttribute="centerX" id="8TF-yb-7g2"/>
                             <constraint firstItem="Hh8-2v-dZi" firstAttribute="leading" secondItem="73X-pB-bEe" secondAttribute="leading" constant="25" id="GH7-LY-tNX"/>
-                            <constraint firstItem="ngR-p8-Uqq" firstAttribute="top" secondItem="73X-pB-bEe" secondAttribute="top" constant="74" id="HB0-5S-Tri"/>
-                            <constraint firstItem="73X-pB-bEe" firstAttribute="bottom" secondItem="Hh8-2v-dZi" secondAttribute="bottom" constant="246.33000000000001" id="Q2f-mX-gK3"/>
+                            <constraint firstItem="Hh8-2v-dZi" firstAttribute="top" secondItem="ngR-p8-Uqq" secondAttribute="bottom" constant="81" id="Nxv-3K-sia"/>
+                            <constraint firstItem="73X-pB-bEe" firstAttribute="bottom" secondItem="Hh8-2v-dZi" secondAttribute="bottom" constant="200" id="Q2f-mX-gK3"/>
                             <constraint firstItem="73X-pB-bEe" firstAttribute="trailing" secondItem="Hh8-2v-dZi" secondAttribute="trailing" constant="25" id="c2q-2E-8Io"/>
-                            <constraint firstItem="73X-pB-bEe" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ngR-p8-Uqq" secondAttribute="trailing" constant="87" id="tEh-2p-qig"/>
+                            <constraint firstItem="ngR-p8-Uqq" firstAttribute="centerX" secondItem="AyF-5N-JVj" secondAttribute="centerX" id="esm-we-ia8"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Bam-BQ-7eL"/>
@@ -92,34 +91,34 @@
             <objects>
                 <viewController storyboardIdentifier="SignUpViewController" title="SignUpViewController" id="2JI-5B-K8K" customClass="SignUpViewController" customModule="PetProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MmU-2b-jDk">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="vg4-CT-lyy">
-                                <rect key="frame" x="25" y="191" width="340" height="246.33333333333337"/>
+                                <rect key="frame" x="25" y="192" width="364" height="246.5"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите логин" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bof-Nr-5ZK">
-                                        <rect key="frame" x="0.0" y="0.0" width="340" height="34"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="364" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s0v-ge-jNi">
-                                        <rect key="frame" x="0.0" y="53" width="340" height="34"/>
+                                        <rect key="frame" x="0.0" y="53" width="364" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите почту" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TkK-XZ-6Pr">
-                                        <rect key="frame" x="0.0" y="106" width="340" height="34"/>
+                                        <rect key="frame" x="0.0" y="106" width="364" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите возраст" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kha-Zp-8DS">
-                                        <rect key="frame" x="0.0" y="159" width="340" height="34"/>
+                                        <rect key="frame" x="0.0" y="159" width="364" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="decimalPad"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hTx-h5-Yht">
-                                        <rect key="frame" x="0.0" y="212" width="340" height="34.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="212" width="364" height="34.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="Зарегистрироваться"/>
                                         <connections>
@@ -129,7 +128,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Регистрация" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IxY-5r-LXd">
-                                <rect key="frame" x="144" y="111" width="102" height="20.333333333333343"/>
+                                <rect key="frame" x="156" y="112" width="102" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -164,7 +163,7 @@
             <objects>
                 <viewController id="YCk-BB-nLF" customClass="AboutViewControllerSwiftUI" customModule="PetProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JHd-ds-imt">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="4Jc-sL-v9G"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -183,7 +182,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AQX-gz-YCq" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="kjO-e4-eBL">
-                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -220,7 +219,7 @@
             <objects>
                 <collectionViewController storyboardIdentifier="CollectionViewController" title="CollectionViewController" id="2Qm-M0-m52" customClass="CollectionViewController" customModule="PetProject" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="oue-il-uug">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="BdD-gj-c9b">
@@ -249,14 +248,14 @@
             <objects>
                 <viewController storyboardIdentifier="DetailPhotoViewController" title="DetailPhotoViewController" id="MnF-6T-0Re" customClass="DetailPhotoViewController" customModule="PetProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="su3-Yt-4Sv">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wFy-QO-7eI">
-                                <rect key="frame" x="0.0" y="107" width="390" height="680"/>
+                                <rect key="frame" x="0.0" y="108" width="414" height="730"/>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1X2-mO-K7v">
-                                <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                                <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                                 <items>
                                     <barButtonItem systemItem="save" id="Xvs-8w-4Aa">
                                         <connections>
@@ -295,7 +294,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="cKf-t6-rNO"/>
+        <segue reference="J6f-ML-QEY"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="google" width="18" height="18"/>

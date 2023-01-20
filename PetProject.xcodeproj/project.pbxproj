@@ -69,10 +69,7 @@
 		3A6C245C2969B773007AECB2 /* DetailViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModelProtocol.swift; sourceTree = "<group>"; };
 		3A6EB25E292A73EA000688FE /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
 		3A6EB260292AA7D1000688FE /* CollectionViewController + DelegateFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectionViewController + DelegateFlowLayout.swift"; sourceTree = "<group>"; };
-		3A7008CA29622A5F00FA6B8E /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
-		3A7008CB29622A6000FA6B8E /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		3A7008CF296231A100FA6B8E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		3A7008D1296231A500FA6B8E /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3A8B53242921122700FDDA1C /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		3A8B532C2921253100FDDA1C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		3A8B532E292128CE00FDDA1C /* ImseaImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImseaImageModel.swift; sourceTree = "<group>"; };
@@ -324,7 +321,6 @@
 			knownRegions = (
 				en,
 				Base,
-				ru,
 			);
 			mainGroup = 3A906C3529144A860070996F;
 			packageReferences = (
@@ -407,7 +403,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				3A7008CF296231A100FA6B8E /* en */,
-				3A7008D1296231A500FA6B8E /* ru */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -416,7 +411,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				3A906C4829144A860070996F /* Base */,
-				3A7008CA29622A5F00FA6B8E /* ru */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -425,7 +419,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				3A906C4D29144A890070996F /* Base */,
-				3A7008CB29622A6000FA6B8E /* ru */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -577,7 +570,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -609,7 +602,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

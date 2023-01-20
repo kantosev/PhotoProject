@@ -21,7 +21,7 @@
 "MnF-6T-0Re.title" = "DetailPhotoViewController";
 
 /* Class = "UITabBarItem"; title = "About"; ObjectID = "QRN-DY-7pl"; */
-"QRN-DY-7pl.title" = "О пользователе о пользователе о пользователе";
+"QRN-DY-7pl.title" = "О пользователе";
 
 /* Class = "UITextField"; placeholder = "Введите почту"; ObjectID = "TkK-XZ-6Pr"; */
 "TkK-XZ-6Pr.placeholder" = "Введите почту";

@@ -86,7 +86,7 @@ extension SignInViewController {
         let animationDuration = (userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as! NSNumber).doubleValue
         let keyboardScreenEndFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
         if notification.name == UIResponder.keyboardWillShowNotification {
-            bottomConstraint.constant = keyboardScreenEndFrame.height
+            bottomConstraint.constant = keyboardScreenEndFrame.height + 15
         }
         if notification.name == UIResponder.keyboardWillHideNotification {
             bottomConstraint.constant = 246
