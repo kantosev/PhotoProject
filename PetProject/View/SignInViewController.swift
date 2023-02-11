@@ -18,7 +18,7 @@ class SignInViewController: UIViewController {
     private var signManager: SignManagerProtocol?
     private var googleSignManager: GoogleSignManagerProtocol?
     
-    
+    var activityIndicator: UIActivityIndicatorView!
     
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     
@@ -30,6 +30,7 @@ class SignInViewController: UIViewController {
         registerForKeyboardNotifications()
         userNameOrEmailTextField.delegate = self
         passwordTextField.delegate = self
+        setActivityIndicator()
         
     }
     // Проверка вошел ли уже пользователь до этого
@@ -45,10 +46,14 @@ class SignInViewController: UIViewController {
               let password = passwordTextField.text, !password.isEmpty else {
             return AlertController.showAlertController(onViewController: self, title: "Error", message: "Данные введены неверно")
         }
-        
+        activityIndicator.isHidden = false
+        activityIndicator.startAnimating()
+        activityIndicator.hidesWhenStopped = true
         
         signManager?.logIn(username: username, password: password, onViewController: self) { _ in
+            self.activityIndicator.stopAnimating()
             self.performSegue(withIdentifier: "toMainVCfromSignInVC", sender: self)
+            
         }
     }
     
@@ -110,4 +115,13 @@ extension SignInViewController: UITextFieldDelegate {
         return true
     }
     
+    func setActivityIndicator() {
+        activityIndicator = UIActivityIndicatorView(style: .large)
+        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(activityIndicator)
+        NSLayoutConstraint.activate([
+            activityIndicator.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            activityIndicator.centerYAnchor.constraint(equalTo: self.view.centerYAnchor)
+        ])
+    }
 }

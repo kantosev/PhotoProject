@@ -8,7 +8,6 @@
 import Foundation
 
 /*
-Сделать activity indicator на sign in, пока ожидается вход
 2.в deinit -> removeObserver
  
  */
