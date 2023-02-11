@@ -2,7 +2,7 @@
 //  TextFieldView.swift
 //  PetProject
 //
-//  Created by Антон Кирилюк on 18.12.2022.
+//  Created by Ivan Eremeev on 18.12.2022.
 //
 
 import SwiftUI
@@ -19,6 +19,7 @@ struct TextFieldView: View {
             .padding(EdgeInsets(top: 0, leading: 5, bottom: 0, trailing: 5))
             .border(.blue)
             .padding(EdgeInsets(top: 0, leading: 5, bottom: 0, trailing: 5))
+            
 
     }
 }

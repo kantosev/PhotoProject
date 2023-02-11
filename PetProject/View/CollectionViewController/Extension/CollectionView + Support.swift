@@ -2,7 +2,7 @@
 //  CollectionView + Support.swift
 //  PetProject
 //
-//  Created by Антон Кирилюк on 20.11.2022.
+//  Created by Ivan Eremeev on 20.11.2022.
 //
 
 import Foundation

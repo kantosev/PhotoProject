@@ -2,7 +2,7 @@
 //  RowView.swift
 //  PetProject
 //
-//  Created by Антон Кирилюк on 17.12.2022.
+//  Created by Ivan Eremeev on 17.12.2022.
 //
 
 import SwiftUI
@@ -18,8 +18,13 @@ struct RowView: View {
             Spacer()
             Text(text2)
                 .foregroundColor(.black)
-        }
-        .padding(EdgeInsets(top: 0, leading: 40, bottom: 15, trailing: 40))
+                }
+        
+        .padding(EdgeInsets(top: 13, leading: 15, bottom: 15, trailing: 15))
+        .overlay(RoundedRectangle(cornerRadius: 7).stroke(lineWidth: 2)
+            .foregroundColor(.blue)
+        )
+        .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
         
     }
 }

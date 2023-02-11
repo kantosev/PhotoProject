@@ -2,7 +2,7 @@
 //  AboutView(SwitUI).swift
 //  PetProject
 //
-//  Created by Антон Кирилюк on 17.12.2022.
+//  Created by Ivan Eremeev on 17.12.2022.
 //
 
 import SwiftUI

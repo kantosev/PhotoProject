@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  PetProject
 //
-//  Created by Антон Кирилюк on 03.11.2022.
+//  Created by Ivan Eremeev on 03.11.2022.
 //
 
 import UIKit
@@ -53,8 +53,8 @@ class SignInViewController: UIViewController {
         signManager?.logIn(username: username, password: password, onViewController: self) { _ in
             self.activityIndicator.stopAnimating()
             self.performSegue(withIdentifier: "toMainVCfromSignInVC", sender: self)
-            
         }
+        self.activityIndicator.stopAnimating()
     }
     
     

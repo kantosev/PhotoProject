@@ -2,7 +2,7 @@
 //  DetailViewModel.swift
 //  PetProject
 //
-//  Created by Антон Кирилюк on 07.01.2023.
+//  Created by Ivan Eremeev on 07.01.2023.
 //
 
 import Foundation

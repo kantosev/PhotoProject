@@ -2,7 +2,7 @@
 //  CollectionViewModel.swift
 //  PetProject
 //
-//  Created by Антон Кирилюк on 19.11.2022.
+//  Created by Ivan Eremeev on 19.11.2022.
 //
 
 import UIKit

@@ -2,7 +2,7 @@
 //  DetailPhotoViewController.swift
 //  PetProject
 //
-//  Created by Антон Кирилюк on 26.11.2022.
+//  Created by Ivan Eremeev on 26.11.2022.
 //
 
 import UIKit

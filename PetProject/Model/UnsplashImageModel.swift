@@ -2,7 +2,7 @@
 //  UnsplashImageModel.swift
 //  PetProject
 //
-//  Created by Антон Кирилюк on 27.11.2022.
+//  Created by Ivan Eremeev on 27.11.2022.
 //
 
 import Foundation

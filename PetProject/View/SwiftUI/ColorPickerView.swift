@@ -2,7 +2,7 @@
 //  Experiment.swift
 //  PetProject
 //
-//  Created by Антон Кирилюк on 18.12.2022.
+//  Created by Ivan Eremeev on 18.12.2022.
 //
 
 import SwiftUI
