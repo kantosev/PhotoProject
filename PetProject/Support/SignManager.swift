@@ -21,8 +21,11 @@ class SignManager: SignManagerProtocol {
             case .success:
                 AlertController.showAlertController(onViewController: vc, title: "Signup succeeded", message: "Вы зарегистрированы", buttonTitle: "Ok", completion: { completionToSuccessAlert?() })
             case .failure(let error):
-                AlertController.showAlertController(onViewController: vc, title: "Error", message: error.message)
-                print(error.code, error.debugDescription)
+                switch error.code.rawValue {
+                case -1: AlertController.showAlertController(onViewController: vc, title: "Error", message: "Нет соединения с интернетом")
+                case 125: AlertController.showAlertController(onViewController: vc, title: "Error", message: "Неверный email")
+                default: AlertController.showAlertController(onViewController: vc, title: "Error", message: error.localizedDescription)
+                }
             }
         }
     }
@@ -34,7 +37,13 @@ class SignManager: SignManagerProtocol {
             case .success(let loggedInUser):
                 successCompletion(loggedInUser)
             case .failure(let error):
-                AlertController.showAlertController(onViewController: vc, title: "Error", message: "\(error.debugDescription)")
+                switch error.code.rawValue {
+                case -1: AlertController.showAlertController(onViewController: vc, title: "Error", message: "Нет соединения с интернетом")
+                case 101: AlertController.showAlertController(onViewController: vc, title: "Error", message: "Неверный логин или пароль")
+                default: AlertController.showAlertController(onViewController: vc, title: "Error", message: "\(error.debugDescription)")
+                }
+                
+                print(error.code.rawValue)
             }
         }
     }

@@ -18,15 +18,12 @@
 		3A5D84DF292968EA00E41245 /* CollectionViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A5D84DD292968EA00E41245 /* CollectionViewHeader.xib */; };
 		3A5F9521292AAA7100C8C869 /* CollectionView + Support.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5F9520292AAA7100C8C869 /* CollectionView + Support.swift */; };
 		3A6C2459296989F5007AECB2 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6C2458296989F5007AECB2 /* DetailViewModel.swift */; };
-		3A6C245B29698A67007AECB2 /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6C245A29698A67007AECB2 /* Bindable.swift */; };
 		3A6C245D2969B773007AECB2 /* DetailViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6C245C2969B773007AECB2 /* DetailViewModelProtocol.swift */; };
 		3A6EB25F292A73EA000688FE /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6EB25E292A73EA000688FE /* ToDo.swift */; };
 		3A6EB261292AA7D1000688FE /* CollectionViewController + DelegateFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6EB260292AA7D1000688FE /* CollectionViewController + DelegateFlowLayout.swift */; };
-		3A7008CE296231A100FA6B8E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3A7008D0296231A100FA6B8E /* Localizable.strings */; };
 		3A8B53252921122700FDDA1C /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8B53242921122700FDDA1C /* CollectionViewController.swift */; };
 		3A8B532B292124FB00FDDA1C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3A8B532A292124FB00FDDA1C /* Alamofire */; };
 		3A8B532D2921253100FDDA1C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8B532C2921253100FDDA1C /* NetworkManager.swift */; };
-		3A8B532F292128CE00FDDA1C /* ImseaImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8B532E292128CE00FDDA1C /* ImseaImageModel.swift */; };
 		3A8B53342921658B00FDDA1C /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8B53322921658B00FDDA1C /* PhotoCell.swift */; };
 		3A8B53352921658B00FDDA1C /* PhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A8B53332921658B00FDDA1C /* PhotoCell.xib */; };
 		3A8D1D4A294F48B7001341AE /* ColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8D1D49294F48B7001341AE /* ColorPickerView.swift */; };
@@ -52,7 +49,6 @@
 		3AC1DC4029293E2F004D10EE /* CollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1DC3F29293E2F004D10EE /* CollectionViewModel.swift */; };
 		3AC1DC4229293ECA004D10EE /* NetworkManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1DC4129293ECA004D10EE /* NetworkManagerProtocol.swift */; };
 		3AC1DC442929415B004D10EE /* CollectionViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1DC432929415B004D10EE /* CollectionViewModelProtocol.swift */; };
-		3AEDD931294E65C700A7F169 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A4FDF3329183EAA00D4B066 /* AuthenticationServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,14 +61,11 @@
 		3A5D84DD292968EA00E41245 /* CollectionViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewHeader.xib; sourceTree = "<group>"; };
 		3A5F9520292AAA7100C8C869 /* CollectionView + Support.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectionView + Support.swift"; sourceTree = "<group>"; };
 		3A6C2458296989F5007AECB2 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
-		3A6C245A29698A67007AECB2 /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
 		3A6C245C2969B773007AECB2 /* DetailViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModelProtocol.swift; sourceTree = "<group>"; };
 		3A6EB25E292A73EA000688FE /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
 		3A6EB260292AA7D1000688FE /* CollectionViewController + DelegateFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectionViewController + DelegateFlowLayout.swift"; sourceTree = "<group>"; };
-		3A7008CF296231A100FA6B8E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3A8B53242921122700FDDA1C /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		3A8B532C2921253100FDDA1C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		3A8B532E292128CE00FDDA1C /* ImseaImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImseaImageModel.swift; sourceTree = "<group>"; };
 		3A8B53322921658B00FDDA1C /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		3A8B53332921658B00FDDA1C /* PhotoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCell.xib; sourceTree = "<group>"; };
 		3A8D1D49294F48B7001341AE /* ColorPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerView.swift; sourceTree = "<group>"; };
@@ -105,7 +98,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AEDD931294E65C700A7F169 /* AuthenticationServices.framework in Frameworks */,
 				3A8B532B292124FB00FDDA1C /* Alamofire in Frameworks */,
 				3A4FDF31291835A200D4B066 /* GoogleSignInSwift in Frameworks */,
 				3A0D6E5C2933A1DF00D468F8 /* UnsplashPhotoPicker in Frameworks */,
@@ -189,7 +181,6 @@
 				3A906C5D2914509D0070996F /* Support */,
 				3A907CCE291821C70004FC00 /* Protocols */,
 				3A906C5A291450790070996F /* Model */,
-				3A7008D0296231A100FA6B8E /* Localizable.strings */,
 				3A906C4A29144A890070996F /* Assets.xcassets */,
 				3A906C4F29144A890070996F /* Info.plist */,
 				3A6EB25E292A73EA000688FE /* ToDo.swift */,
@@ -201,7 +192,6 @@
 			isa = PBXGroup;
 			children = (
 				3A906C612914656D0070996F /* User.swift */,
-				3A8B532E292128CE00FDDA1C /* ImseaImageModel.swift */,
 				3A0D6E5D2933A3C200D468F8 /* UnsplashImageModel.swift */,
 			);
 			path = Model;
@@ -228,7 +218,6 @@
 			children = (
 				3AC1DC3F29293E2F004D10EE /* CollectionViewModel.swift */,
 				3A6C2458296989F5007AECB2 /* DetailViewModel.swift */,
-				3A6C245A29698A67007AECB2 /* Bindable.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -345,7 +334,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A5D84DF292968EA00E41245 /* CollectionViewHeader.xib in Resources */,
-				3A7008CE296231A100FA6B8E /* Localizable.strings in Resources */,
 				3A8B53352921658B00FDDA1C /* PhotoCell.xib in Resources */,
 				3A906C4E29144A890070996F /* LaunchScreen.storyboard in Resources */,
 				3A906C4B29144A890070996F /* Assets.xcassets in Resources */,
@@ -382,12 +370,10 @@
 				3A5BA2DC294E36A400DE0B65 /* AboutViewControllerSwiftUI.swift in Sources */,
 				3A8D1D50294F8CBC001341AE /* UpdateAccountScreenView.swift in Sources */,
 				3A6EB261292AA7D1000688FE /* CollectionViewController + DelegateFlowLayout.swift in Sources */,
-				3A8B532F292128CE00FDDA1C /* ImseaImageModel.swift in Sources */,
 				3AC1DC442929415B004D10EE /* CollectionViewModelProtocol.swift in Sources */,
 				3AC1DC4229293ECA004D10EE /* NetworkManagerProtocol.swift in Sources */,
 				3A5BA2DE294E3E4900DE0B65 /* RowView.swift in Sources */,
 				3A6C245D2969B773007AECB2 /* DetailViewModelProtocol.swift in Sources */,
-				3A6C245B29698A67007AECB2 /* Bindable.swift in Sources */,
 				3AC1DC4029293E2F004D10EE /* CollectionViewModel.swift in Sources */,
 				3A907CD0291821EA0004FC00 /* SignManagerProtocol.swift in Sources */,
 				3A902A4229154042007C3FDC /* SignManager.swift in Sources */,
@@ -399,14 +385,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		3A7008D0296231A100FA6B8E /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3A7008CF296231A100FA6B8E /* en */,
-			);
-			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
 		3A906C4729144A860070996F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -557,7 +535,9 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -589,7 +569,9 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

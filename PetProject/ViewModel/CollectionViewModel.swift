@@ -13,7 +13,6 @@ class CollectionViewModel: CollectionViewModelProtocol {
     private let networkManager: NetworkManagerProtocol = NetworkManager()
     
     private var arrayOfImages: [String]?
-//    private let url = "https://imsea.herokuapp.com/api/1?"
     private let url = "https://api.unsplash.com/search/photos"
     
     func fetchOfData(with text: String, completion: @escaping (Bool) -> (), errorCompletion: @escaping (AFError) -> ()) {

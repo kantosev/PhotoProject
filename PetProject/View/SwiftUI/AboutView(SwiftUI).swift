@@ -24,24 +24,24 @@ struct AboutView: View {
         NavigationView {
             ZStack {
                 VStack {
+                    //                    RowView(text1: "Имя", text2: $name)
+                    //                        .onAppear {
+                    //                            guard let userName = User.current?.username else { return }
+                    //                            name = userName
+                    //                        }
+                    //                    RowView(text1: "email", text2: $email)
+                    //                        .onAppear {
+                    //                            guard let userEmail = User.current?.email else { return }
+                    //                            email = userEmail
+                    //                        }
+                    //                    RowView(text1: "Возраст", text2: $age)
+                    //                        .onAppear {
+                    //                            guard let userAge = User.current?.age else { return }
+                    //                            age = userAge
+                    //                        }
                     RowView(text1: "Имя", text2: $name)
-                        .onAppear {
-                            guard let userName = User.current?.username else { return }
-                            name = userName
-                        }
-                    RowView(text1: "email", text2: $email)
-                        .onAppear {
-                            guard let userEmail = User.current?.email else { return }
-                            email = userEmail
-                        }
-                    RowView(text1: "Возраст", text2: $age)
-                        .onAppear {
-                            guard let userAge = User.current?.age else { return }
-                            age = userAge
-                        }
-                    //                    RowView(text1: "Имя", text2: "")
-                    //                    RowView(text1: "email", text2: $name)
-                    //                    RowView(text1: "Возраст", text2: $name)
+                    RowView(text1: "email", text2: $name)
+                    RowView(text1: "Возраст", text2: $name)
                     NavigationLink(destination: UpdateAccountScreenView()) {
                         Text("Изменить данные аккаунта")
                     }
