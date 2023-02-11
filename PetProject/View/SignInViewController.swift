@@ -18,6 +18,8 @@ class SignInViewController: UIViewController {
     private var signManager: SignManagerProtocol?
     private var googleSignManager: GoogleSignManagerProtocol?
     
+    
+    
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {

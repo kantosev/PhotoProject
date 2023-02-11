@@ -7,6 +7,7 @@
 
 import UIKit
 import Alamofire
+import Kingfisher
 
 class CollectionViewModel: CollectionViewModelProtocol {
     
@@ -35,13 +36,10 @@ class CollectionViewModel: CollectionViewModelProtocol {
     func setOfCell(cell: PhotoCell, with indexPath: IndexPath) {
         if let arrayOfImages {
         guard let url = URL(string: arrayOfImages[indexPath.row]) else { return }
-            DispatchQueue.global().async {
-                guard let data = try? Data(contentsOf: url) else { return }
                 DispatchQueue.main.async {
-                    let image = UIImage(data: data)
-                    cell.imageView.image = image
+                    cell.imageView.kf.setImage(with: url)
                 }
-            }
+            
         }
     }
 }

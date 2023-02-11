@@ -10,6 +10,7 @@
 		3A0D6E5C2933A1DF00D468F8 /* UnsplashPhotoPicker in Frameworks */ = {isa = PBXBuildFile; productRef = 3A0D6E5B2933A1DF00D468F8 /* UnsplashPhotoPicker */; };
 		3A0D6E5E2933A3C200D468F8 /* UnsplashImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0D6E5D2933A3C200D468F8 /* UnsplashImageModel.swift */; };
 		3A17777829325B6700703F92 /* DetailPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A17777729325B6700703F92 /* DetailPhotoViewController.swift */; };
+		3A25A31729982484000671CD /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 3A25A31629982484000671CD /* Kingfisher */; };
 		3A4FDF2F291835A200D4B066 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 3A4FDF2E291835A200D4B066 /* GoogleSignIn */; };
 		3A4FDF31291835A200D4B066 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3A4FDF30291835A200D4B066 /* GoogleSignInSwift */; };
 		3A5BA2DC294E36A400DE0B65 /* AboutViewControllerSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5BA2DB294E36A400DE0B65 /* AboutViewControllerSwiftUI.swift */; };
@@ -101,6 +102,7 @@
 				3A8B532B292124FB00FDDA1C /* Alamofire in Frameworks */,
 				3A4FDF31291835A200D4B066 /* GoogleSignInSwift in Frameworks */,
 				3A0D6E5C2933A1DF00D468F8 /* UnsplashPhotoPicker in Frameworks */,
+				3A25A31729982484000671CD /* Kingfisher in Frameworks */,
 				3A906C5729144A9C0070996F /* ParseSwift in Frameworks */,
 				3AA5F9EF29644A8000EBD9A0 /* SwiftyKeychainKit in Frameworks */,
 				3A4FDF2F291835A200D4B066 /* GoogleSignIn in Frameworks */,
@@ -283,6 +285,7 @@
 				3A8B532A292124FB00FDDA1C /* Alamofire */,
 				3A0D6E5B2933A1DF00D468F8 /* UnsplashPhotoPicker */,
 				3AA5F9EE29644A8000EBD9A0 /* SwiftyKeychainKit */,
+				3A25A31629982484000671CD /* Kingfisher */,
 			);
 			productName = PetProject;
 			productReference = 3A906C3E29144A860070996F /* PetProject.app */;
@@ -318,6 +321,7 @@
 				3A8B5329292124FB00FDDA1C /* XCRemoteSwiftPackageReference "Alamofire" */,
 				3A0D6E5A2933A1DF00D468F8 /* XCRemoteSwiftPackageReference "unsplash-photopicker-ios" */,
 				3AA5F9ED29644A8000EBD9A0 /* XCRemoteSwiftPackageReference "SwiftyKeychainKit" */,
+				3A25A31529982484000671CD /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 3A906C3F29144A860070996F /* Products */;
 			projectDirPath = "";
@@ -620,6 +624,14 @@
 				kind = branch;
 			};
 		};
+		3A25A31529982484000671CD /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		3A4FDF2D291835A200D4B066 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
@@ -659,6 +671,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3A0D6E5A2933A1DF00D468F8 /* XCRemoteSwiftPackageReference "unsplash-photopicker-ios" */;
 			productName = UnsplashPhotoPicker;
+		};
+		3A25A31629982484000671CD /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3A25A31529982484000671CD /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 		3A4FDF2E291835A200D4B066 /* GoogleSignIn */ = {
 			isa = XCSwiftPackageProductDependency;
