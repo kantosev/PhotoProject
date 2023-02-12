@@ -50,6 +50,11 @@
 		3AC1DC4029293E2F004D10EE /* CollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1DC3F29293E2F004D10EE /* CollectionViewModel.swift */; };
 		3AC1DC4229293ECA004D10EE /* NetworkManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1DC4129293ECA004D10EE /* NetworkManagerProtocol.swift */; };
 		3AC1DC442929415B004D10EE /* CollectionViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1DC432929415B004D10EE /* CollectionViewModelProtocol.swift */; };
+		3AF34C65299907A600454E05 /* CollectionViewFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF34C63299907A600454E05 /* CollectionViewFooter.swift */; };
+		3AF34C66299907A600454E05 /* CollectionViewFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AF34C64299907A600454E05 /* CollectionViewFooter.xib */; };
+		3AF34C682999311300454E05 /* CollectionView + Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF34C672999311300454E05 /* CollectionView + Keyboard.swift */; };
+		3AF34C6A2999313500454E05 /* CollectionView + Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF34C692999313500454E05 /* CollectionView + Search.swift */; };
+		3AF34C6C2999452B00454E05 /* String + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF34C6B2999452B00454E05 /* String + Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +97,11 @@
 		3AC1DC3F29293E2F004D10EE /* CollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewModel.swift; sourceTree = "<group>"; };
 		3AC1DC4129293ECA004D10EE /* NetworkManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerProtocol.swift; sourceTree = "<group>"; };
 		3AC1DC432929415B004D10EE /* CollectionViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewModelProtocol.swift; sourceTree = "<group>"; };
+		3AF34C63299907A600454E05 /* CollectionViewFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewFooter.swift; sourceTree = "<group>"; };
+		3AF34C64299907A600454E05 /* CollectionViewFooter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewFooter.xib; sourceTree = "<group>"; };
+		3AF34C672999311300454E05 /* CollectionView + Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectionView + Keyboard.swift"; sourceTree = "<group>"; };
+		3AF34C692999313500454E05 /* CollectionView + Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectionView + Search.swift"; sourceTree = "<group>"; };
+		3AF34C6B2999452B00454E05 /* String + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String + Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +135,8 @@
 			children = (
 				3A6EB260292AA7D1000688FE /* CollectionViewController + DelegateFlowLayout.swift */,
 				3A5F9520292AAA7100C8C869 /* CollectionView + Support.swift */,
+				3AF34C672999311300454E05 /* CollectionView + Keyboard.swift */,
+				3AF34C692999313500454E05 /* CollectionView + Search.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -142,6 +154,9 @@
 			isa = PBXGroup;
 			children = (
 				3A8B53242921122700FDDA1C /* CollectionViewController.swift */,
+				3AF34C622999074F00454E05 /* CollectionViewFooter */,
+				3A8D1D4E294F8C71001341AE /* CollectionViewHeader */,
+				3A8B53262921232400FDDA1C /* Cell */,
 				3A5F951F292AAA4B00C8C869 /* Extension */,
 			);
 			path = CollectionViewController;
@@ -207,8 +222,6 @@
 				3A902A3D29153E96007C3FDC /* SignUpViewController.swift */,
 				3A8D1D4D294F8C52001341AE /* CollectionViewController */,
 				3A17777729325B6700703F92 /* DetailPhotoViewController.swift */,
-				3A8D1D4E294F8C71001341AE /* CollectionViewHeader */,
-				3A8B53262921232400FDDA1C /* Cell */,
 				3A906C4729144A860070996F /* Main.storyboard */,
 				3A906C4C29144A890070996F /* LaunchScreen.storyboard */,
 			);
@@ -227,6 +240,7 @@
 		3A906C5D2914509D0070996F /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				3AF34C6B2999452B00454E05 /* String + Extension.swift */,
 				3A902A4129154042007C3FDC /* SignManager.swift */,
 				3A907CD129182DCC0004FC00 /* GoogleSignManager.swift */,
 				3A8B532C2921253100FDDA1C /* NetworkManager.swift */,
@@ -260,6 +274,15 @@
 				3A8D1D51294F8CEC001341AE /* TextFieldView.swift */,
 			);
 			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		3AF34C622999074F00454E05 /* CollectionViewFooter */ = {
+			isa = PBXGroup;
+			children = (
+				3AF34C63299907A600454E05 /* CollectionViewFooter.swift */,
+				3AF34C64299907A600454E05 /* CollectionViewFooter.xib */,
+			);
+			path = CollectionViewFooter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,6 +361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A5D84DF292968EA00E41245 /* CollectionViewHeader.xib in Resources */,
+				3AF34C66299907A600454E05 /* CollectionViewFooter.xib in Resources */,
 				3A8B53352921658B00FDDA1C /* PhotoCell.xib in Resources */,
 				3A906C4E29144A890070996F /* LaunchScreen.storyboard in Resources */,
 				3A906C4B29144A890070996F /* Assets.xcassets in Resources */,
@@ -354,6 +378,7 @@
 			files = (
 				3A8B53252921122700FDDA1C /* CollectionViewController.swift in Sources */,
 				3A8B53342921658B00FDDA1C /* PhotoCell.swift in Sources */,
+				3AF34C6C2999452B00454E05 /* String + Extension.swift in Sources */,
 				3A902A3E29153E96007C3FDC /* SignUpViewController.swift in Sources */,
 				3A906C4629144A860070996F /* SignInViewController.swift in Sources */,
 				3A906C4229144A860070996F /* AppDelegate.swift in Sources */,
@@ -361,9 +386,12 @@
 				3A8D1D4C294F5B53001341AE /* NetworkMonitor.swift in Sources */,
 				3A906C4429144A860070996F /* SceneDelegate.swift in Sources */,
 				3A907CD429182DDB0004FC00 /* GoogleSignManagerProtocol.swift in Sources */,
+				3AF34C682999311300454E05 /* CollectionView + Keyboard.swift in Sources */,
 				3A902A4029153F79007C3FDC /* AlertController.swift in Sources */,
 				3A5F9521292AAA7100C8C869 /* CollectionView + Support.swift in Sources */,
+				3AF34C65299907A600454E05 /* CollectionViewFooter.swift in Sources */,
 				3A17777829325B6700703F92 /* DetailPhotoViewController.swift in Sources */,
+				3AF34C6A2999313500454E05 /* CollectionView + Search.swift in Sources */,
 				3A907CD229182DCC0004FC00 /* GoogleSignManager.swift in Sources */,
 				3A6C2459296989F5007AECB2 /* DetailViewModel.swift in Sources */,
 				3A9F25BE294E213600A53EC6 /* AboutView(SwiftUI).swift in Sources */,
@@ -531,7 +559,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = QLSY4AKN2Q;
+				DEVELOPMENT_TEAM = FS563UXRHA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PetProject/Info.plist;
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Для сохранения фото в галарею";
@@ -547,7 +575,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Erem.PhotoProj;
+				PRODUCT_BUNDLE_IDENTIFIER = Inc.PhotoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -565,7 +593,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = QLSY4AKN2Q;
+				DEVELOPMENT_TEAM = FS563UXRHA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PetProject/Info.plist;
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Для сохранения фото в галарею";
@@ -581,7 +609,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Erem.PhotoProj;
+				PRODUCT_BUNDLE_IDENTIFIER = Inc.PhotoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;

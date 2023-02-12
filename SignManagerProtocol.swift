@@ -12,7 +12,7 @@ protocol SignManagerProtocol {
     
     func signUp(username: String, email: String?, password: String, age: String, onViewController vc: UIViewController, completionToSuccessAlert: (() -> ())?)
     
-    func logIn(username: String, password: String, onViewController vc: UIViewController, successCompletion: @escaping (User) -> ())
+    func logIn(username: String, password: String, onViewController vc: UIViewController, successCompletion: @escaping () -> (), errorCompletion: @escaping () -> ())
     
     func logOut(successCompletion: @escaping () -> (), errorCompletion: @escaping (Error) -> ())
     

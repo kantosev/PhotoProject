@@ -9,11 +9,12 @@ import Foundation
 import Alamofire
 
 class NetworkManager: NetworkManagerProtocol {
-    func getArrayOfImages(url: String, searchText: String, completion: @escaping (([String]) -> ()), errorCompletion: @escaping ((AFError) -> ())) {
+    func getArrayOfImages(url: String, searchText: String, page: String?, completion: @escaping (([String]) -> ()), errorCompletion: @escaping ((AFError) -> ())) {
         guard let url = URL(string: url) else { return }
         let urlParams = [
             "query": searchText,
-            "per_page": "30"
+            "per_page": "30",
+            "page": page
         ]
         let headers = [
             "Authorization": "Client-ID 4Uitm6ZbRdgeZKMPHKFW11JI9Q00TFRFN3ajlRuzUTs"

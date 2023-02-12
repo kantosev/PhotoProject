@@ -16,10 +16,14 @@ extension CollectionViewController {
     func addObserverForErrorSearch() {
         NotificationCenter.default.addObserver(self, selector: #selector(errorSearch), name: .init("errorSearch"), object: nil)
     }
+    func addObserverForOverButtonLoadPressed() {
+        NotificationCenter.default.addObserver(self, selector: #selector(overButtonLoadPressed), name: .init("overImageLoad"), object: nil)
+    }
     func registerView() {
         collectionView.register(UINib(nibName: "PhotoCell", bundle: nil), forCellWithReuseIdentifier: "PhotoCell")
         collectionView.register(UINib(nibName: "CollectionViewHeader", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "Header")
-    }
+        collectionView.register(UINib(nibName: "CollectionViewFooter", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "Footer")
+        }
     func setActivityIndicator() {
         activityIndicator = UIActivityIndicatorView(style: .large)
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false
@@ -30,3 +34,6 @@ extension CollectionViewController {
         ])
     }
 }
+
+
+

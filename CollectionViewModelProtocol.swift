@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 
 protocol CollectionViewModelProtocol {
-    func fetchOfData(with text: String, completion: @escaping (Bool) -> (), errorCompletion: @escaping (AFError) -> ())
+    func fetchOfData(with text: String, completion: @escaping (Bool) -> (), errorCompletion: @escaping (AFError) -> (), searchButtonPressed: Bool)
     func numberOfItemsInSection() -> Int
     func setOfCell(cell: PhotoCell, with indexPath: IndexPath)
 }

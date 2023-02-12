@@ -45,17 +45,20 @@ class SignInViewController: UIViewController {
         guard let username = userNameOrEmailTextField.text, !username.isEmpty,
               let password = passwordTextField.text, !password.isEmpty else {
             return AlertController.showAlertController(onViewController: self, title: "Error", message: "Данные введены неверно")
+            
         }
         activityIndicator.isHidden = false
         activityIndicator.startAnimating()
         activityIndicator.hidesWhenStopped = true
         
-        signManager?.logIn(username: username, password: password, onViewController: self) { _ in
+        signManager?.logIn(username: username, password: password, onViewController: self, successCompletion: {
             self.activityIndicator.stopAnimating()
             self.performSegue(withIdentifier: "toMainVCfromSignInVC", sender: self)
-        }
-        self.activityIndicator.stopAnimating()
+        }, errorCompletion: {
+            self.activityIndicator.stopAnimating()
+        })
     }
+    
     
     
     @IBAction func signInGoogleButtonAction(_ sender: Any) {

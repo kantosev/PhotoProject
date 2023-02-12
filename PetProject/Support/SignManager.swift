@@ -29,14 +29,15 @@ class SignManager: SignManagerProtocol {
             }
         }
     }
-    func logIn(username: String, password: String, onViewController vc: UIViewController, successCompletion: @escaping (User) -> ()) {
+    func logIn(username: String, password: String, onViewController vc: UIViewController, successCompletion: @escaping () -> (), errorCompletion: @escaping () -> ()) {
         // Logs in the user asynchronously
         
         User.login(username: username, password: password) { result in // Handle the result (of type Result<User, ParseError>)
             switch result {
-            case .success(let loggedInUser):
-                successCompletion(loggedInUser)
+            case .success:
+                successCompletion()
             case .failure(let error):
+                errorCompletion()
                 switch error.code.rawValue {
                 case -1: AlertController.showAlertController(onViewController: vc, title: "Error", message: "Нет соединения с интернетом")
                 case 101: AlertController.showAlertController(onViewController: vc, title: "Error", message: "Неверный логин или пароль")
