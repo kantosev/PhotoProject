@@ -9,5 +9,6 @@ import Foundation
 
 /*
 2.в deinit -> removeObserver
- Реализовать
+ Убрать возраст из параметров регистрации
+ Сделать LaunchScreen
  */

@@ -12,7 +12,12 @@ struct UnsplashImageModel: Codable {
 }
 struct Result: Codable {
     let urls: Urls
+    let user: UserUnsplash?
 }
 struct Urls: Codable {
     let regular: String
 }
+struct UserUnsplash: Codable {
+    let username: String
+}
+

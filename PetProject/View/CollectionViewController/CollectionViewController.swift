@@ -47,14 +47,10 @@ class CollectionViewController: UICollectionViewController {
     // MARK: - UICollectionViewDataSource Header
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        
         switch kind {
-
         case UICollectionView.elementKindSectionHeader:
-
             let view = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "Header", for: indexPath) as! CollectionViewHeader
             return view
-
         case UICollectionView.elementKindSectionFooter:
             let view = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "Footer", for: indexPath) as! CollectionViewFooter
             view.isHidden = footerIsHidden

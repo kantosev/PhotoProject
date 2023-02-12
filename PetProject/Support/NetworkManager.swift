@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 
 class NetworkManager: NetworkManagerProtocol {
-    func getArrayOfImages(url: String, searchText: String, page: String?, completion: @escaping (([String]) -> ()), errorCompletion: @escaping ((AFError) -> ())) {
+    func getArrayOfImages(url: String, searchText: String, page: String?, completion: @escaping (([String], [String]) -> ()), errorCompletion: @escaping ((AFError) -> ())) {
         guard let url = URL(string: url) else { return }
         let urlParams = [
             "query": searchText,
@@ -22,16 +22,18 @@ class NetworkManager: NetworkManagerProtocol {
         AF.request(url, parameters: urlParams, headers: HTTPHeaders(headers)).validate().responseDecodable(of: UnsplashImageModel.self) { response in
             switch response.result {
             case .success(let answer):
-                var array: [String] = []
-                
+                var arrayImagesUrl: [String] = []
+                var arrayOfUserName: [String] = []
                 let imagesCount = answer.results.count
                 
                 if imagesCount > 1 {
                     for image in 0...(imagesCount - 1) {
-                        array.append(answer.results[image].urls.regular)
+                        arrayImagesUrl.append(answer.results[image].urls.regular)
+                        arrayOfUserName.append(answer.results[image].user?.username ?? "")
                     }
                 }
-                completion(array)  
+                
+                completion(arrayImagesUrl, arrayOfUserName)
             case.failure(let error):
                 print(error)
                 errorCompletion(error)
