@@ -16,6 +16,8 @@ class CollectionViewController: UICollectionViewController {
     var activityIndicator: UIActivityIndicatorView!
     
     var recognizer: UILongPressGestureRecognizer!
+    
+    var footerIsHidden: Bool = true
        
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,6 +57,7 @@ class CollectionViewController: UICollectionViewController {
 
         case UICollectionView.elementKindSectionFooter:
             let view = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "Footer", for: indexPath) as! CollectionViewFooter
+            view.isHidden = footerIsHidden
             return view
         default:
                 assert(false, "Unexpected element kind")

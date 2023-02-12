@@ -14,6 +14,7 @@ extension CollectionViewController {
     @objc func searchButtonPressed(notification: Notification) {
         // очищает кеш фото при новом поиске
         KingfisherManager.shared.cache.clearCache()
+        footerIsHidden = false
         view.endEditing(true)
         if NetworkMonitor.shared.isConnected == true {
             activityIndicator.isHidden = false
