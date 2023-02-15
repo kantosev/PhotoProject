@@ -76,6 +76,7 @@ struct AboutView: View {
                     .buttonStyle(.borderedProminent)
                     Button("Удалить аккаунт") {
                         self.deleteAccountCompletion?()
+                        visibleActivityIndicator.toggle()
                     }
                     
                     .foregroundColor(.red)
