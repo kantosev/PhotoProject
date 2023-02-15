@@ -41,12 +41,12 @@ struct AboutView: View {
                             guard let userAge = User.current?.age else { return }
                             age = userAge
                         }
-//                                        RowView(text1: "Имя", text2: $name)
-//                                        RowView(text1: "email", text2: $email)
-//                                        RowView(text1: "Возраст", text2: $age)
+                    //                                        RowView(text1: "Имя", text2: $name)
+                    //                                        RowView(text1: "email", text2: $email)
+                    //                                        RowView(text1: "Возраст", text2: $age)
                     NavigationLink(destination: UpdateAccountScreenView()) {
                         Text("Изменить данные аккаунта")
-                            
+                        
                     }
                     .buttonStyle(.borderedProminent)
                     Spacer()
@@ -63,10 +63,12 @@ struct AboutView: View {
                             let color = CGColor(red: colorComponent[0], green: colorComponent[1], blue: colorComponent[2], alpha: colorComponent[3])
                             backgroundColor = Color(cgColor: color)
                         }
-                  
+                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 70, trailing: 0))
+                    
                     ActivityIndicatorView(isVisible: $visibleActivityIndicator, type: .rotatingDots())
                         .foregroundColor(.red)
                         .frame(width: 50, height: 50, alignment: .center)
+                    
                     
                     Spacer()
                     Button("Выйти из аккаунта") {

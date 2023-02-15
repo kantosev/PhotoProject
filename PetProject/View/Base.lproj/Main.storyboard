@@ -18,8 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Hh8-2v-dZi">
-                                <rect key="frame" x="25" y="393" width="364" height="269"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Hh8-2v-dZi">
+                                <rect key="frame" x="25" y="433" width="364" height="229"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите логин или почту" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FhU-Be-fPl">
                                         <rect key="frame" x="0.0" y="0.0" width="364" height="34"/>
@@ -27,12 +27,12 @@
                                         <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gl3-xw-p7E">
-                                        <rect key="frame" x="0.0" y="59" width="364" height="34"/>
+                                        <rect key="frame" x="0.0" y="49" width="364" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZtB-5d-rY5">
-                                        <rect key="frame" x="0.0" y="118" width="364" height="34.5"/>
+                                        <rect key="frame" x="0.0" y="98" width="364" height="34.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Войти"/>
                                         <connections>
@@ -40,14 +40,14 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B6M-Vh-O5t">
-                                        <rect key="frame" x="0.0" y="177.5" width="364" height="32"/>
+                                        <rect key="frame" x="0.0" y="147.5" width="364" height="32"/>
                                         <buttonConfiguration key="configuration" style="gray" image="google" title=""/>
                                         <connections>
                                             <action selector="signInGoogleButtonAction:" destination="nJp-xH-SDG" eventType="touchUpInside" id="T9Y-Q3-2rL"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wQI-86-mjL">
-                                        <rect key="frame" x="0.0" y="234.5" width="364" height="34.5"/>
+                                        <rect key="frame" x="0.0" y="194.5" width="364" height="34.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Зарегистрироваться"/>
                                         <connections>
@@ -57,7 +57,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Авторизация" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ngR-p8-Uqq">
-                                <rect key="frame" x="147.5" y="288" width="119" height="24"/>
+                                <rect key="frame" x="147.5" y="328" width="119" height="24"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

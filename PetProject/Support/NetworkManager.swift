@@ -35,7 +35,6 @@ class NetworkManager: NetworkManagerProtocol {
                         arrayOfUserName.append(answer.results[image].user?.username ?? "")
                     }
                 }
-                
                 completion(arrayImagesUrl, arrayOfUserName)
             case.failure(let error):
                 print(error)
@@ -51,7 +50,7 @@ class NetworkManager: NetworkManagerProtocol {
         if count > 0 {
             for i in 0...(count - 1) {
                 guard let url = URL(string: model.results[i].links.download_location) else { return }
-                AF.request(url, headers: HTTPHeaders(headers))
+                AF.request(url, method: .get, headers: HTTPHeaders(headers)).validate().responseString { _ in }
             }
         }
         

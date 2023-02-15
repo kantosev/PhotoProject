@@ -18,7 +18,7 @@ class SignInViewController: UIViewController {
     private var signManager: SignManagerProtocol?
     private var googleSignManager: GoogleSignManagerProtocol?
     
-    var activityIndicator: UIActivityIndicatorView!
+    private var activityIndicator: UIActivityIndicatorView!
     
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     
