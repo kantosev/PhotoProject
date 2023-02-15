@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import ActivityIndicatorView
 
 struct AboutView: View {
     @State private var backgroundColor: Color = .white
@@ -13,6 +14,7 @@ struct AboutView: View {
     @State private var name: String = (User.current?.username)!
     @State private var email: String = (User.current?.email)!
     @State private var age: String = (User.current?.age)!
+    @State private var visibleActivityIndicator: Bool = false
     
     var dismiss: (() -> Void)?
     
@@ -39,9 +41,9 @@ struct AboutView: View {
                             guard let userAge = User.current?.age else { return }
                             age = userAge
                         }
-                    //                    RowView(text1: "Имя", text2: $name)
-                    //                    RowView(text1: "email", text2: $name)
-                    //                    RowView(text1: "Возраст", text2: $name)
+//                                        RowView(text1: "Имя", text2: $name)
+//                                        RowView(text1: "email", text2: $email)
+//                                        RowView(text1: "Возраст", text2: $age)
                     NavigationLink(destination: UpdateAccountScreenView()) {
                         Text("Изменить данные аккаунта")
                             
@@ -60,12 +62,16 @@ struct AboutView: View {
                             guard let colorComponent = UserDefaults.standard.object(forKey: user) as? [CGFloat] else { return }
                             let color = CGColor(red: colorComponent[0], green: colorComponent[1], blue: colorComponent[2], alpha: colorComponent[3])
                             backgroundColor = Color(cgColor: color)
-                            
-                            
                         }
+                  
+                    ActivityIndicatorView(isVisible: $visibleActivityIndicator, type: .rotatingDots())
+                        .foregroundColor(.red)
+                        .frame(width: 50, height: 50, alignment: .center)
+                    
                     Spacer()
                     Button("Выйти из аккаунта") {
                         self.dismiss?()
+                        visibleActivityIndicator.toggle()
                     }
                     .buttonStyle(.borderedProminent)
                     Button("Удалить аккаунт") {
