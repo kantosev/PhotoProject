@@ -81,6 +81,8 @@ class CollectionViewController: UICollectionViewController {
             let vc = segue.destination as? DetailPhotoViewController
             let cell = collectionView.cellForItem(at: indexPath) as? PhotoCell
             vc?.image = cell?.imageView.image
+            
+            viewModel?.sendRequestToDownloadLocation()
         }
     }
     

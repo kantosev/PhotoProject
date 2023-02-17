@@ -57,6 +57,7 @@
 		3AF34C6A2999313500454E05 /* CollectionView + Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF34C692999313500454E05 /* CollectionView + Search.swift */; };
 		3AF34C6C2999452B00454E05 /* String + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF34C6B2999452B00454E05 /* String + Extension.swift */; };
 		3AF98920299FED9400F48775 /* ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF9891F299FED9400F48775 /* ScrollView.swift */; };
+		3AF9892229A0174100F48775 /* UserDefaults + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF9892129A0174100F48775 /* UserDefaults + Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -105,6 +106,7 @@
 		3AF34C692999313500454E05 /* CollectionView + Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectionView + Search.swift"; sourceTree = "<group>"; };
 		3AF34C6B2999452B00454E05 /* String + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String + Extension.swift"; sourceTree = "<group>"; };
 		3AF9891F299FED9400F48775 /* ScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollView.swift; sourceTree = "<group>"; };
+		3AF9892129A0174100F48775 /* UserDefaults + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults + Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,6 +253,7 @@
 				3A8B532C2921253100FDDA1C /* NetworkManager.swift */,
 				3A902A3F29153F79007C3FDC /* AlertController.swift */,
 				3A8D1D4B294F5B53001341AE /* NetworkMonitor.swift */,
+				3AF9892129A0174100F48775 /* UserDefaults + Extension.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -407,6 +410,7 @@
 				3A6EB25F292A73EA000688FE /* ToDo.swift in Sources */,
 				3A8D1D52294F8CEC001341AE /* TextFieldView.swift in Sources */,
 				3A8B532D2921253100FDDA1C /* NetworkManager.swift in Sources */,
+				3AF9892229A0174100F48775 /* UserDefaults + Extension.swift in Sources */,
 				3A5BA2DC294E36A400DE0B65 /* AboutViewControllerSwiftUI.swift in Sources */,
 				3A8D1D50294F8CBC001341AE /* UpdateAccountScreenView.swift in Sources */,
 				3A6EB261292AA7D1000688FE /* CollectionViewController + DelegateFlowLayout.swift in Sources */,

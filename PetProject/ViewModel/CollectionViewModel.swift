@@ -67,4 +67,8 @@ class CollectionViewModel: CollectionViewModelProtocol {
         }
         
     }
+    func sendRequestToDownloadLocation() {
+        guard let model = UserDefaults.standard.getCodableObject(dataType: UnsplashImageModel.self, key: "userModel") else { return }
+        networkManager.getToDownloadLocation(model: model)
+    }
 }

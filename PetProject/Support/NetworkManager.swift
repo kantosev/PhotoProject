@@ -22,9 +22,7 @@ class NetworkManager: NetworkManagerProtocol {
         AF.request(url, parameters: urlParams, headers: HTTPHeaders(headers)).validate().responseDecodable(of: UnsplashImageModel.self) { response in
             switch response.result {
             case .success(let answer):
-                DispatchQueue.global(qos: .utility).async {
-                    self.getToDownloadLocation(model: answer)
-                }
+                UserDefaults.standard.setCodableObject(answer, forKey: "userModel")
                 var arrayImagesUrl: [String] = []
                 var arrayOfUserName: [String] = []
                 let imagesCount = answer.results.count
@@ -42,7 +40,7 @@ class NetworkManager: NetworkManagerProtocol {
             }
         }
     }
-    private func getToDownloadLocation(model: UnsplashImageModel) {
+    func getToDownloadLocation(model: UnsplashImageModel) {
         let headers = [
             "Authorization": "Client-ID 4Uitm6ZbRdgeZKMPHKFW11JI9Q00TFRFN3ajlRuzUTs"
         ]
