@@ -56,6 +56,7 @@
 		3AF34C682999311300454E05 /* CollectionView + Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF34C672999311300454E05 /* CollectionView + Keyboard.swift */; };
 		3AF34C6A2999313500454E05 /* CollectionView + Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF34C692999313500454E05 /* CollectionView + Search.swift */; };
 		3AF34C6C2999452B00454E05 /* String + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF34C6B2999452B00454E05 /* String + Extension.swift */; };
+		3AF98920299FED9400F48775 /* ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF9891F299FED9400F48775 /* ScrollView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,6 +104,7 @@
 		3AF34C672999311300454E05 /* CollectionView + Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectionView + Keyboard.swift"; sourceTree = "<group>"; };
 		3AF34C692999313500454E05 /* CollectionView + Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectionView + Search.swift"; sourceTree = "<group>"; };
 		3AF34C6B2999452B00454E05 /* String + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String + Extension.swift"; sourceTree = "<group>"; };
+		3AF9891F299FED9400F48775 /* ScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +221,7 @@
 		3A906C5B291450800070996F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3AF9891F299FED9400F48775 /* ScrollView.swift */,
 				3A9F25BF294E2FC300A53EC6 /* SwiftUI */,
 				3A906C4529144A860070996F /* SignInViewController.swift */,
 				3A902A3D29153E96007C3FDC /* SignUpViewController.swift */,
@@ -392,6 +395,7 @@
 				3A907CD429182DDB0004FC00 /* GoogleSignManagerProtocol.swift in Sources */,
 				3AF34C682999311300454E05 /* CollectionView + Keyboard.swift in Sources */,
 				3A902A4029153F79007C3FDC /* AlertController.swift in Sources */,
+				3AF98920299FED9400F48775 /* ScrollView.swift in Sources */,
 				3A5F9521292AAA7100C8C869 /* CollectionView + Support.swift in Sources */,
 				3AF34C65299907A600454E05 /* CollectionViewFooter.swift in Sources */,
 				3A17777829325B6700703F92 /* DetailPhotoViewController.swift in Sources */,

@@ -14,16 +14,16 @@ class DetailPhotoViewController: UIViewController {
     let fileManager = FileManager.default
     private var viewModel: DetailViewModelProtocol?
     
+    var imageScrollView: ImageScrollView!
     
     @IBOutlet weak var shareActionButton: UIBarButtonItem!
-    
-    @IBOutlet weak var imageView: UIImageView!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = DetailViewModel()
-        imageView.image = image
+        imageScrollView = ImageScrollView(frame: view.bounds)
+        view.addSubview(imageScrollView)
+        setupImageScrollView()
         
     }
     
@@ -53,6 +53,19 @@ class DetailPhotoViewController: UIViewController {
         }
     }
     
+    
+    
+    
+    func setupImageScrollView() {
+        imageScrollView.translatesAutoresizingMaskIntoConstraints = false
+        imageScrollView.topAnchor.constraint(equalTo: view.topAnchor, constant: 44).isActive = true
+        imageScrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        imageScrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        imageScrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        guard let image = image else { return }
+        self.imageScrollView.set(image: image)
+        
+    }
     
     
 }
