@@ -65,12 +65,13 @@ class CollectionViewModel: CollectionViewModelProtocol {
         if let arrayOfImages {
             guard let url = URL(string: arrayOfImages[indexPath.row]) else { return }
             DispatchQueue.main.async {
-                cell.imageView.kf.setImage(with: url, options: [.transition(.fade(0.4))])
-            }
-        }
-        if let arrayOfUserName {
-            DispatchQueue.main.async {
-                cell.userNameLabel.text = "Photo by \(arrayOfUserName[indexPath.row]) on Unsplash"
+                cell.imageView.kf.setImage(with: url, options: [.transition(.fade(0.4))]) { result in
+//                        if let array = self.arrayOfUserName {
+//                            cell.userNameLabel.text = "Photo by \(array[indexPath.row]) on Unsplash"
+//                    }
+                }
+           
+                
             }
         }
         

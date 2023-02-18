@@ -11,9 +11,9 @@ struct ColorPickerView: View {
     @Binding var bgColor: Color
     
     var body: some View {
-        ColorPicker("Выберите цвет фона", selection: $bgColor)
+        ColorPicker("Choose background color", selection: $bgColor)
             .foregroundColor(.black)
-            .frame(width: 220)
+            .frame(width: 240)
     }
 }
 

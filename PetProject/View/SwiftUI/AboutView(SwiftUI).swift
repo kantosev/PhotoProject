@@ -25,18 +25,18 @@ struct AboutView: View {
         NavigationView {
             ZStack {
                 VStack {
-                    RowView(text1: "Имя", text2: $name)
+                    RowView(text1: "Name", text2: $name)
                         .onAppear {
                             guard let userName = User.current?.username else { return }
                             name = userName
                         }
-                    RowView(text1: "email", text2: $email)
+                    RowView(text1: "Email", text2: $email)
                         .onAppear {
                             guard let userEmail = User.current?.email else { return }
                             email = userEmail
                         }
                     NavigationLink(destination: UpdateAccountScreenView()) {
-                        Text("Изменить данные аккаунта")
+                        Text("Change account details")
                         
                     }
                     .buttonStyle(.borderedProminent)
@@ -62,12 +62,12 @@ struct AboutView: View {
                     
                     
                     Spacer()
-                    Button("Выйти из аккаунта") {
+                    Button("Log Out") {
                         self.dismiss?()
                         visibleActivityIndicator.toggle()
                     }
                     .buttonStyle(.borderedProminent)
-                    Button("Удалить аккаунт") {
+                    Button("Delete account") {
                         self.deleteAccountCompletion?()
                         visibleActivityIndicator.toggle()
                     }
@@ -85,7 +85,7 @@ struct AboutView: View {
                 }
             }
             .background(backgroundColor)
-            .alert("Нет интернет соединения", isPresented: $connected) {}
+            .alert("lost internet connection", isPresented: $connected) {}
         }
     }
     

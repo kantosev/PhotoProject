@@ -20,8 +20,8 @@ struct UpdateAccountScreenView: View {
     
     var body: some View {
         VStack {
-            TextFieldView(textFieldText: $userName, placeholder: Text("Введите новое имя пользователя"))
-            TextFieldView(textFieldText: $email, placeholder: Text("Введите новый email"))
+            TextFieldView(textFieldText: $userName, placeholder: Text("Enter new login"))
+            TextFieldView(textFieldText: $email, placeholder: Text("Enter new email"))
             Spacer()
         }
         .toolbar {
@@ -45,9 +45,9 @@ struct UpdateAccountScreenView: View {
                     })
                 }
             }
-            .alert("Вы ничего не велли", isPresented: $allisEmptyMarker) {}
-            .alert("Информация аккаунта обновлена успешно", isPresented: $renameDataSuccessful) {}
-            .alert("Ошибка. Данные не изменены.", isPresented: $renameDataError) { }
+            .alert("You haven't entered anything", isPresented: $allisEmptyMarker) {}
+            .alert("Account information has been updated successfully", isPresented: $renameDataSuccessful) {}
+            .alert("Mistake. The data has not been changed", isPresented: $renameDataError) { }
             
         }
            

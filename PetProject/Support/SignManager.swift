@@ -24,6 +24,7 @@ class SignManager: SignManagerProtocol {
                 switch error.code.rawValue {
                 case -1: AlertController.showAlertController(onViewController: vc, title: "Error", message: "Нет соединения с интернетом")
                 case 125: AlertController.showAlertController(onViewController: vc, title: "Error", message: "Неверный email")
+                case 202: AlertController.showAlertController(onViewController: vc, title: "Error", message: "Аккаунт с таким логином уже зарегистрирован")
                 default: AlertController.showAlertController(onViewController: vc, title: "Error", message: error.localizedDescription)
                 }
             }

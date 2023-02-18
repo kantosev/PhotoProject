@@ -79,14 +79,14 @@ class DetailPhotoViewController: UIViewController {
         self.textView.attributedText = attributedString
         self.textView.isUserInteractionEnabled = true
         self.textView.isEditable = false
+        self.textView.textColor = .systemRed
 
         // Set how links should appear: blue and underlined
         self.textView.linkTextAttributes = [
             .foregroundColor: UIColor.blue,
             .underlineStyle: NSUnderlineStyle.single.rawValue
         ]
-        // utm_source=your_app_name&utm_medium=referral
-        // https://unsplash.com/@steven1302?utm_source=your_app_name&utm_medium=referral
+        
     }
     
     
