@@ -69,13 +69,13 @@ class DetailPhotoViewController: UIViewController {
     }
     func setTextViewHyperText(userName: String, url: String, longHyperText: Int) {
         let attributedString = NSMutableAttributedString(string: "Photo by \(userName) on Unsplash")
-        guard let url = URL(string: url) else { return }
+        guard let url = URL(string: url), let url2 = URL(string: "https://unsplash.com") else { return }
         let startIndex = userName.startIndex
         let endIndex = userName.endIndex
         let long = userName.distance(from: startIndex, to: endIndex)
         // Set the 'click here' substring to be the link
         attributedString.setAttributes([.link: url], range: NSMakeRange(9, long))
-
+        attributedString.addAttributes([.link: url2], range: NSMakeRange(13 + long, 8))
         self.textView.attributedText = attributedString
         self.textView.isUserInteractionEnabled = true
         self.textView.isEditable = false
