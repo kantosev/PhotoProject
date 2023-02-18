@@ -13,7 +13,6 @@ struct AboutView: View {
     
     @State private var name: String = (User.current?.username)!
     @State private var email: String = (User.current?.email)!
-    @State private var age: String = (User.current?.age)!
     @State private var visibleActivityIndicator: Bool = false
     
     var dismiss: (() -> Void)?
@@ -36,14 +35,6 @@ struct AboutView: View {
                             guard let userEmail = User.current?.email else { return }
                             email = userEmail
                         }
-                    RowView(text1: "Возраст", text2: $age)
-                        .onAppear {
-                            guard let userAge = User.current?.age else { return }
-                            age = userAge
-                        }
-                    //                                        RowView(text1: "Имя", text2: $name)
-                    //                                        RowView(text1: "email", text2: $email)
-                    //                                        RowView(text1: "Возраст", text2: $age)
                     NavigationLink(destination: UpdateAccountScreenView()) {
                         Text("Изменить данные аккаунта")
                         

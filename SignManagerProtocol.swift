@@ -10,7 +10,7 @@ import UIKit
 
 protocol SignManagerProtocol {
     
-    func signUp(username: String, email: String?, password: String, age: String, onViewController vc: UIViewController, completionToSuccessAlert: (() -> ())?)
+    func signUp(username: String, email: String?, password: String, onViewController vc: UIViewController, completionToSuccessAlert: (() -> ())?)
     
     func logIn(username: String, password: String, onViewController vc: UIViewController, successCompletion: @escaping () -> (), errorCompletion: @escaping () -> ())
     
@@ -18,5 +18,5 @@ protocol SignManagerProtocol {
     
     func deleteAccount(successCompletion: @escaping () -> (), errorCompletion: @escaping (Error) -> ())
     
-    func updateAccount(userName: String, email: String, age: String, successCompletion: @escaping () -> (), errorCompletion: @escaping (Error) -> ())
+    func updateAccount(userName: String, email: String, successCompletion: @escaping () -> (), errorCompletion: @escaping (Error) -> ())
 }

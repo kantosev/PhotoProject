@@ -12,7 +12,6 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var signUpLoginTextField: UITextField!
     @IBOutlet weak var signUpPasswordTextField: UITextField!
     @IBOutlet weak var signupEmailTextField: UITextField!
-    @IBOutlet weak var signUpAgeTextField: UITextField!
     
     private var signManager: SignManagerProtocol?
     
@@ -22,11 +21,11 @@ class SignUpViewController: UIViewController {
     }
 
     @IBAction func signUpButtonAction(_ sender: Any) {
-        guard let login = signUpLoginTextField.text, !login.isEmpty, let password = signUpPasswordTextField.text, !password.isEmpty, let email = signupEmailTextField.text, !email.isEmpty, let age = signUpAgeTextField.text, !age.isEmpty
+        guard let login = signUpLoginTextField.text, !login.isEmpty, let password = signUpPasswordTextField.text, !password.isEmpty, let email = signupEmailTextField.text, !email.isEmpty
         else {
             return AlertController.showAlertController(onViewController: self, title: "Error", message: "Данные введены неверно", buttonTitle: "Ok", buttonStyle: .cancel)
         }
-        signManager?.signUp(username: login, email: email, password: password, age: age, onViewController: self) {
+        signManager?.signUp(username: login, email: email, password: password, onViewController: self) {
             self.performSegue(withIdentifier: "toMainVCfromSignUpVC", sender: self)
         }
     }

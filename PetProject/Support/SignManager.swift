@@ -11,8 +11,8 @@ import UIKit
 
 class SignManager: SignManagerProtocol {
     
-    func signUp(username: String, email: String?, password: String, age: String, onViewController vc: UIViewController, completionToSuccessAlert: (() -> ())?) {
-        let newUser = User(username: username, email: email, password: password, age: age)
+    func signUp(username: String, email: String?, password: String, onViewController vc: UIViewController, completionToSuccessAlert: (() -> ())?) {
+        let newUser = User(username: username, email: email, password: password)
         
         
         // The below registers the user asynchronously and returns the updated User object (stored on your Back4App application) wrapped in a Result<User, ParseError> object
@@ -70,7 +70,7 @@ class SignManager: SignManagerProtocol {
             }
         }
     }
-    func updateAccount(userName: String, email: String, age: String, successCompletion: @escaping () -> (), errorCompletion: @escaping (Error) -> ()) {
+    func updateAccount(userName: String, email: String, successCompletion: @escaping () -> (), errorCompletion: @escaping (Error) -> ()) {
         guard var currentUser = User.current else { return }
         
         
@@ -79,9 +79,6 @@ class SignManager: SignManagerProtocol {
         }
         if !email.isEmpty {
             currentUser.email = email
-        }
-        if !age.isEmpty {
-            currentUser.age = age
         }
         currentUser.save { result in
             switch result {

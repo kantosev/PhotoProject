@@ -10,7 +10,6 @@ import SwiftUI
 struct UpdateAccountScreenView: View {
     @State private var userName: String = ""
     @State private var email: String = ""
-    @State private var age: String = ""
     @State private var renameDataSuccessful: Bool = false
     @State private var renameDataError: Bool = false
     @State private var allisEmptyMarker = false
@@ -23,7 +22,6 @@ struct UpdateAccountScreenView: View {
         VStack {
             TextFieldView(textFieldText: $userName, placeholder: Text("Введите новое имя пользователя"))
             TextFieldView(textFieldText: $email, placeholder: Text("Введите новый email"))
-            TextFieldView(textFieldText: $age, placeholder: Text("Введите новый возраст"))
             Spacer()
         }
         .toolbar {
@@ -31,10 +29,10 @@ struct UpdateAccountScreenView: View {
                 guard let user = User.current?.username else { renameDataError.toggle()
                     return
                 }
-                if userName.isEmpty && email.isEmpty && age.isEmpty {
+                if userName.isEmpty && email.isEmpty {
                     allisEmptyMarker.toggle()
                 } else {
-                    signManager?.updateAccount(userName: userName, email: email, age: age, successCompletion: {
+                    signManager?.updateAccount(userName: userName, email: email, successCompletion: {
                         DispatchQueue.main.async {
                             dismiss()
                         }
