@@ -15,6 +15,7 @@ class CollectionViewModel: CollectionViewModelProtocol {
     
     private var arrayOfImages: [String]? = []
     private var arrayOfUserName: [String]? = []
+    private var arrayOfDownloadLocation: [String]? = []
     private let url = "https://api.unsplash.com/search/photos"
     private var text: String = ""
     private var countOfRepeatLoad: Int = 2
@@ -23,11 +24,13 @@ class CollectionViewModel: CollectionViewModelProtocol {
         if searchButtonPressed == true {
             self.countOfRepeatLoad = 2
             self.text = text
-            networkManager.getArrayOfImages(url: url, searchText: text, page: "1") { [weak self] arrayImages, arrayUserName in
+            networkManager.getArrayOfImages(url: url, searchText: text, page: "1") { [weak self] arrayImages, arrayUserName, arrayDownloadLocation in
                 if !arrayImages.isEmpty {
                     self?.arrayOfImages = arrayImages
                     self?.arrayOfUserName = arrayUserName
+                    self?.arrayOfDownloadLocation = arrayDownloadLocation
                     UserDefaults.standard.set(arrayUserName, forKey: "userName")
+                    UserDefaults.standard.set(arrayDownloadLocation, forKey: "downloadLocation")
                     completion(false)
                 } else {
                     completion(true)
@@ -37,11 +40,13 @@ class CollectionViewModel: CollectionViewModelProtocol {
             }
             
         } else {
-            networkManager.getArrayOfImages(url: url, searchText: self.text, page: String(countOfRepeatLoad)) { arrayImages, arrayUserName in
+            networkManager.getArrayOfImages(url: url, searchText: self.text, page: String(countOfRepeatLoad)) { arrayImages, arrayUserName, arrayDownloadLocation in
                 if !arrayImages.isEmpty {
                     self.arrayOfImages?.append(contentsOf: arrayImages)
                     self.arrayOfUserName?.append(contentsOf: arrayUserName)
+                    self.arrayOfDownloadLocation?.append(contentsOf: arrayDownloadLocation)
                     UserDefaults.standard.set(self.arrayOfUserName, forKey: "userName")
+                    UserDefaults.standard.set(self.arrayOfDownloadLocation, forKey: "downloadLocation")
                     completion(false)
                     self.countOfRepeatLoad += 1
                 } else {
@@ -70,9 +75,8 @@ class CollectionViewModel: CollectionViewModelProtocol {
         }
         
     }
-    func sendRequestToDownloadLocation() {
-        guard let model = UserDefaults.standard.getCodableObject(dataType: UnsplashImageModel.self, key: "userModel") else { return }
-        networkManager.getToDownloadLocation(model: model)
+    func sendRequestToDownloadLocation(indexPath: IndexPath) {
+        networkManager.getToDownloadLocation(indexPath: indexPath)
     }
     
     func getUserNames() -> [String]? {

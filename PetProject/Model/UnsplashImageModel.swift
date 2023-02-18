@@ -23,12 +23,5 @@ struct Links: Codable {
 }
 struct UserUnsplash: Codable {
     let username: String
-    let links: UserLinks
 }
-struct UserLinks: Codable {
-    let linkUser: String
-    
-    enum CodingKeys: String, CodingKey {
-        case linkUser = "self"
-    }
-}
+

@@ -22,7 +22,7 @@ struct RowView: View {
         
         .padding(EdgeInsets(top: 13, leading: 15, bottom: 15, trailing: 15))
         .overlay(RoundedRectangle(cornerRadius: 7).stroke(lineWidth: 2)
-            .foregroundColor(.blue)
+            .foregroundColor(.gray)
         )
         .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
         

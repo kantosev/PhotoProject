@@ -25,7 +25,7 @@ class DetailPhotoViewController: UIViewController {
         imageScrollView = ImageScrollView(frame: view.bounds)
         view.addSubview(imageScrollView)
         setupImageScrollView()
-        guard let userName = userName else { return }
+        guard let userName = userName else { return}
         setTextViewHyperText(userName: userName, longHyperText: userName.count)
         
     }
