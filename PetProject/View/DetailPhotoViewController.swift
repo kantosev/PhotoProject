@@ -10,11 +10,13 @@ import UIKit
 
 class DetailPhotoViewController: UIViewController {
     
+    @IBOutlet weak var textView: UITextView!
     var image: UIImage?
     let fileManager = FileManager.default
     private var viewModel: DetailViewModelProtocol?
-    
     var imageScrollView: ImageScrollView!
+    var userName: String?
+    var url: String?
     
     @IBOutlet weak var shareActionButton: UIBarButtonItem!
     
@@ -24,6 +26,8 @@ class DetailPhotoViewController: UIViewController {
         imageScrollView = ImageScrollView(frame: view.bounds)
         view.addSubview(imageScrollView)
         setupImageScrollView()
+        guard let userName = userName, let url = url else { return }
+        setTextViewHyperText(userName: userName, url: url, longHyperText: userName.count)
         
     }
     
@@ -52,19 +56,35 @@ class DetailPhotoViewController: UIViewController {
             AlertController.showAlertController(onViewController: self, title: "Ошибка", message: "Ошибка загрузки")
         }
     }
-    
-    
-    
-    
+   
     func setupImageScrollView() {
         imageScrollView.translatesAutoresizingMaskIntoConstraints = false
         imageScrollView.topAnchor.constraint(equalTo: view.topAnchor, constant: 44).isActive = true
-        imageScrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        imageScrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -100).isActive = true
         imageScrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         imageScrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         guard let image = image else { return }
         self.imageScrollView.set(image: image)
         
+    }
+    func setTextViewHyperText(userName: String, url: String, longHyperText: Int) {
+        let attributedString = NSMutableAttributedString(string: "Photo by \(userName) on Unsplash")
+        guard let url = URL(string: url) else { return }
+        let startIndex = userName.startIndex
+        let endIndex = userName.endIndex
+        let long = userName.distance(from: startIndex, to: endIndex)
+        // Set the 'click here' substring to be the link
+        attributedString.setAttributes([.link: url], range: NSMakeRange(9, long))
+
+        self.textView.attributedText = attributedString
+        self.textView.isUserInteractionEnabled = true
+        self.textView.isEditable = false
+
+        // Set how links should appear: blue and underlined
+        self.textView.linkTextAttributes = [
+            .foregroundColor: UIColor.blue,
+            .underlineStyle: NSUnderlineStyle.single.rawValue
+        ]
     }
     
     

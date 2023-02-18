@@ -26,6 +26,6 @@ class DetailViewModel: NSObject, DetailViewModelProtocol {
             return
         }
         successCompletion?()
-        
     }
+    
 }

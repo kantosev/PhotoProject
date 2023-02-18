@@ -13,4 +13,6 @@ protocol CollectionViewModelProtocol {
     func numberOfItemsInSection() -> Int
     func setOfCell(cell: PhotoCell, with indexPath: IndexPath)
     func sendRequestToDownloadLocation()
+    func getUserProfilesLink() -> [String]?
+    func getUserNames() -> [String]?
 }

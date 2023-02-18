@@ -83,12 +83,14 @@ class CollectionViewController: UICollectionViewController {
             vc?.image = cell?.imageView.image
             
             viewModel?.sendRequestToDownloadLocation()
+            guard let usersProfileLinks = viewModel?.getUserProfilesLink(), !usersProfileLinks.isEmpty, let usersName = viewModel?.getUserNames(), !usersName.isEmpty else { return }
+            vc?.userName = usersName[indexPath.row]
+            vc?.url = usersProfileLinks[indexPath.row]
         }
     }
     
     @objc private func longPress(_ gestureRecognizer: UILongPressGestureRecognizer) {
         if gestureRecognizer.state == .began {
-            
         }
     }
 

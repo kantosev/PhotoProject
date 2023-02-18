@@ -11,4 +11,5 @@ import Foundation
 2.в deinit -> removeObserver
  Убрать возраст из параметров регистрации
  Сделать LaunchScreen
+ Чтобы при поиске картинок кнопка return на клавиатуре начинала поиск
  */
