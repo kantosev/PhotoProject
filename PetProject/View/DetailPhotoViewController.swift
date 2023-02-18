@@ -16,7 +16,6 @@ class DetailPhotoViewController: UIViewController {
     private var viewModel: DetailViewModelProtocol?
     var imageScrollView: ImageScrollView!
     var userName: String?
-    var url: String?
     
     @IBOutlet weak var shareActionButton: UIBarButtonItem!
     
@@ -26,8 +25,8 @@ class DetailPhotoViewController: UIViewController {
         imageScrollView = ImageScrollView(frame: view.bounds)
         view.addSubview(imageScrollView)
         setupImageScrollView()
-        guard let userName = userName, let url = url else { return }
-        setTextViewHyperText(userName: userName, url: url, longHyperText: userName.count)
+        guard let userName = userName else { return }
+        setTextViewHyperText(userName: userName, longHyperText: userName.count)
         
     }
     
@@ -67,9 +66,10 @@ class DetailPhotoViewController: UIViewController {
         self.imageScrollView.set(image: image)
         
     }
-    func setTextViewHyperText(userName: String, url: String, longHyperText: Int) {
+    func setTextViewHyperText(userName: String, longHyperText: Int) {
         let attributedString = NSMutableAttributedString(string: "Photo by \(userName) on Unsplash")
-        guard let url = URL(string: url), let url2 = URL(string: "https://unsplash.com") else { return }
+        let address = "https://unsplash.com/@\(userName)?utm_source=PetProject&utm_medium=referral"
+        guard let url = URL(string: address), let url2 = URL(string: "https://unsplash.com") else { return }
         let startIndex = userName.startIndex
         let endIndex = userName.endIndex
         let long = userName.distance(from: startIndex, to: endIndex)
@@ -85,6 +85,8 @@ class DetailPhotoViewController: UIViewController {
             .foregroundColor: UIColor.blue,
             .underlineStyle: NSUnderlineStyle.single.rawValue
         ]
+        // utm_source=your_app_name&utm_medium=referral
+        // https://unsplash.com/@steven1302?utm_source=your_app_name&utm_medium=referral
     }
     
     
