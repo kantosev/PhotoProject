@@ -43,14 +43,18 @@ extension CollectionViewController {
     }
     
     @objc func overButtonLoadPressed() {
-        
+        activityIndicator.isHidden = false
+        activityIndicator.startAnimating()
+        activityIndicator.hidesWhenStopped = true
         viewModel?.fetchOfData(with: "", completion: { [collectionView] arrayIsEmpty in
+            self.activityIndicator?.stopAnimating()
             if arrayIsEmpty == false {
                 collectionView?.reloadData()
             } else {
                 AlertController.showAlertController(onViewController: self, title: "Неудачно", message: "Изображений больше нет")
             }
         }, errorCompletion: { error in
+            self.activityIndicator?.stopAnimating()
             AlertController.showAlertController(onViewController: self, title: "Ошибка загрузки данных", message: "Данные не были загружены, попробуйте позже")
         }, searchButtonPressed: false)
     }
