@@ -17,7 +17,7 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hun-zM-Dxo">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="tinted" title="Загрузить еще"/>
+                    <buttonConfiguration key="configuration" style="tinted" title="Download more"/>
                     <connections>
                         <action selector="footerButtonPressed:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="5Cu-pd-Vjb"/>
                     </connections>

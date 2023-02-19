@@ -28,7 +28,15 @@ class NetworkManager: NetworkManagerProtocol {
                 var arrayDownloadLocation: [String] = []
                 let imagesCount = answer.results.count
                 
-                let imageSize = UserDefaults.standard.string(forKey: "sizeImage")
+                guard let imageSize = UserDefaults.standard.string(forKey: "sizeImage"), !imageSize.isEmpty else { if imagesCount > 1 {
+                    for image in 0...(imagesCount - 1) {
+                        arrayImagesUrl.append(answer.results[image].urls.regular!)
+                        arrayOfUserName.append(answer.results[image].user?.username ?? "nil")
+                        arrayDownloadLocation.append(answer.results[image].links.download_location)
+                    }
+                }
+                    return
+                }
                 switch imageSize {
                 case "raw": if imagesCount > 1 {
                     for image in 0...(imagesCount - 1) {
