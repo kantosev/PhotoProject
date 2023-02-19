@@ -17,15 +17,6 @@
         "branch" : "master",
         "revision" : "2db469112fbcfd83ff0a96c4546772d283f317f5"
       }
-    },
-    {
-      "identity" : "swiftykeychainkit",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/andriyslyusar/SwiftyKeychainKit",
-      "state" : {
-        "branch" : "master",
-        "revision" : "f864b84bf570e9b13bacbdbec5133c40ddd75364"
-      }
     }
   ],
   "version" : 2

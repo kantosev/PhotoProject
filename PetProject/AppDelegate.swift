@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import ParseSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {

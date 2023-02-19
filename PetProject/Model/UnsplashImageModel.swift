@@ -16,7 +16,12 @@ struct Result: Codable {
     let user: UserUnsplash?
 }
 struct Urls: Codable {
-    let regular: String
+    let raw: String?
+    let full: String?
+    let regular: String?
+    let small: String?
+    let thumb: String?
+
 }
 struct Links: Codable {
     let download_location: String

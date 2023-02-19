@@ -28,13 +28,46 @@ class NetworkManager: NetworkManagerProtocol {
                 var arrayDownloadLocation: [String] = []
                 let imagesCount = answer.results.count
                 
-                if imagesCount > 1 {
+                let imageSize = UserDefaults.standard.string(forKey: "sizeImage")
+                switch imageSize {
+                case "raw": if imagesCount > 1 {
                     for image in 0...(imagesCount - 1) {
-                        arrayImagesUrl.append(answer.results[image].urls.regular)
+                        arrayImagesUrl.append(answer.results[image].urls.raw!)
                         arrayOfUserName.append(answer.results[image].user?.username ?? "nil")
                         arrayDownloadLocation.append(answer.results[image].links.download_location)
                     }
                 }
+                case "full": if imagesCount > 1 {
+                    for image in 0...(imagesCount - 1) {
+                        arrayImagesUrl.append(answer.results[image].urls.full!)
+                        arrayOfUserName.append(answer.results[image].user?.username ?? "nil")
+                        arrayDownloadLocation.append(answer.results[image].links.download_location)
+                    }
+                }
+                case "regular": if imagesCount > 1 {
+                    for image in 0...(imagesCount - 1) {
+                        arrayImagesUrl.append(answer.results[image].urls.regular!)
+                        arrayOfUserName.append(answer.results[image].user?.username ?? "nil")
+                        arrayDownloadLocation.append(answer.results[image].links.download_location)
+                    }
+                }
+                case "small": if imagesCount > 1 {
+                    for image in 0...(imagesCount - 1) {
+                        arrayImagesUrl.append(answer.results[image].urls.small!)
+                        arrayOfUserName.append(answer.results[image].user?.username ?? "nil")
+                        arrayDownloadLocation.append(answer.results[image].links.download_location)
+                    }
+                }
+                case "thumb": if imagesCount > 1 {
+                    for image in 0...(imagesCount - 1) {
+                        arrayImagesUrl.append(answer.results[image].urls.thumb!)
+                        arrayOfUserName.append(answer.results[image].user?.username ?? "nil")
+                        arrayDownloadLocation.append(answer.results[image].links.download_location)
+                    }
+                }
+                default: break 
+                }
+                
                 
                 completion(arrayImagesUrl, arrayOfUserName, arrayDownloadLocation)
             case.failure(let error):

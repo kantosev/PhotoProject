@@ -33,7 +33,6 @@
 		3A906C4B29144A890070996F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A906C4A29144A890070996F /* Assets.xcassets */; };
 		3A906C4E29144A890070996F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A906C4C29144A890070996F /* LaunchScreen.storyboard */; };
 		3A9F25BE294E213600A53EC6 /* AboutView(SwiftUI).swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F25BD294E213600A53EC6 /* AboutView(SwiftUI).swift */; };
-		3AA5F9EF29644A8000EBD9A0 /* SwiftyKeychainKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3AA5F9EE29644A8000EBD9A0 /* SwiftyKeychainKit */; };
 		3AC1DC4029293E2F004D10EE /* CollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1DC3F29293E2F004D10EE /* CollectionViewModel.swift */; };
 		3AC1DC4229293ECA004D10EE /* NetworkManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1DC4129293ECA004D10EE /* NetworkManagerProtocol.swift */; };
 		3AC1DC442929415B004D10EE /* CollectionViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1DC432929415B004D10EE /* CollectionViewModelProtocol.swift */; };
@@ -93,7 +92,6 @@
 			files = (
 				3A8B532B292124FB00FDDA1C /* Alamofire in Frameworks */,
 				3A25A31729982484000671CD /* Kingfisher in Frameworks */,
-				3AA5F9EF29644A8000EBD9A0 /* SwiftyKeychainKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,7 +272,6 @@
 			name = PetProject;
 			packageProductDependencies = (
 				3A8B532A292124FB00FDDA1C /* Alamofire */,
-				3AA5F9EE29644A8000EBD9A0 /* SwiftyKeychainKit */,
 				3A25A31629982484000671CD /* Kingfisher */,
 			);
 			productName = PetProject;
@@ -307,7 +304,6 @@
 			mainGroup = 3A906C3529144A860070996F;
 			packageReferences = (
 				3A8B5329292124FB00FDDA1C /* XCRemoteSwiftPackageReference "Alamofire" */,
-				3AA5F9ED29644A8000EBD9A0 /* XCRemoteSwiftPackageReference "SwiftyKeychainKit" */,
 				3A25A31529982484000671CD /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 3A906C3F29144A860070996F /* Products */;
@@ -617,14 +613,6 @@
 				kind = branch;
 			};
 		};
-		3AA5F9ED29644A8000EBD9A0 /* XCRemoteSwiftPackageReference "SwiftyKeychainKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/andriyslyusar/SwiftyKeychainKit";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -637,11 +625,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3A8B5329292124FB00FDDA1C /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
-		};
-		3AA5F9EE29644A8000EBD9A0 /* SwiftyKeychainKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3AA5F9ED29644A8000EBD9A0 /* XCRemoteSwiftPackageReference "SwiftyKeychainKit" */;
-			productName = SwiftyKeychainKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
