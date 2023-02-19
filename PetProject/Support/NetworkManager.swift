@@ -13,7 +13,7 @@ class NetworkManager: NetworkManagerProtocol {
         guard let url = URL(string: url) else { return }
         let urlParams = [
             "query": searchText,
-            "per_page": "2",
+            "per_page": "10",
             "page": page
         ]
         let headers = [
