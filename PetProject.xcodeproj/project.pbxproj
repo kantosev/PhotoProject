@@ -25,7 +25,6 @@
 		3A8B53342921658B00FDDA1C /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8B53322921658B00FDDA1C /* PhotoCell.swift */; };
 		3A8B53352921658B00FDDA1C /* PhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A8B53332921658B00FDDA1C /* PhotoCell.xib */; };
 		3A8D1D4C294F5B53001341AE /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8D1D4B294F5B53001341AE /* NetworkMonitor.swift */; };
-		3A8D1D52294F8CEC001341AE /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8D1D51294F8CEC001341AE /* TextFieldView.swift */; };
 		3A902A4029153F79007C3FDC /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A902A3F29153F79007C3FDC /* AlertController.swift */; };
 		3A906C4229144A860070996F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A906C4129144A860070996F /* AppDelegate.swift */; };
 		3A906C4429144A860070996F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A906C4329144A860070996F /* SceneDelegate.swift */; };
@@ -64,7 +63,6 @@
 		3A8B53322921658B00FDDA1C /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		3A8B53332921658B00FDDA1C /* PhotoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCell.xib; sourceTree = "<group>"; };
 		3A8D1D4B294F5B53001341AE /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
-		3A8D1D51294F8CEC001341AE /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 		3A902A3F29153F79007C3FDC /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		3A906C3E29144A860070996F /* PetProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A906C4129144A860070996F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -243,7 +241,6 @@
 				3A5BA2DB294E36A400DE0B65 /* AboutViewControllerSwiftUI.swift */,
 				3A9F25BD294E213600A53EC6 /* AboutView(SwiftUI).swift */,
 				3A5BA2DD294E3E4900DE0B65 /* RowView.swift */,
-				3A8D1D51294F8CEC001341AE /* TextFieldView.swift */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -357,7 +354,6 @@
 				3A9F25BE294E213600A53EC6 /* AboutView(SwiftUI).swift in Sources */,
 				3A0D6E5E2933A3C200D468F8 /* UnsplashImageModel.swift in Sources */,
 				3A6EB25F292A73EA000688FE /* ToDo.swift in Sources */,
-				3A8D1D52294F8CEC001341AE /* TextFieldView.swift in Sources */,
 				3A8B532D2921253100FDDA1C /* NetworkManager.swift in Sources */,
 				3AF9892229A0174100F48775 /* UserDefaults + Extension.swift in Sources */,
 				3A5BA2DC294E36A400DE0B65 /* AboutViewControllerSwiftUI.swift in Sources */,
@@ -444,7 +440,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -499,7 +495,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -514,6 +510,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FS563UXRHA;
@@ -524,9 +521,9 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -548,6 +545,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FS563UXRHA;
@@ -558,9 +556,9 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

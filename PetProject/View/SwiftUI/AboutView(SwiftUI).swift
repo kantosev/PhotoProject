@@ -34,7 +34,11 @@ struct AboutView: View {
             UserDefaults.standard.set("raw", forKey: "sizeImage")
         }), forSegmentAt: 4)
         
-        UISegmentedControl.appearance().selectedSegmentTintColor = .systemCyan
+        if #available(iOS 15.0, *) {
+            UISegmentedControl.appearance().selectedSegmentTintColor = .systemIndigo
+        } else {
+            UISegmentedControl.appearance().selectedSegmentTintColor = .gray
+        }
         
     }
     
@@ -46,14 +50,30 @@ struct AboutView: View {
         
         VStack {
             Text("Качество загружаемых изображений")
-                .padding(EdgeInsets(top: 20, leading: 5, bottom: 0, trailing: 5))
+                .padding(EdgeInsets(top: 60, leading: 5, bottom: 0, trailing: 5))
             Picker("", selection: $segmentationSelection) {
                 ForEach(ProfileSection.allCases, id: \.self) { option in
                     Text(option.rawValue)
                 }
             }
             .pickerStyle(SegmentedPickerStyle())
-            .padding()
+            .padding(EdgeInsets(top: 10, leading: 1, bottom: 40, trailing: 1))
+            
+            if #available(iOS 15.0, *) {
+                Button("Contact the developers") {
+                    if let url = URL(string: "mailto:kantosev2@gmail.com") {
+                        UIApplication.shared.open(url)
+                    }
+                }
+                .buttonStyle(.bordered)
+            } else {
+                Button("Contact the developers") {
+                    if let url = URL(string: "mailto:kantosev2@gmail.com") {
+                        UIApplication.shared.open(url)
+                    }
+                }
+            }
+            
             Spacer()
         }
     }
