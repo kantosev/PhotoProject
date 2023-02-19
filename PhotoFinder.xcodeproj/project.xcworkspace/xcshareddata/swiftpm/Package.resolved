@@ -10,12 +10,12 @@
       }
     },
     {
-      "identity" : "kingfisher",
+      "identity" : "kingfisher?ysclid=lebpt2zxwu256656967",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/onevcat/Kingfisher.git",
+      "location" : "https://github.com/onevcat/Kingfisher?ysclid=lebpt2zxwu256656967",
       "state" : {
         "branch" : "master",
-        "revision" : "2db469112fbcfd83ff0a96c4546772d283f317f5"
+        "revision" : "415b1d97fb38bda1e5a6b2dde63354720832110b"
       }
     }
   ],

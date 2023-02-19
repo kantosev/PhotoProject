@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		3A0D6E5E2933A3C200D468F8 /* UnsplashImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0D6E5D2933A3C200D468F8 /* UnsplashImageModel.swift */; };
 		3A17777829325B6700703F92 /* DetailPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A17777729325B6700703F92 /* DetailPhotoViewController.swift */; };
-		3A25A31729982484000671CD /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 3A25A31629982484000671CD /* Kingfisher */; };
 		3A5BA2DC294E36A400DE0B65 /* AboutViewControllerSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5BA2DB294E36A400DE0B65 /* AboutViewControllerSwiftUI.swift */; };
 		3A5BA2DE294E3E4900DE0B65 /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5BA2DD294E3E4900DE0B65 /* RowView.swift */; };
 		3A5D84DE292968EA00E41245 /* CollectionViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5D84DC292968EA00E41245 /* CollectionViewHeader.swift */; };
@@ -20,7 +19,6 @@
 		3A6EB25F292A73EA000688FE /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6EB25E292A73EA000688FE /* ToDo.swift */; };
 		3A6EB261292AA7D1000688FE /* CollectionViewController + DelegateFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6EB260292AA7D1000688FE /* CollectionViewController + DelegateFlowLayout.swift */; };
 		3A8B53252921122700FDDA1C /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8B53242921122700FDDA1C /* CollectionViewController.swift */; };
-		3A8B532B292124FB00FDDA1C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3A8B532A292124FB00FDDA1C /* Alamofire */; };
 		3A8B532D2921253100FDDA1C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8B532C2921253100FDDA1C /* NetworkManager.swift */; };
 		3A8B53342921658B00FDDA1C /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8B53322921658B00FDDA1C /* PhotoCell.swift */; };
 		3A8B53352921658B00FDDA1C /* PhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A8B53332921658B00FDDA1C /* PhotoCell.xib */; };
@@ -32,6 +30,8 @@
 		3A906C4B29144A890070996F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A906C4A29144A890070996F /* Assets.xcassets */; };
 		3A906C4E29144A890070996F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A906C4C29144A890070996F /* LaunchScreen.storyboard */; };
 		3A9F25BE294E213600A53EC6 /* AboutView(SwiftUI).swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F25BD294E213600A53EC6 /* AboutView(SwiftUI).swift */; };
+		3AB11C6729A2A2410064EDAD /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 3AB11C6629A2A2410064EDAD /* Kingfisher */; };
+		3AB11C6A29A2A2560064EDAD /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3AB11C6929A2A2560064EDAD /* Alamofire */; };
 		3AC1DC4029293E2F004D10EE /* CollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1DC3F29293E2F004D10EE /* CollectionViewModel.swift */; };
 		3AC1DC4229293ECA004D10EE /* NetworkManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1DC4129293ECA004D10EE /* NetworkManagerProtocol.swift */; };
 		3AC1DC442929415B004D10EE /* CollectionViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1DC432929415B004D10EE /* CollectionViewModelProtocol.swift */; };
@@ -64,7 +64,7 @@
 		3A8B53332921658B00FDDA1C /* PhotoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCell.xib; sourceTree = "<group>"; };
 		3A8D1D4B294F5B53001341AE /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		3A902A3F29153F79007C3FDC /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
-		3A906C3E29144A860070996F /* PetProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A906C3E29144A860070996F /* PhotoFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A906C4129144A860070996F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A906C4329144A860070996F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3A906C4829144A860070996F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -90,8 +90,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A8B532B292124FB00FDDA1C /* Alamofire in Frameworks */,
-				3A25A31729982484000671CD /* Kingfisher in Frameworks */,
+				3AB11C6729A2A2410064EDAD /* Kingfisher in Frameworks */,
+				3AB11C6A29A2A2560064EDAD /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,7 +151,7 @@
 		3A906C3529144A860070996F = {
 			isa = PBXGroup;
 			children = (
-				3A906C4029144A860070996F /* PetProject */,
+				3A906C4029144A860070996F /* PhotoFinder */,
 				3A906C3F29144A860070996F /* Products */,
 				3A4FDF3229183EA900D4B066 /* Frameworks */,
 			);
@@ -160,12 +160,12 @@
 		3A906C3F29144A860070996F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3A906C3E29144A860070996F /* PetProject.app */,
+				3A906C3E29144A860070996F /* PhotoFinder.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3A906C4029144A860070996F /* PetProject */ = {
+		3A906C4029144A860070996F /* PhotoFinder */ = {
 			isa = PBXGroup;
 			children = (
 				3A906C4329144A860070996F /* SceneDelegate.swift */,
@@ -179,7 +179,7 @@
 				3A906C4F29144A890070996F /* Info.plist */,
 				3A6EB25E292A73EA000688FE /* ToDo.swift */,
 			);
-			path = PetProject;
+			path = PhotoFinder;
 			sourceTree = "<group>";
 		};
 		3A906C5A291450790070996F /* Model */ = {
@@ -257,9 +257,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3A906C3D29144A860070996F /* PetProject */ = {
+		3A906C3D29144A860070996F /* PhotoFinder */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3A906C5229144A890070996F /* Build configuration list for PBXNativeTarget "PetProject" */;
+			buildConfigurationList = 3A906C5229144A890070996F /* Build configuration list for PBXNativeTarget "PhotoFinder" */;
 			buildPhases = (
 				3A906C3A29144A860070996F /* Sources */,
 				3A906C3B29144A860070996F /* Frameworks */,
@@ -269,13 +269,13 @@
 			);
 			dependencies = (
 			);
-			name = PetProject;
+			name = PhotoFinder;
 			packageProductDependencies = (
-				3A8B532A292124FB00FDDA1C /* Alamofire */,
-				3A25A31629982484000671CD /* Kingfisher */,
+				3AB11C6629A2A2410064EDAD /* Kingfisher */,
+				3AB11C6929A2A2560064EDAD /* Alamofire */,
 			);
 			productName = PetProject;
-			productReference = 3A906C3E29144A860070996F /* PetProject.app */;
+			productReference = 3A906C3E29144A860070996F /* PhotoFinder.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -293,7 +293,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3A906C3929144A860070996F /* Build configuration list for PBXProject "PetProject" */;
+			buildConfigurationList = 3A906C3929144A860070996F /* Build configuration list for PBXProject "PhotoFinder" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -303,14 +303,14 @@
 			);
 			mainGroup = 3A906C3529144A860070996F;
 			packageReferences = (
-				3A8B5329292124FB00FDDA1C /* XCRemoteSwiftPackageReference "Alamofire" */,
-				3A25A31529982484000671CD /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				3AB11C6529A2A2410064EDAD /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				3AB11C6829A2A2560064EDAD /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 3A906C3F29144A860070996F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3A906C3D29144A860070996F /* PetProject */,
+				3A906C3D29144A860070996F /* PhotoFinder */,
 			);
 		};
 /* End PBXProject section */
@@ -515,7 +515,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FS563UXRHA;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PetProject/Info.plist;
+				INFOPLIST_FILE = PhotoFinder/Info.plist;
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Для сохранения фото в галарею";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
@@ -550,7 +550,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FS563UXRHA;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PetProject/Info.plist;
+				INFOPLIST_FILE = PhotoFinder/Info.plist;
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Для сохранения фото в галарею";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
@@ -578,7 +578,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3A906C3929144A860070996F /* Build configuration list for PBXProject "PetProject" */ = {
+		3A906C3929144A860070996F /* Build configuration list for PBXProject "PhotoFinder" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3A906C5029144A890070996F /* Debug */,
@@ -587,7 +587,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3A906C5229144A890070996F /* Build configuration list for PBXNativeTarget "PetProject" */ = {
+		3A906C5229144A890070996F /* Build configuration list for PBXNativeTarget "PhotoFinder" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3A906C5329144A890070996F /* Debug */,
@@ -599,15 +599,15 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		3A25A31529982484000671CD /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+		3AB11C6529A2A2410064EDAD /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			repositoryURL = "https://github.com/onevcat/Kingfisher?ysclid=lebpt2zxwu256656967";
 			requirement = {
 				branch = master;
 				kind = branch;
 			};
 		};
-		3A8B5329292124FB00FDDA1C /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		3AB11C6829A2A2560064EDAD /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
 			requirement = {
@@ -618,14 +618,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		3A25A31629982484000671CD /* Kingfisher */ = {
+		3AB11C6629A2A2410064EDAD /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 3A25A31529982484000671CD /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			package = 3AB11C6529A2A2410064EDAD /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
 		};
-		3A8B532A292124FB00FDDA1C /* Alamofire */ = {
+		3AB11C6929A2A2560064EDAD /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 3A8B5329292124FB00FDDA1C /* XCRemoteSwiftPackageReference "Alamofire" */;
+			package = 3AB11C6829A2A2560064EDAD /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */

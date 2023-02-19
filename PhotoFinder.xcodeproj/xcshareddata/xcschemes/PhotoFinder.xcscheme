@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3A906C3D29144A860070996F"
-               BuildableName = "PetProject.app"
-               BlueprintName = "PetProject"
-               ReferencedContainer = "container:PetProject.xcodeproj">
+               BuildableName = "PhotoFinder.app"
+               BlueprintName = "PhotoFinder"
+               ReferencedContainer = "container:PhotoFinder.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,9 +46,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3A906C3D29144A860070996F"
-            BuildableName = "PetProject.app"
-            BlueprintName = "PetProject"
-            ReferencedContainer = "container:PetProject.xcodeproj">
+            BuildableName = "PhotoFinder.app"
+            BlueprintName = "PhotoFinder"
+            ReferencedContainer = "container:PhotoFinder.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -63,9 +63,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3A906C3D29144A860070996F"
-            BuildableName = "PetProject.app"
-            BlueprintName = "PetProject"
-            ReferencedContainer = "container:PetProject.xcodeproj">
+            BuildableName = "PhotoFinder.app"
+            BlueprintName = "PhotoFinder"
+            ReferencedContainer = "container:PhotoFinder.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
