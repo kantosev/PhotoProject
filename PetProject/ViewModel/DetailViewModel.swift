@@ -21,7 +21,7 @@ class DetailViewModel: NSObject, DetailViewModelProtocol {
     }
     
     @objc func imageSaved(_ image: UIImage, error: Error?, context: UnsafeMutableRawPointer?) {
-        if let error {
+        if error != nil {
             errorCompletion?()
             return
         }

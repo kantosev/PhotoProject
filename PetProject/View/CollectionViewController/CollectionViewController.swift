@@ -12,16 +12,21 @@ import Alamofire
 class CollectionViewController: UICollectionViewController {
     
     var viewModel: CollectionViewModelProtocol?
-
+    var detailViewModel: DetailViewModel?
     var activityIndicator: UIActivityIndicatorView!
     
     var recognizer: UILongPressGestureRecognizer!
     
     var footerIsHidden: Bool = true
+    
+    var imageMenu = UIMenu()
+    
+    var image: UIImage?
        
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        detailViewModel = DetailViewModel()
+        setupImageMenu()
         addObserverForTouchSearchButton()
         addObserverForErrorSearch()
         addObserverForOverButtonLoadPressed()

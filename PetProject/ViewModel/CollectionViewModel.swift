@@ -84,4 +84,6 @@ class CollectionViewModel: CollectionViewModelProtocol {
         guard let array = UserDefaults.standard.stringArray(forKey: "userName"), !array.isEmpty else { return nil }
         return array
     }
+    
+    
 }
