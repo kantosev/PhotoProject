@@ -21,6 +21,7 @@ class CollectionViewController: UICollectionViewController {
        
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         addObserverForTouchSearchButton()
         addObserverForErrorSearch()
         addObserverForOverButtonLoadPressed()
