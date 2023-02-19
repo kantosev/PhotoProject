@@ -7,13 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3A0D6E5C2933A1DF00D468F8 /* UnsplashPhotoPicker in Frameworks */ = {isa = PBXBuildFile; productRef = 3A0D6E5B2933A1DF00D468F8 /* UnsplashPhotoPicker */; };
 		3A0D6E5E2933A3C200D468F8 /* UnsplashImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0D6E5D2933A3C200D468F8 /* UnsplashImageModel.swift */; };
-		3A0F5BC6299D47950035C15D /* ActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = 3A0F5BC5299D47950035C15D /* ActivityIndicatorView */; };
 		3A17777829325B6700703F92 /* DetailPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A17777729325B6700703F92 /* DetailPhotoViewController.swift */; };
 		3A25A31729982484000671CD /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 3A25A31629982484000671CD /* Kingfisher */; };
-		3A4FDF2F291835A200D4B066 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 3A4FDF2E291835A200D4B066 /* GoogleSignIn */; };
-		3A4FDF31291835A200D4B066 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3A4FDF30291835A200D4B066 /* GoogleSignInSwift */; };
 		3A5BA2DC294E36A400DE0B65 /* AboutViewControllerSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5BA2DB294E36A400DE0B65 /* AboutViewControllerSwiftUI.swift */; };
 		3A5BA2DE294E3E4900DE0B65 /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5BA2DD294E3E4900DE0B65 /* RowView.swift */; };
 		3A5D84DE292968EA00E41245 /* CollectionViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5D84DC292968EA00E41245 /* CollectionViewHeader.swift */; };
@@ -28,24 +24,14 @@
 		3A8B532D2921253100FDDA1C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8B532C2921253100FDDA1C /* NetworkManager.swift */; };
 		3A8B53342921658B00FDDA1C /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8B53322921658B00FDDA1C /* PhotoCell.swift */; };
 		3A8B53352921658B00FDDA1C /* PhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A8B53332921658B00FDDA1C /* PhotoCell.xib */; };
-		3A8D1D4A294F48B7001341AE /* ColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8D1D49294F48B7001341AE /* ColorPickerView.swift */; };
 		3A8D1D4C294F5B53001341AE /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8D1D4B294F5B53001341AE /* NetworkMonitor.swift */; };
-		3A8D1D50294F8CBC001341AE /* UpdateAccountScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8D1D4F294F8CBC001341AE /* UpdateAccountScreenView.swift */; };
 		3A8D1D52294F8CEC001341AE /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8D1D51294F8CEC001341AE /* TextFieldView.swift */; };
-		3A902A3E29153E96007C3FDC /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A902A3D29153E96007C3FDC /* SignUpViewController.swift */; };
 		3A902A4029153F79007C3FDC /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A902A3F29153F79007C3FDC /* AlertController.swift */; };
-		3A902A4229154042007C3FDC /* SignManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A902A4129154042007C3FDC /* SignManager.swift */; };
 		3A906C4229144A860070996F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A906C4129144A860070996F /* AppDelegate.swift */; };
 		3A906C4429144A860070996F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A906C4329144A860070996F /* SceneDelegate.swift */; };
-		3A906C4629144A860070996F /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A906C4529144A860070996F /* SignInViewController.swift */; };
 		3A906C4929144A860070996F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A906C4729144A860070996F /* Main.storyboard */; };
 		3A906C4B29144A890070996F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A906C4A29144A890070996F /* Assets.xcassets */; };
 		3A906C4E29144A890070996F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A906C4C29144A890070996F /* LaunchScreen.storyboard */; };
-		3A906C5729144A9C0070996F /* ParseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3A906C5629144A9C0070996F /* ParseSwift */; };
-		3A906C622914656D0070996F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A906C612914656D0070996F /* User.swift */; };
-		3A907CD0291821EA0004FC00 /* SignManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A907CCF291821EA0004FC00 /* SignManagerProtocol.swift */; };
-		3A907CD229182DCC0004FC00 /* GoogleSignManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A907CD129182DCC0004FC00 /* GoogleSignManager.swift */; };
-		3A907CD429182DDB0004FC00 /* GoogleSignManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A907CD329182DDB0004FC00 /* GoogleSignManagerProtocol.swift */; };
 		3A9F25BE294E213600A53EC6 /* AboutView(SwiftUI).swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F25BD294E213600A53EC6 /* AboutView(SwiftUI).swift */; };
 		3AA5F9EF29644A8000EBD9A0 /* SwiftyKeychainKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3AA5F9EE29644A8000EBD9A0 /* SwiftyKeychainKit */; };
 		3AC1DC4029293E2F004D10EE /* CollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1DC3F29293E2F004D10EE /* CollectionViewModel.swift */; };
@@ -77,25 +63,16 @@
 		3A8B532C2921253100FDDA1C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		3A8B53322921658B00FDDA1C /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		3A8B53332921658B00FDDA1C /* PhotoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCell.xib; sourceTree = "<group>"; };
-		3A8D1D49294F48B7001341AE /* ColorPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerView.swift; sourceTree = "<group>"; };
 		3A8D1D4B294F5B53001341AE /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
-		3A8D1D4F294F8CBC001341AE /* UpdateAccountScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateAccountScreenView.swift; sourceTree = "<group>"; };
 		3A8D1D51294F8CEC001341AE /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
-		3A902A3D29153E96007C3FDC /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		3A902A3F29153F79007C3FDC /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
-		3A902A4129154042007C3FDC /* SignManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignManager.swift; sourceTree = "<group>"; };
 		3A906C3E29144A860070996F /* PetProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A906C4129144A860070996F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A906C4329144A860070996F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3A906C4529144A860070996F /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		3A906C4829144A860070996F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3A906C4A29144A890070996F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A906C4D29144A890070996F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A906C4F29144A890070996F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3A906C612914656D0070996F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		3A907CCF291821EA0004FC00 /* SignManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignManagerProtocol.swift; sourceTree = "<group>"; };
-		3A907CD129182DCC0004FC00 /* GoogleSignManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignManager.swift; sourceTree = "<group>"; };
-		3A907CD329182DDB0004FC00 /* GoogleSignManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignManagerProtocol.swift; sourceTree = "<group>"; };
 		3A9F25BD294E213600A53EC6 /* AboutView(SwiftUI).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AboutView(SwiftUI).swift"; sourceTree = "<group>"; };
 		3AC1DC3F29293E2F004D10EE /* CollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewModel.swift; sourceTree = "<group>"; };
 		3AC1DC4129293ECA004D10EE /* NetworkManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerProtocol.swift; sourceTree = "<group>"; };
@@ -115,13 +92,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A8B532B292124FB00FDDA1C /* Alamofire in Frameworks */,
-				3A4FDF31291835A200D4B066 /* GoogleSignInSwift in Frameworks */,
-				3A0F5BC6299D47950035C15D /* ActivityIndicatorView in Frameworks */,
-				3A0D6E5C2933A1DF00D468F8 /* UnsplashPhotoPicker in Frameworks */,
 				3A25A31729982484000671CD /* Kingfisher in Frameworks */,
-				3A906C5729144A9C0070996F /* ParseSwift in Frameworks */,
 				3AA5F9EF29644A8000EBD9A0 /* SwiftyKeychainKit in Frameworks */,
-				3A4FDF2F291835A200D4B066 /* GoogleSignIn in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,7 +186,6 @@
 		3A906C5A291450790070996F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				3A906C612914656D0070996F /* User.swift */,
 				3A0D6E5D2933A3C200D468F8 /* UnsplashImageModel.swift */,
 			);
 			path = Model;
@@ -225,8 +196,6 @@
 			children = (
 				3AF9891F299FED9400F48775 /* ScrollView.swift */,
 				3A9F25BF294E2FC300A53EC6 /* SwiftUI */,
-				3A906C4529144A860070996F /* SignInViewController.swift */,
-				3A902A3D29153E96007C3FDC /* SignUpViewController.swift */,
 				3A8D1D4D294F8C52001341AE /* CollectionViewController */,
 				3A17777729325B6700703F92 /* DetailPhotoViewController.swift */,
 				3A906C4729144A860070996F /* Main.storyboard */,
@@ -248,8 +217,6 @@
 			isa = PBXGroup;
 			children = (
 				3AF34C6B2999452B00454E05 /* String + Extension.swift */,
-				3A902A4129154042007C3FDC /* SignManager.swift */,
-				3A907CD129182DCC0004FC00 /* GoogleSignManager.swift */,
 				3A8B532C2921253100FDDA1C /* NetworkManager.swift */,
 				3A902A3F29153F79007C3FDC /* AlertController.swift */,
 				3A8D1D4B294F5B53001341AE /* NetworkMonitor.swift */,
@@ -261,8 +228,6 @@
 		3A907CCE291821C70004FC00 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				3A907CCF291821EA0004FC00 /* SignManagerProtocol.swift */,
-				3A907CD329182DDB0004FC00 /* GoogleSignManagerProtocol.swift */,
 				3AC1DC4129293ECA004D10EE /* NetworkManagerProtocol.swift */,
 				3AC1DC432929415B004D10EE /* CollectionViewModelProtocol.swift */,
 				3A6C245C2969B773007AECB2 /* DetailViewModelProtocol.swift */,
@@ -277,8 +242,6 @@
 				3A5BA2DB294E36A400DE0B65 /* AboutViewControllerSwiftUI.swift */,
 				3A9F25BD294E213600A53EC6 /* AboutView(SwiftUI).swift */,
 				3A5BA2DD294E3E4900DE0B65 /* RowView.swift */,
-				3A8D1D49294F48B7001341AE /* ColorPickerView.swift */,
-				3A8D1D4F294F8CBC001341AE /* UpdateAccountScreenView.swift */,
 				3A8D1D51294F8CEC001341AE /* TextFieldView.swift */,
 			);
 			path = SwiftUI;
@@ -310,14 +273,9 @@
 			);
 			name = PetProject;
 			packageProductDependencies = (
-				3A906C5629144A9C0070996F /* ParseSwift */,
-				3A4FDF2E291835A200D4B066 /* GoogleSignIn */,
-				3A4FDF30291835A200D4B066 /* GoogleSignInSwift */,
 				3A8B532A292124FB00FDDA1C /* Alamofire */,
-				3A0D6E5B2933A1DF00D468F8 /* UnsplashPhotoPicker */,
 				3AA5F9EE29644A8000EBD9A0 /* SwiftyKeychainKit */,
 				3A25A31629982484000671CD /* Kingfisher */,
-				3A0F5BC5299D47950035C15D /* ActivityIndicatorView */,
 			);
 			productName = PetProject;
 			productReference = 3A906C3E29144A860070996F /* PetProject.app */;
@@ -348,13 +306,9 @@
 			);
 			mainGroup = 3A906C3529144A860070996F;
 			packageReferences = (
-				3A906C5529144A9C0070996F /* XCRemoteSwiftPackageReference "Parse-Swift" */,
-				3A4FDF2D291835A200D4B066 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 				3A8B5329292124FB00FDDA1C /* XCRemoteSwiftPackageReference "Alamofire" */,
-				3A0D6E5A2933A1DF00D468F8 /* XCRemoteSwiftPackageReference "unsplash-photopicker-ios" */,
 				3AA5F9ED29644A8000EBD9A0 /* XCRemoteSwiftPackageReference "SwiftyKeychainKit" */,
 				3A25A31529982484000671CD /* XCRemoteSwiftPackageReference "Kingfisher" */,
-				3A0F5BC4299D47950035C15D /* XCRemoteSwiftPackageReference "ActivityIndicatorView" */,
 			);
 			productRefGroup = 3A906C3F29144A860070996F /* Products */;
 			projectDirPath = "";
@@ -389,13 +343,10 @@
 				3A8B53252921122700FDDA1C /* CollectionViewController.swift in Sources */,
 				3A8B53342921658B00FDDA1C /* PhotoCell.swift in Sources */,
 				3AF34C6C2999452B00454E05 /* String + Extension.swift in Sources */,
-				3A902A3E29153E96007C3FDC /* SignUpViewController.swift in Sources */,
-				3A906C4629144A860070996F /* SignInViewController.swift in Sources */,
 				3A906C4229144A860070996F /* AppDelegate.swift in Sources */,
 				3A5D84DE292968EA00E41245 /* CollectionViewHeader.swift in Sources */,
 				3A8D1D4C294F5B53001341AE /* NetworkMonitor.swift in Sources */,
 				3A906C4429144A860070996F /* SceneDelegate.swift in Sources */,
-				3A907CD429182DDB0004FC00 /* GoogleSignManagerProtocol.swift in Sources */,
 				3AF34C682999311300454E05 /* CollectionView + Keyboard.swift in Sources */,
 				3A902A4029153F79007C3FDC /* AlertController.swift in Sources */,
 				3AF98920299FED9400F48775 /* ScrollView.swift in Sources */,
@@ -403,7 +354,6 @@
 				3AF34C65299907A600454E05 /* CollectionViewFooter.swift in Sources */,
 				3A17777829325B6700703F92 /* DetailPhotoViewController.swift in Sources */,
 				3AF34C6A2999313500454E05 /* CollectionView + Search.swift in Sources */,
-				3A907CD229182DCC0004FC00 /* GoogleSignManager.swift in Sources */,
 				3A6C2459296989F5007AECB2 /* DetailViewModel.swift in Sources */,
 				3A9F25BE294E213600A53EC6 /* AboutView(SwiftUI).swift in Sources */,
 				3A0D6E5E2933A3C200D468F8 /* UnsplashImageModel.swift in Sources */,
@@ -412,17 +362,12 @@
 				3A8B532D2921253100FDDA1C /* NetworkManager.swift in Sources */,
 				3AF9892229A0174100F48775 /* UserDefaults + Extension.swift in Sources */,
 				3A5BA2DC294E36A400DE0B65 /* AboutViewControllerSwiftUI.swift in Sources */,
-				3A8D1D50294F8CBC001341AE /* UpdateAccountScreenView.swift in Sources */,
 				3A6EB261292AA7D1000688FE /* CollectionViewController + DelegateFlowLayout.swift in Sources */,
 				3AC1DC442929415B004D10EE /* CollectionViewModelProtocol.swift in Sources */,
 				3AC1DC4229293ECA004D10EE /* NetworkManagerProtocol.swift in Sources */,
 				3A5BA2DE294E3E4900DE0B65 /* RowView.swift in Sources */,
 				3A6C245D2969B773007AECB2 /* DetailViewModelProtocol.swift in Sources */,
 				3AC1DC4029293E2F004D10EE /* CollectionViewModel.swift in Sources */,
-				3A907CD0291821EA0004FC00 /* SignManagerProtocol.swift in Sources */,
-				3A902A4229154042007C3FDC /* SignManager.swift in Sources */,
-				3A8D1D4A294F48B7001341AE /* ColorPickerView.swift in Sources */,
-				3A906C622914656D0070996F /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -656,22 +601,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		3A0D6E5A2933A1DF00D468F8 /* XCRemoteSwiftPackageReference "unsplash-photopicker-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/unsplash/unsplash-photopicker-ios.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-		3A0F5BC4299D47950035C15D /* XCRemoteSwiftPackageReference "ActivityIndicatorView" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/exyte/ActivityIndicatorView?ysclid=le5x6hhe25636830374";
-			requirement = {
-				kind = upToNextMinorVersion;
-				minimumVersion = 1.1.0;
-			};
-		};
 		3A25A31529982484000671CD /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
@@ -680,27 +609,11 @@
 				kind = branch;
 			};
 		};
-		3A4FDF2D291835A200D4B066 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
-			requirement = {
-				kind = exactVersion;
-				version = 6.2.4;
-			};
-		};
 		3A8B5329292124FB00FDDA1C /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
 			requirement = {
 				branch = master;
-				kind = branch;
-			};
-		};
-		3A906C5529144A9C0070996F /* XCRemoteSwiftPackageReference "Parse-Swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/parse-community/Parse-Swift";
-			requirement = {
-				branch = main;
 				kind = branch;
 			};
 		};
@@ -715,40 +628,15 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		3A0D6E5B2933A1DF00D468F8 /* UnsplashPhotoPicker */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3A0D6E5A2933A1DF00D468F8 /* XCRemoteSwiftPackageReference "unsplash-photopicker-ios" */;
-			productName = UnsplashPhotoPicker;
-		};
-		3A0F5BC5299D47950035C15D /* ActivityIndicatorView */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3A0F5BC4299D47950035C15D /* XCRemoteSwiftPackageReference "ActivityIndicatorView" */;
-			productName = ActivityIndicatorView;
-		};
 		3A25A31629982484000671CD /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 3A25A31529982484000671CD /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
 		};
-		3A4FDF2E291835A200D4B066 /* GoogleSignIn */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3A4FDF2D291835A200D4B066 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
-			productName = GoogleSignIn;
-		};
-		3A4FDF30291835A200D4B066 /* GoogleSignInSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3A4FDF2D291835A200D4B066 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
-			productName = GoogleSignInSwift;
-		};
 		3A8B532A292124FB00FDDA1C /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 3A8B5329292124FB00FDDA1C /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
-		};
-		3A906C5629144A9C0070996F /* ParseSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3A906C5529144A9C0070996F /* XCRemoteSwiftPackageReference "Parse-Swift" */;
-			productName = ParseSwift;
 		};
 		3AA5F9EE29644A8000EBD9A0 /* SwiftyKeychainKit */ = {
 			isa = XCSwiftPackageProductDependency;

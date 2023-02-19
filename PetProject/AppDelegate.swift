@@ -12,9 +12,6 @@ import ParseSwift
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        ParseSwift.initialize(applicationId: "3qHLuFG43vEm3RVhlVrE62qK8RVDiRtDWCzlbTmy",
-                              clientKey: "GAMe7XdBym157Zz2dC2WUOUDnp0VqoG81eEvu5v7",
-                              serverURL: URL(string: "https://parseapi.back4app.com")!)
         NetworkMonitor.shared.startMonitoring()
         
         return true
