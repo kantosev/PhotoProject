@@ -20,7 +20,7 @@ extension CollectionViewController {
     }
     
     func setupImageMenu() {
-        let shareImage = UIAction(title: "Поделиться", image: UIImage(systemName: "square.and.arrow.up")) { _ in
+        let shareImage = UIAction(title: "Share", image: UIImage(systemName: "square.and.arrow.up")) { _ in
             let items: [Any] = [self.image as Any]
             let activityVC = UIActivityViewController(activityItems: items, applicationActivities: nil)
             //        activityVC.modalPresentationStyle = .popover
@@ -29,12 +29,12 @@ extension CollectionViewController {
             
             self.present(activityVC, animated: true)
         }
-        let saveImage = UIAction(title: "Сохранить", image: UIImage(systemName: "tray.and.arrow.down")) { _ in
+        let saveImage = UIAction(title: "Save", image: UIImage(systemName: "tray.and.arrow.down")) { _ in
             guard let image = self.image else { return }
             self.detailViewModel?.saveImage(image: image, successCompletion: {
-                AlertController.showAlertController(onViewController: self, title: "Успешно", message: "Фото загружено в галерею")
+                AlertController.showAlertController(onViewController: self, title: "Successfully", message: "Photo uploaded to gallery")
             }, errorCompletion: {
-                AlertController.showAlertController(onViewController: self, title: "Ошибка", message: "Ошибка загрузки")
+                AlertController.showAlertController(onViewController: self, title: "Error", message: "Loading error")
             })
         }
             

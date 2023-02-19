@@ -50,9 +50,9 @@ class DetailPhotoViewController: UIViewController {
 // MARK: - Functions -
     private func saveImage(image: UIImage) {
         viewModel?.saveImage(image: image) {
-            AlertController.showAlertController(onViewController: self, title: "Успешно", message: "Фото загружено в галерею")
+            AlertController.showAlertController(onViewController: self, title: "Successfully", message: "Photo uploaded to gallery")
         } errorCompletion: {
-            AlertController.showAlertController(onViewController: self, title: "Ошибка", message: "Ошибка загрузки")
+            AlertController.showAlertController(onViewController: self, title: "Error", message: "Loading error")
         }
     }
    

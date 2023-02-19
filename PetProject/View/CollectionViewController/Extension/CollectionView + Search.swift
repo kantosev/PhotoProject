@@ -28,18 +28,18 @@ extension CollectionViewController {
                 if arrayIsEmpty == false {
                     collectionView?.reloadData()
                 } else {
-                    AlertController.showAlertController(onViewController: self, title: "Ошибка", message: "Изображений по запросу не найдено")
+                    AlertController.showAlertController(onViewController: self, title: "Error", message: "No images found on request")
                 }
             }, errorCompletion: { [activityIndicator] error in
-                AlertController.showAlertController(onViewController: self, title: "Ошибка загрузки данных", message: "Данные не были загружены, попробуйте позже")
+                AlertController.showAlertController(onViewController: self, title: "Data loading error", message: "The data was not uploaded, try again later")
                 activityIndicator?.stopAnimating()
             }, searchButtonPressed: true)
         } else {
-            AlertController.showAlertController(onViewController: self, title: "Ошибка соединения", message: "Нет соединения с интернетом")
+            AlertController.showAlertController(onViewController: self, title: "Connection error", message: "No internet connection")
         }
     }
     @objc func errorSearch() {
-        AlertController.showAlertController(onViewController: self, title: "Error", message: "Вы ничего не ввели")
+        AlertController.showAlertController(onViewController: self, title: "Error", message: "You haven't entered anything")
     }
     
     @objc func overButtonLoadPressed() {
@@ -51,11 +51,11 @@ extension CollectionViewController {
             if arrayIsEmpty == false {
                 collectionView?.reloadData()
             } else {
-                AlertController.showAlertController(onViewController: self, title: "Неудачно", message: "Изображений больше нет")
+                AlertController.showAlertController(onViewController: self, title: "Error", message: "There are no more images")
             }
         }, errorCompletion: { error in
             self.activityIndicator?.stopAnimating()
-            AlertController.showAlertController(onViewController: self, title: "Ошибка загрузки данных", message: "Данные не были загружены, попробуйте позже")
+            AlertController.showAlertController(onViewController: self, title: "Data loading error", message: "The data was not uploaded, try again later")
         }, searchButtonPressed: false)
     }
     

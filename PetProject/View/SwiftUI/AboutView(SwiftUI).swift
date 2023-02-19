@@ -9,9 +9,9 @@ import SwiftUI
 
 enum ProfileSection : String, CaseIterable {
     case thumb = "Min"
-    case small = "Небольшой"
-    case regular = "Средний"
-    case full = "Большой"
+    case small = "Small"
+    case regular = "Regular"
+    case full = "Full"
     case raw = "Max"
 }
 
@@ -49,7 +49,7 @@ struct AboutView: View {
     var body: some View {
         
         VStack {
-            Text("Качество загружаемых изображений")
+            Text("Quality of uploaded images")
                 .padding(EdgeInsets(top: 60, leading: 5, bottom: 0, trailing: 5))
             Picker("", selection: $segmentationSelection) {
                 ForEach(ProfileSection.allCases, id: \.self) { option in
