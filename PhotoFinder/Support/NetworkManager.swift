@@ -17,7 +17,8 @@ class NetworkManager: NetworkManagerProtocol {
             "page": page
         ]
         let headers = [
-            "Authorization": "Client-ID 4Uitm6ZbRdgeZKMPHKFW11JI9Q00TFRFN3ajlRuzUTs"
+            "X-RapidAPI-Key": "a7e581eb9amsheeb72a6a4042d77p1db599jsn9b1afcde9cb1",
+            "X-RapidAPI-Host": "unsplash-data.p.rapidapi.com"
         ]
         AF.request(url, parameters: urlParams, headers: HTTPHeaders(headers)).validate().responseDecodable(of: UnsplashImageModel.self) { response in
             switch response.result {

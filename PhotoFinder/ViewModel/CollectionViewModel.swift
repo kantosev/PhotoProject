@@ -16,7 +16,8 @@ class CollectionViewModel: CollectionViewModelProtocol {
     private var arrayOfImages: [String]? = []
     private var arrayOfUserName: [String]? = []
     private var arrayOfDownloadLocation: [String]? = []
-    private let url = "https://api.unsplash.com/search/photos"
+//    private let url = "https://api.unsplash.com/search/photos"
+    private let url = "https://unsplash-data.p.rapidapi.com/search/photos"
     private var text: String = ""
     private var countOfRepeatLoad: Int = 2
     
