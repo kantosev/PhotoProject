@@ -70,9 +70,9 @@ class CollectionViewModel: CollectionViewModelProtocol {
         }
         
     }
-    func sendRequestToDownloadLocation(indexPath: IndexPath) {
-        networkManager.getToDownloadLocation(indexPath: indexPath)
-    }
+//    func sendRequestToDownloadLocation(indexPath: IndexPath) {
+//        networkManager.getToDownloadLocation(indexPath: indexPath)
+//    }
     
     func getUserNames() -> [String]? {
         guard let array = UserDefaults.standard.stringArray(forKey: "userName"), !array.isEmpty else { return nil }

@@ -50,9 +50,9 @@ class DetailPhotoViewController: UIViewController {
 // MARK: - Functions -
     private func saveImage(image: UIImage) {
         viewModel?.saveImage(image: image) {
-            AlertController.showAlertController(onViewController: self, title: "Successfully", message: "Photo uploaded to gallery")
+            AlertController.showAlertController(onViewController: self, title: NSLocalizedString("Successfully", comment: "Successfully"), message: NSLocalizedString("Photo uploaded to gallery", comment: "Photo uploaded to gallery"))
         } errorCompletion: {
-            AlertController.showAlertController(onViewController: self, title: "Error", message: "Loading error")
+            AlertController.showAlertController(onViewController: self, title: NSLocalizedString("Error", comment: "Error5"), message: NSLocalizedString("Loading error", comment: "Loading error"))
         }
     }
    
@@ -66,28 +66,4 @@ class DetailPhotoViewController: UIViewController {
         self.imageScrollView.set(image: image)
         
     }
-    func setTextViewHyperText(userName: String, longHyperText: Int) {
-        let attributedString = NSMutableAttributedString(string: "Photo by \(userName) on Unsplash")
-        let address = "https://unsplash.com/@\(userName)?utm_source=PetProject&utm_medium=referral"
-        guard let url = URL(string: address), let url2 = URL(string: "https://unsplash.com") else { return }
-        let startIndex = userName.startIndex
-        let endIndex = userName.endIndex
-        let long = userName.distance(from: startIndex, to: endIndex)
-        // Set the 'click here' substring to be the link
-        attributedString.setAttributes([.link: url], range: NSMakeRange(9, long))
-        attributedString.addAttributes([.link: url2], range: NSMakeRange(13 + long, 8))
-        self.textView.attributedText = attributedString
-        self.textView.isUserInteractionEnabled = true
-        self.textView.isEditable = false
-        self.textView.textColor = .systemRed
-
-        // Set how links should appear: blue and underlined
-        self.textView.linkTextAttributes = [
-            .foregroundColor: UIColor.blue,
-            .underlineStyle: NSUnderlineStyle.single.rawValue
-        ]
-        
-    }
-    
-    
 }

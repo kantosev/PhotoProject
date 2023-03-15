@@ -85,13 +85,14 @@ class NetworkManager: NetworkManagerProtocol {
             }
         }
     }
-    func getToDownloadLocation(indexPath: IndexPath) {
-        guard let arrayDL = UserDefaults.standard.stringArray(forKey: "downloadLocation") else { return }
-        let headers = [
-            "Authorization": "Client-ID 4Uitm6ZbRdgeZKMPHKFW11JI9Q00TFRFN3ajlRuzUTs"
-        ]
-        guard let url = URL(string: arrayDL[indexPath.row]) else { return }
-        AF.request(url, method: .get, headers: HTTPHeaders(headers)).validate().responseString { _ in }
-        
-    }
+//    func getToDownloadLocation(indexPath: IndexPath) {
+//        guard let arrayDL = UserDefaults.standard.stringArray(forKey: "downloadLocation") else { return }
+//        let headers = [
+//            "X-RapidAPI-Key": "a7e581eb9amsheeb72a6a4042d77p1db599jsn9b1afcde9cb1",
+//            "X-RapidAPI-Host": "unsplash-data.p.rapidapi.com"
+//        ]
+//        guard let url = URL(string: arrayDL[indexPath.row]) else { return }
+//        AF.request(url, method: .get, headers: HTTPHeaders(headers)).validate().responseString { _ in }
+//        
+//    }
 }
