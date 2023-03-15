@@ -36,6 +36,8 @@
 		3AC1DC4229293ECA004D10EE /* NetworkManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1DC4129293ECA004D10EE /* NetworkManagerProtocol.swift */; };
 		3AC1DC442929415B004D10EE /* CollectionViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1DC432929415B004D10EE /* CollectionViewModelProtocol.swift */; };
 		3AC1EA1D29A274C7006E24C5 /* CollectionViewController + LongGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1EA1C29A274C7006E24C5 /* CollectionViewController + LongGesture.swift */; };
+		3AC6E71829C258EA000D12BD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3AC6E71629C258EA000D12BD /* InfoPlist.strings */; };
+		3AC6E71B29C258EA000D12BD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3AC6E71929C258EA000D12BD /* Localizable.strings */; };
 		3AF34C65299907A600454E05 /* CollectionViewFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF34C63299907A600454E05 /* CollectionViewFooter.swift */; };
 		3AF34C66299907A600454E05 /* CollectionViewFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AF34C64299907A600454E05 /* CollectionViewFooter.xib */; };
 		3AF34C682999311300454E05 /* CollectionView + Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF34C672999311300454E05 /* CollectionView + Keyboard.swift */; };
@@ -48,7 +50,6 @@
 /* Begin PBXFileReference section */
 		3A0D6E5D2933A3C200D468F8 /* UnsplashImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashImageModel.swift; sourceTree = "<group>"; };
 		3A17777729325B6700703F92 /* DetailPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPhotoViewController.swift; sourceTree = "<group>"; };
-		3A4FDF3329183EAA00D4B066 /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
 		3A5BA2DB294E36A400DE0B65 /* AboutViewControllerSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewControllerSwiftUI.swift; sourceTree = "<group>"; };
 		3A5BA2DD294E3E4900DE0B65 /* RowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
 		3A5D84DC292968EA00E41245 /* CollectionViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewHeader.swift; sourceTree = "<group>"; };
@@ -76,6 +77,10 @@
 		3AC1DC4129293ECA004D10EE /* NetworkManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerProtocol.swift; sourceTree = "<group>"; };
 		3AC1DC432929415B004D10EE /* CollectionViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewModelProtocol.swift; sourceTree = "<group>"; };
 		3AC1EA1C29A274C7006E24C5 /* CollectionViewController + LongGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectionViewController + LongGesture.swift"; sourceTree = "<group>"; };
+		3AC6E71529C25750000D12BD /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		3AC6E71729C258EA000D12BD /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3AC6E71A29C258EA000D12BD /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3AC6E71C29C258EA000D12BD /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ru; path = ru.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3AF34C63299907A600454E05 /* CollectionViewFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewFooter.swift; sourceTree = "<group>"; };
 		3AF34C64299907A600454E05 /* CollectionViewFooter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewFooter.xib; sourceTree = "<group>"; };
 		3AF34C672999311300454E05 /* CollectionView + Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectionView + Keyboard.swift"; sourceTree = "<group>"; };
@@ -98,14 +103,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3A4FDF3229183EA900D4B066 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				3A4FDF3329183EAA00D4B066 /* AuthenticationServices.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		3A5F951F292AAA4B00C8C869 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,7 +150,6 @@
 			children = (
 				3A906C4029144A860070996F /* PhotoFinder */,
 				3A906C3F29144A860070996F /* Products */,
-				3A4FDF3229183EA900D4B066 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -177,6 +173,8 @@
 				3A906C5A291450790070996F /* Model */,
 				3A906C4A29144A890070996F /* Assets.xcassets */,
 				3A906C4F29144A890070996F /* Info.plist */,
+				3AC6E71929C258EA000D12BD /* Localizable.strings */,
+				3AC6E71629C258EA000D12BD /* InfoPlist.strings */,
 				3A6EB25E292A73EA000688FE /* ToDo.swift */,
 			);
 			path = PhotoFinder;
@@ -300,6 +298,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 3A906C3529144A860070996F;
 			packageReferences = (
@@ -321,9 +320,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A5D84DF292968EA00E41245 /* CollectionViewHeader.xib in Resources */,
+				3AC6E71829C258EA000D12BD /* InfoPlist.strings in Resources */,
 				3AF34C66299907A600454E05 /* CollectionViewFooter.xib in Resources */,
 				3A8B53352921658B00FDDA1C /* PhotoCell.xib in Resources */,
 				3A906C4E29144A890070996F /* LaunchScreen.storyboard in Resources */,
+				3AC6E71B29C258EA000D12BD /* Localizable.strings in Resources */,
 				3A906C4B29144A890070996F /* Assets.xcassets in Resources */,
 				3A906C4929144A860070996F /* Main.storyboard in Resources */,
 			);
@@ -374,6 +375,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				3A906C4829144A860070996F /* Base */,
+				3AC6E71529C25750000D12BD /* ru */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -382,8 +384,25 @@
 			isa = PBXVariantGroup;
 			children = (
 				3A906C4D29144A890070996F /* Base */,
+				3AC6E71C29C258EA000D12BD /* ru */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		3AC6E71629C258EA000D12BD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3AC6E71729C258EA000D12BD /* ru */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3AC6E71929C258EA000D12BD /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3AC6E71A29C258EA000D12BD /* ru */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -516,7 +535,7 @@
 				DEVELOPMENT_TEAM = FS563UXRHA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PhotoFinder/Info.plist;
-				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Для сохранения фото в галарею";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "To save a photo to the gallery";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -551,7 +570,7 @@
 				DEVELOPMENT_TEAM = FS563UXRHA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PhotoFinder/Info.plist;
-				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Для сохранения фото в галарею";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "To save a photo to the gallery";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

@@ -9,10 +9,12 @@ import UIKit
 
 class CollectionViewFooter: UICollectionReusableView {
 
+    @IBOutlet weak var button: UIButton!
     var viewModel: CollectionViewModelProtocol?
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        button.setTitle(NSLocalizedString("Download more", comment: "Footer Button"), for: .normal)
         viewModel = CollectionViewModel()
         // Initialization code
     }

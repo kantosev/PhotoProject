@@ -1,0 +1,58 @@
+/* Connection error */
+"Connection error" = "Ошибка соединения";
+
+/* No comment provided by engineer. */
+"Contact the developers" = "Связь с разработчиками";
+
+/* Data loading error */
+"Data loading error" = "Ошибка загрузки данных";
+
+/* Footer Button */
+"Download more" = "Загрузить еще";
+
+/* Error1
+   Error2
+   Error3
+   Error4
+   Error5 */
+"Error" = "Ошибка";
+
+/* Loading error */
+"Loading error" = "Ошибка загрузки";
+
+/* No images found on request */
+"No images found on request" = "По запросу изображений не найдено";
+
+/* No internet connection */
+"No internet connection" = "Нет интернет соединения";
+
+/* MenuTitle */
+"Options" = "Опции";
+
+/* Photo uploaded to gallery */
+"Photo uploaded to gallery" = "Изображение загружено в галерею";
+
+/* No comment provided by engineer. */
+"Quality of uploaded images" = "Качество загружаемых изображений";
+
+/* MenuItemTitle */
+"Save" = "Сохранить";
+
+/* Header placeholder */
+"Search image" = "Поиск изображений";
+
+/* MenuItemTitle */
+"Share" = "Поделиться";
+
+/* Successfully */
+"Successfully" = "Успешно";
+
+/* The data was not uploaded, try again later */
+"The data was not uploaded, try again later" = "Данные не были загружены, попробуйте позже";
+
+/* There are no more images */
+"There are no more images" = "Больше изображений нет";
+
+/* You haven't entered anything */
+"You haven't entered anything" = "Вы ничего не ввели";
+

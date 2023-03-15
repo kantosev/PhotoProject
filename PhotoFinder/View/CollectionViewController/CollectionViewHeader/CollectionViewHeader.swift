@@ -16,6 +16,7 @@ class CollectionViewHeader: UICollectionReusableView {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        searchTextField.placeholder = NSLocalizedString("Search image", comment: "Header placeholder")
         self.searchTextField.delegate = self
         // кнопка ввод скрыта до ввода первого символа
         searchTextField.enablesReturnKeyAutomatically = true

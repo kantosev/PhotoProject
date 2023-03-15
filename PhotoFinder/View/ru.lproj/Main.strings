@@ -1,64 +1,12 @@
-
 /* Class = "UITabBarItem"; title = "Photo"; ObjectID = "2Aa-fu-xdV"; */
-"2Aa-fu-xdV.title" = "Photo";
-
-/* Class = "UIViewController"; title = "SignUpViewController"; ObjectID = "2JI-5B-K8K"; */
-"2JI-5B-K8K.title" = "SignUpViewController";
+"2Aa-fu-xdV.title" = "Фото";
 
 /* Class = "UICollectionViewController"; title = "CollectionViewController"; ObjectID = "2Qm-M0-m52"; */
 "2Qm-M0-m52.title" = "CollectionViewController";
 
-/* Class = "UITextField"; placeholder = "Введите логин или почту"; ObjectID = "FhU-Be-fPl"; */
-"FhU-Be-fPl.placeholder" = "Введите логин или почту";
-
-/* Class = "UILabel"; text = "Регистрация"; ObjectID = "IxY-5r-LXd"; */
-"IxY-5r-LXd.text" = "Registration";
-
-/* Class = "UITextField"; placeholder = "Введите возраст"; ObjectID = "Kha-Zp-8DS"; */
-"Kha-Zp-8DS.placeholder" = "Введите возраст";
-
 /* Class = "UIViewController"; title = "DetailPhotoViewController"; ObjectID = "MnF-6T-0Re"; */
 "MnF-6T-0Re.title" = "DetailPhotoViewController";
 
-/* Class = "UITabBarItem"; title = "About"; ObjectID = "QRN-DY-7pl"; */
-"QRN-DY-7pl.title" = "О пользователе";
-
-/* Class = "UITextField"; placeholder = "Введите почту"; ObjectID = "TkK-XZ-6Pr"; */
-"TkK-XZ-6Pr.placeholder" = "Введите почту";
-
-/* Class = "UIButton"; configuration.title = "Войти"; ObjectID = "ZtB-5d-rY5"; */
-"ZtB-5d-rY5.configuration.title" = "Войти";
-
-/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "ZtB-5d-rY5"; */
-"ZtB-5d-rY5.normalTitle" = "Button";
-
-/* Class = "UITextField"; placeholder = "Введите логин"; ObjectID = "bof-Nr-5ZK"; */
-"bof-Nr-5ZK.placeholder" = "Введите логин";
-
-/* Class = "UITextField"; placeholder = "Введите пароль"; ObjectID = "gl3-xw-p7E"; */
-"gl3-xw-p7E.placeholder" = "Введите пароль";
-
-/* Class = "UIButton"; configuration.title = "Зарегистрироваться"; ObjectID = "hTx-h5-Yht"; */
-"hTx-h5-Yht.configuration.title" = "Зарегистрироваться";
-
-/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "hTx-h5-Yht"; */
-"hTx-h5-Yht.normalTitle" = "Button";
-
-/* Class = "UIViewController"; title = "SignInViewController"; ObjectID = "nJp-xH-SDG"; */
-"nJp-xH-SDG.title" = "SignInViewController";
-
-/* Class = "UILabel"; text = "Авторизация пользователя"; ObjectID = "ngR-p8-Uqq"; */
-"ngR-p8-Uqq.text" = "Авторизация пользователя";
-
-/* Class = "UITextField"; placeholder = "Введите пароль"; ObjectID = "s0v-ge-jNi"; */
-"s0v-ge-jNi.placeholder" = "Введите пароль";
-
-/* Class = "UIButton"; configuration.title = "Зарегистрироваться"; ObjectID = "wQI-86-mjL"; */
-"wQI-86-mjL.configuration.title" = "Зарегистрироваться";
-
-/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "wQI-86-mjL"; */
-"wQI-86-mjL.normalTitle" = "Button";
-
-
-
+/* Class = "UITabBarItem"; title = "Settings"; ObjectID = "QRN-DY-7pl"; */
+"QRN-DY-7pl.title" = "Настройки";
 

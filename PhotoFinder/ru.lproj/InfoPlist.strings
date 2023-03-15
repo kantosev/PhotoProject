@@ -1,0 +1,6 @@
+/* Bundle name */
+"CFBundleName" = "Поиск фото";
+
+/* Privacy - Photo Library Additions Usage Description */
+"NSPhotoLibraryAddUsageDescription" = "Для сохранения фото в галерею";
+
