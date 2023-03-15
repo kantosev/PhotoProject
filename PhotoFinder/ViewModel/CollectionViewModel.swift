@@ -16,7 +16,6 @@ class CollectionViewModel: CollectionViewModelProtocol {
     private var arrayOfImages: [String]? = []
     private var arrayOfUserName: [String]? = []
     private var arrayOfDownloadLocation: [String]? = []
-//    private let url = "https://api.unsplash.com/search/photos"
     private let url = "https://unsplash-data.p.rapidapi.com/search/photos"
     private var text: String = ""
     private var countOfRepeatLoad: Int = 2
@@ -66,13 +65,7 @@ class CollectionViewModel: CollectionViewModelProtocol {
         if let arrayOfImages {
             guard let url = URL(string: arrayOfImages[indexPath.row]) else { return }
             DispatchQueue.main.async {
-                cell.imageView.kf.setImage(with: url, options: [.transition(.fade(0.4))]) { result in
-//                        if let array = self.arrayOfUserName {
-//                            cell.userNameLabel.text = "Photo by \(array[indexPath.row]) on Unsplash"
-//                    }
-                }
-           
-                
+                cell.imageView.kf.setImage(with: url, options: [.transition(.fade(0.4))])
             }
         }
         

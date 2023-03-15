@@ -6,13 +6,14 @@
 //
 
 import SwiftUI
+import Foundation
 
 enum ProfileSection : String, CaseIterable {
-    case thumb = "Min"
-    case small = "Small"
-    case regular = "Regular"
-    case full = "Full"
-    case raw = "Max"
+    case thumb = "1"
+    case small = "2"
+    case regular = "3"
+    case full = "4"
+    case raw = "5"
 }
 
 struct AboutView: View {
