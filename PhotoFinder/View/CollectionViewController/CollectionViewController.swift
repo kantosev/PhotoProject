@@ -22,7 +22,8 @@ class CollectionViewController: UICollectionViewController {
     var imageMenu = UIMenu()
     
     var image: UIImage?
-       
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         detailViewModel = DetailViewModel()
@@ -34,6 +35,16 @@ class CollectionViewController: UICollectionViewController {
         addRecognizer()
         registerView()
         setActivityIndicator()
+        
+        
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        let count = UserDefaults.standard.bool(forKey: "oneAlert")
+        if count != true {
+            AlertController.showAlertController(onViewController: self, title: NSLocalizedString("Attention!", comment: "Attention"), message: NSLocalizedString("There will be more results if you enter the query in English 😁", comment: "OneFrase"))
+            UserDefaults.standard.set(true, forKey: "oneAlert")
+        }
         
     }
     
@@ -62,8 +73,8 @@ class CollectionViewController: UICollectionViewController {
             view.isHidden = footerIsHidden
             return view
         default:
-                assert(false, "Unexpected element kind")
-            }
+            assert(false, "Unexpected element kind")
+        }
     }
     
     override func collectionView(_ collectionView: UICollectionView, willDisplaySupplementaryView view: UICollectionReusableView, forElementKind elementKind: String, at indexPath: IndexPath) {
@@ -88,7 +99,7 @@ class CollectionViewController: UICollectionViewController {
             let cell = collectionView.cellForItem(at: indexPath) as? PhotoCell
             vc?.image = cell?.imageView.image
             
-//            viewModel?.sendRequestToDownloadLocation(indexPath: indexPath)
+            //            viewModel?.sendRequestToDownloadLocation(indexPath: indexPath)
             guard let usersName = viewModel?.getUserNames(), !usersName.isEmpty else { return }
             vc?.userName = usersName[indexPath.row]
         }
@@ -98,7 +109,7 @@ class CollectionViewController: UICollectionViewController {
         if gestureRecognizer.state == .began {
         }
     }
-
+    
     private func addRecognizer() {
         recognizer = UILongPressGestureRecognizer()
         recognizer.addTarget(self, action: #selector(longPress))

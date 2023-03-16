@@ -20,7 +20,7 @@ class NetworkManager: NetworkManagerProtocol {
             "X-RapidAPI-Key": "a7e581eb9amsheeb72a6a4042d77p1db599jsn9b1afcde9cb1",
             "X-RapidAPI-Host": "unsplash-data.p.rapidapi.com"
         ]
-        AF.request(url, parameters: urlParams, headers: HTTPHeaders(headers)).validate().responseDecodable(of: UnsplashImageModel.self) { response in
+        AF.request(url, parameters: urlParams, headers: HTTPHeaders(headers)).validate().responseDecodable(of: ImageModel.self) { response in
             switch response.result {
             case .success(let answer):
                 UserDefaults.standard.setCodableObject(answer, forKey: "userModel")

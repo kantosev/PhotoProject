@@ -7,13 +7,13 @@
 
 import Foundation
 
-struct UnsplashImageModel: Codable {
+struct ImageModel: Codable {
     let results: [Result]
 }
 struct Result: Codable {
     let urls: Urls
     let links: Links
-    let user: UserUnsplash?
+    let user: ImageUser?
 }
 struct Urls: Codable {
     let raw: String?
@@ -26,7 +26,7 @@ struct Urls: Codable {
 struct Links: Codable {
     let download_location: String
 }
-struct UserUnsplash: Codable {
+struct ImageUser: Codable {
     let username: String
 }
 
