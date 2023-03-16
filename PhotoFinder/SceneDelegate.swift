@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  PetProject
 //
-//  Created by Ivan Eremeev on 03.11.2022.
+//  Created by Anton Kirilyuk on 03.11.2022.
 //
 
 import UIKit

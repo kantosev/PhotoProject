@@ -2,7 +2,7 @@
 //  PhotoCell.swift
 //  PetProject
 //
-//  Created by Ivan Eremeev on 13.11.2022.
+//  Created by Anton Kirilyuk on 13.11.2022.
 //
 
 import UIKit

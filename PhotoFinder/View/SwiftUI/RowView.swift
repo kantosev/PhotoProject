@@ -2,7 +2,7 @@
 //  RowView.swift
 //  PetProject
 //
-//  Created by Ivan Eremeev on 17.12.2022.
+//  Created by Anton Kirilyuk on 17.12.2022.
 //
 
 import SwiftUI

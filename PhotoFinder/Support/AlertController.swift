@@ -2,7 +2,7 @@
 //  AlertController.swift
 //  PetProject
 //
-//  Created by Ivan Eremeev on 04.11.2022.
+//  Created by Anton Kirilyuk on 04.11.2022.
 //
 
 import Foundation

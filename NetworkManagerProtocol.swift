@@ -2,7 +2,7 @@
 //  NetworkManagerProtocol.swift
 //  PetProject
 //
-//  Created by Ivan Eremeev on 19.11.2022.
+//  Created by Anton Kirilyuk on 19.11.2022.
 //
 
 import Foundation
