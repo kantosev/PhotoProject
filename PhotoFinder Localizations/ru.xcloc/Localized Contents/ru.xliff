@@ -7,7 +7,7 @@
     <body>
       <trans-unit id="CFBundleName" xml:space="preserve">
         <source>PhotoFinder</source>
-        <target>Поиск изображений</target>
+        <target>Поиск фото</target>
         <note>Bundle name</note>
       </trans-unit>
       <trans-unit id="NSPhotoLibraryAddUsageDescription" xml:space="preserve">
@@ -24,6 +24,7 @@
     <body>
       <trans-unit id="%@" xml:space="preserve">
         <source>%@</source>
+        <target>%@</target>
         <note>No comment provided by engineer.</note>
       </trans-unit>
       <trans-unit id="Connection error" xml:space="preserve">
@@ -146,6 +147,11 @@
         <source>Settings</source>
         <target>Настройки</target>
         <note>Class = "UITabBarItem"; title = "Settings"; ObjectID = "QRN-DY-7pl";</note>
+      </trans-unit>
+      <trans-unit id="Xvs-8w-4Aa.title" xml:space="preserve">
+        <source>Save</source>
+        <target>Сохранить</target>
+        <note>Class = "UIBarButtonItem"; title = "Save"; ObjectID = "Xvs-8w-4Aa";</note>
       </trans-unit>
     </body>
   </file>

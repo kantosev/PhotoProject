@@ -85,15 +85,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1X2-mO-K7v">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="1X2-mO-K7v">
                                 <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                                 <items>
-                                    <barButtonItem systemItem="save" id="Xvs-8w-4Aa">
+                                    <barButtonItem image="arrow.down.app" catalog="system" id="Xvs-8w-4Aa">
                                         <connections>
                                             <action selector="saveButtonPressed:" destination="MnF-6T-0Re" id="97A-OP-oPb"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem systemItem="action" id="wta-Ut-lSm">
+                                    <barButtonItem image="square.and.arrow.up" catalog="system" id="wta-Ut-lSm">
                                         <inset key="imageInsets" minX="600" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <connections>
                                             <action selector="shareAction:" destination="MnF-6T-0Re" id="aTs-eY-Nip"/>
@@ -134,8 +134,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.down.app" catalog="system" width="128" height="114"/>
         <image name="gearshape.fill" catalog="system" width="128" height="123"/>
         <image name="photo.fill" catalog="system" width="128" height="93"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

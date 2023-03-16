@@ -12,12 +12,13 @@ class PhotoCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     
     var userNameLabel: UILabel!
-    
+    var activityIndicator: UIActivityIndicatorView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         setLabel()
         imageView.addSubview(userNameLabel)
+        setActivityIndicatorOnCell()
         
     }
     // каждый раз перед показом ячейки мы очищаем ее, тем самым не происходит неразберихи при переиспользовании ячеек
@@ -32,5 +33,14 @@ class PhotoCell: UICollectionViewCell {
         userNameLabel.adjustsFontSizeToFitWidth = true
         userNameLabel.numberOfLines = 0
         userNameLabel.textAlignment = .justified
+    }
+    func setActivityIndicatorOnCell() {
+        activityIndicator = UIActivityIndicatorView(style: .large)
+        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+        self.contentView.addSubview(activityIndicator)
+        NSLayoutConstraint.activate([
+            activityIndicator.centerXAnchor.constraint(equalTo: self.contentView.centerXAnchor),
+            activityIndicator.centerYAnchor.constraint(equalTo: self.contentView.centerYAnchor)
+        ])
     }
 }

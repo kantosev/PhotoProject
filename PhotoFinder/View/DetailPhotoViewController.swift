@@ -10,6 +10,7 @@ import UIKit
 
 class DetailPhotoViewController: UIViewController {
     
+ 
     @IBOutlet weak var textView: UITextView!
     var image: UIImage?
     let fileManager = FileManager.default
@@ -21,6 +22,7 @@ class DetailPhotoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+      
         viewModel = DetailViewModel()
         imageScrollView = ImageScrollView(frame: view.bounds)
         view.addSubview(imageScrollView)

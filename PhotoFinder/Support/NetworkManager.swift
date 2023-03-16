@@ -93,6 +93,6 @@ class NetworkManager: NetworkManagerProtocol {
 //        ]
 //        guard let url = URL(string: arrayDL[indexPath.row]) else { return }
 //        AF.request(url, method: .get, headers: HTTPHeaders(headers)).validate().responseString { _ in }
-//        
+//
 //    }
 }

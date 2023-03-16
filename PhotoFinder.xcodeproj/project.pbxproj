@@ -37,7 +37,7 @@
 		3AC1DC442929415B004D10EE /* CollectionViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1DC432929415B004D10EE /* CollectionViewModelProtocol.swift */; };
 		3AC1EA1D29A274C7006E24C5 /* CollectionViewController + LongGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1EA1C29A274C7006E24C5 /* CollectionViewController + LongGesture.swift */; };
 		3AC6E71829C258EA000D12BD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3AC6E71629C258EA000D12BD /* InfoPlist.strings */; };
-		3AC6E71B29C258EA000D12BD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3AC6E71929C258EA000D12BD /* Localizable.strings */; };
+		3AC6E71F29C25CA7000D12BD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3AC6E71D29C25CA7000D12BD /* Localizable.strings */; };
 		3AF34C65299907A600454E05 /* CollectionViewFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF34C63299907A600454E05 /* CollectionViewFooter.swift */; };
 		3AF34C66299907A600454E05 /* CollectionViewFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AF34C64299907A600454E05 /* CollectionViewFooter.xib */; };
 		3AF34C682999311300454E05 /* CollectionView + Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF34C672999311300454E05 /* CollectionView + Keyboard.swift */; };
@@ -79,8 +79,8 @@
 		3AC1EA1C29A274C7006E24C5 /* CollectionViewController + LongGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectionViewController + LongGesture.swift"; sourceTree = "<group>"; };
 		3AC6E71529C25750000D12BD /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		3AC6E71729C258EA000D12BD /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		3AC6E71A29C258EA000D12BD /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3AC6E71C29C258EA000D12BD /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ru; path = ru.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3AC6E71E29C25CA7000D12BD /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3AF34C63299907A600454E05 /* CollectionViewFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewFooter.swift; sourceTree = "<group>"; };
 		3AF34C64299907A600454E05 /* CollectionViewFooter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewFooter.xib; sourceTree = "<group>"; };
 		3AF34C672999311300454E05 /* CollectionView + Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectionView + Keyboard.swift"; sourceTree = "<group>"; };
@@ -173,7 +173,7 @@
 				3A906C5A291450790070996F /* Model */,
 				3A906C4A29144A890070996F /* Assets.xcassets */,
 				3A906C4F29144A890070996F /* Info.plist */,
-				3AC6E71929C258EA000D12BD /* Localizable.strings */,
+				3AC6E71D29C25CA7000D12BD /* Localizable.strings */,
 				3AC6E71629C258EA000D12BD /* InfoPlist.strings */,
 				3A6EB25E292A73EA000688FE /* ToDo.swift */,
 			);
@@ -324,7 +324,7 @@
 				3AF34C66299907A600454E05 /* CollectionViewFooter.xib in Resources */,
 				3A8B53352921658B00FDDA1C /* PhotoCell.xib in Resources */,
 				3A906C4E29144A890070996F /* LaunchScreen.storyboard in Resources */,
-				3AC6E71B29C258EA000D12BD /* Localizable.strings in Resources */,
+				3AC6E71F29C25CA7000D12BD /* Localizable.strings in Resources */,
 				3A906C4B29144A890070996F /* Assets.xcassets in Resources */,
 				3A906C4929144A860070996F /* Main.storyboard in Resources */,
 			);
@@ -397,10 +397,10 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		3AC6E71929C258EA000D12BD /* Localizable.strings */ = {
+		3AC6E71D29C25CA7000D12BD /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				3AC6E71A29C258EA000D12BD /* ru */,
+				3AC6E71E29C25CA7000D12BD /* ru */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

@@ -65,7 +65,12 @@ class CollectionViewModel: CollectionViewModelProtocol {
         if let arrayOfImages {
             guard let url = URL(string: arrayOfImages[indexPath.row]) else { return }
             DispatchQueue.main.async {
-                cell.imageView.kf.setImage(with: url, options: [.transition(.fade(0.4))])
+                cell.activityIndicator.startAnimating()
+                cell.activityIndicator.hidesWhenStopped = true
+                cell.imageView.kf.setImage(with: url, options: [.transition(.fade(0.4))]) {
+                    _ in
+                    cell.activityIndicator.stopAnimating()
+                }
             }
         }
         
