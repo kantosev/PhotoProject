@@ -52,7 +52,7 @@
         <scene sceneID="G8Z-TE-N6C">
             <objects>
                 <collectionViewController storyboardIdentifier="CollectionViewController" title="CollectionViewController" id="2Qm-M0-m52" customClass="CollectionViewController" customModule="PhotoFinder" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="oue-il-uug">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" dataMode="prototypes" id="oue-il-uug">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
