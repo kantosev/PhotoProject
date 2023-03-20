@@ -8,25 +8,16 @@
 import Foundation
 
 struct ImageModel: Codable {
-    let results: [Result]
+    let data: [Datum]
 }
-struct Result: Codable {
-    let urls: Urls
-    let links: Links
-    let user: ImageUser?
-}
-struct Urls: Codable {
-    let raw: String?
-    let full: String?
-    let regular: String?
-    let small: String?
-    let thumb: String?
 
+// MARK: - Datum
+struct Datum: Codable {
+    let images: [Image]?
 }
-struct Links: Codable {
-    let download_location: String
-}
-struct ImageUser: Codable {
-    let username: String
+
+// MARK: - Image
+struct Image: Codable {
+    let link: String
 }
 

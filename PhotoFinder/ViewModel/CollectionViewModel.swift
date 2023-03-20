@@ -14,7 +14,7 @@ class CollectionViewModel: CollectionViewModelProtocol {
     private let networkManager: NetworkManagerProtocol = NetworkManager()
     
     private var arrayOfImages: [String]? = []
-    private let url = "https://unsplash-data.p.rapidapi.com/search/photos"
+    private let url = "https://api.imgur.com/3/gallery/search/"
     private var text: String = ""
     private var countOfRepeatLoad: Int = 2
     
