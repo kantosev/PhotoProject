@@ -16,7 +16,6 @@ class DetailPhotoViewController: UIViewController {
     let fileManager = FileManager.default
     private var viewModel: DetailViewModelProtocol?
     var imageScrollView: ImageScrollView!
-    var userName: String?
     
     @IBOutlet weak var shareActionButton: UIBarButtonItem!
     

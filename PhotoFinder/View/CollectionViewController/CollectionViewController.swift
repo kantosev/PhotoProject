@@ -98,10 +98,6 @@ class CollectionViewController: UICollectionViewController {
             let vc = segue.destination as? DetailPhotoViewController
             let cell = collectionView.cellForItem(at: indexPath) as? PhotoCell
             vc?.image = cell?.imageView.image
-            
-            //            viewModel?.sendRequestToDownloadLocation(indexPath: indexPath)
-            guard let usersName = viewModel?.getUserNames(), !usersName.isEmpty else { return }
-            vc?.userName = usersName[indexPath.row]
         }
     }
     
