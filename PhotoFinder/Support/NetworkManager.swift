@@ -11,11 +11,14 @@ import Alamofire
 class NetworkManager: NetworkManagerProtocol {
     func getArrayOfImages(url: String, searchText: String, page: String?, completion: @escaping (([String]) -> ()), errorCompletion: @escaping ((AFError) -> ())) {
         guard let url = URL(string: url) else { return }
+        
+        let sizeOfImage = UserDefaults.standard.string(forKey: "sizeImage")
+        
         let urlParams = [
             "q": searchText,
             "page": page,
             "q_type": "jpg",
-            "q_size_px": "med"
+            "q_size_px": sizeOfImage ?? "med"
         ]
         let headers = [
             "Authorization": "Client-ID 65ad3ec70fa68e0",
@@ -29,8 +32,10 @@ class NetworkManager: NetworkManagerProtocol {
                 let imagesCount = answer.data.count
         
                 if imagesCount > 0 {
-                    for image1 in 0...(imagesCount - 1) {
-                        arrayImagesUrl.append(answer.data[image1].images?[0].link ?? "")
+                    for image in 0...(imagesCount - 1) {
+                        if answer.data[image].images?[0].type == "image/jpeg" {
+                            arrayImagesUrl.append(answer.data[image].images?[0].link ?? "")
+                        }
                     }
                 }
                 completion(arrayImagesUrl)

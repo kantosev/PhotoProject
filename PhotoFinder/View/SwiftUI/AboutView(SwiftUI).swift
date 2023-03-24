@@ -9,30 +9,30 @@ import SwiftUI
 import Foundation
 
 enum ProfileSection : String, CaseIterable {
-    case thumb = "1"
-    case small = "2"
-    case regular = "3"
-    case full = "4"
-    case raw = "5"
+    case small = "1"
+    case med = "2"
+    case big = "3"
+    case lrg = "4"
+    case huge = "5"
 }
 
 struct AboutView: View {
     
     init() {
         UISegmentedControl.appearance().setAction(UIAction(handler: { _ in
-            UserDefaults.standard.set("thumb", forKey: "sizeImage")
+            UserDefaults.standard.set("small", forKey: "sizeImage")
         }), forSegmentAt: 0)
         UISegmentedControl.appearance().setAction(UIAction(handler: { _ in
-            UserDefaults.standard.set("small", forKey: "sizeImage")
+            UserDefaults.standard.set("med", forKey: "sizeImage")
         }), forSegmentAt: 1)
         UISegmentedControl.appearance().setAction(UIAction(handler: { _ in
-            UserDefaults.standard.set("regular", forKey: "sizeImage")
+            UserDefaults.standard.set("big", forKey: "sizeImage")
         }), forSegmentAt: 2)
         UISegmentedControl.appearance().setAction(UIAction(handler: { _ in
-            UserDefaults.standard.set("full", forKey: "sizeImage")
+            UserDefaults.standard.set("lrg", forKey: "sizeImage")
         }), forSegmentAt: 3)
         UISegmentedControl.appearance().setAction(UIAction(handler: { _ in
-            UserDefaults.standard.set("raw", forKey: "sizeImage")
+            UserDefaults.standard.set("huge", forKey: "sizeImage")
         }), forSegmentAt: 4)
         
         if #available(iOS 15.0, *) {
@@ -45,7 +45,7 @@ struct AboutView: View {
     
     @State private var visibleActivityIndicator: Bool = false
     @State private var connected: Bool = false
-    @State var segmentationSelection : ProfileSection = .regular
+    @State var segmentationSelection : ProfileSection = .med
     
     var body: some View {
         
