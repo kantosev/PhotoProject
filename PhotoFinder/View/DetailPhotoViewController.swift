@@ -11,7 +11,6 @@ import UIKit
 class DetailPhotoViewController: UIViewController {
     
  
-    @IBOutlet weak var textView: UITextView!
     var image: UIImage?
     let fileManager = FileManager.default
     private var viewModel: DetailViewModelProtocol?
@@ -26,8 +25,6 @@ class DetailPhotoViewController: UIViewController {
         imageScrollView = ImageScrollView(frame: view.bounds)
         view.addSubview(imageScrollView)
         setupImageScrollView()
-//        guard let userNames = userName else { return}
-//        setTextViewHyperText(userName: userNames, longHyperText: userNames.count)
         
     }
     

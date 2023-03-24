@@ -12,6 +12,7 @@ import Kingfisher
 // MARK: - Observer
 extension CollectionViewController {
     @objc func searchButtonPressed(notification: Notification) {
+
         // очищает кеш фото при новом поиске
         KingfisherManager.shared.cache.clearCache()
         footerIsHidden = false
