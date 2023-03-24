@@ -18,6 +18,7 @@ struct Datum: Codable {
 
 // MARK: - Image
 struct Image: Codable {
+    let type: String
     let link: String
 }
 

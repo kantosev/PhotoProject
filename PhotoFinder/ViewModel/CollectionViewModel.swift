@@ -22,7 +22,7 @@ class CollectionViewModel: CollectionViewModelProtocol {
         if searchButtonPressed == true {
             self.countOfRepeatLoad = 2
             self.text = text
-            networkManager.getArrayOfImages(url: url, searchText: text, page: "1") { [weak self] arrayImages in
+            networkManager.getArrayOfImages(url: url, searchText: text, page: "0") { [weak self] arrayImages in
                 if !arrayImages.isEmpty {
                     self?.arrayOfImages = arrayImages
                     completion(false)
@@ -34,6 +34,7 @@ class CollectionViewModel: CollectionViewModelProtocol {
             }
             
         } else {
+
             networkManager.getArrayOfImages(url: url, searchText: self.text, page: String(countOfRepeatLoad)) { arrayImages in
                 if !arrayImages.isEmpty {
                     self.arrayOfImages?.append(contentsOf: arrayImages)
@@ -55,12 +56,11 @@ class CollectionViewModel: CollectionViewModelProtocol {
         if let arrayOfImages {
             guard let url = URL(string: arrayOfImages[indexPath.row]) else { return }
             DispatchQueue.main.async {
-                cell.activityIndicator.startAnimating()
-                cell.activityIndicator.hidesWhenStopped = true
-                cell.imageView.kf.setImage(with: url, options: [.transition(.fade(0.4))]) {
-                    _ in
-                    cell.activityIndicator.stopAnimating()
+                cell.imageView.kf.indicatorType = .activity
+                cell.imageView.kf.setImage(with: url, options: [.transition(.fade(0.4))]) { _ in
+                    
                 }
+                
             }
         }
         
