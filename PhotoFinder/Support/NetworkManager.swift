@@ -12,7 +12,15 @@ class NetworkManager: NetworkManagerProtocol {
     func getArrayOfImages(url: String, searchText: String, page: String?, completion: @escaping (([String]) -> ()), errorCompletion: @escaping ((AFError) -> ())) {
         guard let url = URL(string: url) else { return }
         
-        let sizeOfImage = UserDefaults.standard.string(forKey: "sizeImage")
+        var sizeOfImage = UserDefaults.standard.string(forKey: "sizeImage")
+        switch sizeOfImage {
+        case "1": sizeOfImage = "small"
+        case "2": sizeOfImage = "med"
+        case "3": sizeOfImage = "big"
+        case "4": sizeOfImage = "lrg"
+        case "5": sizeOfImage = "huge"
+        default: break
+        }
         
         let urlParams = [
             "q": searchText,

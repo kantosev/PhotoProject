@@ -20,19 +20,19 @@ struct AboutView: View {
     
     init() {
         UISegmentedControl.appearance().setAction(UIAction(handler: { _ in
-            UserDefaults.standard.set("small", forKey: "sizeImage")
+            UserDefaults.standard.set("1", forKey: "sizeImage")
         }), forSegmentAt: 0)
         UISegmentedControl.appearance().setAction(UIAction(handler: { _ in
-            UserDefaults.standard.set("med", forKey: "sizeImage")
+            UserDefaults.standard.set("2", forKey: "sizeImage")
         }), forSegmentAt: 1)
         UISegmentedControl.appearance().setAction(UIAction(handler: { _ in
-            UserDefaults.standard.set("big", forKey: "sizeImage")
+            UserDefaults.standard.set("3", forKey: "sizeImage")
         }), forSegmentAt: 2)
         UISegmentedControl.appearance().setAction(UIAction(handler: { _ in
-            UserDefaults.standard.set("lrg", forKey: "sizeImage")
+            UserDefaults.standard.set("4", forKey: "sizeImage")
         }), forSegmentAt: 3)
         UISegmentedControl.appearance().setAction(UIAction(handler: { _ in
-            UserDefaults.standard.set("huge", forKey: "sizeImage")
+            UserDefaults.standard.set("5", forKey: "sizeImage")
         }), forSegmentAt: 4)
         
         if #available(iOS 15.0, *) {
@@ -45,7 +45,7 @@ struct AboutView: View {
     
     @State private var visibleActivityIndicator: Bool = false
     @State private var connected: Bool = false
-    @State var segmentationSelection : ProfileSection = .med
+    @State var segmentationSelection : ProfileSection = ProfileSection(rawValue: UserDefaults.standard.string(forKey: "sizeImage") ?? "2")! 
     
     var body: some View {
         
