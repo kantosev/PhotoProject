@@ -73,7 +73,8 @@ class CollectionViewController: UICollectionViewController {
             view.isHidden = footerIsHidden
             return view
         default:
-            assert(false, "Unexpected element kind")
+            return UICollectionReusableView()
+//            assert(false, "Unexpected element kind")
         }
     }
     
