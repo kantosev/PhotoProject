@@ -58,7 +58,7 @@ struct AboutView: View {
                 }
             }
             .pickerStyle(SegmentedPickerStyle())
-            .padding(EdgeInsets(top: 10, leading: 1, bottom: 40, trailing: 1))
+            .padding(EdgeInsets(top: 10, leading: 8, bottom: 40, trailing: 8))
             
             if #available(iOS 15.0, *) {
                 Button("Contact the developers") {
