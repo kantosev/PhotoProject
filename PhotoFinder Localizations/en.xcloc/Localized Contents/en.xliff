@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
+  <file original="PhotoFinder/en.lproj/InfoPlist.strings" source-language="en" target-language="en" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="14.2" build-num="14C18"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleName" xml:space="preserve">
+        <source>PhotoFinder</source>
+        <target>PhotoFinder</target>
+        <note>Bundle name</note>
+      </trans-unit>
+      <trans-unit id="NSPhotoLibraryAddUsageDescription" xml:space="preserve">
+        <source>To save a photo to the gallery</source>
+        <target>To save a photo to the gallery</target>
+        <note>Privacy - Photo Library Additions Usage Description</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="PhotoFinder/en.lproj/Localizable.strings" source-language="en" target-language="en" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="14.2" build-num="14C18"/>
+    </header>
+    <body>
+      <trans-unit id="%@" xml:space="preserve">
+        <source>%@</source>
+        <target>%@</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Attention!" xml:space="preserve">
+        <source>Attention!</source>
+        <target>Attention!</target>
+        <note>Attention</note>
+      </trans-unit>
+      <trans-unit id="Connection error" xml:space="preserve">
+        <source>Connection error</source>
+        <target>Connection error</target>
+        <note>Connection error</note>
+      </trans-unit>
+      <trans-unit id="Contact the developers" xml:space="preserve">
+        <source>Contact the developers</source>
+        <target>Contact the developers</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Data loading error" xml:space="preserve">
+        <source>Data loading error</source>
+        <target>Data loading error</target>
+        <note>Data loading error</note>
+      </trans-unit>
+      <trans-unit id="Download more" xml:space="preserve">
+        <source>Download more</source>
+        <target>Download more</target>
+        <note>Footer Button</note>
+      </trans-unit>
+      <trans-unit id="Error" xml:space="preserve">
+        <source>Error</source>
+        <target>Error</target>
+        <note>Error1
+   Error2
+   Error3
+   Error4
+   Error5</note>
+      </trans-unit>
+      <trans-unit id="Loading error" xml:space="preserve">
+        <source>Loading error</source>
+        <target>Loading error</target>
+        <note>Loading error</note>
+      </trans-unit>
+      <trans-unit id="No images found on request" xml:space="preserve">
+        <source>No images found on request</source>
+        <target>No images found on request</target>
+        <note>No images found on request</note>
+      </trans-unit>
+      <trans-unit id="No internet connection" xml:space="preserve">
+        <source>No internet connection</source>
+        <target>No internet connection</target>
+        <note>No internet connection</note>
+      </trans-unit>
+      <trans-unit id="Options" xml:space="preserve">
+        <source>Options</source>
+        <target>Options</target>
+        <note>MenuTitle</note>
+      </trans-unit>
+      <trans-unit id="Photo uploaded to gallery" xml:space="preserve">
+        <source>Photo uploaded to gallery</source>
+        <target>Photo uploaded to gallery</target>
+        <note>Photo uploaded to gallery</note>
+      </trans-unit>
+      <trans-unit id="Quality of uploaded images" xml:space="preserve">
+        <source>Quality of uploaded images</source>
+        <target>Quality of uploaded images</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Save" xml:space="preserve">
+        <source>Save</source>
+        <target>Save</target>
+        <note>MenuItemTitle</note>
+      </trans-unit>
+      <trans-unit id="Search image" xml:space="preserve">
+        <source>Search image</source>
+        <target>Search image</target>
+        <note>Header placeholder</note>
+      </trans-unit>
+      <trans-unit id="Share" xml:space="preserve">
+        <source>Share</source>
+        <target>Share</target>
+        <note>MenuItemTitle</note>
+      </trans-unit>
+      <trans-unit id="Successfully" xml:space="preserve">
+        <source>Successfully</source>
+        <target>Successfully</target>
+        <note>Successfully</note>
+      </trans-unit>
+      <trans-unit id="The data was not uploaded, try again later" xml:space="preserve">
+        <source>The data was not uploaded, try again later</source>
+        <target>The data was not uploaded, try again later</target>
+        <note>The data was not uploaded, try again later</note>
+      </trans-unit>
+      <trans-unit id="There are no more images" xml:space="preserve">
+        <source>There are no more images</source>
+        <target>There are no more images</target>
+        <note>There are no more images</note>
+      </trans-unit>
+      <trans-unit id="There will be more results if you enter the query in English 😁" xml:space="preserve">
+        <source>There will be more results if you enter the query in English 😁</source>
+        <target>There will be more results if you enter the query in English 😁</target>
+        <note>OneFrase</note>
+      </trans-unit>
+      <trans-unit id="You haven't entered anything" xml:space="preserve">
+        <source>You haven't entered anything</source>
+        <target>You haven't entered anything</target>
+        <note>You haven't entered anything</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="PhotoFinder/View/Base.lproj/Main.storyboard" source-language="en" target-language="en" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="14.2" build-num="14C18"/>
+    </header>
+    <body>
+      <trans-unit id="2Aa-fu-xdV.title" xml:space="preserve">
+        <source>Photo</source>
+        <target>Photo</target>
+        <note>Class = "UITabBarItem"; title = "Photo"; ObjectID = "2Aa-fu-xdV";</note>
+      </trans-unit>
+      <trans-unit id="2Qm-M0-m52.title" xml:space="preserve">
+        <source>CollectionViewController</source>
+        <target>CollectionViewController</target>
+        <note>Class = "UICollectionViewController"; title = "CollectionViewController"; ObjectID = "2Qm-M0-m52";</note>
+      </trans-unit>
+      <trans-unit id="MnF-6T-0Re.title" xml:space="preserve">
+        <source>DetailPhotoViewController</source>
+        <target>DetailPhotoViewController</target>
+        <note>Class = "UIViewController"; title = "DetailPhotoViewController"; ObjectID = "MnF-6T-0Re";</note>
+      </trans-unit>
+      <trans-unit id="QRN-DY-7pl.title" xml:space="preserve">
+        <source>Settings</source>
+        <target>About</target>
+        <note>Class = "UITabBarItem"; title = "Settings"; ObjectID = "QRN-DY-7pl";</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

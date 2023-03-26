@@ -1,0 +1,61 @@
+/* No comment provided by engineer. */
+"%@" = "%@";
+
+/* Connection error */
+"Connection error" = "خطأ في الاتصال";
+
+/* No comment provided by engineer. */
+"Contact the developers" = "التواصل مع المطورين";
+
+/* Data loading error */
+"Data loading error" = "خطأ في تحميل البيانات";
+
+/* Footer Button */
+"Download more" = "تحميل المزيد";
+
+/* Error1
+   Error2
+   Error3
+   Error4
+   Error5 */
+"Error" = "خطأ";
+
+/* Loading error */
+"Loading error" = "خطأ في التحميل";
+
+/* No images found on request */
+"No images found on request" = "لم يتم العثور على صور عند الطلب";
+
+/* No internet connection */
+"No internet connection" = "لا يوجد اتصال بالإنترنت";
+
+/* MenuTitle */
+"Options" = "الخيارات";
+
+/* Photo uploaded to gallery */
+"Photo uploaded to gallery" = "تم تحميل الصورة إلى المعرض";
+
+/* No comment provided by engineer. */
+"Quality of uploaded images" = "جودة الصور التي تم تحميلها";
+
+/* MenuItemTitle */
+"Save" = "حفظ";
+
+/* Header placeholder */
+"Search image" = "بحث صورة";
+
+/* MenuItemTitle */
+"Share" = "حصة";
+
+/* Successfully */
+"Successfully" = "بنجاح";
+
+/* The data was not uploaded, try again later */
+"The data was not uploaded, try again later" = "لم يتم تحميل البيانات ، حاول مرة أخرى لاحقا";
+
+/* There are no more images */
+"There are no more images" = "لا يوجد المزيد من الصور";
+
+/* You haven't entered anything */
+"You haven't entered anything" = "أنت لم تدخل أي شيء";
+

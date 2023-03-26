@@ -38,15 +38,7 @@ class CollectionViewController: UICollectionViewController {
         
         
     }
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        let count = UserDefaults.standard.bool(forKey: "oneAlert")
-        if count != true {
-            AlertController.showAlertController(onViewController: self, title: NSLocalizedString("Attention!", comment: "Attention"), message: NSLocalizedString("There will be more results if you enter the query in English 😁", comment: "OneFrase"))
-            UserDefaults.standard.set(true, forKey: "oneAlert")
-        }
-        
-    }
+  
     
     // MARK: - UICollectionViewDataSource
     

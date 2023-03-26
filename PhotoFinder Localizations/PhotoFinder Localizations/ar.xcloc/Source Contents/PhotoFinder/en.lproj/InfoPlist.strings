@@ -1,0 +1,4 @@
+/* Bundle name */
+"CFBundleName" = "PhotoFinder";
+/* Privacy - Photo Library Additions Usage Description */
+"NSPhotoLibraryAddUsageDescription" = "To save a photo to the gallery";

@@ -1,0 +1,12 @@
+/* Class = "UITabBarItem"; title = "Photo"; ObjectID = "2Aa-fu-xdV"; */
+"2Aa-fu-xdV.title" = "صور";
+
+/* Class = "UICollectionViewController"; title = "CollectionViewController"; ObjectID = "2Qm-M0-m52"; */
+"2Qm-M0-m52.title" = "CollectionViewController";
+
+/* Class = "UIViewController"; title = "DetailPhotoViewController"; ObjectID = "MnF-6T-0Re"; */
+"MnF-6T-0Re.title" = "DetailPhotoViewController";
+
+/* Class = "UITabBarItem"; title = "Settings"; ObjectID = "QRN-DY-7pl"; */
+"QRN-DY-7pl.title" = "الإعدادات";
+

@@ -1,9 +1,6 @@
 /* No comment provided by engineer. */
 "%@" = "%@";
 
-/* Attention */
-"Attention!" = "Внимание!";
-
 /* Connection error */
 "Connection error" = "Ошибка соединения";
 
@@ -45,7 +42,7 @@
 "Save" = "Сохранить";
 
 /* Header placeholder */
-"Search image" = "Поиск изображений";
+"Search image" = "Поиск изображений (больше на английском)";
 
 /* MenuItemTitle */
 "Share" = "Поделиться";
@@ -58,9 +55,6 @@
 
 /* There are no more images */
 "There are no more images" = "Больше изображений нет";
-
-/* OneFrase */
-"There will be more results if you enter the query in English 😁" = "Вы получите больше изображений, если введете запрос на Английском языке 😁";
 
 /* You haven't entered anything */
 "You haven't entered anything" = "Вы ничего не ввели";

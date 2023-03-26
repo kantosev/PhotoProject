@@ -1,0 +1,6 @@
+/* Bundle name */
+"CFBundleName" = "مكتشف الصور";
+
+/* Privacy - Photo Library Additions Usage Description */
+"NSPhotoLibraryAddUsageDescription" = "لحفظ صورة في المعرض";
+
