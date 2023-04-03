@@ -1,0 +1,35 @@
+{
+  "identifier" : "B0B77518",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+    {
+      "displayPrice" : "3.99",
+      "familyShareable" : false,
+      "internalID" : "6446813495",
+      "localizations" : [
+        {
+          "description" : "Developer Support",
+          "displayName" : "Developer Support",
+          "locale" : "en_GB"
+        }
+      ],
+      "productID" : "com.PhotoApp.support",
+      "referenceName" : "Поддержка разработчика",
+      "type" : "Consumable"
+    }
+  ],
+  "settings" : {
+    "_applicationInternalID" : "6446799403",
+    "_developerTeamID" : "CBGVUJP69Q",
+    "_lastSynchronizedDate" : 701532177.20836401
+  },
+  "subscriptionGroups" : [
+
+  ],
+  "version" : {
+    "major" : 2,
+    "minor" : 0
+  }
+}
