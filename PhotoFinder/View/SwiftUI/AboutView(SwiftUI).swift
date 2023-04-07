@@ -13,7 +13,6 @@ enum ProfileSection : String, CaseIterable {
     case med = "2"
     case big = "3"
     case lrg = "4"
-    case huge = "5"
 }
 
 struct AboutView: View {
@@ -31,9 +30,7 @@ struct AboutView: View {
         UISegmentedControl.appearance().setAction(UIAction(handler: { _ in
             UserDefaults.standard.set("4", forKey: "sizeImage")
         }), forSegmentAt: 3)
-        UISegmentedControl.appearance().setAction(UIAction(handler: { _ in
-            UserDefaults.standard.set("5", forKey: "sizeImage")
-        }), forSegmentAt: 4)
+        
         
         if #available(iOS 15.0, *) {
             UISegmentedControl.appearance().selectedSegmentTintColor = .systemIndigo
