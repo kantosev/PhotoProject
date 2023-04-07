@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import StoreKit
+import Foundation
 
 enum ProfileSection : String, CaseIterable {
     case small = "1"
@@ -42,12 +42,10 @@ struct AboutView: View {
         }
         
     }
-    @State var segmentationSelection : ProfileSection = ProfileSection(rawValue: UserDefaults.standard.string(forKey: "sizeImage") ?? "2")!
     
-    private let productIds = ["com.PhotoApp.support"]
-    @State private var products: [Product] = []
-    
-    @StateObject private var purchaseManager = PurchaseManager()
+    @State private var visibleActivityIndicator: Bool = false
+    @State private var connected: Bool = false
+    @State var segmentationSelection : ProfileSection = ProfileSection(rawValue: UserDefaults.standard.string(forKey: "sizeImage") ?? "2")! 
     
     var body: some View {
         
@@ -76,37 +74,11 @@ struct AboutView: View {
                     }
                 }
             }
-            Spacer()
-            // Кнопка покупки
-            ForEach(purchaseManager.products) { product in
-                Button {
-                    Task {
-                        do {
-                            try await purchaseManager.purchase(product)
-                        } catch {
-                            print(error)
-                        }
-                    }
-                } label: {
-                    Text("\(product.displayPrice) - \(product.displayName)")
-                        .foregroundColor(.white)
-                        .padding()
-                        .background(.blue)
-                        .clipShape(Capsule())
-                }
-            }
-            
             
             Spacer()
-            // эта функция вызывается, когда наше вью появляется с помощью .task()
-        }.task {
-            do {
-                try await purchaseManager.loadProducts()
-            } catch {
-                print(error)
-            }
         }
     }
+    
 }
 
 struct AboutView_SwiftUI__Previews: PreviewProvider {
@@ -115,3 +87,10 @@ struct AboutView_SwiftUI__Previews: PreviewProvider {
     }
 }
 
+
+//    .onAppear {
+//        if !NetworkMonitor.shared.isConnected {
+//            connected = true
+//        }
+//    }
+//    .alert("lost internet connection", isPresented: $connected) {}

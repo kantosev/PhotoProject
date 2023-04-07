@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3A0D6E5E2933A3C200D468F8 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0D6E5D2933A3C200D468F8 /* ImageModel.swift */; };
-		3A11AC3229D08C6600FA4C90 /* Purchase Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A11AC3129D08C6500FA4C90 /* Purchase Manager.swift */; };
 		3A17777829325B6700703F92 /* DetailPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A17777729325B6700703F92 /* DetailPhotoViewController.swift */; };
 		3A5BA2DC294E36A400DE0B65 /* AboutViewControllerSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5BA2DB294E36A400DE0B65 /* AboutViewControllerSwiftUI.swift */; };
 		3A5BA2DE294E3E4900DE0B65 /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5BA2DD294E3E4900DE0B65 /* RowView.swift */; };
@@ -53,8 +52,6 @@
 		3A11AC2D29D055B800FA4C90 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
 		3A11AC2E29D05A9700FA4C90 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3A11AC2F29D05A9700FA4C90 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
-		3A11AC3029D087F100FA4C90 /* StoreKitConfig.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = StoreKitConfig.storekit; sourceTree = "<group>"; };
-		3A11AC3129D08C6500FA4C90 /* Purchase Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Purchase Manager.swift"; sourceTree = "<group>"; };
 		3A17777729325B6700703F92 /* DetailPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPhotoViewController.swift; sourceTree = "<group>"; };
 		3A5BA2DB294E36A400DE0B65 /* AboutViewControllerSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewControllerSwiftUI.swift; sourceTree = "<group>"; };
 		3A5BA2DD294E3E4900DE0B65 /* RowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
@@ -224,8 +221,6 @@
 				3A902A3F29153F79007C3FDC /* AlertController.swift */,
 				3A8D1D4B294F5B53001341AE /* NetworkMonitor.swift */,
 				3AF9892129A0174100F48775 /* UserDefaults + Extension.swift */,
-				3A11AC3029D087F100FA4C90 /* StoreKitConfig.storekit */,
-				3A11AC3129D08C6500FA4C90 /* Purchase Manager.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -350,7 +345,6 @@
 				3A8B53342921658B00FDDA1C /* PhotoCell.swift in Sources */,
 				3AF34C6C2999452B00454E05 /* String + Extension.swift in Sources */,
 				3A906C4229144A860070996F /* AppDelegate.swift in Sources */,
-				3A11AC3229D08C6600FA4C90 /* Purchase Manager.swift in Sources */,
 				3A5D84DE292968EA00E41245 /* CollectionViewHeader.swift in Sources */,
 				3A8D1D4C294F5B53001341AE /* NetworkMonitor.swift in Sources */,
 				3A906C4429144A860070996F /* SceneDelegate.swift in Sources */,
@@ -544,7 +538,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 0;
 				DEVELOPMENT_TEAM = CBGVUJP69Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PhotoFinder/Info.plist;
@@ -556,7 +550,7 @@
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -580,7 +574,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 0;
 				DEVELOPMENT_TEAM = CBGVUJP69Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PhotoFinder/Info.plist;
@@ -592,7 +586,7 @@
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
