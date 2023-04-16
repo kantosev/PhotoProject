@@ -11,12 +11,17 @@ import UIKit
 extension CollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, contextMenuConfigurationForItemsAt indexPaths: [IndexPath], point: CGPoint) -> UIContextMenuConfiguration? {
-        let cell = collectionView.cellForItem(at: indexPaths[0]) as? PhotoCell
-        let image = cell?.imageView.image
-        self.image = image
-        return UIContextMenuConfiguration(actionProvider:  { _ in
-            self.imageMenu
-        })
+        if !indexPaths.isEmpty {
+            let cell = collectionView.cellForItem(at: indexPaths[0]) as? PhotoCell
+            let image = cell?.imageView.image
+            self.image = image
+            return UIContextMenuConfiguration(actionProvider:  { _ in
+                self.imageMenu
+            })
+        } else {
+            return nil
+        }
+    
     }
     
     func setupImageMenu() {

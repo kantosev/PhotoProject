@@ -42,7 +42,7 @@ struct AboutView: View {
     
     @State private var visibleActivityIndicator: Bool = false
     @State private var connected: Bool = false
-    @State var segmentationSelection : ProfileSection = ProfileSection(rawValue: UserDefaults.standard.string(forKey: "sizeImage") ?? "2")! 
+    @State var segmentationSelection : ProfileSection = ProfileSection(rawValue: UserDefaults.standard.string(forKey: "sizeImage") ?? "3")! 
     
     var body: some View {
         
@@ -54,7 +54,7 @@ struct AboutView: View {
                     Text(option.rawValue)
                 }
             }
-            .pickerStyle(SegmentedPickerStyle())
+            .pickerStyle(.segmented)
             .padding(EdgeInsets(top: 10, leading: 8, bottom: 40, trailing: 8))
             
             if #available(iOS 15.0, *) {

@@ -13,12 +13,13 @@ class PhotoCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-
+        
     }
     // каждый раз перед показом ячейки мы очищаем ее, тем самым не происходит неразберихи при переиспользовании ячеек
     override func prepareForReuse() {
         super.prepareForReuse()
         imageView.image = nil
+
     }
 
 }
