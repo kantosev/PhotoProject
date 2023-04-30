@@ -14,8 +14,8 @@ class CollectionViewModel: CollectionViewModelProtocol {
     private let networkManager: NetworkManagerProtocol = NetworkManager()
     
     private var arrayOfImages: [String]? = []
-//    private let url = "https://api.imgur.com/3/gallery/search/"
-    private let url = "https://imgur-apiv3.p.rapidapi.com/3/gallery/search/top/%7Bwindow%7D/%7Bpage%7D"
+    private let url = "https://api.imgur.com/3/gallery/search/"
+//    private let url = "https://imgur-apiv3.p.rapidapi.com/3/gallery/search/top/%7Bwindow%7D/%7Bpage%7D"
     private var text: String = ""
     private var countOfRepeatLoad: Int = 2
     

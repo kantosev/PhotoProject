@@ -28,9 +28,9 @@ class NetworkManager: NetworkManagerProtocol {
             "q_size_px": sizeOfImage ?? "med"
         ]
         let headers = [
-            "Authorization": "Client-ID 65ad3ec70fa68e0",
-            "X-RapidAPI-Key": "a7e581eb9amsheeb72a6a4042d77p1db599jsn9b1afcde9cb1",
-            "X-RapidAPI-Host": "imgur-apiv3.p.rapidapi.com"
+            "Authorization": "Client-ID 65ad3ec70fa68e0"
+//            "X-RapidAPI-Key": "a7e581eb9amsheeb72a6a4042d77p1db599jsn9b1afcde9cb1",
+//            "X-RapidAPI-Host": "imgur-apiv3.p.rapidapi.com"
         ]
 
         AF.request(url, parameters: urlParams, headers: HTTPHeaders(headers)).responseDecodable(of: ImageModel.self) { response in
