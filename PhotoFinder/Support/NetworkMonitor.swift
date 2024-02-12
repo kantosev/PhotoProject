@@ -2,7 +2,7 @@
 //  Networkmonitor.swift
 //  PetProject
 //
-//  Created by Антон Кирилюк on 18.12.2022.
+//  Created by Anton Kirilyuk on 18.12.2022.
 //
 // 
 

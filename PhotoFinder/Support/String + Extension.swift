@@ -2,7 +2,7 @@
 //  String + Extension.swift
 //  ProjectAlarm
 //
-//  Created by Антон Кирилюк on 22.01.2023.
+//  Created by Anton Kirilyuk on 22.01.2023.
 //
 
 import Foundation

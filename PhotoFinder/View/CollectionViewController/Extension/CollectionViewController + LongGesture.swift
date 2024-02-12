@@ -2,7 +2,7 @@
 //  CollectionViewController + LongGesture.swift
 //  PetProject
 //
-//  Created by Антон Кирилюк on 19.02.2023.
+//  Created by Anton Kirilyuk on 19.02.2023.
 //
 
 import UIKit
@@ -28,9 +28,9 @@ extension CollectionViewController {
         let shareImage = UIAction(title: NSLocalizedString("Share", comment: "MenuItemTitle"), image: UIImage(systemName: "square.and.arrow.up")) { _ in
             let items: [Any] = [self.image as Any]
             let activityVC = UIActivityViewController(activityItems: items, applicationActivities: nil)
-            //        activityVC.modalPresentationStyle = .popover
+            // activityVC.modalPresentationStyle = .popover
             // для ipad -> указываем точку привязки для popover'a, причем строчка выше необязательна.
-//            activityVC.popoverPresentationController?.barButtonItem = shareActionButton
+            // activityVC.popoverPresentationController?.barButtonItem = shareActionButton
             
             self.present(activityVC, animated: true)
         }

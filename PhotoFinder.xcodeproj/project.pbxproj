@@ -133,8 +133,8 @@
 				3A8B53242921122700FDDA1C /* CollectionViewController.swift */,
 				3AF34C622999074F00454E05 /* CollectionViewFooter */,
 				3A8D1D4E294F8C71001341AE /* CollectionViewHeader */,
-				3A8B53262921232400FDDA1C /* Cell */,
 				3A5F951F292AAA4B00C8C869 /* Extension */,
+				3A8B53262921232400FDDA1C /* Cell */,
 			);
 			path = CollectionViewController;
 			sourceTree = "<group>";

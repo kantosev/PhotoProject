@@ -18,10 +18,13 @@ class DetailPhotoViewController: UIViewController {
     
     @IBOutlet weak var shareActionButton: UIBarButtonItem!
     
+    required init?(coder: NSCoder) {
+        self.viewModel = DetailViewModel()
+        super.init(coder: coder)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-      
-        viewModel = DetailViewModel()
         imageScrollView = ImageScrollView(frame: view.bounds)
         view.addSubview(imageScrollView)
         setupImageScrollView()

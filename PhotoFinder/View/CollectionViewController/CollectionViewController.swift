@@ -9,36 +9,40 @@ import UIKit
 import Alamofire
 
 
+/// Основной экран приложения (CollectionView)
 class CollectionViewController: UICollectionViewController {
-    
+    // View model CollectionVC
     var viewModel: CollectionViewModelProtocol?
-    
+    // View model DetailPhotoVC
     var detailViewModel: DetailViewModelProtocol?
-    
+    // Индикатор загрузки
     var activityIndicator: UIActivityIndicatorView!
-    
+    // Жест длительного нажатия
     var recognizer: UILongPressGestureRecognizer!
-    
+    // Показан ли Footer
     var footerIsHidden: Bool = true
-    
+    // Меню, открывающееся по длительному нажатию на фото
     var imageMenu = UIMenu()
-    
+    // Изображение для детального открытия
     var image: UIImage?
+    
+    
+    required init?(coder: NSCoder) {
+        self.viewModel = CollectionViewModel()
+        self.detailViewModel = DetailViewModel()
+        super.init(coder: coder)
+    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        detailViewModel = DetailViewModel()
         setupImageMenu()
         addObserverForTouchSearchButton()
         addObserverForErrorSearch()
         addObserverForOverButtonLoadPressed()
-        viewModel = CollectionViewModel()
         addRecognizer()
         registerView()
         setActivityIndicator()
-        
-        
     }
   
     

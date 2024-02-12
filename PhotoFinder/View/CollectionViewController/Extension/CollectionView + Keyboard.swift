@@ -2,7 +2,7 @@
 //  CollectionView + Keyboard.swift
 //  PetProject
 //
-//  Created by Антон Кирилюк on 12.02.2023.
+//  Created by Anton Kirilyuk on 12.02.2023.
 //
 
 import Foundation

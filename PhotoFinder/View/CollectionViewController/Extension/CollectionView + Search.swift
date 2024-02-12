@@ -2,7 +2,7 @@
 //  CollectionView + Search.swift
 //  PetProject
 //
-//  Created by Антон Кирилюк on 12.02.2023.
+//  Created by Anton Kirilyuk on 12.02.2023.
 //
 
 import Foundation
@@ -24,7 +24,7 @@ extension CollectionViewController {
             activityIndicator.hidesWhenStopped = true
             guard let userInfo = notification.userInfo else { return }
             guard let text = userInfo["text"] as? String else { return }
-            
+
             viewModel?.fetchOfData(with: text, completion: { [activityIndicator, collectionView] arrayIsEmpty in
                 activityIndicator?.stopAnimating()
                 if arrayIsEmpty == false {

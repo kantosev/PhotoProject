@@ -17,11 +17,11 @@ class CollectionViewModel: CollectionViewModelProtocol {
     // Массив ссылок на изображения
     private var arrayOfImages: [String]? = []
     // url
-    private let url = "https://api.imgur.com/3/gallery/search/"
+    private let url: String = "https://api.imgur.com/3/gallery/search/"
     // Поисковый запрос
     private var text: String = ""
-    
-    private var countOfRepeatLoad: Int = 2
+    // Счетчик для смены page при запросе дополнительных изображений
+    private var countOfRepeatLoad: Int = 1
     
     
     /// Получение массива ссылок на изображения
@@ -29,10 +29,11 @@ class CollectionViewModel: CollectionViewModelProtocol {
     ///   - text: Поисковый запрос
     ///   - completion: completion
     ///   - errorCompletion: В случае ошибки в запросе
-    ///   - searchButtonPressed: <#searchButtonPressed description#>
+    ///   - searchButtonPressed: true - нажата кнопка поиска, false - нажата кнопка "Загрузить еще"
     func fetchOfData(with text: String, completion: @escaping (Bool) -> (), errorCompletion: @escaping (AFError) -> (), searchButtonPressed: Bool) {
+        
         if searchButtonPressed == true {
-            self.countOfRepeatLoad = 2
+            self.countOfRepeatLoad = 1
             self.text = text
             networkManager.getArrayOfImages(url: url, searchText: text, page: "0") { [weak self] arrayImages in
                 if !arrayImages.isEmpty {
@@ -56,7 +57,6 @@ class CollectionViewModel: CollectionViewModelProtocol {
             } errorCompletion: { error in
                 errorCompletion(error)
             }
-            
         }
     }
     
