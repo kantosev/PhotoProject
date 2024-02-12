@@ -7,9 +7,10 @@
 
 import SwiftUI
 
-class AboutViewControllerSwiftUI: UIViewController {
+/// Обертка для использования SwiftUI в UIKit проекте
+class SettingViewControllerSwiftUI: UIViewController {
     
-    private let hostingViewController = UIHostingController(rootView: AboutView())
+    private let hostingViewController = UIHostingController(rootView: SettingView())
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,12 +32,4 @@ class AboutViewControllerSwiftUI: UIViewController {
         addChild(hostingViewController)
         view.addSubview(hostingViewController.view)
     }
- 
-    
-    
-    //    required init?(coder aDecoder: NSCoder){
-    //        super.init(coder: aDecoder, rootView: AboutView())
-    //    }
-    
-    
 }

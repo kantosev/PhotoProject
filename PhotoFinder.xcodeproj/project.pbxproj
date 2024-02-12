@@ -9,8 +9,7 @@
 /* Begin PBXBuildFile section */
 		3A0D6E5E2933A3C200D468F8 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0D6E5D2933A3C200D468F8 /* ImageModel.swift */; };
 		3A17777829325B6700703F92 /* DetailPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A17777729325B6700703F92 /* DetailPhotoViewController.swift */; };
-		3A5BA2DC294E36A400DE0B65 /* AboutViewControllerSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5BA2DB294E36A400DE0B65 /* AboutViewControllerSwiftUI.swift */; };
-		3A5BA2DE294E3E4900DE0B65 /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5BA2DD294E3E4900DE0B65 /* RowView.swift */; };
+		3A5BA2DC294E36A400DE0B65 /* SettingViewControllerSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5BA2DB294E36A400DE0B65 /* SettingViewControllerSwiftUI.swift */; };
 		3A5D84DE292968EA00E41245 /* CollectionViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5D84DC292968EA00E41245 /* CollectionViewHeader.swift */; };
 		3A5D84DF292968EA00E41245 /* CollectionViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A5D84DD292968EA00E41245 /* CollectionViewHeader.xib */; };
 		3A5F9521292AAA7100C8C869 /* CollectionView + Support.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5F9520292AAA7100C8C869 /* CollectionView + Support.swift */; };
@@ -29,7 +28,7 @@
 		3A906C4929144A860070996F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A906C4729144A860070996F /* Main.storyboard */; };
 		3A906C4B29144A890070996F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A906C4A29144A890070996F /* Assets.xcassets */; };
 		3A906C4E29144A890070996F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A906C4C29144A890070996F /* LaunchScreen.storyboard */; };
-		3A9F25BE294E213600A53EC6 /* AboutView(SwiftUI).swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F25BD294E213600A53EC6 /* AboutView(SwiftUI).swift */; };
+		3A9F25BE294E213600A53EC6 /* SettingView(SwiftUI).swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9F25BD294E213600A53EC6 /* SettingView(SwiftUI).swift */; };
 		3AC1DC4029293E2F004D10EE /* CollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1DC3F29293E2F004D10EE /* CollectionViewModel.swift */; };
 		3AC1DC4229293ECA004D10EE /* NetworkManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1DC4129293ECA004D10EE /* NetworkManagerProtocol.swift */; };
 		3AC1DC442929415B004D10EE /* CollectionViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1DC432929415B004D10EE /* CollectionViewModelProtocol.swift */; };
@@ -53,8 +52,7 @@
 		3A11AC2E29D05A9700FA4C90 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3A11AC2F29D05A9700FA4C90 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3A17777729325B6700703F92 /* DetailPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPhotoViewController.swift; sourceTree = "<group>"; };
-		3A5BA2DB294E36A400DE0B65 /* AboutViewControllerSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewControllerSwiftUI.swift; sourceTree = "<group>"; };
-		3A5BA2DD294E3E4900DE0B65 /* RowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
+		3A5BA2DB294E36A400DE0B65 /* SettingViewControllerSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewControllerSwiftUI.swift; sourceTree = "<group>"; };
 		3A5D84DC292968EA00E41245 /* CollectionViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewHeader.swift; sourceTree = "<group>"; };
 		3A5D84DD292968EA00E41245 /* CollectionViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewHeader.xib; sourceTree = "<group>"; };
 		3A5F9520292AAA7100C8C869 /* CollectionView + Support.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectionView + Support.swift"; sourceTree = "<group>"; };
@@ -75,7 +73,7 @@
 		3A906C4A29144A890070996F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A906C4D29144A890070996F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A906C4F29144A890070996F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3A9F25BD294E213600A53EC6 /* AboutView(SwiftUI).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AboutView(SwiftUI).swift"; sourceTree = "<group>"; };
+		3A9F25BD294E213600A53EC6 /* SettingView(SwiftUI).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingView(SwiftUI).swift"; sourceTree = "<group>"; };
 		3AC1DC3F29293E2F004D10EE /* CollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewModel.swift; sourceTree = "<group>"; };
 		3AC1DC4129293ECA004D10EE /* NetworkManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerProtocol.swift; sourceTree = "<group>"; };
 		3AC1DC432929415B004D10EE /* CollectionViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewModelProtocol.swift; sourceTree = "<group>"; };
@@ -239,9 +237,8 @@
 		3A9F25BF294E2FC300A53EC6 /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				3A5BA2DB294E36A400DE0B65 /* AboutViewControllerSwiftUI.swift */,
-				3A9F25BD294E213600A53EC6 /* AboutView(SwiftUI).swift */,
-				3A5BA2DD294E3E4900DE0B65 /* RowView.swift */,
+				3A5BA2DB294E36A400DE0B65 /* SettingViewControllerSwiftUI.swift */,
+				3A9F25BD294E213600A53EC6 /* SettingView(SwiftUI).swift */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -287,7 +284,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1400;
-				LastUpgradeCheck = 1400;
+				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					3A906C3D29144A860070996F = {
 						CreatedOnToolsVersion = 14.0.1;
@@ -356,17 +353,16 @@
 				3A17777829325B6700703F92 /* DetailPhotoViewController.swift in Sources */,
 				3AF34C6A2999313500454E05 /* CollectionView + Search.swift in Sources */,
 				3A6C2459296989F5007AECB2 /* DetailViewModel.swift in Sources */,
-				3A9F25BE294E213600A53EC6 /* AboutView(SwiftUI).swift in Sources */,
+				3A9F25BE294E213600A53EC6 /* SettingView(SwiftUI).swift in Sources */,
 				3A0D6E5E2933A3C200D468F8 /* ImageModel.swift in Sources */,
 				3A6EB25F292A73EA000688FE /* ToDo.swift in Sources */,
 				3A8B532D2921253100FDDA1C /* NetworkManager.swift in Sources */,
 				3AF9892229A0174100F48775 /* UserDefaults + Extension.swift in Sources */,
-				3A5BA2DC294E36A400DE0B65 /* AboutViewControllerSwiftUI.swift in Sources */,
+				3A5BA2DC294E36A400DE0B65 /* SettingViewControllerSwiftUI.swift in Sources */,
 				3A6EB261292AA7D1000688FE /* CollectionViewController + DelegateFlowLayout.swift in Sources */,
 				3AC1EA1D29A274C7006E24C5 /* CollectionViewController + LongGesture.swift in Sources */,
 				3AC1DC442929415B004D10EE /* CollectionViewModelProtocol.swift in Sources */,
 				3AC1DC4229293ECA004D10EE /* NetworkManagerProtocol.swift in Sources */,
-				3A5BA2DE294E3E4900DE0B65 /* RowView.swift in Sources */,
 				3A6C245D2969B773007AECB2 /* DetailViewModelProtocol.swift in Sources */,
 				3AC1DC4029293E2F004D10EE /* CollectionViewModel.swift in Sources */,
 			);
@@ -452,6 +448,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -513,6 +510,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

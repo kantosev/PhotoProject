@@ -8,10 +8,12 @@
 import UIKit
 
 
+/// Объект для реализации зума изображения
 class ImageScrollView: UIScrollView, UIScrollViewDelegate {
 
     var imageZoomView: UIImageView!
     
+    // Жест приближения по двойному тапу
     lazy var zoomingTap: UITapGestureRecognizer = {
         let zoomingTap = UITapGestureRecognizer(target: self, action: #selector(handleZoomingTap))
         zoomingTap.numberOfTapsRequired = 2
@@ -20,7 +22,6 @@ class ImageScrollView: UIScrollView, UIScrollViewDelegate {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
         self.delegate = self
         self.showsVerticalScrollIndicator = false
         self.showsHorizontalScrollIndicator = false
@@ -31,20 +32,22 @@ class ImageScrollView: UIScrollView, UIScrollViewDelegate {
         fatalError("init(coder:) has not been implemented")
     }
     
+    /// Настройка UIImage
+    /// - Parameter image: Изображение для настройки
     func set(image: UIImage) {
-        
         imageZoomView?.removeFromSuperview()
         imageZoomView = nil
         imageZoomView = UIImageView(image: image)
         self.addSubview(imageZoomView)
-        
         configurateFor(imageSize: image.size)
     }
     
+    /// Настройка в соответствии с размером
+    /// - Parameter imageSize: Размер изображения
     func configurateFor(imageSize: CGSize) {
         self.contentSize = imageSize
         
-        setCurrentMaxandMinZoomScale()
+        setCurrentMaxAndMinZoomScale()
         self.zoomScale = self.minimumZoomScale
         
         self.imageZoomView.addGestureRecognizer(self.zoomingTap)
@@ -59,7 +62,8 @@ class ImageScrollView: UIScrollView, UIScrollViewDelegate {
         }
     }
     
-    func setCurrentMaxandMinZoomScale() {
+    /// Настройка границ зума
+    func setCurrentMaxAndMinZoomScale() {
         let boundsSize = self.bounds.size
         let imageSize = imageZoomView.bounds.size
         
@@ -82,6 +86,7 @@ class ImageScrollView: UIScrollView, UIScrollViewDelegate {
         self.maximumZoomScale = maxScale
     }
     
+    /// Центрирование изображения
     func centerImage() {
         let boundsSize = self.bounds.size
         var frameToCenter = imageZoomView.frame
@@ -101,12 +106,13 @@ class ImageScrollView: UIScrollView, UIScrollViewDelegate {
         imageZoomView.frame = frameToCenter
     }
     
-    // gesture
+    /// Zooming Gesture
     @objc func handleZoomingTap(sender: UITapGestureRecognizer) {
         let location = sender.location(in: sender.view)
         self.zoom(point: location, animated: true)
     }
     
+    /// Zoom
     func zoom(point: CGPoint, animated: Bool) {
         let currectScale = self.zoomScale
         let minScale = self.minimumZoomScale
@@ -136,10 +142,14 @@ class ImageScrollView: UIScrollView, UIScrollViewDelegate {
     
     // MARK: - UIScrollViewDelegate
     
+    
+    /// Запрашивает у делегата представление при масштабировании
+    /// - Returns: Масштабируемый объект
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
-        return self.imageZoomView
+        self.imageZoomView
     }
     
+    /// Сообщает делегату, что коэффициент масштабирования изменился
     func scrollViewDidZoom(_ scrollView: UIScrollView) {
         self.centerImage()
     }
