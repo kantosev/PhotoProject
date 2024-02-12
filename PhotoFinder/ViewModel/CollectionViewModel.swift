@@ -9,16 +9,27 @@ import UIKit
 import Alamofire
 import Kingfisher
 
+/// View Model для CollectionViewController
 class CollectionViewModel: CollectionViewModelProtocol {
     
+    // Network Manager (получение данных из сети)
     private let networkManager: NetworkManagerProtocol = NetworkManager()
-    
+    // Массив ссылок на изображения
     private var arrayOfImages: [String]? = []
+    // url
     private let url = "https://api.imgur.com/3/gallery/search/"
-//    private let url = "https://imgur-apiv3.p.rapidapi.com/3/gallery/search/top/%7Bwindow%7D/%7Bpage%7D"
+    // Поисковый запрос
     private var text: String = ""
+    
     private var countOfRepeatLoad: Int = 2
     
+    
+    /// Получение массива ссылок на изображения
+    /// - Parameters:
+    ///   - text: Поисковый запрос
+    ///   - completion: completion
+    ///   - errorCompletion: В случае ошибки в запросе
+    ///   - searchButtonPressed: <#searchButtonPressed description#>
     func fetchOfData(with text: String, completion: @escaping (Bool) -> (), errorCompletion: @escaping (AFError) -> (), searchButtonPressed: Bool) {
         if searchButtonPressed == true {
             self.countOfRepeatLoad = 2
@@ -33,9 +44,7 @@ class CollectionViewModel: CollectionViewModelProtocol {
             } errorCompletion: { error in
                 errorCompletion(error)
             }
-            
         } else {
-
             networkManager.getArrayOfImages(url: url, searchText: self.text, page: String(countOfRepeatLoad)) { arrayImages in
                 if !arrayImages.isEmpty {
                     self.arrayOfImages?.append(contentsOf: arrayImages)
@@ -50,22 +59,27 @@ class CollectionViewModel: CollectionViewModelProtocol {
             
         }
     }
+    
+    
+    /// Расчет количества item в CollectionView
+    /// - Returns: Количество item в CollectionView
     func numberOfItemsInSection() -> Int {
         return arrayOfImages?.count ?? 0
     }
+    
+    /// Настройка ячейки CollectionView
+    /// - Parameters:
+    ///   - cell: Ячейка для настройки
+    ///   - indexPath: Местоположение ячейки
     func setOfCell(cell: PhotoCell, with indexPath: IndexPath) {
         if let arrayOfImages {
             guard let url = URL(string: arrayOfImages[indexPath.row]) else { return }
             DispatchQueue.main.async {
                 cell.imageView.kf.indicatorType = .activity
                 cell.imageView.kf.setImage(with: url, options: [.transition(.fade(0.4))]) { _ in
-                    
                 }
                 
             }
         }
-        
     }
-    
-    
 }

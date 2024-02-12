@@ -8,5 +8,7 @@
 import Foundation
 
 /*
+ Observer
  
+ Отписываться, когда уходим с экрана
  */

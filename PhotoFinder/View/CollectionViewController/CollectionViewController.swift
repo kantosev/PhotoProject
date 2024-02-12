@@ -12,7 +12,9 @@ import Alamofire
 class CollectionViewController: UICollectionViewController {
     
     var viewModel: CollectionViewModelProtocol?
-    var detailViewModel: DetailViewModel?
+    
+    var detailViewModel: DetailViewModelProtocol?
+    
     var activityIndicator: UIActivityIndicatorView!
     
     var recognizer: UILongPressGestureRecognizer!

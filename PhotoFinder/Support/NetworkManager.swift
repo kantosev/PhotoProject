@@ -8,6 +8,7 @@
 import Foundation
 import Alamofire
 
+/// Manager для работы с сетью (загрузка изображений)
 class NetworkManager: NetworkManagerProtocol {
     func getArrayOfImages(url: String, searchText: String, page: String?, completion: @escaping (([String]) -> ()), errorCompletion: @escaping ((AFError) -> ())) {
         guard let url = URL(string: url) else { return }
@@ -29,13 +30,12 @@ class NetworkManager: NetworkManagerProtocol {
         ]
         let headers = [
             "Authorization": "Client-ID 65ad3ec70fa68e0"
-//            "X-RapidAPI-Key": "a7e581eb9amsheeb72a6a4042d77p1db599jsn9b1afcde9cb1",
-//            "X-RapidAPI-Host": "imgur-apiv3.p.rapidapi.com"
         ]
 
         AF.request(url, parameters: urlParams, headers: HTTPHeaders(headers)).responseDecodable(of: ImageModel.self) { response in
             switch response.result {
             case .success(let answer):
+                #warning("лишняя строка? UserDef...")
                 UserDefaults.standard.setCodableObject(answer, forKey: "userModel")
                 var arrayImagesUrl: [String] = []
                 let imagesCount = answer.data.count
