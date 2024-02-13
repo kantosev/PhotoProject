@@ -8,8 +8,17 @@
 import Foundation
 import UIKit
 
-class AlertController {
+/// Объект для показа Alert Controller
+final class AlertController {
     
+    /// Показать alert
+    /// - Parameters:
+    ///   - vc: На каком VC
+    ///   - title: Заголовок
+    ///   - message: Сообщение
+    ///   - buttonTitle: Название кнопки
+    ///   - buttonStyle: Стиль кнопки
+    ///   - completion: Действие по нажатию кнопки
     static func showAlertController(onViewController vc: UIViewController, title: String, message: String, buttonTitle: String = "Ok", buttonStyle: UIAlertAction.Style = .cancel, completion: (() -> ())? = nil) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let alertAction = UIAlertAction(title: buttonTitle, style: buttonStyle) { _ in 

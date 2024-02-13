@@ -30,6 +30,11 @@ extension CollectionViewController {
         let shareImage = UIAction(title: NSLocalizedString("Share", comment: "MenuItemTitle"), image: UIImage(systemName: "square.and.arrow.up")) { _ in
             let items: [Any] = [self.image as Any]
             let activityVC = UIActivityViewController(activityItems: items, applicationActivities: nil)
+            
+//             activityVC.modalPresentationStyle = .popover
+            // для ipad -> указываем точку привязки для popover'a, причем строчка выше необязательна.
+//            activityVC.popoverPresentationController?.sourceRect
+            
             self.present(activityVC, animated: true)
         }
         // Save Button

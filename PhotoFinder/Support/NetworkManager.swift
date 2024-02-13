@@ -9,7 +9,16 @@ import Foundation
 import Alamofire
 
 /// Manager для работы с сетью (загрузка изображений)
-class NetworkManager: NetworkManagerProtocol {
+final class NetworkManager: NetworkManagerProtocol {
+    
+    
+    /// Загрузка массива ссылок на изображения
+    /// - Parameters:
+    ///   - url: Ссылка для загрузки
+    ///   - searchText: Текст запроса
+    ///   - page: Номер страницы для загрузки
+    ///   - completion: После успешной загрузки
+    ///   - errorCompletion: При ошибке
     func getArrayOfImages(url: String, searchText: String, page: String?, completion: @escaping (([String]) -> ()), errorCompletion: @escaping ((AFError) -> ())) {
         guard let url = URL(string: url) else { return }
         
@@ -31,15 +40,16 @@ class NetworkManager: NetworkManagerProtocol {
         let headers = [
             "Authorization": "Client-ID 65ad3ec70fa68e0"
         ]
-
+        
+        // Alamofire - непосредственно получение данных
         AF.request(url, parameters: urlParams, headers: HTTPHeaders(headers)).responseDecodable(of: ImageModel.self) { response in
             switch response.result {
             case .success(let answer):
-                #warning("лишняя строка? UserDef...")
+#warning("лишняя строка? UserDef...")
                 UserDefaults.standard.setCodableObject(answer, forKey: "userModel")
                 var arrayImagesUrl: [String] = []
                 let imagesCount = answer.data.count
-        
+                
                 if imagesCount > 0 {
                     for image in 0...(imagesCount - 1) {
                         if answer.data[image].images?[0].type == "image/jpeg" {
@@ -53,5 +63,5 @@ class NetworkManager: NetworkManagerProtocol {
             }
         }
     }
-
+    
 }

@@ -9,7 +9,7 @@ import UIKit
 
 
 /// Объект для реализации зума изображения
-class ImageScrollView: UIScrollView, UIScrollViewDelegate {
+final class ImageScrollView: UIScrollView, UIScrollViewDelegate {
 
     var imageZoomView: UIImageView!
     

@@ -10,7 +10,7 @@ import Alamofire
 
 
 /// Основной экран приложения (CollectionView)
-class CollectionViewController: UICollectionViewController {
+final class CollectionViewController: UICollectionViewController {
     
     // MARK: - Properties
     
@@ -44,7 +44,7 @@ class CollectionViewController: UICollectionViewController {
         registerView()
         setActivityIndicator()
     }
-  
+    
     // MARK: - UICollectionViewDataSource
     
     /// Число ячеек в секции

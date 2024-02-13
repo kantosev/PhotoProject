@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 /// View model детального просмотра изображения
-class DetailViewModel: NSObject, DetailViewModelProtocol {
+final class DetailViewModel: NSObject, DetailViewModelProtocol {
     
     // Успешное сохранение
     var successCompletion: (() -> ())?

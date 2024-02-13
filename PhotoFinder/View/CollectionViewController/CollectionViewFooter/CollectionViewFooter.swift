@@ -8,7 +8,7 @@
 import UIKit
 
 /// Кнопка загрузки дополнительных изображений
-class CollectionViewFooter: UICollectionReusableView {
+final class CollectionViewFooter: UICollectionReusableView {
 
     @IBOutlet weak var button: UIButton!
     

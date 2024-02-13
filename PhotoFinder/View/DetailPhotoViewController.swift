@@ -7,8 +7,8 @@
 
 import UIKit
 
-
-class DetailPhotoViewController: UIViewController {
+/// Экран детального просмотра изображения
+final class DetailPhotoViewController: UIViewController {
     
  
     var image: UIImage?
@@ -17,6 +17,8 @@ class DetailPhotoViewController: UIViewController {
     var imageScrollView: ImageScrollView!
     
     @IBOutlet weak var shareActionButton: UIBarButtonItem!
+    
+    // MARK: - init
     
     required init?(coder: NSCoder) {
         self.viewModel = DetailViewModel()
@@ -32,12 +34,13 @@ class DetailPhotoViewController: UIViewController {
     }
     
 // MARK: - IBAction -
+    /// Нажатие кнопки сохранения изображения
     @IBAction func saveButtonPressed(_ sender: Any) {
         guard let image = image else { return }
         saveImage(image: image)
         
     }
-    
+    /// Нажатие кнопки поделиться
     @IBAction func shareAction(_ sender: Any) {
         let items: [Any] = [image as Any]
         let activityVC = UIActivityViewController(activityItems: items, applicationActivities: nil)
@@ -49,6 +52,8 @@ class DetailPhotoViewController: UIViewController {
         
     }
 // MARK: - Functions -
+    
+    /// Сохранение изображения
     private func saveImage(image: UIImage) {
         viewModel?.saveImage(image: image) {
             AlertController.showAlertController(onViewController: self, title: NSLocalizedString("Successfully", comment: "Successfully"), message: NSLocalizedString("Photo uploaded to gallery", comment: "Photo uploaded to gallery"))
@@ -56,7 +61,8 @@ class DetailPhotoViewController: UIViewController {
             AlertController.showAlertController(onViewController: self, title: NSLocalizedString("Error", comment: "Error5"), message: NSLocalizedString("Loading error", comment: "Loading error"))
         }
     }
-   
+    
+    /// Настройка ScrollView (for Zoom)
     func setupImageScrollView() {
         imageScrollView.translatesAutoresizingMaskIntoConstraints = false
         imageScrollView.topAnchor.constraint(equalTo: view.topAnchor, constant: 44).isActive = true

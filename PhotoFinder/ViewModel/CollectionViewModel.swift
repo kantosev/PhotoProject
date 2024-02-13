@@ -10,7 +10,7 @@ import Alamofire
 import Kingfisher
 
 /// View Model для CollectionViewController
-class CollectionViewModel: CollectionViewModelProtocol {
+final class CollectionViewModel: CollectionViewModelProtocol {
     
     // Network Manager (получение данных из сети)
     private let networkManager: NetworkManagerProtocol = NetworkManager()

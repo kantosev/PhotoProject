@@ -8,7 +8,7 @@
 import SwiftUI
 
 /// Обертка для использования SwiftUI в UIKit проекте
-class SettingViewControllerSwiftUI: UIViewController {
+final class SettingViewControllerSwiftUI: UIViewController {
     
     private let hostingViewController = UIHostingController(rootView: SettingView())
     

@@ -8,7 +8,7 @@
 import UIKit
 
 /// Объект для поиска изображений (TextField + Search Button)
-class CollectionViewHeader: UICollectionReusableView {
+final class CollectionViewHeader: UICollectionReusableView {
 
     @IBOutlet weak var searchTextField: UITextField!
     

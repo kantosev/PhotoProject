@@ -9,13 +9,12 @@ import UIKit
 
 
 /// Фото - ячейка
-class PhotoCell: UICollectionViewCell {
+final class PhotoCell: UICollectionViewCell {
 
     @IBOutlet weak var imageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
     }
     // каждый раз перед показом ячейки мы очищаем ее, тем самым не происходит неразберихи при переиспользовании ячеек
     override func prepareForReuse() {

@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Модель изображения, загружаемого из сети
 struct ImageModel: Codable {
     let data: [Datum]
 }
