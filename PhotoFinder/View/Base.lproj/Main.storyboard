@@ -93,8 +93,8 @@
                                             <action selector="saveButtonPressed:" destination="MnF-6T-0Re" id="97A-OP-oPb"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="7J9-ZH-iHO"/>
                                     <barButtonItem image="square.and.arrow.up" catalog="system" id="wta-Ut-lSm">
-                                        <inset key="imageInsets" minX="600" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <connections>
                                             <action selector="shareAction:" destination="MnF-6T-0Re" id="aTs-eY-Nip"/>
                                         </connections>

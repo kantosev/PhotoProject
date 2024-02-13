@@ -86,7 +86,7 @@ class ImageScrollView: UIScrollView, UIScrollViewDelegate {
         self.maximumZoomScale = maxScale
     }
     
-    /// Центрирование изображения
+    /// Чтобы при выходе из зума изображение возвращалось в  свое изначальное положение
     func centerImage() {
         let boundsSize = self.bounds.size
         var frameToCenter = imageZoomView.frame

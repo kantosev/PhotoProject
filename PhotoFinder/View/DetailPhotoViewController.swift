@@ -41,8 +41,8 @@ class DetailPhotoViewController: UIViewController {
     @IBAction func shareAction(_ sender: Any) {
         let items: [Any] = [image as Any]
         let activityVC = UIActivityViewController(activityItems: items, applicationActivities: nil)
-        //        activityVC.modalPresentationStyle = .popover
-        // для ipad -> указываем точку привязки для popover'a, причем строчка выше необязательна.
+        
+        // для ipad -> указываем точку привязки для popover'a
         activityVC.popoverPresentationController?.barButtonItem = shareActionButton
         
         self.present(activityVC, animated: true)

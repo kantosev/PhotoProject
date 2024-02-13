@@ -10,6 +10,7 @@ import UIKit
 
 extension CollectionViewController {
     
+    /// Запрашивает у делегата конфигурацию меню для конкретной ячейки
     override func collectionView(_ collectionView: UICollectionView, contextMenuConfigurationForItemsAt indexPaths: [IndexPath], point: CGPoint) -> UIContextMenuConfiguration? {
         if !indexPaths.isEmpty {
             let cell = collectionView.cellForItem(at: indexPaths[0]) as? PhotoCell
@@ -21,19 +22,17 @@ extension CollectionViewController {
         } else {
             return nil
         }
-    
     }
     
+    /// Настройка меню
     func setupImageMenu() {
+        // Share Button
         let shareImage = UIAction(title: NSLocalizedString("Share", comment: "MenuItemTitle"), image: UIImage(systemName: "square.and.arrow.up")) { _ in
             let items: [Any] = [self.image as Any]
             let activityVC = UIActivityViewController(activityItems: items, applicationActivities: nil)
-            // activityVC.modalPresentationStyle = .popover
-            // для ipad -> указываем точку привязки для popover'a, причем строчка выше необязательна.
-            // activityVC.popoverPresentationController?.barButtonItem = shareActionButton
-            
             self.present(activityVC, animated: true)
         }
+        // Save Button
         let saveImage = UIAction(title: NSLocalizedString("Save", comment: "MenuItemTitle"), image: UIImage(systemName: "tray.and.arrow.down")) { _ in
             guard let image = self.image else { return }
             self.detailViewModel?.saveImage(image: image, successCompletion: {

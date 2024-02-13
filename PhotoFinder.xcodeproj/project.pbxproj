@@ -32,7 +32,7 @@
 		3AC1DC4029293E2F004D10EE /* CollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1DC3F29293E2F004D10EE /* CollectionViewModel.swift */; };
 		3AC1DC4229293ECA004D10EE /* NetworkManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1DC4129293ECA004D10EE /* NetworkManagerProtocol.swift */; };
 		3AC1DC442929415B004D10EE /* CollectionViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1DC432929415B004D10EE /* CollectionViewModelProtocol.swift */; };
-		3AC1EA1D29A274C7006E24C5 /* CollectionViewController + LongGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1EA1C29A274C7006E24C5 /* CollectionViewController + LongGesture.swift */; };
+		3AC1EA1D29A274C7006E24C5 /* CollectionViewController + UIMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1EA1C29A274C7006E24C5 /* CollectionViewController + UIMenu.swift */; };
 		3AC6E71829C258EA000D12BD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3AC6E71629C258EA000D12BD /* InfoPlist.strings */; };
 		3AC6E71F29C25CA7000D12BD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3AC6E71D29C25CA7000D12BD /* Localizable.strings */; };
 		3ADAE33B29CF0DA600BBF854 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3ADAE33A29CF0DA600BBF854 /* Alamofire */; };
@@ -77,7 +77,7 @@
 		3AC1DC3F29293E2F004D10EE /* CollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewModel.swift; sourceTree = "<group>"; };
 		3AC1DC4129293ECA004D10EE /* NetworkManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerProtocol.swift; sourceTree = "<group>"; };
 		3AC1DC432929415B004D10EE /* CollectionViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewModelProtocol.swift; sourceTree = "<group>"; };
-		3AC1EA1C29A274C7006E24C5 /* CollectionViewController + LongGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectionViewController + LongGesture.swift"; sourceTree = "<group>"; };
+		3AC1EA1C29A274C7006E24C5 /* CollectionViewController + UIMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectionViewController + UIMenu.swift"; sourceTree = "<group>"; };
 		3AC6E71529C25750000D12BD /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		3AC6E71729C258EA000D12BD /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3AC6E71C29C258EA000D12BD /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ru; path = ru.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -111,7 +111,7 @@
 				3A5F9520292AAA7100C8C869 /* CollectionView + Support.swift */,
 				3AF34C672999311300454E05 /* CollectionView + Keyboard.swift */,
 				3AF34C692999313500454E05 /* CollectionView + Search.swift */,
-				3AC1EA1C29A274C7006E24C5 /* CollectionViewController + LongGesture.swift */,
+				3AC1EA1C29A274C7006E24C5 /* CollectionViewController + UIMenu.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -360,7 +360,7 @@
 				3AF9892229A0174100F48775 /* UserDefaults + Extension.swift in Sources */,
 				3A5BA2DC294E36A400DE0B65 /* SettingViewControllerSwiftUI.swift in Sources */,
 				3A6EB261292AA7D1000688FE /* CollectionViewController + DelegateFlowLayout.swift in Sources */,
-				3AC1EA1D29A274C7006E24C5 /* CollectionViewController + LongGesture.swift in Sources */,
+				3AC1EA1D29A274C7006E24C5 /* CollectionViewController + UIMenu.swift in Sources */,
 				3AC1DC442929415B004D10EE /* CollectionViewModelProtocol.swift in Sources */,
 				3AC1DC4229293ECA004D10EE /* NetworkManagerProtocol.swift in Sources */,
 				3A6C245D2969B773007AECB2 /* DetailViewModelProtocol.swift in Sources */,

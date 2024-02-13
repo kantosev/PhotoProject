@@ -10,10 +10,10 @@ import UIKit
 
 
 extension CollectionViewController: UITextFieldDelegate {
-    // нажатие кнопки return на клавиатуре обрабатывается
+    
+    /// обрабатывается нажатие кнопки return на клавиатуре 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         view.endEditing(true)
-//        textField.resignFirstResponder()
         return true
     }
 }

@@ -9,22 +9,25 @@ import Foundation
 import UIKit
 import Kingfisher
 
-// MARK: - Observer
-extension CollectionViewController {
-    @objc func searchButtonPressed(notification: Notification) {
 
+extension CollectionViewController {
+    
+    /// Нажатие кнопки поиска изображений
+    @objc func searchButtonPressed(notification: Notification) {
+        
         // очищает кеш фото при новом поиске
         KingfisherManager.shared.cache.clearCache()
         
         footerIsHidden = false
         view.endEditing(true)
+        // Есть соединение с интернетом
         if NetworkMonitor.shared.isConnected == true {
             activityIndicator.isHidden = false
             activityIndicator.startAnimating()
             activityIndicator.hidesWhenStopped = true
             guard let userInfo = notification.userInfo else { return }
             guard let text = userInfo["text"] as? String else { return }
-
+            
             viewModel?.fetchOfData(with: text, completion: { [activityIndicator, collectionView] arrayIsEmpty in
                 activityIndicator?.stopAnimating()
                 if arrayIsEmpty == false {
@@ -36,14 +39,19 @@ extension CollectionViewController {
                 AlertController.showAlertController(onViewController: self, title: NSLocalizedString("Data loading error", comment: "Data loading error"), message: NSLocalizedString("The data was not uploaded, try again later", comment: "The data was not uploaded, try again later"))
                 activityIndicator?.stopAnimating()
             }, searchButtonPressed: true)
+            
+        // Нет соединения с интернетом
         } else {
             AlertController.showAlertController(onViewController: self, title: NSLocalizedString("Connection error", comment: "Connection error"), message: NSLocalizedString("No internet connection", comment: "No internet connection"))
         }
     }
+    
+    /// Что делать при ошибке поиска
     @objc func errorSearch() {
         AlertController.showAlertController(onViewController: self, title: NSLocalizedString("Error", comment: "Error2"), message: NSLocalizedString("You haven't entered anything", comment: "You haven't entered anything"))
     }
     
+    /// Нажата кнопка "Загрузить еще"
     @objc func overButtonLoadPressed() {
         activityIndicator.isHidden = false
         activityIndicator.startAnimating()
@@ -60,5 +68,4 @@ extension CollectionViewController {
             AlertController.showAlertController(onViewController: self, title: NSLocalizedString("Data loading error", comment: "Data loading error"), message: NSLocalizedString("The data was not uploaded, try again later", comment: "The data was not uploaded, try again later"))
         }, searchButtonPressed: false)
     }
-    
-    }
+}

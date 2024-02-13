@@ -7,6 +7,8 @@
 
 import UIKit
 
+
+/// Фото - ячейка
 class PhotoCell: UICollectionViewCell {
 
     @IBOutlet weak var imageView: UIImageView!

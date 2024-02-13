@@ -11,21 +11,23 @@ import Alamofire
 
 /// Основной экран приложения (CollectionView)
 class CollectionViewController: UICollectionViewController {
+    
+    // MARK: - Properties
+    
     // View model CollectionVC
     var viewModel: CollectionViewModelProtocol?
     // View model DetailPhotoVC
     var detailViewModel: DetailViewModelProtocol?
     // Индикатор загрузки
     var activityIndicator: UIActivityIndicatorView!
-    // Жест длительного нажатия
-    var recognizer: UILongPressGestureRecognizer!
     // Показан ли Footer
     var footerIsHidden: Bool = true
     // Меню, открывающееся по длительному нажатию на фото
-    var imageMenu = UIMenu()
+    var imageMenu: UIMenu?
     // Изображение для детального открытия
     var image: UIImage?
     
+    // MARK: - init()
     
     required init?(coder: NSCoder) {
         self.viewModel = CollectionViewModel()
@@ -33,25 +35,24 @@ class CollectionViewController: UICollectionViewController {
         super.init(coder: coder)
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupImageMenu()
         addObserverForTouchSearchButton()
         addObserverForErrorSearch()
         addObserverForOverButtonLoadPressed()
-        addRecognizer()
         registerView()
         setActivityIndicator()
     }
   
-    
     // MARK: - UICollectionViewDataSource
     
+    /// Число ячеек в секции
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel?.numberOfItemsInSection() ?? 0
     }
     
+    /// Возвращает саму ячейку
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath) as? PhotoCell else { return UICollectionViewCell() }
@@ -59,8 +60,9 @@ class CollectionViewController: UICollectionViewController {
         return cell
     }
     
-    // MARK: - UICollectionViewDataSource Header
+    // MARK: - UICollectionViewDataSource (Kind)
     
+    /// Создание kind item (Header + Footer)
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         switch kind {
         case UICollectionView.elementKindSectionHeader:
@@ -72,7 +74,6 @@ class CollectionViewController: UICollectionViewController {
             return view
         default:
             return UICollectionReusableView()
-//            assert(false, "Unexpected element kind")
         }
     }
     
@@ -82,15 +83,21 @@ class CollectionViewController: UICollectionViewController {
     
     
     // MARK: - UICollectionViewDelegate
-    // Отслеживание поворота экрана
+    
+    /// Отслеживание поворота экрана
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         collectionView.reloadData()
     }
     
+    /// Действие по выбору ячейки
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         performSegue(withIdentifier: "toDetailPhotoVC", sender: indexPath)
     }
     
+    /// Вызывается в момент срабатывания перехода (непосредственно перед переходом на новую сцену)
+    /// - Parameters:
+    ///   - segue: Сработавший переход
+    ///   - sender: Элемент. вызвавший segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let indexPath = sender as? IndexPath else { return }
         if segue.identifier == "toDetailPhotoVC" {
@@ -100,16 +107,6 @@ class CollectionViewController: UICollectionViewController {
         }
     }
     
-    @objc private func longPress(_ gestureRecognizer: UILongPressGestureRecognizer) {
-        if gestureRecognizer.state == .began {
-        }
-    }
-    
-    private func addRecognizer() {
-        recognizer = UILongPressGestureRecognizer()
-        recognizer.addTarget(self, action: #selector(longPress))
-        view.addGestureRecognizer(recognizer)
-    }
 }
 
 
