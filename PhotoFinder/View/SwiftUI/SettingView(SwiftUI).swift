@@ -31,7 +31,7 @@ struct SettingView: View {
         
     }
     
-    @AppStorage("sizeImage") var sizeImage: ProfileSection = ProfileSection.med
+    @AppStorage("sizeImage") private var sizeImage: ProfileSection = ProfileSection.med
     
     var body: some View {
         

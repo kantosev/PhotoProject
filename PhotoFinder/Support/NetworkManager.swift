@@ -11,7 +11,6 @@ import Alamofire
 /// Manager для работы с сетью (загрузка изображений)
 final class NetworkManager: NetworkManagerProtocol {
     
-    
     /// Загрузка массива ссылок на изображения
     /// - Parameters:
     ///   - url: Ссылка для загрузки
@@ -45,8 +44,6 @@ final class NetworkManager: NetworkManagerProtocol {
         AF.request(url, parameters: urlParams, headers: HTTPHeaders(headers)).responseDecodable(of: ImageModel.self) { response in
             switch response.result {
             case .success(let answer):
-#warning("лишняя строка? UserDef...")
-                UserDefaults.standard.setCodableObject(answer, forKey: "userModel")
                 var arrayImagesUrl: [String] = []
                 let imagesCount = answer.data.count
                 
