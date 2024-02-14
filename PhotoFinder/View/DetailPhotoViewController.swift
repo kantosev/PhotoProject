@@ -10,12 +10,15 @@ import UIKit
 /// Экран детального просмотра изображения
 final class DetailPhotoViewController: UIViewController {
     
- 
+    /// Открытое изображение
     var image: UIImage?
+    /// File Manager
     let fileManager = FileManager.default
-    private var viewModel: DetailViewModelProtocol?
+    /// View Model
+    private let viewModel: DetailViewModelProtocol?
+    /// Для зума изображения
     var imageScrollView: ImageScrollView!
-    
+    /// Кнопка поделиться
     @IBOutlet weak var shareActionButton: UIBarButtonItem!
     
     // MARK: - init
@@ -33,7 +36,8 @@ final class DetailPhotoViewController: UIViewController {
         
     }
     
-// MARK: - IBAction -
+// MARK: - IBAction
+    
     /// Нажатие кнопки сохранения изображения
     @IBAction func saveButtonPressed(_ sender: Any) {
         guard let image = image else { return }
@@ -63,7 +67,7 @@ final class DetailPhotoViewController: UIViewController {
     }
     
     /// Настройка ScrollView (for Zoom)
-    func setupImageScrollView() {
+    private func setupImageScrollView() {
         imageScrollView.translatesAutoresizingMaskIntoConstraints = false
         imageScrollView.topAnchor.constraint(equalTo: view.topAnchor, constant: 44).isActive = true
         imageScrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -100).isActive = true

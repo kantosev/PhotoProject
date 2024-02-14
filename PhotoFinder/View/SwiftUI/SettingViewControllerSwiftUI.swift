@@ -19,6 +19,7 @@ final class SettingViewControllerSwiftUI: UIViewController {
     }
   
     
+    /// Настройка constraint
     private func setupConstraint() {
         hostingViewController.view.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([

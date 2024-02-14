@@ -44,7 +44,7 @@ final class ImageScrollView: UIScrollView, UIScrollViewDelegate {
     
     /// Настройка в соответствии с размером
     /// - Parameter imageSize: Размер изображения
-    func configurateFor(imageSize: CGSize) {
+    private func configurateFor(imageSize: CGSize) {
         self.contentSize = imageSize
         
         setCurrentMaxAndMinZoomScale()
@@ -63,7 +63,7 @@ final class ImageScrollView: UIScrollView, UIScrollViewDelegate {
     }
     
     /// Настройка границ зума
-    func setCurrentMaxAndMinZoomScale() {
+    private func setCurrentMaxAndMinZoomScale() {
         let boundsSize = self.bounds.size
         let imageSize = imageZoomView.bounds.size
         
@@ -87,7 +87,7 @@ final class ImageScrollView: UIScrollView, UIScrollViewDelegate {
     }
     
     /// Чтобы при выходе из зума изображение возвращалось в  свое изначальное положение
-    func centerImage() {
+    private func centerImage() {
         let boundsSize = self.bounds.size
         var frameToCenter = imageZoomView.frame
         
@@ -113,7 +113,7 @@ final class ImageScrollView: UIScrollView, UIScrollViewDelegate {
     }
     
     /// Zoom
-    func zoom(point: CGPoint, animated: Bool) {
+    private func zoom(point: CGPoint, animated: Bool) {
         let currectScale = self.zoomScale
         let minScale = self.minimumZoomScale
         let maxScale = self.maximumZoomScale
@@ -128,7 +128,7 @@ final class ImageScrollView: UIScrollView, UIScrollViewDelegate {
         self.zoom(to: zoomRect, animated: animated)
     }
     
-    func zoomRect(scale: CGFloat, center: CGPoint) -> CGRect {
+    private func zoomRect(scale: CGFloat, center: CGPoint) -> CGRect {
         var zoomRect = CGRect.zero
         let bounds = self.bounds
         

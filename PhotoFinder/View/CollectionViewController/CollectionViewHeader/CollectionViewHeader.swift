@@ -12,7 +12,7 @@ final class CollectionViewHeader: UICollectionReusableView {
 
     @IBOutlet weak var searchTextField: UITextField!
     
-    var searchText: String!
+    var searchText: String?
 
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -15,9 +15,9 @@ final class CollectionViewController: UICollectionViewController {
     // MARK: - Properties
     
     // View model CollectionVC
-    var viewModel: CollectionViewModelProtocol?
+    let viewModel: CollectionViewModelProtocol?
     // View model DetailPhotoVC
-    var detailViewModel: DetailViewModelProtocol?
+    let detailViewModel: DetailViewModelProtocol?
     // Индикатор загрузки
     var activityIndicator: UIActivityIndicatorView!
     // Показан ли Footer

@@ -15,7 +15,6 @@ extension UserDefaults {
         set(encoded, forKey: defaultName)
     }
     
-    
     func getCodableObject<T : Codable>(dataType: T.Type, key: String) -> T? {
         guard let userDefaultData = data(forKey: key) else {
             return nil

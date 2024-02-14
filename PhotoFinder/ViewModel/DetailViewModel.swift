@@ -32,7 +32,7 @@ final class DetailViewModel: NSObject, DetailViewModelProtocol {
     /// - Parameters:
     ///   - image: Сохраняемое иображение
     ///   - error: Ошибка
-    @objc func imageSaved(_ image: UIImage, error: Error?, context: UnsafeMutableRawPointer?) {
+    @objc private func imageSaved(_ image: UIImage, error: Error?, context: UnsafeMutableRawPointer?) {
         if error != nil {
             errorCompletion?()
             return
