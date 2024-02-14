@@ -31,9 +31,7 @@ extension CollectionViewController {
             let items: [Any] = [self.image as Any]
             let activityVC = UIActivityViewController(activityItems: items, applicationActivities: nil)
             
-//             activityVC.modalPresentationStyle = .popover
-            // для ipad -> указываем точку привязки для popover'a, причем строчка выше необязательна.
-//            activityVC.popoverPresentationController?.sourceRect
+            activityVC.popoverPresentationController?.sourceView = CollectionViewHeader()
             
             self.present(activityVC, animated: true)
         }
