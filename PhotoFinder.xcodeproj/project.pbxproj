@@ -44,7 +44,19 @@
 		3AF34C6C2999452B00454E05 /* String + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF34C6B2999452B00454E05 /* String + Extension.swift */; };
 		3AF98920299FED9400F48775 /* ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF9891F299FED9400F48775 /* ScrollView.swift */; };
 		3AF9892229A0174100F48775 /* UserDefaults + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF9892129A0174100F48775 /* UserDefaults + Extension.swift */; };
+		8D32903B2B7E70DE005293AD /* PhotoFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D32903A2B7E70DE005293AD /* PhotoFinderTests.swift */; };
+		8D3290422B7E7519005293AD /* NetworkMonitorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3290412B7E7519005293AD /* NetworkMonitorProtocol.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8D32903C2B7E70DE005293AD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A906C3629144A860070996F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A906C3D29144A860070996F;
+			remoteInfo = PhotoFinder;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3A0D6E5D2933A3C200D468F8 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
@@ -89,6 +101,9 @@
 		3AF34C6B2999452B00454E05 /* String + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String + Extension.swift"; sourceTree = "<group>"; };
 		3AF9891F299FED9400F48775 /* ScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollView.swift; sourceTree = "<group>"; };
 		3AF9892129A0174100F48775 /* UserDefaults + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults + Extension.swift"; sourceTree = "<group>"; };
+		8D3290382B7E70DE005293AD /* PhotoFinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoFinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D32903A2B7E70DE005293AD /* PhotoFinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFinderTests.swift; sourceTree = "<group>"; };
+		8D3290412B7E7519005293AD /* NetworkMonitorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitorProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +113,13 @@
 			files = (
 				3ADAE33E29CF0DB600BBF854 /* Kingfisher in Frameworks */,
 				3ADAE33B29CF0DA600BBF854 /* Alamofire in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D3290352B7E70DE005293AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				3A906C4029144A860070996F /* PhotoFinder */,
+				8D3290392B7E70DE005293AD /* PhotoFinderTests */,
 				3A906C3F29144A860070996F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -158,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				3A906C3E29144A860070996F /* PhotoFinder.app */,
+				8D3290382B7E70DE005293AD /* PhotoFinderTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -229,6 +253,7 @@
 				3AC1DC4129293ECA004D10EE /* NetworkManagerProtocol.swift */,
 				3AC1DC432929415B004D10EE /* CollectionViewModelProtocol.swift */,
 				3A6C245C2969B773007AECB2 /* DetailViewModelProtocol.swift */,
+				8D3290412B7E7519005293AD /* NetworkMonitorProtocol.swift */,
 			);
 			name = Protocols;
 			path = ..;
@@ -250,6 +275,14 @@
 				3AF34C64299907A600454E05 /* CollectionViewFooter.xib */,
 			);
 			path = CollectionViewFooter;
+			sourceTree = "<group>";
+		};
+		8D3290392B7E70DE005293AD /* PhotoFinderTests */ = {
+			isa = PBXGroup;
+			children = (
+				8D32903A2B7E70DE005293AD /* PhotoFinderTests.swift */,
+			);
+			path = PhotoFinderTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,6 +309,24 @@
 			productReference = 3A906C3E29144A860070996F /* PhotoFinder.app */;
 			productType = "com.apple.product-type.application";
 		};
+		8D3290372B7E70DE005293AD /* PhotoFinderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D3290402B7E70DE005293AD /* Build configuration list for PBXNativeTarget "PhotoFinderTests" */;
+			buildPhases = (
+				8D3290342B7E70DE005293AD /* Sources */,
+				8D3290352B7E70DE005293AD /* Frameworks */,
+				8D3290362B7E70DE005293AD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8D32903D2B7E70DE005293AD /* PBXTargetDependency */,
+			);
+			name = PhotoFinderTests;
+			productName = PhotoFinderTests;
+			productReference = 8D3290382B7E70DE005293AD /* PhotoFinderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -283,11 +334,15 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1400;
+				LastSwiftUpdateCheck = 1520;
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					3A906C3D29144A860070996F = {
 						CreatedOnToolsVersion = 14.0.1;
+					};
+					8D3290372B7E70DE005293AD = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 3A906C3D29144A860070996F;
 					};
 				};
 			};
@@ -311,6 +366,7 @@
 			projectRoot = "";
 			targets = (
 				3A906C3D29144A860070996F /* PhotoFinder */,
+				8D3290372B7E70DE005293AD /* PhotoFinderTests */,
 			);
 		};
 /* End PBXProject section */
@@ -331,6 +387,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8D3290362B7E70DE005293AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -345,6 +408,7 @@
 				3A5D84DE292968EA00E41245 /* CollectionViewHeader.swift in Sources */,
 				3A8D1D4C294F5B53001341AE /* NetworkMonitor.swift in Sources */,
 				3A906C4429144A860070996F /* SceneDelegate.swift in Sources */,
+				8D3290422B7E7519005293AD /* NetworkMonitorProtocol.swift in Sources */,
 				3AF34C682999311300454E05 /* CollectionView + Keyboard.swift in Sources */,
 				3A902A4029153F79007C3FDC /* AlertController.swift in Sources */,
 				3AF98920299FED9400F48775 /* ScrollView.swift in Sources */,
@@ -368,7 +432,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8D3290342B7E70DE005293AD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D32903B2B7E70DE005293AD /* PhotoFinderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8D32903D2B7E70DE005293AD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3A906C3D29144A860070996F /* PhotoFinder */;
+			targetProxy = 8D32903C2B7E70DE005293AD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3A906C4729144A860070996F /* Main.storyboard */ = {
@@ -601,6 +681,51 @@
 			};
 			name = Release;
 		};
+		8D32903E2B7E70DE005293AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CBGVUJP69Q;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AKteam.HolidaysApp.PhotoFinderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhotoFinder.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PhotoFinder";
+			};
+			name = Debug;
+		};
+		8D32903F2B7E70DE005293AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CBGVUJP69Q;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AKteam.HolidaysApp.PhotoFinderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhotoFinder.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PhotoFinder";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -618,6 +743,15 @@
 			buildConfigurations = (
 				3A906C5329144A890070996F /* Debug */,
 				3A906C5429144A890070996F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8D3290402B7E70DE005293AD /* Build configuration list for PBXNativeTarget "PhotoFinderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D32903E2B7E70DE005293AD /* Debug */,
+				8D32903F2B7E70DE005293AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
