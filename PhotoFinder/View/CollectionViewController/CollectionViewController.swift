@@ -26,14 +26,27 @@ final class CollectionViewController: UICollectionViewController {
     var imageMenu: UIMenu?
     // Изображение для детального открытия
     var image: UIImage?
+    // Network Monitor
+    let networkMonitor: NetworkMonitorProtocol
     
     // MARK: - init()
+
+    /// For tests (dependency injection)
+    init(networkMonitor: NetworkMonitorProtocol = NetworkMonitor.shared) {
+        self.viewModel = CollectionViewModel()
+        self.detailViewModel = DetailViewModel()
+        self.networkMonitor = networkMonitor
+        super.init(nibName: nil, bundle: nil)
+    }
     
     required init?(coder: NSCoder) {
         self.viewModel = CollectionViewModel()
         self.detailViewModel = DetailViewModel()
+        self.networkMonitor = NetworkMonitor.shared
         super.init(coder: coder)
     }
+    
+    // MARK: - Life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()

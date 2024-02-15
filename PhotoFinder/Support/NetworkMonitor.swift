@@ -10,7 +10,7 @@ import Foundation
 import Network
 
 /// Объект для отслеживание соединения устройства с интернетом
-final class NetworkMonitor {
+final class NetworkMonitor: NetworkMonitorProtocol {
     static let shared = NetworkMonitor()
     
     private let monitor: NWPathMonitor

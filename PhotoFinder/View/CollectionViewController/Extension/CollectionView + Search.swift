@@ -21,7 +21,7 @@ extension CollectionViewController {
         footerIsHidden = false
         view.endEditing(true)
         // Есть соединение с интернетом
-        if NetworkMonitor.shared.isConnected == true {
+        if networkMonitor.isConnected == true {
             activityIndicator.isHidden = false
             activityIndicator.startAnimating()
             activityIndicator.hidesWhenStopped = true
