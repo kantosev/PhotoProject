@@ -42,10 +42,11 @@
 		3AF34C6C2999452B00454E05 /* String + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF34C6B2999452B00454E05 /* String + Extension.swift */; };
 		3AF98920299FED9400F48775 /* ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF9891F299FED9400F48775 /* ScrollView.swift */; };
 		3AF9892229A0174100F48775 /* UserDefaults + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF9892129A0174100F48775 /* UserDefaults + Extension.swift */; };
-		8D32903B2B7E70DE005293AD /* PhotoFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D32903A2B7E70DE005293AD /* PhotoFinderTests.swift */; };
 		8D3290422B7E7519005293AD /* NetworkMonitorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3290412B7E7519005293AD /* NetworkMonitorProtocol.swift */; };
 		8D3290492B7E88BA005293AD /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 8D3290482B7E88BA005293AD /* Kingfisher */; };
 		8D32904C2B7E88CA005293AD /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8D32904B2B7E88CA005293AD /* Alamofire */; };
+		8D3DD78C2B80E7FF0022CB71 /* CollectionViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3DD78B2B80E7FF0022CB71 /* CollectionViewModelTests.swift */; };
+		8D3DD78F2B80E8A40022CB71 /* NetworkManagerStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3DD78E2B80E8A40022CB71 /* NetworkManagerStub.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,8 +103,10 @@
 		3AF9891F299FED9400F48775 /* ScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollView.swift; sourceTree = "<group>"; };
 		3AF9892129A0174100F48775 /* UserDefaults + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults + Extension.swift"; sourceTree = "<group>"; };
 		8D3290382B7E70DE005293AD /* PhotoFinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoFinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8D32903A2B7E70DE005293AD /* PhotoFinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFinderTests.swift; sourceTree = "<group>"; };
 		8D3290412B7E7519005293AD /* NetworkMonitorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitorProtocol.swift; sourceTree = "<group>"; };
+		8D3DD78B2B80E7FF0022CB71 /* CollectionViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewModelTests.swift; sourceTree = "<group>"; };
+		8D3DD78E2B80E8A40022CB71 /* NetworkManagerStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerStub.swift; sourceTree = "<group>"; };
+		8D3DD7912B80EC430022CB71 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +174,7 @@
 		3A906C3529144A860070996F = {
 			isa = PBXGroup;
 			children = (
+				8D3DD7912B80EC430022CB71 /* PrivacyInfo.xcprivacy */,
 				3A906C4029144A860070996F /* PhotoFinder */,
 				8D3290392B7E70DE005293AD /* PhotoFinderTests */,
 				3A906C3F29144A860070996F /* Products */,
@@ -280,9 +284,26 @@
 		8D3290392B7E70DE005293AD /* PhotoFinderTests */ = {
 			isa = PBXGroup;
 			children = (
-				8D32903A2B7E70DE005293AD /* PhotoFinderTests.swift */,
+				8D3DD78D2B80E88E0022CB71 /* CollectionViewModelTests */,
 			);
 			path = PhotoFinderTests;
+			sourceTree = "<group>";
+		};
+		8D3DD78D2B80E88E0022CB71 /* CollectionViewModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				8D3DD7902B80E8AB0022CB71 /* Stub */,
+				8D3DD78B2B80E7FF0022CB71 /* CollectionViewModelTests.swift */,
+			);
+			path = CollectionViewModelTests;
+			sourceTree = "<group>";
+		};
+		8D3DD7902B80E8AB0022CB71 /* Stub */ = {
+			isa = PBXGroup;
+			children = (
+				8D3DD78E2B80E8A40022CB71 /* NetworkManagerStub.swift */,
+			);
+			path = Stub;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,6 +363,7 @@
 					};
 					8D3290372B7E70DE005293AD = {
 						CreatedOnToolsVersion = 15.2;
+						LastSwiftMigration = 1520;
 						TestTargetID = 3A906C3D29144A860070996F;
 					};
 				};
@@ -436,7 +458,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D32903B2B7E70DE005293AD /* PhotoFinderTests.swift in Sources */,
+				8D3DD78F2B80E8A40022CB71 /* NetworkManagerStub.swift in Sources */,
+				8D3DD78C2B80E7FF0022CB71 /* CollectionViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -639,6 +662,7 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -675,6 +699,7 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -686,6 +711,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = CBGVUJP69Q;
@@ -698,6 +724,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhotoFinder.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PhotoFinder";
@@ -709,6 +736,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = CBGVUJP69Q;
