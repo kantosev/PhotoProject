@@ -14,5 +14,4 @@ protocol NetworkMonitorProtocol {
     var isExpensive: Bool { get }
     func startMonitoring()
     func stopMonitoring()
-    
 }

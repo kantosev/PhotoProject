@@ -35,8 +35,6 @@
 		3AC1EA1D29A274C7006E24C5 /* CollectionViewController + UIMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1EA1C29A274C7006E24C5 /* CollectionViewController + UIMenu.swift */; };
 		3AC6E71829C258EA000D12BD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3AC6E71629C258EA000D12BD /* InfoPlist.strings */; };
 		3AC6E71F29C25CA7000D12BD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3AC6E71D29C25CA7000D12BD /* Localizable.strings */; };
-		3ADAE33B29CF0DA600BBF854 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3ADAE33A29CF0DA600BBF854 /* Alamofire */; };
-		3ADAE33E29CF0DB600BBF854 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 3ADAE33D29CF0DB600BBF854 /* Kingfisher */; };
 		3AF34C65299907A600454E05 /* CollectionViewFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF34C63299907A600454E05 /* CollectionViewFooter.swift */; };
 		3AF34C66299907A600454E05 /* CollectionViewFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AF34C64299907A600454E05 /* CollectionViewFooter.xib */; };
 		3AF34C682999311300454E05 /* CollectionView + Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF34C672999311300454E05 /* CollectionView + Keyboard.swift */; };
@@ -46,6 +44,8 @@
 		3AF9892229A0174100F48775 /* UserDefaults + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF9892129A0174100F48775 /* UserDefaults + Extension.swift */; };
 		8D32903B2B7E70DE005293AD /* PhotoFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D32903A2B7E70DE005293AD /* PhotoFinderTests.swift */; };
 		8D3290422B7E7519005293AD /* NetworkMonitorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3290412B7E7519005293AD /* NetworkMonitorProtocol.swift */; };
+		8D3290492B7E88BA005293AD /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 8D3290482B7E88BA005293AD /* Kingfisher */; };
+		8D32904C2B7E88CA005293AD /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8D32904B2B7E88CA005293AD /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,8 +111,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3ADAE33E29CF0DB600BBF854 /* Kingfisher in Frameworks */,
-				3ADAE33B29CF0DA600BBF854 /* Alamofire in Frameworks */,
+				8D3290492B7E88BA005293AD /* Kingfisher in Frameworks */,
+				8D32904C2B7E88CA005293AD /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,8 +302,8 @@
 			);
 			name = PhotoFinder;
 			packageProductDependencies = (
-				3ADAE33A29CF0DA600BBF854 /* Alamofire */,
-				3ADAE33D29CF0DB600BBF854 /* Kingfisher */,
+				8D3290482B7E88BA005293AD /* Kingfisher */,
+				8D32904B2B7E88CA005293AD /* Alamofire */,
 			);
 			productName = PetProject;
 			productReference = 3A906C3E29144A860070996F /* PhotoFinder.app */;
@@ -358,8 +358,8 @@
 			);
 			mainGroup = 3A906C3529144A860070996F;
 			packageReferences = (
-				3ADAE33929CF0DA600BBF854 /* XCRemoteSwiftPackageReference "Alamofire" */,
-				3ADAE33C29CF0DB600BBF854 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				8D3290472B7E88BA005293AD /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				8D32904A2B7E88CA005293AD /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 3A906C3F29144A860070996F /* Products */;
 			projectDirPath = "";
@@ -633,7 +633,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.03;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.AKTeam.PhotoApplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -669,7 +669,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.03;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.AKTeam.PhotoApplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -759,34 +759,34 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		3ADAE33929CF0DA600BBF854 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		8D3290472B7E88BA005293AD /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
 			requirement = {
-				kind = upToNextMinorVersion;
-				minimumVersion = 5.6.0;
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.11.0;
 			};
 		};
-		3ADAE33C29CF0DB600BBF854 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+		8D32904A2B7E88CA005293AD /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/onevcat/Kingfisher?ysclid=lebpt2zxwu256656967";
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
-				kind = upToNextMinorVersion;
-				minimumVersion = 7.6.0;
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.8.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		3ADAE33A29CF0DA600BBF854 /* Alamofire */ = {
+		8D3290482B7E88BA005293AD /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 3ADAE33929CF0DA600BBF854 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
-		3ADAE33D29CF0DB600BBF854 /* Kingfisher */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3ADAE33C29CF0DB600BBF854 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			package = 8D3290472B7E88BA005293AD /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		8D32904B2B7E88CA005293AD /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8D32904A2B7E88CA005293AD /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

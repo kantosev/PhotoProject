@@ -31,14 +31,6 @@ final class CollectionViewController: UICollectionViewController {
     
     // MARK: - init()
 
-    /// For tests (dependency injection)
-    init(networkMonitor: NetworkMonitorProtocol = NetworkMonitor.shared) {
-        self.viewModel = CollectionViewModel()
-        self.detailViewModel = DetailViewModel()
-        self.networkMonitor = networkMonitor
-        super.init(nibName: nil, bundle: nil)
-    }
-    
     required init?(coder: NSCoder) {
         self.viewModel = CollectionViewModel()
         self.detailViewModel = DetailViewModel()
