@@ -12,17 +12,28 @@ import Kingfisher
 /// View Model для CollectionViewController
 final class CollectionViewModel: CollectionViewModelProtocol {
     
+    // MARK: - Properties
     // Network Manager (получение данных из сети)
-    private let networkManager: NetworkManagerProtocol = NetworkManager()
+    private let networkManager: NetworkManagerProtocol
     // Массив ссылок на изображения
-    private var arrayOfImages: [String]? = []
+    private var arrayOfImages: [String]
     // url
     private let url: String = "https://api.imgur.com/3/gallery/search/"
     // Поисковый запрос
-    private var text: String = ""
+    private var text: String
     // Счетчик для смены page при запросе дополнительных изображений
-    private var countOfRepeatLoad: Int = 1
+    private var countOfRepeatLoad: Int
     
+    // MARK: - init
+    
+    init(networkManager: NetworkManagerProtocol = NetworkManager()) {
+        self.networkManager = networkManager
+        self.arrayOfImages = []
+        self.text = ""
+        self.countOfRepeatLoad = 1
+    }
+    
+    // MARK: - Functions
     
     /// Получение массива ссылок на изображения
     /// - Parameters:
@@ -30,7 +41,7 @@ final class CollectionViewModel: CollectionViewModelProtocol {
     ///   - completion: completion
     ///   - errorCompletion: В случае ошибки в запросе
     ///   - searchButtonPressed: true - нажата кнопка поиска, false - нажата кнопка "Загрузить еще"
-    func fetchOfData(with text: String, completion: @escaping (Bool) -> (), errorCompletion: @escaping (AFError) -> (), searchButtonPressed: Bool) {
+    func fetchOfData(with text: String, searchButtonPressed: Bool, completion: @escaping (Bool) -> (), errorCompletion: @escaping (AFError) -> ()) {
         
         if searchButtonPressed == true {
             self.countOfRepeatLoad = 1
@@ -48,7 +59,7 @@ final class CollectionViewModel: CollectionViewModelProtocol {
         } else {
             networkManager.getArrayOfImages(url: url, searchText: self.text, page: String(countOfRepeatLoad)) { arrayImages in
                 if !arrayImages.isEmpty {
-                    self.arrayOfImages?.append(contentsOf: arrayImages)
+                    self.arrayOfImages.append(contentsOf: arrayImages)
                     completion(false)
                     self.countOfRepeatLoad += 1
                 } else {
@@ -64,7 +75,7 @@ final class CollectionViewModel: CollectionViewModelProtocol {
     /// Расчет количества item в CollectionView
     /// - Returns: Количество item в CollectionView
     func numberOfItemsInSection() -> Int {
-        return arrayOfImages?.count ?? 0
+        return arrayOfImages.count
     }
     
     /// Настройка ячейки CollectionView
@@ -72,14 +83,10 @@ final class CollectionViewModel: CollectionViewModelProtocol {
     ///   - cell: Ячейка для настройки
     ///   - indexPath: Местоположение ячейки
     func setOfCell(cell: PhotoCell, with indexPath: IndexPath) {
-        if let arrayOfImages {
-            guard let url = URL(string: arrayOfImages[indexPath.row]) else { return }
-            DispatchQueue.main.async {
-                cell.imageView.kf.indicatorType = .activity
-                cell.imageView.kf.setImage(with: url, options: [.transition(.fade(0.4))]) { _ in
-                }
-                
-            }
+        guard let url = URL(string: arrayOfImages[indexPath.row]) else { return }
+        DispatchQueue.main.async {
+            cell.imageView.kf.indicatorType = .activity
+            cell.imageView.kf.setImage(with: url, options: [.transition(.fade(0.4))]) { _ in }
         }
     }
 }

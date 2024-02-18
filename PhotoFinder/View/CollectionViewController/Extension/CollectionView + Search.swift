@@ -28,7 +28,7 @@ extension CollectionViewController {
             guard let userInfo = notification.userInfo else { return }
             guard let text = userInfo["text"] as? String else { return }
             
-            viewModel?.fetchOfData(with: text, completion: { [activityIndicator, collectionView] arrayIsEmpty in
+            viewModel?.fetchOfData(with: text, searchButtonPressed: true, completion: { [activityIndicator, collectionView] arrayIsEmpty in
                 activityIndicator?.stopAnimating()
                 if arrayIsEmpty == false {
                     collectionView?.reloadData()
@@ -38,7 +38,7 @@ extension CollectionViewController {
             }, errorCompletion: { [activityIndicator] error in
                 AlertController.showAlertController(onViewController: self, title: NSLocalizedString("Data loading error", comment: "Data loading error"), message: NSLocalizedString("The data was not uploaded, try again later", comment: "The data was not uploaded, try again later"))
                 activityIndicator?.stopAnimating()
-            }, searchButtonPressed: true)
+            })
             
         // Нет соединения с интернетом
         } else {
@@ -56,7 +56,7 @@ extension CollectionViewController {
         activityIndicator.isHidden = false
         activityIndicator.startAnimating()
         activityIndicator.hidesWhenStopped = true
-        viewModel?.fetchOfData(with: "", completion: { [collectionView] arrayIsEmpty in
+        viewModel?.fetchOfData(with: "", searchButtonPressed: false, completion: { [collectionView] arrayIsEmpty in
             self.activityIndicator?.stopAnimating()
             if arrayIsEmpty == false {
                 collectionView?.reloadData()
@@ -66,6 +66,6 @@ extension CollectionViewController {
         }, errorCompletion: { error in
             self.activityIndicator?.stopAnimating()
             AlertController.showAlertController(onViewController: self, title: NSLocalizedString("Data loading error", comment: "Data loading error"), message: NSLocalizedString("The data was not uploaded, try again later", comment: "The data was not uploaded, try again later"))
-        }, searchButtonPressed: false)
+        })
     }
 }
