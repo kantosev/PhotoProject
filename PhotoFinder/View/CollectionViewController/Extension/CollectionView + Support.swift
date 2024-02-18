@@ -39,6 +39,7 @@ extension CollectionViewController {
     func setActivityIndicator() {
         activityIndicator = UIActivityIndicatorView(style: .large)
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+        activityIndicator.hidesWhenStopped = true
         self.collectionView.addSubview(activityIndicator)
         NSLayoutConstraint.activate([
             activityIndicator.centerXAnchor.constraint(equalTo: self.collectionView.centerXAnchor),

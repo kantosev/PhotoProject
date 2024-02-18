@@ -24,7 +24,6 @@ extension CollectionViewController {
         if networkMonitor.isConnected == true {
             activityIndicator.isHidden = false
             activityIndicator.startAnimating()
-            activityIndicator.hidesWhenStopped = true
             guard let userInfo = notification.userInfo else { return }
             guard let text = userInfo["text"] as? String else { return }
             
@@ -55,7 +54,6 @@ extension CollectionViewController {
     @objc func overButtonLoadPressed() {
         activityIndicator.isHidden = false
         activityIndicator.startAnimating()
-        activityIndicator.hidesWhenStopped = true
         viewModel?.fetchOfData(with: "", searchButtonPressed: false, completion: { [collectionView] arrayIsEmpty in
             self.activityIndicator?.stopAnimating()
             if arrayIsEmpty == false {

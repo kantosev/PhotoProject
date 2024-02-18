@@ -13,9 +13,9 @@ final class DetailPhotoViewController: UIViewController {
     /// Открытое изображение
     var image: UIImage?
     /// File Manager
-    let fileManager = FileManager.default
+    let fileManager: FileManager
     /// View Model
-    private let viewModel: DetailViewModelProtocol?
+    private let viewModel: DetailViewModelProtocol
     /// Для зума изображения
     var imageScrollView: ImageScrollView!
     /// Кнопка поделиться
@@ -24,16 +24,14 @@ final class DetailPhotoViewController: UIViewController {
     // MARK: - init
     
     required init?(coder: NSCoder) {
+        self.fileManager = FileManager.default
         self.viewModel = DetailViewModel()
         super.init(coder: coder)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        imageScrollView = ImageScrollView(frame: view.bounds)
-        view.addSubview(imageScrollView)
         setupImageScrollView()
-        
     }
     
 // MARK: - IBAction
@@ -59,7 +57,7 @@ final class DetailPhotoViewController: UIViewController {
     
     /// Сохранение изображения
     private func saveImage(image: UIImage) {
-        viewModel?.saveImage(image: image) {
+        viewModel.saveImage(image: image) {
             AlertController.showAlertController(onViewController: self, title: NSLocalizedString("Successfully", comment: "Successfully"), message: NSLocalizedString("Photo uploaded to gallery", comment: "Photo uploaded to gallery"))
         } errorCompletion: {
             AlertController.showAlertController(onViewController: self, title: NSLocalizedString("Error", comment: "Error5"), message: NSLocalizedString("Loading error", comment: "Loading error"))
@@ -68,6 +66,8 @@ final class DetailPhotoViewController: UIViewController {
     
     /// Настройка ScrollView (for Zoom)
     private func setupImageScrollView() {
+        imageScrollView = ImageScrollView(frame: view.bounds)
+        view.addSubview(imageScrollView)
         imageScrollView.translatesAutoresizingMaskIntoConstraints = false
         imageScrollView.topAnchor.constraint(equalTo: view.topAnchor, constant: 44).isActive = true
         imageScrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -100).isActive = true
