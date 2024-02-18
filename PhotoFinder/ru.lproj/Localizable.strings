@@ -13,11 +13,7 @@
 /* Footer Button */
 "Download more" = "Загрузить еще";
 
-/* Error1
-   Error2
-   Error3
-   Error4
-   Error5 */
+/* Error */
 "Error" = "Ошибка";
 
 /* Loading error */
@@ -59,3 +55,11 @@
 /* You haven't entered anything */
 "You haven't entered anything" = "Вы ничего не ввели";
 
+/* It is impossible to save. Allow access to the gallery */
+"It is impossible to save. Allow access to the gallery" = "Невозможно сохранить. Разрешите доступ к галерее";
+
+/* Cancel */
+"Cancel" = "Отмена";
+
+/* Allow */
+"Allow" = "Разрешить";

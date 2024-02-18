@@ -33,7 +33,7 @@ extension CollectionViewController {
                     if arrayIsEmpty == false {
                         collectionView?.reloadData()
                     } else {
-                        AlertController.showAlertController(onViewController: self, title: NSLocalizedString("Error", comment: "Error1"), message: NSLocalizedString("No images found on request", comment: "No images found on request"))
+                        AlertController.showAlertController(onViewController: self, title: NSLocalizedString("Error", comment: "Error"), message: NSLocalizedString("No images found on request", comment: "No images found on request"))
                     }
                 case .failure(_):
                     AlertController.showAlertController(onViewController: self, title: NSLocalizedString("Data loading error", comment: "Data loading error"), message: NSLocalizedString("The data was not uploaded, try again later", comment: "The data was not uploaded, try again later"))
@@ -50,7 +50,7 @@ extension CollectionViewController {
     
     /// Что делать при ошибке поиска
     @objc func errorSearch() {
-        AlertController.showAlertController(onViewController: self, title: NSLocalizedString("Error", comment: "Error2"), message: NSLocalizedString("You haven't entered anything", comment: "You haven't entered anything"))
+        AlertController.showAlertController(onViewController: self, title: NSLocalizedString("Error", comment: "Error"), message: NSLocalizedString("You haven't entered anything", comment: "You haven't entered anything"))
     }
     
     /// Нажата кнопка "Загрузить еще"
@@ -62,7 +62,7 @@ extension CollectionViewController {
                 if arrayIsEmpty == false {
                     collectionView?.reloadData()
                 } else {
-                    AlertController.showAlertController(onViewController: self, title: NSLocalizedString("Error", comment: "Error3"), message: NSLocalizedString("There are no more images", comment: "There are no more images"))
+                    AlertController.showAlertController(onViewController: self, title: NSLocalizedString("Error", comment: "Error"), message: NSLocalizedString("There are no more images", comment: "There are no more images"))
                 }
             case .failure(_):
                 NotificationCenter.default.post(name: .init("stopActivityIndicator"), object: self, userInfo: nil)

@@ -33,13 +33,20 @@ final class AlertController {
     /// Показать alert при запрете доступа к галерее
     /// - Parameter vc: На каком VC
     static func galleryAccessIsDenied(onViewController vc: UIViewController) {
-        let alertController = UIAlertController(title: "Ошибка", message: "Невозможно сохранить. Разрешите доступ к галерее.", preferredStyle: .alert)
-        let alertAction = UIAlertAction(title: "Разрешить", style: .cancel) { _ in
+        let alertController = UIAlertController(
+            title: NSLocalizedString("Error", comment: "Error"),
+            message: NSLocalizedString("It is impossible to save. Allow access to the gallery", comment: "It is impossible to save. Allow access to the gallery"),
+            preferredStyle: .alert)
+        let alertAction = UIAlertAction(
+            title: NSLocalizedString("Allow", comment: "Allow"),
+            style: .cancel) { _ in
             if let url = URL(string: UIApplication.openSettingsURLString), UIApplication.shared.canOpenURL(url) {
                 UIApplication.shared.open(url, options: [:], completionHandler: nil)
             }
         }
-        let cancelAction = UIAlertAction(title: "Отмена", style: .destructive) { _ in
+        let cancelAction = UIAlertAction(
+            title: "Cancel".localized(),
+            style: .destructive) { _ in
             alertController.dismiss(animated: true)
         }
         alertController.addAction(alertAction)
@@ -47,5 +54,4 @@ final class AlertController {
         vc.present(alertController, animated: true)
     }
 }
-
 

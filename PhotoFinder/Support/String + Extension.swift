@@ -13,3 +13,11 @@ extension DefaultStringInterpolation {
         appendInterpolation(String(describing: optional))
     }
 }
+
+
+extension String {
+    func localized() -> String {
+        return NSLocalizedString(self, comment: self)
+    }
+}
+                        

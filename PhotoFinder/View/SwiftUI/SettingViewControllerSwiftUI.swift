@@ -18,8 +18,7 @@ final class SettingViewControllerSwiftUI: UIViewController {
         setupConstraint()
     }
   
-    
-    /// Настройка constraint
+
     private func setupConstraint() {
         hostingViewController.view.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -29,6 +28,7 @@ final class SettingViewControllerSwiftUI: UIViewController {
             hostingViewController.view.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
     }
+    
     private func addVC() {
         addChild(hostingViewController)
         view.addSubview(hostingViewController.view)

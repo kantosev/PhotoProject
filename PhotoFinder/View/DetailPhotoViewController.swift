@@ -67,7 +67,7 @@ final class DetailPhotoViewController: UIViewController {
                     AlertController.galleryAccessIsDenied(onViewController: self)
                 // Остальные ошибки
                 } else {
-                    AlertController.showAlertController(onViewController: self, title: NSLocalizedString("Error", comment: "Error5"), message: NSLocalizedString("Loading error", comment: "Loading error"))
+                    AlertController.showAlertController(onViewController: self, title: NSLocalizedString("Error", comment: "Error"), message: NSLocalizedString("Loading error", comment: "Loading error"))
                     
                 }
                 

@@ -90,7 +90,6 @@ final class CollectionViewModel: CollectionViewModelProtocol {
     }
     
     
-    /// Количество item в CollectionView
     func numberOfItemsInSection() -> Int {
         return arrayOfImages.count
     }

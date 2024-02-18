@@ -13,11 +13,7 @@
 /* Footer Button */
 "Download more" = "تحميل المزيد";
 
-/* Error1
-   Error2
-   Error3
-   Error4
-   Error5 */
+/* Error */
 "Error" = "خطأ";
 
 /* Loading error */
@@ -59,3 +55,11 @@
 /* You haven't entered anything */
 "You haven't entered anything" = "أنت لم تدخل أي شيء";
 
+/* It is impossible to save. Allow access to the gallery */
+"It is impossible to save. Allow access to the gallery" = "فمن المستحيل لإنقاذ. السماح بالوصول إلى المعرض";
+
+/* Cancel */
+"Cancel" = "إلغاء";
+
+/* Allow */
+"Allow" = "السماح";
