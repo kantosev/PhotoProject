@@ -14,7 +14,7 @@ final class CollectionViewModelTests: XCTestCase {
     /// Тестируемый объект - SUT
     var sut: CollectionViewModel!
     
-    /// Тестовый объект
+    /// Тестовый stub объект
     var networkManagerStub: NetworkManagerProtocol!
     
     override func setUp() {
@@ -29,10 +29,12 @@ final class CollectionViewModelTests: XCTestCase {
         super.tearDown()
     }
     
+    
+    // searchButtonPressed: true
     func testFetchOfData1() {
         // arrange - подготовка (дано)
         var boolChecked: Bool!
-        var errorFetchOfData: AFError?
+        var errorFetchOfData: AFError!
         
         // act - выполнение тестируемого кода
         sut.fetchOfData(with: "", searchButtonPressed: true) { arrayImagesIsEmpty in
@@ -46,6 +48,7 @@ final class CollectionViewModelTests: XCTestCase {
         XCTAssertNotNil(errorFetchOfData)
     }
     
+    // searchButtonPressed: false
     func testFetchOfData2() {
         // arrange - подготовка (дано)
         var boolChecked: Bool!
