@@ -12,7 +12,7 @@ import UIKit
 final class DetailViewModel: NSObject, DetailViewModelProtocol {
     
     var completion: ((Result<Data?, Error>) -> Void)?
-
+    
     
     /// Сохранение изображения в галерею
     /// - Parameters:
@@ -29,11 +29,17 @@ final class DetailViewModel: NSObject, DetailViewModelProtocol {
     ///   - image: Сохраняемое иображение
     ///   - error: Ошибка
     @objc private func imageSaved(_ image: UIImage, error: Error?, context: UnsafeMutableRawPointer?) {
+        let result: Result<Data?, Error>
+        
+        defer {
+            completion?(result)
+        }
+        
         if let error {
-            completion?(.failure(error))
+            result = .failure(error)
             return
         }
-        completion?(.success(nil))
+        result = .success(nil)
     }
     
 }

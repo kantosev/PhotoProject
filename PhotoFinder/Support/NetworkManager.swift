@@ -41,7 +41,14 @@ final class NetworkManager: NetworkManagerProtocol {
         
         // Alamofire - непосредственно получение данных
         AF.request(url, parameters: urlParams, headers: HTTPHeaders(headers)).responseDecodable(of: ImageModel.self) { response in
+            let result: Result<[String], Error>
+            
+            defer {
+                completion(result)
+            }
+            
             switch response.result {
+                
             case .success(let answer):
                 var arrayImagesUrl: [String] = []
                 let imagesCount = answer.data.count
@@ -53,9 +60,9 @@ final class NetworkManager: NetworkManagerProtocol {
                         }
                     }
                 }
-                completion(.success(arrayImagesUrl))
+                result = .success(arrayImagesUrl)
             case.failure(let error):
-                completion(.failure(error))
+                result = .failure(error)
             }
         }
     }
