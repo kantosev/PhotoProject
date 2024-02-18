@@ -1,16 +1,16 @@
 //
-//  NetworkManagerStub.swift
+//  NetworkManagerStub2.swift
 //  PhotoFinderTests
 //
-//  Created by Аркадий Варежкин on 17.02.2024.
+//  Created by Аркадий Варежкин on 18.02.2024.
 //
 
 import Foundation
 import Alamofire
 @testable import PhotoFinder
 
-class NetworkManagerStub: NetworkManagerProtocol {
+class NetworkManagerStub2: NetworkManagerProtocol {
     func getArrayOfImages(url: String,searchText: String, page: String?, completion: @escaping (Result<[String], Error>) -> Void) {
-        completion(.success([]))
+        completion(.failure(AFError.sessionDeinitialized))
     }
 }

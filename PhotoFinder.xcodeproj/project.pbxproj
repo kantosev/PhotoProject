@@ -45,6 +45,7 @@
 		8D2ED3D82B822DF0008BA9F9 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 8D2ED3D72B822DF0008BA9F9 /* PrivacyInfo.xcprivacy */; };
 		8D2ED3F02B823E0C008BA9F9 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8D2ED3EF2B823E0C008BA9F9 /* Alamofire */; };
 		8D2ED3F42B824BD7008BA9F9 /* CollectionViewHeader + Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2ED3F32B824BD7008BA9F9 /* CollectionViewHeader + Delegate.swift */; };
+		8D2ED3F82B8258B0008BA9F9 /* NetworkManagerStub2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2ED3F72B8258B0008BA9F9 /* NetworkManagerStub2.swift */; };
 		8D3290422B7E7519005293AD /* NetworkMonitorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3290412B7E7519005293AD /* NetworkMonitorProtocol.swift */; };
 		8D3290492B7E88BA005293AD /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 8D3290482B7E88BA005293AD /* Kingfisher */; };
 		8D3DD78C2B80E7FF0022CB71 /* CollectionViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3DD78B2B80E7FF0022CB71 /* CollectionViewModelTests.swift */; };
@@ -106,6 +107,7 @@
 		3AF9892129A0174100F48775 /* UserDefaults + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults + Extension.swift"; sourceTree = "<group>"; };
 		8D2ED3D72B822DF0008BA9F9 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		8D2ED3F32B824BD7008BA9F9 /* CollectionViewHeader + Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectionViewHeader + Delegate.swift"; sourceTree = "<group>"; };
+		8D2ED3F72B8258B0008BA9F9 /* NetworkManagerStub2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerStub2.swift; sourceTree = "<group>"; };
 		8D3290382B7E70DE005293AD /* PhotoFinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoFinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D3290412B7E7519005293AD /* NetworkMonitorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitorProtocol.swift; sourceTree = "<group>"; };
 		8D3DD78B2B80E7FF0022CB71 /* CollectionViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewModelTests.swift; sourceTree = "<group>"; };
@@ -306,6 +308,7 @@
 			isa = PBXGroup;
 			children = (
 				8D3DD78E2B80E8A40022CB71 /* NetworkManagerStub.swift */,
+				8D2ED3F72B8258B0008BA9F9 /* NetworkManagerStub2.swift */,
 			);
 			path = Stub;
 			sourceTree = "<group>";
@@ -464,6 +467,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D2ED3F82B8258B0008BA9F9 /* NetworkManagerStub2.swift in Sources */,
 				8D3DD78F2B80E8A40022CB71 /* NetworkManagerStub.swift in Sources */,
 				8D3DD78C2B80E7FF0022CB71 /* CollectionViewModelTests.swift in Sources */,
 			);

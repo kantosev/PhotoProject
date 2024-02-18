@@ -39,7 +39,7 @@ final class DetailPhotoViewController: UIViewController {
     /// Нажатие кнопки сохранения изображения
     @IBAction func saveButtonPressed(_ sender: Any) {
         guard let image = image else { return }
-        saveImage(image: image)
+        localSaveImage(image: image)
         
     }
     /// Нажатие кнопки поделиться
@@ -56,11 +56,14 @@ final class DetailPhotoViewController: UIViewController {
 // MARK: - Functions -
     
     /// Сохранение изображения
-    private func saveImage(image: UIImage) {
-        viewModel.saveImage(image: image) {
-            AlertController.showAlertController(onViewController: self, title: NSLocalizedString("Successfully", comment: "Successfully"), message: NSLocalizedString("Photo uploaded to gallery", comment: "Photo uploaded to gallery"))
-        } errorCompletion: {
-            AlertController.showAlertController(onViewController: self, title: NSLocalizedString("Error", comment: "Error5"), message: NSLocalizedString("Loading error", comment: "Loading error"))
+    private func localSaveImage(image: UIImage) {
+        viewModel.saveImage(image: image) { result in
+            switch result {
+            case .success(_):
+                AlertController.showAlertController(onViewController: self, title: NSLocalizedString("Successfully", comment: "Successfully"), message: NSLocalizedString("Photo uploaded to gallery", comment: "Photo uploaded to gallery"))
+            case .failure(_):
+                AlertController.showAlertController(onViewController: self, title: NSLocalizedString("Error", comment: "Error5"), message: NSLocalizedString("Loading error", comment: "Loading error"))
+            }
         }
     }
     

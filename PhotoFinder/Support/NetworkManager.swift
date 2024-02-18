@@ -16,9 +16,8 @@ final class NetworkManager: NetworkManagerProtocol {
     ///   - url: Ссылка для загрузки
     ///   - searchText: Текст запроса
     ///   - page: Номер страницы для загрузки
-    ///   - completion: После успешной загрузки
-    ///   - errorCompletion: При ошибке
-    func getArrayOfImages(url: String, searchText: String, page: String?, completion: @escaping (([String]) -> ()), errorCompletion: @escaping ((AFError) -> ())) {
+    ///   - completion: Результат запроса
+    func getArrayOfImages(url: String, searchText: String, page: String?, completion: @escaping (Result<[String], Error>) -> Void) {
         guard let url = URL(string: url) else { return }
         
         var sizeOfImage = UserDefaults.standard.string(forKey: "sizeImage")
@@ -42,7 +41,14 @@ final class NetworkManager: NetworkManagerProtocol {
         
         // Alamofire - непосредственно получение данных
         AF.request(url, parameters: urlParams, headers: HTTPHeaders(headers)).responseDecodable(of: ImageModel.self) { response in
+            let result: Result<[String], Error>
+            
+            defer {
+                completion(result)
+            }
+            
             switch response.result {
+                
             case .success(let answer):
                 var arrayImagesUrl: [String] = []
                 let imagesCount = answer.data.count
@@ -54,9 +60,9 @@ final class NetworkManager: NetworkManagerProtocol {
                         }
                     }
                 }
-                completion(arrayImagesUrl)
+                result = .success(arrayImagesUrl)
             case.failure(let error):
-                errorCompletion(error)
+                result = .failure(error)
             }
         }
     }

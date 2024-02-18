@@ -9,5 +9,9 @@ import Foundation
 import UIKit
 
 protocol DetailViewModelProtocol {
-    func saveImage(image: UIImage, successCompletion: @escaping () -> (), errorCompletion: @escaping () -> ())
+    /// Сохранение изображения в галерею
+    /// - Parameters:
+    ///   - image: Сохраняемое иображение
+    ///   - completion: Результат запроса
+    func saveImage(image: UIImage, completion: @escaping (Result<Data?, Error>) -> Void)
 }

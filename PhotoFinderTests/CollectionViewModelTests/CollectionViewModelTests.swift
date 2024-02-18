@@ -12,20 +12,27 @@ import Alamofire
 final class CollectionViewModelTests: XCTestCase {
     
     /// Тестируемый объект - SUT
-    var sut: CollectionViewModel!
+    var sut1: CollectionViewModel!
+    var sut2: CollectionViewModel!
     
     /// Тестовый stub объект
     var networkManagerStub: NetworkManagerProtocol!
+    var networkManagerStub2: NetworkManagerProtocol!
+
     
     override func setUp() {
         super.setUp()
         networkManagerStub = NetworkManagerStub()
-        sut = CollectionViewModel(networkManager: networkManagerStub)
+        networkManagerStub2 = NetworkManagerStub2()
+        sut1 = CollectionViewModel(networkManager: networkManagerStub)
+        sut2 = CollectionViewModel(networkManager: networkManagerStub2)
     }
     
     override func tearDown() {
         networkManagerStub = nil
-        sut = nil
+        networkManagerStub2 = nil
+        sut1 = nil
+        sut2 = nil
         super.tearDown()
     }
     
@@ -34,38 +41,42 @@ final class CollectionViewModelTests: XCTestCase {
     func testFetchOfData1() {
         // arrange - подготовка (дано)
         var boolChecked: Bool!
-        var errorFetchOfData: AFError!
         
         // act - выполнение тестируемого кода
-        sut.fetchOfData(with: "", searchButtonPressed: true) { arrayImagesIsEmpty in
-            boolChecked = arrayImagesIsEmpty
-        } errorCompletion: { error in
-            errorFetchOfData = error
+        sut1.fetchOfData(with: "", searchButtonPressed: true) { result in
+            
+            switch result {
+            case .success(let arrayImagesIsEmpty):
+                boolChecked = arrayImagesIsEmpty
+            case .failure(let error):
+                XCTFail()
+            }
+            
+    
+            // assert - проверка
+            XCTAssertTrue(boolChecked)
         }
-        
-        // assert - проверка
-        XCTAssertTrue(boolChecked)
-        XCTAssertNotNil(errorFetchOfData)
     }
     
     // searchButtonPressed: false
     func testFetchOfData2() {
         // arrange - подготовка (дано)
-        var boolChecked: Bool!
-        var errorFetchOfData: AFError?
+        var errorFetchOfData: Error?
         
         // act - выполнение тестируемого кода
-        sut.fetchOfData(with: "", searchButtonPressed: false) { arrayImagesIsEmpty in
-            boolChecked = arrayImagesIsEmpty
-        } errorCompletion: { error in
-            errorFetchOfData = error
+        sut2.fetchOfData(with: "", searchButtonPressed: false) { result in
+            switch result {
+            case .success(let arrayImagesIsEmpty):
+                XCTFail()
+            case .failure(let error):
+                errorFetchOfData = error
+            }
+            
+            // assert - проверка
+            XCTAssertNotNil(errorFetchOfData)
         }
         
-        // assert - проверка
-        XCTAssertTrue(boolChecked)
-        XCTAssertNotNil(errorFetchOfData)
+        
     }
-    
-    
-    
 }
+
