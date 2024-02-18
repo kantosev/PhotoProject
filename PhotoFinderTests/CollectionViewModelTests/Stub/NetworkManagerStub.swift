@@ -2,7 +2,7 @@
 //  NetworkManagerStub.swift
 //  PhotoFinderTests
 //
-//  Created by Аркадий Варежкин on 17.02.2024.
+//  Created by Anton Kirilyuk on 17.02.2024.
 //
 
 import Foundation

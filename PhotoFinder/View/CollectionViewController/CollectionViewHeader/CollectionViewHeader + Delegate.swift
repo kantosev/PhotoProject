@@ -2,7 +2,7 @@
 //  CollectionViewHeader + Delegate.swift
 //  PhotoFinder
 //
-//  Created by Аркадий Варежкин on 18.02.2024.
+//  Created by Anton Kirilyuk on 18.02.2024.
 //
 
 import Foundation

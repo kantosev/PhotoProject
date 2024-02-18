@@ -48,7 +48,7 @@ final class CollectionViewModelTests: XCTestCase {
             switch result {
             case .success(let arrayImagesIsEmpty):
                 boolChecked = arrayImagesIsEmpty
-            case .failure(let error):
+            case .failure(_):
                 XCTFail()
             }
             
@@ -66,7 +66,7 @@ final class CollectionViewModelTests: XCTestCase {
         // act - выполнение тестируемого кода
         sut2.fetchOfData(with: "", searchButtonPressed: false) { result in
             switch result {
-            case .success(let arrayImagesIsEmpty):
+            case .success(_):
                 XCTFail()
             case .failure(let error):
                 errorFetchOfData = error

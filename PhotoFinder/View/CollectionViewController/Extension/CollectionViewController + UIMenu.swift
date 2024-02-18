@@ -42,8 +42,15 @@ extension CollectionViewController {
                 switch result {
                 case .success(_):
                     AlertController.showAlertController(onViewController: self, title: NSLocalizedString("Successfully", comment: "Successfully"), message: NSLocalizedString("Photo uploaded to gallery", comment: "Photo uploaded to gallery"))
-                case .failure(_):
-                    AlertController.showAlertController(onViewController: self, title: NSLocalizedString("Error", comment: "Error4"), message: NSLocalizedString("Loading error", comment: "Loading error"))
+                case .failure(let error as NSError):
+                    // Нет доступа к галерее
+                    if error.domain == "ALAssetsLibraryErrorDomain" {
+                        AlertController.galleryAccessIsDenied(onViewController: self)
+                    // Остальные ошибки
+                    } else {
+                        AlertController.showAlertController(onViewController: self, title: NSLocalizedString("Error", comment: "Error5"), message: NSLocalizedString("Loading error", comment: "Loading error"))
+                        
+                    }
                 }
             }
         }

@@ -2,7 +2,7 @@
 //  NetworkMonitorProtocol.swift
 //  PhotoFinder
 //
-//  Created by Аркадий Варежкин on 15.02.2024.
+//  Created by Anton Kirilyuk on 15.02.2024.
 //
 
 import Foundation
