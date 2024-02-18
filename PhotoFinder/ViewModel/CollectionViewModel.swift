@@ -38,35 +38,40 @@ final class CollectionViewModel: CollectionViewModelProtocol {
     /// Получение массива ссылок на изображения
     /// - Parameters:
     ///   - text: Поисковый запрос
-    ///   - completion: completion
-    ///   - errorCompletion: В случае ошибки в запросе
+    ///   - completion: Результат запроса
     ///   - searchButtonPressed: true - нажата кнопка поиска, false - нажата кнопка "Загрузить еще"
-    func fetchOfData(with text: String, searchButtonPressed: Bool, completion: @escaping (Bool) -> (), errorCompletion: @escaping (AFError) -> ()) {
+    func fetchOfData(with text: String, searchButtonPressed: Bool, completion: @escaping (Result<Bool, Error>) -> Void) {
         
         if searchButtonPressed == true {
             self.countOfRepeatLoad = 1
             self.text = text
-            networkManager.getArrayOfImages(url: url, searchText: text, page: "0") { [weak self] arrayImages in
-                if !arrayImages.isEmpty {
-                    self?.arrayOfImages = arrayImages
-                    completion(false)
-                } else {
-                    completion(true)
+            networkManager.getArrayOfImages(url: url, searchText: text, page: "0") { [weak self] result in
+                switch result {
+                case .success(let arrayImages):
+                    if !arrayImages.isEmpty {
+                        self?.arrayOfImages = arrayImages
+                        completion(.success(false))
+                    } else {
+                        completion(.success(true))
+                    }
+                case .failure(let error):
+                    completion(.failure(error))
                 }
-            } errorCompletion: { error in
-                errorCompletion(error)
             }
         } else {
-            networkManager.getArrayOfImages(url: url, searchText: self.text, page: String(countOfRepeatLoad)) { arrayImages in
-                if !arrayImages.isEmpty {
-                    self.arrayOfImages.append(contentsOf: arrayImages)
-                    completion(false)
-                    self.countOfRepeatLoad += 1
-                } else {
-                    completion(true)
+            networkManager.getArrayOfImages(url: url, searchText: self.text, page: String(countOfRepeatLoad)) { result in
+                switch result {
+                case .success(let arrayImages):
+                    if !arrayImages.isEmpty {
+                        self.arrayOfImages.append(contentsOf: arrayImages)
+                        completion(.success(false))
+                        self.countOfRepeatLoad += 1
+                    } else {
+                        completion(.success(true))
+                    }
+                case .failure(let error):
+                    completion(.failure(error))
                 }
-            } errorCompletion: { error in
-                errorCompletion(error)
             }
         }
     }

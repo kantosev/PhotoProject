@@ -38,11 +38,14 @@ extension CollectionViewController {
         // Save Button
         let saveImage = UIAction(title: NSLocalizedString("Save", comment: "MenuItemTitle"), image: UIImage(systemName: "tray.and.arrow.down")) { _ in
             guard let image = self.image else { return }
-            self.detailViewModel?.saveImage(image: image, successCompletion: {
-                AlertController.showAlertController(onViewController: self, title: NSLocalizedString("Successfully", comment: "Successfully"), message: NSLocalizedString("Photo uploaded to gallery", comment: "Photo uploaded to gallery"))
-            }, errorCompletion: {
-                AlertController.showAlertController(onViewController: self, title: NSLocalizedString("Error", comment: "Error4"), message: NSLocalizedString("Loading error", comment: "Loading error"))
-            })
+            self.detailViewModel?.saveImage(image: image) { result in
+                switch result {
+                case .success(_):
+                    AlertController.showAlertController(onViewController: self, title: NSLocalizedString("Successfully", comment: "Successfully"), message: NSLocalizedString("Photo uploaded to gallery", comment: "Photo uploaded to gallery"))
+                case .failure(_):
+                    AlertController.showAlertController(onViewController: self, title: NSLocalizedString("Error", comment: "Error4"), message: NSLocalizedString("Loading error", comment: "Loading error"))
+                }
+            }
         }
             
         imageMenu = UIMenu(title: NSLocalizedString("Options", comment: "MenuTitle"), children: [shareImage, saveImage])

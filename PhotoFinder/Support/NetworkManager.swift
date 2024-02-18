@@ -16,9 +16,8 @@ final class NetworkManager: NetworkManagerProtocol {
     ///   - url: Ссылка для загрузки
     ///   - searchText: Текст запроса
     ///   - page: Номер страницы для загрузки
-    ///   - completion: После успешной загрузки
-    ///   - errorCompletion: При ошибке
-    func getArrayOfImages(url: String, searchText: String, page: String?, completion: @escaping (([String]) -> ()), errorCompletion: @escaping ((AFError) -> ())) {
+    ///   - completion: Результат запроса
+    func getArrayOfImages(url: String, searchText: String, page: String?, completion: @escaping (Result<[String], Error>) -> Void) {
         guard let url = URL(string: url) else { return }
         
         var sizeOfImage = UserDefaults.standard.string(forKey: "sizeImage")
@@ -54,9 +53,9 @@ final class NetworkManager: NetworkManagerProtocol {
                         }
                     }
                 }
-                completion(arrayImagesUrl)
+                completion(.success(arrayImagesUrl))
             case.failure(let error):
-                errorCompletion(error)
+                completion(.failure(error))
             }
         }
     }

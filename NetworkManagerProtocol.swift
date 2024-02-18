@@ -11,5 +11,5 @@ import Alamofire
 
 
 protocol NetworkManagerProtocol {
-    func getArrayOfImages(url: String,searchText: String, page: String?, completion: @escaping (([String]) -> ()), errorCompletion: @escaping (AFError) -> ())
+    func getArrayOfImages(url: String,searchText: String, page: String?, completion: @escaping (Result<[String], Error>) -> Void)
 }

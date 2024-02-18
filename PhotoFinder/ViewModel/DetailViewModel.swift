@@ -11,20 +11,16 @@ import UIKit
 /// View model детального просмотра изображения
 final class DetailViewModel: NSObject, DetailViewModelProtocol {
     
-    // Успешное сохранение
-    var successCompletion: (() -> ())?
-    // Ошибка
-    var errorCompletion: (() -> ())?
+    var completion: ((Result<Data?, Error>) -> Void)?
+
     
     /// Сохранение изображения в галерею
     /// - Parameters:
     ///   - image: Сохраняемое иображение
-    ///   - successCompletion: Успешно
-    ///   - errorCompletion: Ошибка
-    func saveImage(image: UIImage, successCompletion: @escaping () -> (), errorCompletion: @escaping () -> ()) {
+    ///   - completion: Результат запроса
+    func saveImage(image: UIImage, completion: @escaping (Result<Data?, Error>) -> Void) {
         UIImageWriteToSavedPhotosAlbum(image, self, #selector(imageSaved), nil)
-        self.successCompletion = successCompletion
-        self.errorCompletion = errorCompletion
+        self.completion = completion
     }
     
     
@@ -33,11 +29,11 @@ final class DetailViewModel: NSObject, DetailViewModelProtocol {
     ///   - image: Сохраняемое иображение
     ///   - error: Ошибка
     @objc private func imageSaved(_ image: UIImage, error: Error?, context: UnsafeMutableRawPointer?) {
-        if error != nil {
-            errorCompletion?()
+        if let error {
+            completion?(.failure(error))
             return
         }
-        successCompletion?()
+        completion?(.success(nil))
     }
     
 }
