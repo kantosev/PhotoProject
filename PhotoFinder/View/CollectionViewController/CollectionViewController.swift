@@ -18,8 +18,6 @@ final class CollectionViewController: UICollectionViewController {
     let viewModel: CollectionViewModelProtocol?
     // View model DetailPhotoVC
     let detailViewModel: DetailViewModelProtocol?
-    // Индикатор загрузки
-    var activityIndicator: UIActivityIndicatorView!
     // Показан ли Footer
     var footerIsHidden: Bool = true
     // Меню, открывающееся по длительному нажатию на фото
@@ -29,12 +27,15 @@ final class CollectionViewController: UICollectionViewController {
     // Network Monitor
     let networkMonitor: NetworkMonitorProtocol
     
+    let notificationCenter: NotificationCenter
+    
     // MARK: - init()
 
     required init?(coder: NSCoder) {
         self.viewModel = CollectionViewModel()
         self.detailViewModel = DetailViewModel()
         self.networkMonitor = NetworkMonitor.shared
+        notificationCenter = NotificationCenter.default
         super.init(coder: coder)
     }
     
@@ -47,7 +48,6 @@ final class CollectionViewController: UICollectionViewController {
         addObserverForErrorSearch()
         addObserverForOverButtonLoadPressed()
         registerView()
-        setActivityIndicator()
     }
     
     // MARK: - UICollectionViewDataSource
@@ -80,10 +80,6 @@ final class CollectionViewController: UICollectionViewController {
         default:
             return UICollectionReusableView()
         }
-    }
-    
-    override func collectionView(_ collectionView: UICollectionView, willDisplaySupplementaryView view: UICollectionReusableView, forElementKind elementKind: String, at indexPath: IndexPath) {
-        
     }
     
     

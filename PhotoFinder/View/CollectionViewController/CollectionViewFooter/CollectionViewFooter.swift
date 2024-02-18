@@ -15,7 +15,6 @@ final class CollectionViewFooter: UICollectionReusableView {
     override func awakeFromNib() {
         super.awakeFromNib()
         button.setTitle(NSLocalizedString("Download more", comment: "Footer Button"), for: .normal)
-        // Initialization code
     }
     
     /// Нажатие кнопки

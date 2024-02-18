@@ -15,15 +15,15 @@ extension CollectionViewController {
     
     /// Добавление наблюдателя за нажатием кнопки поиска
     func addObserverForTouchSearchButton() {
-        NotificationCenter.default.addObserver(self, selector: #selector(searchButtonPressed), name: .init("searchButtonPressed"), object: nil)
+       notificationCenter.addObserver(self, selector: #selector(searchButtonPressed), name: .init("searchButtonPressed"), object: nil)
     }
     /// Добавление наблюдателя за ошибкой поискового запроса
     func addObserverForErrorSearch() {
-        NotificationCenter.default.addObserver(self, selector: #selector(errorSearch), name: .init("errorSearch"), object: nil)
+        notificationCenter.addObserver(self, selector: #selector(errorSearch), name: .init("errorSearch"), object: nil)
     }
     /// Добавление наблюдателя за нажатием кнопки "Загрузить еще"
     func addObserverForOverButtonLoadPressed() {
-        NotificationCenter.default.addObserver(self, selector: #selector(overButtonLoadPressed), name: .init("overImageLoad"), object: nil)
+        notificationCenter.addObserver(self, selector: #selector(overButtonLoadPressed), name: .init("overImageLoad"), object: nil)
     }
     
     // MARK: - View
@@ -34,18 +34,7 @@ extension CollectionViewController {
         collectionView.register(UINib(nibName: "CollectionViewHeader", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "Header")
         collectionView.register(UINib(nibName: "CollectionViewFooter", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "Footer")
     }
-    
-    /// Настройка Activity Indicator
-    func setActivityIndicator() {
-        activityIndicator = UIActivityIndicatorView(style: .large)
-        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
-        activityIndicator.hidesWhenStopped = true
-        self.collectionView.addSubview(activityIndicator)
-        NSLayoutConstraint.activate([
-            activityIndicator.centerXAnchor.constraint(equalTo: self.collectionView.centerXAnchor),
-            activityIndicator.centerYAnchor.constraint(equalTo: self.collectionView.centerYAnchor)
-        ])
-    }
+
 }
 
 

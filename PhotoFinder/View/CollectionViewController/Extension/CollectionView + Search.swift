@@ -22,21 +22,19 @@ extension CollectionViewController {
         view.endEditing(true)
         // Есть соединение с интернетом
         if networkMonitor.isConnected == true {
-            activityIndicator.isHidden = false
-            activityIndicator.startAnimating()
             guard let userInfo = notification.userInfo else { return }
             guard let text = userInfo["text"] as? String else { return }
             
-            viewModel?.fetchOfData(with: text, searchButtonPressed: true, completion: { [activityIndicator, collectionView] arrayIsEmpty in
-                activityIndicator?.stopAnimating()
+            viewModel?.fetchOfData(with: text, searchButtonPressed: true, completion: { [collectionView] arrayIsEmpty in
+                NotificationCenter.default.post(name: .init("stopActivityIndicator"), object: self, userInfo: nil)
                 if arrayIsEmpty == false {
                     collectionView?.reloadData()
                 } else {
                     AlertController.showAlertController(onViewController: self, title: NSLocalizedString("Error", comment: "Error1"), message: NSLocalizedString("No images found on request", comment: "No images found on request"))
                 }
-            }, errorCompletion: { [activityIndicator] error in
+            }, errorCompletion: { error in
                 AlertController.showAlertController(onViewController: self, title: NSLocalizedString("Data loading error", comment: "Data loading error"), message: NSLocalizedString("The data was not uploaded, try again later", comment: "The data was not uploaded, try again later"))
-                activityIndicator?.stopAnimating()
+                NotificationCenter.default.post(name: .init("stopActivityIndicator"), object: self, userInfo: nil)
             })
             
         // Нет соединения с интернетом
@@ -52,17 +50,15 @@ extension CollectionViewController {
     
     /// Нажата кнопка "Загрузить еще"
     @objc func overButtonLoadPressed() {
-        activityIndicator.isHidden = false
-        activityIndicator.startAnimating()
         viewModel?.fetchOfData(with: "", searchButtonPressed: false, completion: { [collectionView] arrayIsEmpty in
-            self.activityIndicator?.stopAnimating()
+            NotificationCenter.default.post(name: .init("stopActivityIndicator"), object: self, userInfo: nil)
             if arrayIsEmpty == false {
                 collectionView?.reloadData()
             } else {
                 AlertController.showAlertController(onViewController: self, title: NSLocalizedString("Error", comment: "Error3"), message: NSLocalizedString("There are no more images", comment: "There are no more images"))
             }
         }, errorCompletion: { error in
-            self.activityIndicator?.stopAnimating()
+            NotificationCenter.default.post(name: .init("stopActivityIndicator"), object: self, userInfo: nil)
             AlertController.showAlertController(onViewController: self, title: NSLocalizedString("Data loading error", comment: "Data loading error"), message: NSLocalizedString("The data was not uploaded, try again later", comment: "The data was not uploaded, try again later"))
         })
     }
