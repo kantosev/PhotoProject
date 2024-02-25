@@ -51,12 +51,14 @@ final class NetworkManager: NetworkManagerProtocol {
                 
             case .success(let answer):
                 var arrayImagesUrl: [String] = []
-                let imagesCount = answer.data.count
+                guard let data = answer.data else { result = .failure(NetworkError.getDataError)
+                    return }
+                let imagesCount = data.count
                 
                 if imagesCount > 0 {
                     for image in 0...(imagesCount - 1) {
-                        if answer.data[image].images?[0].type == "image/jpeg" {
-                            arrayImagesUrl.append(answer.data[image].images?[0].link ?? "")
+                        if let images = data[image].images?[0], images.type == "image/jpeg" {
+                            arrayImagesUrl.append(images.link ?? "")
                         }
                     }
                 }
@@ -65,6 +67,11 @@ final class NetworkManager: NetworkManagerProtocol {
                 result = .failure(error)
             }
         }
+    }
+    
+    
+    enum NetworkError: Error {
+        case getDataError
     }
     
 }

@@ -9,7 +9,7 @@ import Foundation
 
 /// Модель изображения, загружаемого из сети
 struct ImageModel: Codable {
-    let data: [Datum]
+    let data: [Datum]?
 }
 
 // MARK: - Datum
@@ -19,7 +19,7 @@ struct Datum: Codable {
 
 // MARK: - Image
 struct Image: Codable {
-    let type: String
-    let link: String
+    let type: String?
+    let link: String?
 }
 
