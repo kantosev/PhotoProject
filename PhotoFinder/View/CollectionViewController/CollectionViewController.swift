@@ -32,7 +32,7 @@ final class CollectionViewController: UICollectionViewController {
     // MARK: - init()
 
     required init?(coder: NSCoder) {
-        self.viewModel = CollectionViewModel()
+        self.viewModel = CollectionViewModel(networkManager: NetworkManager())
         self.detailViewModel = DetailViewModel()
         self.networkMonitor = NetworkMonitor.shared
         notificationCenter = NotificationCenter.default

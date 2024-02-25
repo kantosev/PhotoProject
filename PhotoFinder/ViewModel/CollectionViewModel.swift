@@ -26,7 +26,7 @@ final class CollectionViewModel: CollectionViewModelProtocol {
     
     // MARK: - init
     
-    init(networkManager: NetworkManagerProtocol = NetworkManager()) {
+    init(networkManager: NetworkManagerProtocol) {
         self.networkManager = networkManager
         self.arrayOfImages = []
         self.text = ""
