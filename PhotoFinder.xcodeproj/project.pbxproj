@@ -43,13 +43,13 @@
 		3AF98920299FED9400F48775 /* ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF9891F299FED9400F48775 /* ScrollView.swift */; };
 		3AF9892229A0174100F48775 /* UserDefaults + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF9892129A0174100F48775 /* UserDefaults + Extension.swift */; };
 		8D2ED3D82B822DF0008BA9F9 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 8D2ED3D72B822DF0008BA9F9 /* PrivacyInfo.xcprivacy */; };
-		8D2ED3F02B823E0C008BA9F9 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8D2ED3EF2B823E0C008BA9F9 /* Alamofire */; };
 		8D2ED3F42B824BD7008BA9F9 /* CollectionViewHeader + Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2ED3F32B824BD7008BA9F9 /* CollectionViewHeader + Delegate.swift */; };
 		8D2ED3F82B8258B0008BA9F9 /* NetworkManagerStub2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2ED3F72B8258B0008BA9F9 /* NetworkManagerStub2.swift */; };
 		8D3290422B7E7519005293AD /* NetworkMonitorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3290412B7E7519005293AD /* NetworkMonitorProtocol.swift */; };
 		8D3290492B7E88BA005293AD /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 8D3290482B7E88BA005293AD /* Kingfisher */; };
 		8D3DD78C2B80E7FF0022CB71 /* CollectionViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3DD78B2B80E7FF0022CB71 /* CollectionViewModelTests.swift */; };
 		8D3DD78F2B80E8A40022CB71 /* NetworkManagerStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3DD78E2B80E8A40022CB71 /* NetworkManagerStub.swift */; };
+		8D77F36C2DABDF040065B383 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8D77F36B2DABDF040065B383 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,7 +120,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D3290492B7E88BA005293AD /* Kingfisher in Frameworks */,
-				8D2ED3F02B823E0C008BA9F9 /* Alamofire in Frameworks */,
+				8D77F36C2DABDF040065B383 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,7 +331,7 @@
 			name = PhotoFinder;
 			packageProductDependencies = (
 				8D3290482B7E88BA005293AD /* Kingfisher */,
-				8D2ED3EF2B823E0C008BA9F9 /* Alamofire */,
+				8D77F36B2DABDF040065B383 /* Alamofire */,
 			);
 			productName = PetProject;
 			productReference = 3A906C3E29144A860070996F /* PhotoFinder.app */;
@@ -363,7 +363,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1520;
-				LastUpgradeCheck = 1520;
+				LastUpgradeCheck = 1630;
 				TargetAttributes = {
 					3A906C3D29144A860070996F = {
 						CreatedOnToolsVersion = 14.0.1;
@@ -388,7 +388,7 @@
 			mainGroup = 3A906C3529144A860070996F;
 			packageReferences = (
 				8D3290472B7E88BA005293AD /* XCRemoteSwiftPackageReference "Kingfisher" */,
-				8D2ED3EE2B823E0C008BA9F9 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				8D77F36A2DABDF040065B383 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 3A906C3F29144A860070996F /* Products */;
 			projectDirPath = "";
@@ -559,6 +559,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = CBGVUJP69Q;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -621,6 +622,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = CBGVUJP69Q;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -650,7 +652,6 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 0;
-				DEVELOPMENT_TEAM = CBGVUJP69Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PhotoFinder/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.photography";
@@ -687,7 +688,6 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 0;
-				DEVELOPMENT_TEAM = CBGVUJP69Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PhotoFinder/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.photography";
@@ -724,7 +724,6 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = CBGVUJP69Q;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
@@ -749,7 +748,6 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = CBGVUJP69Q;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
@@ -797,14 +795,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		8D2ED3EE2B823E0C008BA9F9 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 		8D3290472B7E88BA005293AD /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
@@ -813,18 +803,26 @@
 				minimumVersion = 7.11.0;
 			};
 		};
+		8D77F36A2DABDF040065B383 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 5.10.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		8D2ED3EF2B823E0C008BA9F9 /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8D2ED3EE2B823E0C008BA9F9 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
 		8D3290482B7E88BA005293AD /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8D3290472B7E88BA005293AD /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		8D77F36B2DABDF040065B383 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8D77F36A2DABDF040065B383 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
